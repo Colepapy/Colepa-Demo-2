@@ -1,1 +1,111 @@
+:root {
+    --rojo-paraguay: #D52B1E;
+    --azul-paraguay: #0038A8;
+    --blanco: #FFFFFF;
+    --degradado-header: linear-gradient(135deg, var(--rojo-paraguay) 0%, var(--azul-paraguay) 100%);
+}
 
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: #f0f4f8;
+    color: #333;
+}
+
+/* Encabezado con diseño bandera */
+.header-gradient {
+    background: var(--degradado-header);
+    color: var(--blanco);
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo-red { color: #FFD700; } /* Dorado inspirado en el escudo */
+.logo-blue { color: var(--blanco); }
+
+/* Contenedor de Chat estilo ChatGPT */
+.chat-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: var(--blanco);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.chat-messages {
+    height: 60vh;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+/* Burbujas de mensaje */
+.message {
+    display: flex;
+    margin-bottom: 15px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.bot-message { align-items: flex-start; }
+.user-message { align-items: flex-end; flex-direction: row-reverse; }
+
+.message-content {
+    max-width: 70%;
+    padding: 12px 20px;
+    border-radius: 20px;
+    background: #f1f3f6;
+    position: relative;
+}
+
+.bot-message .message-content {
+    background: var(--azul-paraguay);
+    color: var(--blanco);
+}
+
+.message-icon {
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+/* Input estilo moderno */
+.input-container {
+    display: flex;
+    padding: 20px;
+    border-top: 2px solid #eee;
+}
+
+textarea {
+    flex: 1;
+    border: 2px solid var(--azul-paraguay);
+    border-radius: 25px;
+    padding: 15px;
+    resize: none;
+    font-size: 16px;
+}
+
+button {
+    background: var(--rojo-paraguay);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Animaciones y detalles culturales */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Patrón de fondo inspirado en Ñandutí */
+body::after {
+    content: "";
+    position: fixed;
+   
