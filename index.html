@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colepa - Consulta de Leyes Paraguay</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://example.com/favicon.png"> <!-- Reemplaza con tu favicon -->
+</head>
+<body>
+    <!-- Encabezado con colores de la bandera -->
+    <header class="header-gradient">
+        <div class="container">
+            <h1><span class="logo-red">COLE</span><span class="logo-blue">PA</span></h1>
+            <p>Asistente legal de Paraguay 🇵🇾</p>
+        </div>
+    </header>
 
+    <!-- Contenedor del Chat -->
+    <div class="chat-container">
+        <div class="chat-messages" id="chat-messages">
+            <!-- Mensaje inicial del bot -->
+            <div class="message bot-message">
+                <div class="message-content">
+                    ¡Hola! Soy tu asistente legal. Pregúntame sobre leyes de Paraguay. Ejemplo:<br>
+                    <em>"¿Qué dice la Ley N° 123 sobre...?"</em>
+                </div>
+                <div class="message-icon">⚖️</div>
+            </div>
+        </div>
+        
+        <!-- Área de entrada de texto -->
+        <div class="input-container">
+            <textarea id="user-input" placeholder="Escribe tu consulta legal..." rows="1"></textarea>
+            <button id="send-btn" onclick="sendMessage()">
+                <img src="https://img.icons8.com/fluency/48/send-letter.png" alt="Enviar"> <!-- Icono de enviar -->
+            </button>
+        </div>
+    </div>
+
+    <script src="script/main.js"></script>
+</body>
+</html>
