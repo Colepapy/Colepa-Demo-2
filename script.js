@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentChatId = generateChatId();
     
     // API URL para el backend
-    const apiUrl = '/api/chat';
+    const apiUrl = 'https://mgcapra314.app.n8n.cloud/webhook/Colepa2025';
     
     // Enable/disable send button based on input content
     chatInput.addEventListener('input', function() {
