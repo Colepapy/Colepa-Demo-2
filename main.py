@@ -87,10 +87,11 @@ def chat():
         db.session.add(conversation)
         db.session.commit()
         
-        # Formato correcto para el webhook de n8n
+        # Formato correcto para el webhook de n8n - enviar texto plano sin formato
         webhook_data = {
             "message": message,
-            "chatId": chat_id
+            "chatId": chat_id,
+            "query": message  # Añadiendo campo alternativo por si n8n espera este nombre
         }
         
         logger.debug(f"Sending to webhook: {webhook_data}")
@@ -110,11 +111,28 @@ def chat():
             try:
                 response_data = response.json()
                 
+                # Identificar el campo de respuesta en los datos recibidos
+                bot_response = ''
+                
+                # Intentar varios formatos comunes de respuesta
+                if 'response' in response_data:
+                    bot_response = response_data['response']
+                elif 'respuesta' in response_data:
+                    bot_response = response_data['respuesta']
+                elif 'answer' in response_data:
+                    bot_response = response_data['answer']
+                elif 'text' in response_data:
+                    bot_response = response_data['text']
+                else:
+                    # Si no encontramos un campo conocido, usar todo el contenido
+                    bot_response = str(response_data)
+                
                 # Actualizar la respuesta en la base de datos
-                conversation.bot_response = response_data.get('response', '')
+                conversation.bot_response = bot_response
                 db.session.commit()
                 
-                return jsonify(response_data)
+                # Asegurar que el formato de respuesta sea consistente para el frontend
+                return jsonify({"response": bot_response})
             except ValueError as e:
                 logger.error(f"Error parsing JSON response: {e}")
                 return jsonify({
