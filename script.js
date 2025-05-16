@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let chatHistory = [];
     let currentChatId = generateChatId();
     
-    // N8n webhook URL
-    const webhookUrl = 'https://mgcapra314.app.n8n.cloud/webhook/Colepa2025';
+    // API URL para el backend
+    const apiUrl = '/api/chat';
     
     // Enable/disable send button based on input content
     chatInput.addEventListener('input', function() {
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showTypingIndicator();
         
         try {
-            const response = await fetch(webhookUrl, {
+            const response = await fetch(apiUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
