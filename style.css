@@ -1,131 +1,115 @@
+/* Inspirado en la bandera de Paraguay: rojo, blanco y azul */
 :root {
-    --rojo-paraguay: #D52B1E;
-    --azul-paraguay: #0038A8;
-    --blanco: #FFFFFF;
-    --degradado-header: linear-gradient(135deg, var(--rojo-paraguay) 0%, var(--azul-paraguay) 100%);
+  --rojo: #d32f2f;
+  --blanco: #ffffff;
+  --azul: #1976d2;
+  --gris: #f0f0f0;
+  --negro: #333;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    background: #f0f4f8;
-    color: #333;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--gris);
+  color: var(--negro);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Encabezado con diseño bandera */
-.header-gradient {
-    background: var(--degradado-header);
-    color: var(--blanco);
-    padding: 1rem 0;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+header {
+  background: linear-gradient(to right, var(--rojo), var(--blanco), var(--azul));
+  color: var(--negro);
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.logo-red { color: #FFD700; } /* Dorado inspirado en el escudo */
-.logo-blue { color: var(--blanco); }
-
-/* Contenedor de Chat estilo ChatGPT */
-.chat-container {
-    max-width: 800px;
-    margin: 2rem auto;
-    background: var(--blanco);
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
 }
 
-.chat-messages {
-    height: 60vh;
-    overflow-y: auto;
-    padding: 20px;
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
-/* Burbujas de mensaje */
+.chatbox {
+  background-color: white;
+  width: 100%;
+  max-width: 700px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
 .message {
-    display: flex;
-    margin-bottom: 15px;
-    animation: fadeIn 0.3s ease-in;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  max-width: 80%;
 }
 
-.bot-message { align-items: flex-start; }
-.user-message { align-items: flex-end; flex-direction: row-reverse; }
-
-.message-content {
-    max-width: 70%;
-    padding: 12px 20px;
-    border-radius: 20px;
-    background: #f1f3f6;
-    position: relative;
+.user {
+  background-color: var(--azul);
+  color: white;
+  align-self: flex-end;
 }
 
-.bot-message .message-content {
-    background: var(--azul-paraguay);
-    color: var(--blanco);
+.bot {
+  background-color: var(--rojo);
+  color: white;
+  align-self: flex-start;
 }
 
-.message-icon {
-    font-size: 1.5rem;
-    margin: 0 10px;
-}
-
-/* Input estilo moderno */
-.input-container {
-    display: flex;
-    padding: 20px;
-    border-top: 2px solid #eee;
+.input-area {
+  display: flex;
+  border-top: 1px solid #ccc;
+  padding: 1rem;
+  gap: 0.5rem;
+  background-color: var(--blanco);
 }
 
 textarea {
-    flex: 1;
-    border: 2px solid var(--azul-paraguay);
-    border-radius: 25px;
-    padding: 15px;
-    resize: none;
-    font-size: 16px;
+  flex: 1;
+  resize: none;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
 button {
-    background: var(--rojo-paraguay);
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: transform 0.2s;
+  background-color: var(--azul);
+  color: white;
+  border: none;
+  padding: 0 1.25rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
 button:hover {
-    transform: scale(1.1);
+  background-color: #115293;
 }
 
-/* Animaciones y detalles culturales */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Patrón de fondo inspirado en Ñandutí */
-body::after {
-    content: "";
-    position: fixed;
-   /* Animación de puntos de carga */
-@keyframes blink {
-    0%, 100% { opacity: 0.2; }
-    50% { opacity: 1; }
-}
-
-.loading-dots .dot {
-    animation: blink 1.4s infinite;
-    display: inline-block;
-}
-
-.loading-dots .dot:nth-child(2) { animation-delay: 0.2s; }
-.loading-dots .dot:nth-child(3) { animation-delay: 0.4s; }
-
-.legal-reference {
-    font-size: 0.8rem;
-    color: var(--azul-paraguay);
-    margin-top: 10px;
-    border-left: 3px solid var(--rojo-paraguay);
-    padding-left: 8px;
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background-color: #eaeaea;
 }
