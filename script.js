@@ -1,213 +1,87 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Elements
-    const userInput = document.getElementById('user-input');
+    // DOM elements
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input');
     const sendButton = document.getElementById('send-button');
     const chatMessages = document.getElementById('chat-messages');
     const newChatBtn = document.querySelector('.new-chat-btn');
-    const historyList = document.getElementById('history-list');
-    const themeToggle = document.getElementById('theme-toggle');
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const sidebar = document.querySelector('.sidebar');
-    const currentChatTitle = document.querySelector('.current-chat-title');
     
-    // Constants
-    const WEBHOOK_URL = 'https://mgcapra314.app.n8n.cloud/webhook/Colepa2025';
-    const MAX_HISTORY_ITEMS = 10;
-    
-    // State
-    let chatHistory = loadChatHistory();
+    // State variables
+    let isWaitingForResponse = false;
+    let chatHistory = [];
     let currentChatId = generateChatId();
-    let currentChat = [];
-    let isDarkMode = localStorage.getItem('darkMode') === 'true';
     
-    // Initialize
-    initTheme();
-    renderChatHistory();
-    adjustTextareaHeight();
+    // N8n webhook URL
+    const webhookUrl = 'https://mgcapra314.app.n8n.cloud/webhook/Colepa2025';
     
-    // Event Listeners
-    userInput.addEventListener('input', function() {
-        adjustTextareaHeight();
-        sendButton.disabled = userInput.value.trim() === '';
+    // Enable/disable send button based on input content
+    chatInput.addEventListener('input', function() {
+        sendButton.disabled = chatInput.value.trim() === '' || isWaitingForResponse;
+        
+        // Auto resize textarea
+        chatInput.style.height = 'auto';
+        chatInput.style.height = (chatInput.scrollHeight) + 'px';
     });
     
-    userInput.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' && !e.shiftKey) {
-            e.preventDefault();
-            if (!sendButton.disabled) {
-                sendMessage();
-            }
-        }
+    // Handle new chat button click
+    newChatBtn.addEventListener('click', function() {
+        startNewChat();
     });
     
-    sendButton.addEventListener('click', sendMessage);
-    newChatBtn.addEventListener('click', startNewChat);
-    themeToggle.addEventListener('click', toggleTheme);
-    mobileMenuToggle.addEventListener('click', toggleSidebar);
+    // Handle form submission
+    chatForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const message = chatInput.value.trim();
+        if (message === '' || isWaitingForResponse) return;
+        
+        sendMessage(message);
+    });
     
-    // Functions
-    function initTheme() {
-        if (isDarkMode) {
-            document.body.classList.add('dark-mode');
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        } else {
-            document.body.classList.remove('dark-mode');
-            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-        }
-    }
-    
-    function toggleTheme() {
-        isDarkMode = !isDarkMode;
-        localStorage.setItem('darkMode', isDarkMode);
-        initTheme();
-    }
-    
-    function toggleSidebar() {
-        sidebar.classList.toggle('open');
-    }
-    
-    function generateChatId() {
-        return Date.now().toString(36) + Math.random().toString(36).substr(2);
-    }
-    
+    // Function to start a new chat
     function startNewChat() {
         currentChatId = generateChatId();
-        currentChat = [];
-        currentChatTitle.textContent = 'Nueva Consulta';
         chatMessages.innerHTML = '';
         
         // Add welcome message
         const welcomeMessage = {
-            role: 'assistant',
-            content: '¡Bienvenido a COLEPA! Estoy aquí para ayudarte con consultas sobre leyes paraguayas. ¿En qué puedo asistirte hoy?'
+            role: 'system',
+            content: `
+                <p>¡Bienvenido a COLEPA - Consulta de Leyes del Paraguay!</p>
+                <p>Soy tu asistente legal virtual. Puedo responder preguntas sobre leyes paraguayas y brindarte información legal precisa.</p>
+                <p>¿En qué puedo ayudarte hoy?</p>
+            `
         };
-        addMessageToChat(welcomeMessage);
         
-        if (window.innerWidth < 768) {
-            sidebar.classList.remove('open');
-        }
+        addMessageToUI(welcomeMessage);
+        updateChatHistory();
+        
+        // Reset input
+        chatInput.value = '';
+        chatInput.style.height = 'auto';
+        sendButton.disabled = true;
     }
     
-    function sendMessage() {
-        const message = userInput.value.trim();
-        if (!message) return;
-        
+    // Function to send message to n8n agent
+    async function sendMessage(message) {
         // Add user message to UI
         const userMessage = {
             role: 'user',
             content: message
         };
-        addMessageToChat(userMessage);
-        currentChat.push(userMessage);
+        addMessageToUI(userMessage);
         
-        // Clear input
-        userInput.value = '';
-        userInput.style.height = 'auto';
+        // Clear input and disable send button
+        chatInput.value = '';
+        chatInput.style.height = 'auto';
         sendButton.disabled = true;
+        isWaitingForResponse = true;
         
-        // Add "typing" indicator
-        const typingId = addTypingIndicator();
+        // Show typing indicator
+        showTypingIndicator();
         
-        // Update chat title with first few words of first message
-        if (currentChat.length === 1) {
-            const title = message.slice(0, 30) + (message.length > 30 ? '...' : '');
-            currentChatTitle.textContent = title;
-            
-            // Add to history
-            addChatToHistory(currentChatId, title);
-        }
-        
-        // Send message to webhook
-        fetchResponse(message, typingId);
-    }
-    
-    function addMessageToChat(message) {
-        const messageEl = document.createElement('div');
-        messageEl.className = `message ${message.role}`;
-        
-        const avatar = document.createElement('div');
-        avatar.className = 'message-avatar';
-        
-        if (message.role === 'assistant') {
-            avatar.innerHTML = '<i class="fas fa-balance-scale"></i>';
-        } else {
-            avatar.innerHTML = '<i class="fas fa-user"></i>';
-        }
-        
-        const contentEl = document.createElement('div');
-        contentEl.className = 'message-content';
-        
-        const headerEl = document.createElement('div');
-        headerEl.className = 'message-header';
-        
-        const authorEl = document.createElement('div');
-        authorEl.className = 'message-author';
-        authorEl.textContent = message.role === 'assistant' ? 'Asistente COLEPA' : 'Tú';
-        
-        headerEl.appendChild(authorEl);
-        
-        const textEl = document.createElement('div');
-        textEl.className = 'message-text';
-        textEl.innerHTML = `<p>${message.content}</p>`;
-        
-        contentEl.appendChild(headerEl);
-        contentEl.appendChild(textEl);
-        
-        messageEl.appendChild(avatar);
-        messageEl.appendChild(contentEl);
-        
-        chatMessages.appendChild(messageEl);
-        scrollToBottom();
-    }
-    
-    function addTypingIndicator() {
-        const typingId = 'typing-' + Date.now();
-        const typingEl = document.createElement('div');
-        typingEl.className = 'message assistant typing';
-        typingEl.id = typingId;
-        
-        const avatar = document.createElement('div');
-        avatar.className = 'message-avatar';
-        avatar.innerHTML = '<i class="fas fa-balance-scale"></i>';
-        
-        const contentEl = document.createElement('div');
-        contentEl.className = 'message-content';
-        
-        const headerEl = document.createElement('div');
-        headerEl.className = 'message-header';
-        
-        const authorEl = document.createElement('div');
-        authorEl.className = 'message-author';
-        authorEl.textContent = 'Asistente COLEPA';
-        
-        headerEl.appendChild(authorEl);
-        
-        const textEl = document.createElement('div');
-        textEl.className = 'message-text';
-        textEl.innerHTML = '<p><span class="typing-dots"><span>.</span><span>.</span><span>.</span></span></p>';
-        
-        contentEl.appendChild(headerEl);
-        contentEl.appendChild(textEl);
-        
-        typingEl.appendChild(avatar);
-        typingEl.appendChild(contentEl);
-        
-        chatMessages.appendChild(typingEl);
-        scrollToBottom();
-        
-        return typingId;
-    }
-    
-    function removeTypingIndicator(typingId) {
-        const typingEl = document.getElementById(typingId);
-        if (typingEl) {
-            typingEl.remove();
-        }
-    }
-    
-    async function fetchResponse(message, typingId) {
         try {
-            const response = await fetch(WEBHOOK_URL, {
+            const response = await fetch(webhookUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -219,140 +93,300 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             if (!response.ok) {
-                throw new Error('Error en la respuesta del servidor');
+                throw new Error(`Error: ${response.status}`);
             }
             
             const data = await response.json();
-            removeTypingIndicator(typingId);
             
-            // Add assistant message to UI
-            const assistantMessage = {
-                role: 'assistant',
-                content: data.response || '¡Disculpa! No he podido procesar tu consulta. Por favor, intenta nuevamente.'
+            // Remove typing indicator
+            hideTypingIndicator();
+            
+            // Add bot response to UI
+            const botMessage = {
+                role: 'system',
+                content: formatBotResponse(data.response || "Lo siento, no pude procesar tu consulta. Por favor, intenta de nuevo.")
             };
+            addMessageToUI(botMessage);
             
-            addMessageToChat(assistantMessage);
-            currentChat.push(assistantMessage);
-            saveChatHistory();
+            // Save to chat history
+            saveChatMessage(userMessage, botMessage);
             
         } catch (error) {
             console.error('Error:', error);
-            removeTypingIndicator(typingId);
             
-            // Add error message
+            // Remove typing indicator
+            hideTypingIndicator();
+            
+            // Add error message to UI
             const errorMessage = {
-                role: 'assistant',
-                content: 'Lo siento, ha ocurrido un error al procesar tu consulta. Por favor, intenta nuevamente más tarde.'
+                role: 'system',
+                content: `
+                    <p>Lo siento, ha ocurrido un error al procesar tu consulta.</p>
+                    <p>Por favor, intenta de nuevo más tarde o verifica tu conexión a internet.</p>
+                    <p>Error: ${error.message}</p>
+                `
             };
-            
-            addMessageToChat(errorMessage);
+            addMessageToUI(errorMessage);
         }
+        
+        isWaitingForResponse = false;
     }
     
-    function adjustTextareaHeight() {
-        userInput.style.height = 'auto';
-        userInput.style.height = (userInput.scrollHeight) + 'px';
-    }
-    
-    function scrollToBottom() {
+    // Function to add a message to the UI
+    function addMessageToUI(message) {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message');
+        
+        if (message.role === 'user') {
+            messageDiv.classList.add('user');
+            messageDiv.innerHTML = `
+                <div class="message-content">
+                    <div class="message-text">${escapeHTML(message.content)}</div>
+                </div>
+            `;
+        } else {
+            messageDiv.classList.add('system');
+            messageDiv.innerHTML = `
+                <div class="message-content">
+                    <div class="message-header">
+                        <div class="bot-avatar">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div class="bot-name">COLEPA</div>
+                    </div>
+                    <div class="message-text">${message.content}</div>
+                </div>
+            `;
+        }
+        
+        chatMessages.appendChild(messageDiv);
+        
+        // Scroll to bottom
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
     
-    function loadChatHistory() {
-        const history = localStorage.getItem('chatHistory');
-        return history ? JSON.parse(history) : [];
+    // Function to show typing indicator
+    function showTypingIndicator() {
+        const typingDiv = document.createElement('div');
+        typingDiv.id = 'typing-indicator';
+        typingDiv.classList.add('typing-indicator');
+        typingDiv.innerHTML = `
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+        `;
+        chatMessages.appendChild(typingDiv);
+        
+        // Scroll to bottom
+        chatMessages.scrollTop = chatMessages.scrollHeight;
     }
     
-    function saveChatHistory() {
-        localStorage.setItem('chatHistory', JSON.stringify(chatHistory));
+    // Function to hide typing indicator
+    function hideTypingIndicator() {
+        const typingIndicator = document.getElementById('typing-indicator');
+        if (typingIndicator) {
+            typingIndicator.remove();
+        }
     }
     
-    function addChatToHistory(id, title) {
-        // Add new chat to beginning of array
-        chatHistory.unshift({
-            id: id,
-            title: title,
-            timestamp: Date.now()
+    // Function to format bot response
+    function formatBotResponse(text) {
+        // Replace URLs with clickable links
+        const urlRegex = /(https?:\/\/[^\s]+)/g;
+        text = text.replace(urlRegex, function(url) {
+            return `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`;
         });
         
-        // Limit history size
-        if (chatHistory.length > MAX_HISTORY_ITEMS) {
-            chatHistory = chatHistory.slice(0, MAX_HISTORY_ITEMS);
-        }
-        
-        saveChatHistory();
-        renderChatHistory();
+        // Wrap paragraphs in <p> tags
+        const paragraphs = text.split('\n\n');
+        return paragraphs.map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
     }
     
-    function renderChatHistory() {
-        historyList.innerHTML = '';
+    // Function to save chat messages
+    function saveChatMessage(userMessage, botMessage) {
+        const chatEntry = {
+            id: Date.now(),
+            chatId: currentChatId,
+            userMessage: userMessage.content,
+            botMessage: botMessage.content,
+            timestamp: new Date().toISOString()
+        };
         
-        if (chatHistory.length === 0) {
-            const emptyEl = document.createElement('li');
-            emptyEl.className = 'history-empty';
-            emptyEl.textContent = 'No hay consultas previas';
-            historyList.appendChild(emptyEl);
-            return;
+        chatHistory.push(chatEntry);
+        
+        // Only keep the most recent 10 chats
+        if (chatHistory.length > 50) {
+            chatHistory = chatHistory.slice(-50);
         }
         
-        chatHistory.forEach(chat => {
-            const chatEl = document.createElement('li');
-            chatEl.className = 'history-item';
-            chatEl.dataset.id = chat.id;
+        updateChatHistory();
+        
+        // Save to localStorage
+        try {
+            localStorage.setItem('colepa_chat_history', JSON.stringify(chatHistory));
+        } catch (e) {
+            console.error('Error saving to localStorage:', e);
+        }
+    }
+    
+    // Function to update chat history UI
+    function updateChatHistory() {
+        const historyContainer = document.querySelector('.chat-history');
+        historyContainer.innerHTML = '';
+        
+        // Get unique chat IDs and the most recent message from each
+        const uniqueChats = {};
+        for (const chat of chatHistory) {
+            if (!uniqueChats[chat.chatId] || 
+                new Date(chat.timestamp) > new Date(uniqueChats[chat.chatId].timestamp)) {
+                uniqueChats[chat.chatId] = chat;
+            }
+        }
+        
+        // Create a history item for each unique chat
+        for (const chatId in uniqueChats) {
+            const chat = uniqueChats[chatId];
+            const historyItem = document.createElement('div');
+            historyItem.classList.add('history-item');
+            if (chatId === currentChatId) {
+                historyItem.classList.add('active');
+            }
             
-            const chatTitle = document.createElement('div');
-            chatTitle.className = 'history-item-title';
-            chatTitle.textContent = chat.title;
+            // Create a truncated preview of the user message
+            const previewText = chat.userMessage.length > 25 
+                ? chat.userMessage.substring(0, 25) + '...' 
+                : chat.userMessage;
             
-            const chatDate = document.createElement('div');
-            chatDate.className = 'history-item-date';
-            chatDate.textContent = formatDate(chat.timestamp);
+            historyItem.innerHTML = `
+                <i class="fas fa-comment"></i>
+                <span>${escapeHTML(previewText)}</span>
+            `;
             
-            chatEl.appendChild(chatTitle);
-            chatEl.appendChild(chatDate);
-            
-            chatEl.addEventListener('click', () => {
-                loadChat(chat.id);
+            historyItem.addEventListener('click', function() {
+                loadChat(chat.chatId);
             });
             
-            historyList.appendChild(chatEl);
-        });
-    }
-    
-    function formatDate(timestamp) {
-        const date = new Date(timestamp);
-        return date.toLocaleDateString('es-PY', { 
-            day: '2-digit', 
-            month: '2-digit', 
-            year: '2-digit',
-            hour: '2-digit',
-            minute: '2-digit'
-        });
-    }
-    
-    function loadChat(chatId) {
-        // This is a placeholder - in a real application, you'd fetch the chat from the server
-        // For this demo, we'll just show that the chat was selected
-        currentChatId = chatId;
-        
-        // Find the chat in history
-        const chat = chatHistory.find(c => c.id === chatId);
-        if (chat) {
-            currentChatTitle.textContent = chat.title;
+            historyContainer.appendChild(historyItem);
         }
-        
-        // Clear current chat
+    }
+    
+    // Function to load a specific chat
+    function loadChat(chatId) {
+        currentChatId = chatId;
         chatMessages.innerHTML = '';
         
-        // Add a placeholder message
-        const placeholderMessage = {
-            role: 'assistant',
-            content: 'Has cargado una consulta previa. En una versión completa, aquí se mostrarían los mensajes de esta conversación.'
-        };
-        addMessageToChat(placeholderMessage);
+        // Filter chat history for the selected chat
+        const chatMessages = chatHistory.filter(chat => chat.chatId === chatId);
         
-        if (window.innerWidth < 768) {
-            sidebar.classList.remove('open');
+        // Sort by timestamp
+        chatMessages.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+        
+        // Add messages to UI
+        for (const chat of chatMessages) {
+            const userMessage = {
+                role: 'user',
+                content: chat.userMessage
+            };
+            const botMessage = {
+                role: 'system',
+                content: chat.botMessage
+            };
+            
+            addMessageToUI(userMessage);
+            addMessageToUI(botMessage);
+        }
+        
+        updateChatHistory();
+    }
+    
+    // Helper function to generate a chat ID
+    function generateChatId() {
+        return 'chat_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    }
+    
+    // Helper function to escape HTML
+    function escapeHTML(str) {
+        return str.replace(/[&<>'"]/g, 
+            tag => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                "'": '&#39;',
+                '"': '&quot;'
+            }[tag]));
+    }
+    
+    // Load chat history from localStorage on page load
+    function loadChatHistory() {
+        try {
+            const savedHistory = localStorage.getItem('colepa_chat_history');
+            if (savedHistory) {
+                chatHistory = JSON.parse(savedHistory);
+                updateChatHistory();
+            }
+        } catch (e) {
+            console.error('Error loading from localStorage:', e);
         }
     }
+    
+    // Handle sidebar toggle on mobile
+    function setupMobileSidebar() {
+        // Check if we're on mobile
+        if (window.innerWidth <= 768) {
+            const sidebar = document.querySelector('.sidebar');
+            
+            // Create toggle button if it doesn't exist
+            if (!document.querySelector('.menu-toggle')) {
+                const menuToggle = document.createElement('button');
+                menuToggle.classList.add('menu-toggle');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                
+                const logoContainer = document.querySelector('.logo-container');
+                logoContainer.appendChild(menuToggle);
+                
+                // Add toggle functionality
+                menuToggle.addEventListener('click', function() {
+                    sidebar.classList.toggle('expanded');
+                });
+            }
+        }
+    }
+    
+    // Add futuristic design elements
+    function addFuturisticElements() {
+        const mainContent = document.querySelector('.main-content');
+        
+        // Add flag gradient
+        const flagGradient = document.createElement('div');
+        flagGradient.classList.add('flag-gradient');
+        mainContent.appendChild(flagGradient);
+        
+        // Add decorative circles
+        const circle1 = document.createElement('div');
+        circle1.classList.add('futuristic-circle', 'circle-1');
+        mainContent.appendChild(circle1);
+        
+        const circle2 = document.createElement('div');
+        circle2.classList.add('futuristic-circle', 'circle-2');
+        mainContent.appendChild(circle2);
+    }
+    
+    // Initialize app
+    function init() {
+        loadChatHistory();
+        setupMobileSidebar();
+        addFuturisticElements();
+        
+        // Ensure textarea is properly sized
+        chatInput.style.height = 'auto';
+        chatInput.style.height = (chatInput.scrollHeight) + 'px';
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            setupMobileSidebar();
+        });
+    }
+    
+    // Initialize app
+    init();
 });
