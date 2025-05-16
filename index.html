@@ -1,32 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>COLEPA - Consultas Legales Paraguay</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLEPA - Consulta de Leyes Paraguayas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>🇵🇾 COLEPA</h1>
-    <p>Consultas legales al instante en Paraguay</p>
-  </header>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <h1 class="logo">COLEPA</h1>
+                <p class="tagline">Consultá leyes paraguayas</p>
+            </div>
+            <button class="new-chat-btn">
+                <i class="fas fa-plus"></i> Nueva Consulta
+            </button>
+            <div class="chat-history">
+                <h3>Historial de Consultas</h3>
+                <ul id="history-list">
+                    <!-- Chat history will be populated here by JavaScript -->
+                </ul>
+            </div>
+            <div class="sidebar-footer">
+                <div class="paraguay-flag">
+                    <div class="flag-stripe red"></div>
+                    <div class="flag-stripe white"></div>
+                    <div class="flag-stripe blue"></div>
+                </div>
+                <p class="version">Versión Demo 1.0</p>
+            </div>
+        </div>
 
-  <main>
-    <div class="chatbox">
-      <div class="messages" id="chat"></div>
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <h2 class="current-chat-title">Nueva Consulta</h2>
+                <div class="header-actions">
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </header>
 
-      <div class="input-area">
-        <textarea id="userInput" placeholder="Escribí tu pregunta legal aquí..."></textarea>
-        <button onclick="enviarPregunta()">Enviar</button>
-      </div>
+            <!-- Chat Container -->
+            <div class="chat-container">
+                <div id="chat-messages">
+                    <!-- Welcome message -->
+                    <div class="message assistant">
+                        <div class="message-avatar">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div class="message-content">
+                            <div class="message-header">
+                                <div class="message-author">Asistente COLEPA</div>
+                            </div>
+                            <div class="message-text">
+                                <p>¡Bienvenido a COLEPA! Estoy aquí para ayudarte con consultas sobre leyes paraguayas. ¿En qué puedo asistirte hoy?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Messages will be added here by JavaScript -->
+                </div>
+
+                <!-- Input Area -->
+                <div class="input-container">
+                    <div class="input-box">
+                        <textarea id="user-input" placeholder="Escribe tu consulta sobre leyes paraguayas..." rows="1"></textarea>
+                        <button id="send-button" disabled>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <p class="disclaimer">Versión Demo: Consulta leyes paraguayas. La información proporcionada es referencial y no reemplaza el asesoramiento legal profesional.</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </main>
 
-  <footer>
-    <p>© 2025 COLEPA | Todos los derechos reservados</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
