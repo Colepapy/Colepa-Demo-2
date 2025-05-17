@@ -84,11 +84,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const response = await fetch(webhookUrl, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    query: message
+                    text: message
                 })
             });
             
@@ -101,18 +100,20 @@ document.addEventListener('DOMContentLoaded', function() {
             // Remove typing indicator
             hideTypingIndicator();
             
-            // Determinar cuál es el campo de respuesta
-            let botResponseText = "";
-            if (data.response) {
-                botResponseText = data.response;
-            } else if (data.respuesta) {
-                botResponseText = data.respuesta;
-            } else if (data.answer) {
-                botResponseText = data.answer;
-            } else if (data.text) {
-                botResponseText = data.text;
-            } else {
-                botResponseText = "El servicio de consulta legal está experimentando dificultades temporales. Por favor, intenta de nuevo más tarde.";
+            // Mostrar la respuesta
+            let botResponseText = "No se recibió una respuesta válida del servicio.";
+            
+            if (data && typeof data === 'object') {
+                if (data.respuesta !== undefined) {
+                    botResponseText = data.respuesta;
+                } else if (data.output !== undefined) {
+                    botResponseText = data.output;
+                } else {
+                    // Si no hay campos específicos, intentar usar todo el objeto
+                    botResponseText = JSON.stringify(data);
+                }
+            } else if (typeof data === 'string') {
+                botResponseText = data;
             }
             
             // Add bot response to UI
@@ -136,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 role: 'system',
                 content: `
                     <p>Lo siento, ha ocurrido un error al procesar tu consulta.</p>
-                    <p>Por favor, intenta de nuevo más tarde o verifica tu conexión a internet.</p>
+                    <p>Por favor, intenta de nuevo más tarde.</p>
                     <p>Error: ${error.message}</p>
                 `
             };
