@@ -81,6 +81,15 @@ document.addEventListener('DOMContentLoaded', function() {
         showTypingIndicator();
         
         try {
+   // Data that we would use 
+            const requestData = {
+                message: message,
+                chatId: currentChatId,
+                query: message
+            };
+            
+            console.log("Enviando datos al webhook:", requestData);
+            
             const response = await fetch(webhookUrl, {
                 method: 'POST',
                 headers: {
