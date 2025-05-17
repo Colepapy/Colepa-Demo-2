@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showTypingIndicator();
         
         try {
-             // Enviamos un JSON con una estructura muy simple - solo el mensaje
+            // Enviamos un JSON con una estructura muy simple - solo el mensaje
             console.log("Enviando mensaje simple:", message);
             
             const response = await fetch(webhookUrl, {
@@ -90,6 +90,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
+                    texto: message  // Usamos "texto" como clave única
+                })
             });
             
             if (!response.ok) {
