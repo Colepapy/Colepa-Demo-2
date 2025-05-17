@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let chatHistory = [];
     let currentChatId = generateChatId();
     
-    // API URL para el backend
-    const apiUrl = 'https://mgcapra314.app.n8n.cloud/webhook/Colepa2025';
+    // Webhook URL de n8n - conexión directa
+    const webhookUrl = 'https://mgcapra314.app.n8n.cloud/webhook/Colepa2025';
     
     // Enable/disable send button based on input content
     chatInput.addEventListener('input', function() {
@@ -81,14 +81,15 @@ document.addEventListener('DOMContentLoaded', function() {
         showTypingIndicator();
         
         try {
-            const response = await fetch(apiUrl, {
+            const response = await fetch(webhookUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
                     message: message,
-                    chatId: currentChatId
+                    chatId: currentChatId,
+                    query: message
                 })
             });
             
@@ -97,14 +98,29 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             const data = await response.json();
+            console.log("Respuesta recibida:", data);
             
             // Remove typing indicator
             hideTypingIndicator();
             
+            // Determinar cuál es el campo de respuesta
+            let botResponseText = "";
+            if (data.response) {
+                botResponseText = data.response;
+            } else if (data.respuesta) {
+                botResponseText = data.respuesta;
+            } else if (data.answer) {
+                botResponseText = data.answer;
+            } else if (data.text) {
+                botResponseText = data.text;
+            } else {
+                botResponseText = JSON.stringify(data);
+            }
+            
             // Add bot response to UI
             const botMessage = {
                 role: 'system',
-                content: formatBotResponse(data.response || "Lo siento, no pude procesar tu consulta. Por favor, intenta de nuevo.")
+                content: formatBotResponse(botResponseText)
             };
             addMessageToUI(botMessage);
             
@@ -214,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         chatHistory.push(chatEntry);
         
-        // Only keep the most recent 10 chats
+        // Only keep the most recent 50 chats
         if (chatHistory.length > 50) {
             chatHistory = chatHistory.slice(-50);
         }
@@ -276,13 +292,13 @@ document.addEventListener('DOMContentLoaded', function() {
         chatMessages.innerHTML = '';
         
         // Filter chat history for the selected chat
-        const chatMessages = chatHistory.filter(chat => chat.chatId === chatId);
+        const filteredMessages = chatHistory.filter(chat => chat.chatId === chatId);
         
         // Sort by timestamp
-        chatMessages.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+        filteredMessages.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
         
         // Add messages to UI
-        for (const chat of chatMessages) {
+        for (const chat of filteredMessages) {
             const userMessage = {
                 role: 'user',
                 content: chat.userMessage
