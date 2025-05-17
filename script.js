@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let chatHistory = [];
     let currentChatId = generateChatId();
     
-    // Webhook URL de n8n - conexión directa
+    // Webhook URL de n8n
     const webhookUrl = 'https://mgcapra314.app.n8n.cloud/webhook/Colepa2025';
     
     // Enable/disable send button based on input content
@@ -81,24 +81,14 @@ document.addEventListener('DOMContentLoaded', function() {
         showTypingIndicator();
         
         try {
-   // Data that we would use 
-            const requestData = {
-                message: message,
-                chatId: currentChatId,
-                query: message
-            };
-            
-            console.log("Enviando datos al webhook:", requestData);
-            
+            // Formato más simple, solo enviar el texto directamente
             const response = await fetch(webhookUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    message: message,
-                    chatId: currentChatId,
-                    query: message
+                    text: message
                 })
             });
             
@@ -107,23 +97,21 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             const data = await response.json();
-            console.log("Respuesta recibida:", data);
             
             // Remove typing indicator
             hideTypingIndicator();
             
-            // Determinar cuál es el campo de respuesta
-            let botResponseText = "";
-            if (data.response) {
-                botResponseText = data.response;
-            } else if (data.respuesta) {
-                botResponseText = data.respuesta;
-            } else if (data.answer) {
-                botResponseText = data.answer;
-            } else if (data.text) {
-                botResponseText = data.text;
-            } else {
-                botResponseText = JSON.stringify(data);
+            // Determinar el texto de respuesta o usar texto por defecto
+            let botResponseText = "No se recibió respuesta del servidor.";
+            
+            if (typeof data === 'string') {
+                botResponseText = data;
+            } else if (data && typeof data === 'object') {
+                if (data.text) botResponseText = data.text;
+                else if (data.respuesta) botResponseText = data.respuesta;
+                else if (data.response) botResponseText = data.response;
+                else if (data.answer) botResponseText = data.answer;
+                else botResponseText = JSON.stringify(data);
             }
             
             // Add bot response to UI
@@ -147,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 role: 'system',
                 content: `
                     <p>Lo siento, ha ocurrido un error al procesar tu consulta.</p>
-                    <p>Por favor, intenta de nuevo más tarde o verifica tu conexión a internet.</p>
+                    <p>Por favor, intenta de nuevo más tarde.</p>
                     <p>Error: ${error.message}</p>
                 `
             };
