@@ -81,21 +81,15 @@ document.addEventListener('DOMContentLoaded', function() {
         showTypingIndicator();
         
         try {
-            // Enviar mensaje como JSON con texto claro
-            console.log("Enviando mensaje:", message);
+            // Enviar mensaje como texto plano sin formato JSON
+            console.log("Enviando mensaje como texto plano:", message);
             
             const response = await fetch(webhookUrl, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'text/plain'
                 },
-                body: JSON.stringify({
-                    query: message,
-                    pregunta: message,
-                    text: message,
-                    message: message,
-                    content: message
-                })
+                body: message // Solo el texto, sin formato JSON
             });
             
             if (!response.ok) {
@@ -103,31 +97,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             const data = await response.json();
-            console.log("Respuesta recibida:", data);
             
             // Remove typing indicator
             hideTypingIndicator();
             
-            // Mostrar la respuesta
-            let botResponseText = "No se recibió una respuesta válida del servicio.";
+            console.log("Respuesta completa del webhook:", data);
             
-            if (data && typeof data === 'object') {
-                if (data.respuesta !== undefined) {
-                    botResponseText = data.respuesta;
-                } else if (data.output !== undefined) {
-                    botResponseText = data.output;
-                } else if (data.response !== undefined) {
-                    botResponseText = data.response;
-                } else if (data.text !== undefined) {
-                    botResponseText = data.text;
-                } else if (data.answer !== undefined) {
-                    botResponseText = data.answer;
-                } else {
-                    // Si no hay campos específicos, intentar usar todo el objeto
-                    botResponseText = JSON.stringify(data);
-                }
-            } else if (typeof data === 'string') {
-                botResponseText = data;
+            // Determinar cuál es el campo de respuesta
+            let botResponseText = "";
+            if (data.response && data.response !== "") {
+                botResponseText = data.response;
+            } else if (data.respuesta && data.respuesta !== "") {
+                botResponseText = data.respuesta;
+            } else if (data.answer && data.answer !== "") {
+                botResponseText = data.answer;
+            } else if (data.text && data.text !== "") {
+                botResponseText = data.text;
+            } else {
+                botResponseText = "Lo siento, no he podido procesar tu consulta. El servicio de consulta legal podría estar temporalmente no disponible. Por favor, intenta de nuevo más tarde.";
             }
             
             // Add bot response to UI
@@ -151,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 role: 'system',
                 content: `
                     <p>Lo siento, ha ocurrido un error al procesar tu consulta.</p>
-                    <p>Por favor, intenta de nuevo más tarde.</p>
+                    <p>Por favor, intenta de nuevo más tarde o verifica tu conexión a internet.</p>
                     <p>Error: ${error.message}</p>
                 `
             };
@@ -243,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         chatHistory.push(chatEntry);
         
-        // Only keep the most recent 50 chats
+        // Only keep the most recent 10 chats
         if (chatHistory.length > 50) {
             chatHistory = chatHistory.slice(-50);
         }
@@ -305,13 +292,13 @@ document.addEventListener('DOMContentLoaded', function() {
         chatMessages.innerHTML = '';
         
         // Filter chat history for the selected chat
-        const filteredMessages = chatHistory.filter(chat => chat.chatId === chatId);
+        const chatMessages = chatHistory.filter(chat => chat.chatId === chatId);
         
         // Sort by timestamp
-        filteredMessages.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+        chatMessages.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
         
         // Add messages to UI
-        for (const chat of filteredMessages) {
+        for (const chat of chatMessages) {
             const userMessage = {
                 role: 'user',
                 content: chat.userMessage
