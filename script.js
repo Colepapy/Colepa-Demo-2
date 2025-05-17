@@ -81,15 +81,15 @@ document.addEventListener('DOMContentLoaded', function() {
         showTypingIndicator();
         
         try {
-            // Enviar mensaje como texto plano sin formato JSON
-            console.log("Enviando mensaje como texto plano:", message);
+             // Enviamos un JSON con una estructura muy simple - solo el mensaje
+            console.log("Enviando mensaje simple:", message);
             
             const response = await fetch(webhookUrl, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'text/plain'
+                    'Content-Type': 'application/json'
                 },
-                body: message // Solo el texto, sin formato JSON
+                body: JSON.stringify({
             });
             
             if (!response.ok) {
