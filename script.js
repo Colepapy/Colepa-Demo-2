@@ -81,13 +81,20 @@ document.addEventListener('DOMContentLoaded', function() {
         showTypingIndicator();
         
         try {
+            // Enviar mensaje como JSON con texto claro
+            console.log("Enviando mensaje:", message);
+            
             const response = await fetch(webhookUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    text: message
+                    query: message,
+                    pregunta: message,
+                    text: message,
+                    message: message,
+                    content: message
                 })
             });
             
@@ -96,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             const data = await response.json();
+            console.log("Respuesta recibida:", data);
             
             // Remove typing indicator
             hideTypingIndicator();
@@ -108,6 +116,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     botResponseText = data.respuesta;
                 } else if (data.output !== undefined) {
                     botResponseText = data.output;
+                } else if (data.response !== undefined) {
+                    botResponseText = data.response;
+                } else if (data.text !== undefined) {
+                    botResponseText = data.text;
+                } else if (data.answer !== undefined) {
+                    botResponseText = data.answer;
                 } else {
                     // Si no hay campos específicos, intentar usar todo el objeto
                     botResponseText = JSON.stringify(data);
