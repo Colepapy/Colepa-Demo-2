@@ -95,61 +95,74 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             if (!response.ok) {
-                throw new Error(`Error: ${response.status}`);
+                throw new Error(`Error HTTP: ${response.status}`);
             }
+            
+            // Primero capturamos el texto completo de la respuesta para diagnóstico
+            const responseText = await response.text();
+            console.log("Respuesta completa (texto):", responseText);
             
             let botResponseText = "";
             
-            try {
-                // Primero intentamos procesar como JSON
-                const data = await response.json();
-                console.log("Respuesta completa del webhook:", data);
-                
-                // Determinar cuál es el campo de respuesta
-                if (data.response && data.response !== "") {
-                    botResponseText = data.response;
-                } else if (data.respuesta && data.respuesta !== "") {
-                    botResponseText = data.respuesta;
-                } else if (data.answer && data.answer !== "") {
-                    botResponseText = data.answer;
-                } else if (data.text && data.text !== "") {
-                    botResponseText = data.text;
-                } else {
-                    botResponseText = "Lo siento, no he podido procesar tu consulta. El servicio de consulta legal podría estar temporalmente no disponible. Por favor, intenta de nuevo más tarde.";
-                }
-            } catch (jsonError) {
-                console.error('Error al procesar JSON:', jsonError);
-                
-                // Si falla el parsing JSON, intentamos obtener el texto plano
+            // Intentamos procesar la respuesta de varias maneras
+            if (responseText && responseText.length > 0) {
                 try {
-                    const rawText = await response.text();
-                    console.log("Respuesta en texto plano:", rawText);
+                    // Intenta parse como JSON
+                    const data = JSON.parse(responseText);
+                    console.log("Respuesta parseada como JSON:", data);
                     
-                    // Intentamos extraer manualmente la respuesta
-                    if (rawText.includes('"respuesta":')) {
-                        try {
-                            // Intenta extraer el valor entre comillas
-                            botResponseText = rawText.match(/"respuesta":"([^"]*)"/)[1];
-                        } catch (e) {
-                            // Si la extracción falla, usa todo el texto
-                            botResponseText = rawText;
-                        }
+                    // Buscar el campo de respuesta en diferentes lugares posibles
+                    if (data.response) {
+                        botResponseText = data.response;
+                    } else if (data.respuesta) {
+                        botResponseText = data.respuesta;
+                    } else if (data.answer) {
+                        botResponseText = data.answer;
+                    } else if (data.text) {
+                        botResponseText = data.text;
+                    } else if (data.message) {
+                        botResponseText = data.message;
+                    } else if (data.output) {
+                        botResponseText = data.output;
+                    } else if (typeof data === 'string') {
+                        botResponseText = data;
                     } else {
-                        botResponseText = rawText;
+                        // Si llegamos aquí, no encontramos un campo de respuesta conocido
+                        // Convertimos todo el objeto a una cadena legible
+                        botResponseText = JSON.stringify(data, null, 2);
                     }
+                } catch (jsonError) {
+                    console.error('Error al parsear JSON:', jsonError);
                     
-                    // Si el texto es muy corto o vacío, usar mensaje por defecto
-                    if (!botResponseText || botResponseText.length < 5) {
-                        botResponseText = "Lo siento, hubo un problema al procesar tu consulta. Por favor, intenta nuevamente.";
+                    // Si no es JSON válido, intentamos extraer manualmente cualquier texto útil
+                    
+                    // Intento 1: Buscar patrones comunes de respuesta
+                    if (responseText.includes('"respuesta":')) {
+                        const match = responseText.match(/"respuesta":"([^"]*)"/);
+                        if (match && match[1]) {
+                            botResponseText = match[1];
+                        } else {
+                            botResponseText = responseText;
+                        }
+                    } 
+                    // Intento 2: Eliminar caracteres problemáticos y usar el texto tal cual
+                    else {
+                        botResponseText = responseText
+                            .replace(/\\n/g, '\n')  // Convertir \n literales en saltos de línea
+                            .replace(/\\"/g, '"');  // Convertir \" literales en "
                     }
-                } catch (textError) {
-                    console.error('Error al obtener texto:', textError);
-                    botResponseText = "Error en la comunicación con el servidor. Por favor, intenta nuevamente más tarde.";
                 }
+            } else {
+                botResponseText = "Respuesta vacía del servidor. Por favor, intenta de nuevo.";
             }
             
             // Remove typing indicator
             hideTypingIndicator();
+            
+            // Verificación final: si la respuesta sigue siendo muy corta o está vacía, mostrar mensaje de error
+            if (!botResponseText || botResponseText.trim().length < 3) {
+                botResponseText = "Lo siento, no pude obtener una respuesta adecuada del servidor. Por favor, intenta nuevamente.";
+            }
             
             // Add bot response to UI
             const botMessage = {
@@ -162,18 +175,18 @@ document.addEventListener('DOMContentLoaded', function() {
             saveChatMessage(userMessage, botMessage);
             
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Error completo:', error);
             
             // Remove typing indicator
             hideTypingIndicator();
             
-            // Add error message to UI
+            // Add error message to UI with más detalles
             const errorMessage = {
                 role: 'system',
                 content: `
-                    <p>Lo siento, ha ocurrido un error al procesar tu consulta.</p>
-                    <p>Por favor, intenta de nuevo más tarde o verifica tu conexión a internet.</p>
-                    <p>Error: ${error.message}</p>
+                    <p>Lo siento, ha ocurrido un error al comunicarse con el servidor.</p>
+                    <p>Por favor, intenta de nuevo más tarde.</p>
+                    <p><small>Detalles técnicos: ${error.message}</small></p>
                 `
             };
             addMessageToUI(errorMessage);
