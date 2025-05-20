@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let chatHistory = [];
     let currentChatId = generateChatId();
     
-    // Webhook URL de n8n - conexión directa
-    const webhookUrl = 'https://mgcapra314.app.n8n.cloud/webhook/Colepa2025';
+    // Cambiando el webhook URL a la alternativa
+    const webhookUrl = 'https://n8n.colepa.com.py/webhook/Colepa2025';
     
     // Enable/disable send button based on input content
     chatInput.addEventListener('input', function() {
