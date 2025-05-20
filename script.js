@@ -81,69 +81,43 @@ document.addEventListener('DOMContentLoaded', function() {
         showTypingIndicator();
         
         try {
-            // Preparar y enviar la solicitud
-            console.log("Enviando pregunta:", message);
-            
-            const requestBody = {
-                pregunta: message  // Usamos "pregunta" como clave
-            };
-            
-            console.log("Datos enviados:", JSON.stringify(requestBody));
+            // Enviamos un JSON con una estructura muy simple - solo el mensaje
+            console.log("Enviando mensaje simple:", message);
             
             const response = await fetch(webhookUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(requestBody)
+                body: JSON.stringify({
+                    texto: message  // Usamos "texto" como clave única
+                })
             });
             
-            console.log("Código de estado:", response.status);
-            console.log("Headers:", Object.fromEntries([...response.headers]));
-            
             if (!response.ok) {
-                throw new Error(`Error HTTP: ${response.status}`);
+                throw new Error(`Error: ${response.status}`);
             }
             
-            // Capturar el texto completo de la respuesta
-            const responseText = await response.text();
-            console.log("Respuesta completa (texto):", responseText);
-            
-            let botResponseText = "";
-            
-            // Intentamos procesar la respuesta
-            if (responseText && responseText.length > 0) {
-                try {
-                    // Intenta parse como JSON
-                    const data = JSON.parse(responseText);
-                    console.log("Respuesta parseada como JSON:", data);
-                    
-                    // Buscar campo de respuesta
-                    if (data.respuesta) {
-                        botResponseText = data.respuesta;
-                    } else if (data.output) {
-                        botResponseText = data.output;
-                    } else if (data.response) {
-                        botResponseText = data.response;
-                    } else if (data.text) {
-                        botResponseText = data.text;
-                    } else if (typeof data === 'string') {
-                        botResponseText = data;
-                    } else {
-                        // Mostrar estructura completa si no encontramos campo conocido
-                        botResponseText = "La respuesta del servidor no contiene un campo reconocible:\n\n" + 
-                                         JSON.stringify(data, null, 2);
-                    }
-                } catch (jsonError) {
-                    console.error('Error al parsear JSON:', jsonError);
-                    botResponseText = responseText;
-                }
-            } else {
-                botResponseText = "Respuesta vacía del servidor. Por favor, revisa la configuración del nodo 'AI Agent' en n8n.";
-            }
+            const data = await response.json();
             
             // Remove typing indicator
             hideTypingIndicator();
+            
+            console.log("Respuesta completa del webhook:", data);
+            
+            // Determinar cuál es el campo de respuesta
+            let botResponseText = "";
+            if (data.response && data.response !== "") {
+                botResponseText = data.response;
+            } else if (data.respuesta && data.respuesta !== "") {
+                botResponseText = data.respuesta;
+            } else if (data.answer && data.answer !== "") {
+                botResponseText = data.answer;
+            } else if (data.text && data.text !== "") {
+                botResponseText = data.text;
+            } else {
+                botResponseText = "Lo siento, no he podido procesar tu consulta. El servicio de consulta legal podría estar temporalmente no disponible. Por favor, intenta de nuevo más tarde.";
+            }
             
             // Add bot response to UI
             const botMessage = {
@@ -156,23 +130,18 @@ document.addEventListener('DOMContentLoaded', function() {
             saveChatMessage(userMessage, botMessage);
             
         } catch (error) {
-            console.error('Error completo:', error);
+            console.error('Error:', error);
             
             // Remove typing indicator
             hideTypingIndicator();
             
-            // Add error message to UI with más detalles
+            // Add error message to UI
             const errorMessage = {
                 role: 'system',
                 content: `
-                    <p>Lo siento, ha ocurrido un error al comunicarse con el servidor.</p>
-                    <p>Por favor, intenta con estas acciones:</p>
-                    <ul>
-                        <li>Verifica que el flujo de trabajo en n8n esté activo (indicador verde)</li>
-                        <li>Comprueba la configuración de los nodos 'AI Agent' y 'Respond to Webhook'</li>
-                        <li>Asegúrate de que la base de datos Qdrant esté respondiendo</li>
-                    </ul>
-                    <p><small>Detalles técnicos: ${error.message}</small></p>
+                    <p>Lo siento, ha ocurrido un error al procesar tu consulta.</p>
+                    <p>Por favor, intenta de nuevo más tarde o verifica tu conexión a internet.</p>
+                    <p>Error: ${error.message}</p>
                 `
             };
             addMessageToUI(errorMessage);
@@ -386,26 +355,56 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Create toggle button if it doesn't exist
             if (!document.querySelector('.menu-toggle')) {
-                const menuToggle = document.createElement('div');
-                menuToggle.className = 'menu-toggle';
+                const menuToggle = document.createElement('button');
+                menuToggle.classList.add('menu-toggle');
                 menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                document.querySelector('.chat-header').prepend(menuToggle);
                 
-                // Add event listener
+                const logoContainer = document.querySelector('.logo-container');
+                logoContainer.appendChild(menuToggle);
+                
+                // Add toggle functionality
                 menuToggle.addEventListener('click', function() {
-                    sidebar.classList.toggle('open');
+                    sidebar.classList.toggle('expanded');
                 });
             }
         }
     }
     
-    // Initialize sidebar for mobile
-    setupMobileSidebar();
+    // Add futuristic design elements
+    function addFuturisticElements() {
+        const mainContent = document.querySelector('.main-content');
+        
+        // Add flag gradient
+        const flagGradient = document.createElement('div');
+        flagGradient.classList.add('flag-gradient');
+        mainContent.appendChild(flagGradient);
+        
+        // Add decorative circles
+        const circle1 = document.createElement('div');
+        circle1.classList.add('futuristic-circle', 'circle-1');
+        mainContent.appendChild(circle1);
+        
+        const circle2 = document.createElement('div');
+        circle2.classList.add('futuristic-circle', 'circle-2');
+        mainContent.appendChild(circle2);
+    }
     
-    // Add resize listener for mobile sidebar
-    window.addEventListener('resize', setupMobileSidebar);
+    // Initialize app
+    function init() {
+        loadChatHistory();
+        setupMobileSidebar();
+        addFuturisticElements();
+        
+        // Ensure textarea is properly sized
+        chatInput.style.height = 'auto';
+        chatInput.style.height = (chatInput.scrollHeight) + 'px';
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            setupMobileSidebar();
+        });
+    }
     
-    // Initialize chat
-    loadChatHistory();
-    startNewChat();
+    // Initialize app
+    init();
 });
