@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let chatHistory = [];
     let currentChatId = generateChatId();
     
-    // Cambiando el webhook URL a la alternativa
-    const webhookUrl = 'https://n8n.colepa.com.py/webhook/Colepa2025';
+    // Webhook URL de n8n - conexión directa
+    const webhookUrl = 'https://mgcapra314.app.n8n.cloud/webhook/Colepa2025';
     
     // Enable/disable send button based on input content
     chatInput.addEventListener('input', function() {
@@ -83,10 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             // Enviamos un JSON con una estructura muy simple - solo el mensaje
             console.log("Enviando mensaje simple:", message);
-            
-            // Mostrar detalles de diagnóstico en la consola
             console.log("Webhook URL:", webhookUrl);
-            console.log("Datos enviados:", JSON.stringify({texto: message}));
             
             const response = await fetch(webhookUrl, {
                 method: 'POST',
@@ -94,72 +91,44 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    texto: message  // Usamos "texto" como clave única
+                    pregunta: message  // Cambiado de 'texto' a 'pregunta'
                 })
             });
-            
-            console.log("Código de estado HTTP:", response.status);
-            console.log("Headers de respuesta:", Object.fromEntries([...response.headers]));
             
             if (!response.ok) {
                 throw new Error(`Error HTTP: ${response.status}`);
             }
             
-            // Primero capturamos el texto completo de la respuesta para diagnóstico
+            // Capturar el texto completo de la respuesta
             const responseText = await response.text();
             console.log("Respuesta completa (texto):", responseText);
-            console.log("Longitud de la respuesta:", responseText.length);
-            
-            // Versión codificada para ver caracteres invisibles
-            console.log("Respuesta codificada:", JSON.stringify(responseText));
             
             let botResponseText = "";
             
-            // Intentamos procesar la respuesta de varias maneras
+            // Intentamos procesar la respuesta
             if (responseText && responseText.length > 0) {
                 try {
                     // Intenta parse como JSON
                     const data = JSON.parse(responseText);
                     console.log("Respuesta parseada como JSON:", data);
                     
-                    // Buscar el campo de respuesta en diferentes lugares posibles
-                    if (data.response) {
-                        botResponseText = data.response;
-                    } else if (data.respuesta) {
+                    // Según tu configuración en Respond to Webhook, buscamos 'respuesta'
+                    if (data.respuesta) {
                         botResponseText = data.respuesta;
-                    } else if (data.answer) {
-                        botResponseText = data.answer;
-                    } else if (data.text) {
-                        botResponseText = data.text;
-                    } else if (data.message) {
-                        botResponseText = data.message;
                     } else if (data.output) {
                         botResponseText = data.output;
                     } else if (typeof data === 'string') {
                         botResponseText = data;
                     } else {
                         // Si llegamos aquí, no encontramos un campo de respuesta conocido
-                        // Mostramos la estructura completa de la respuesta
-                        botResponseText = "Respuesta sin un campo reconocible. Datos recibidos:\n\n" + 
-                                         JSON.stringify(data, null, 2);
+                        botResponseText = JSON.stringify(data, null, 2);
                     }
                 } catch (jsonError) {
                     console.error('Error al parsear JSON:', jsonError);
-                    
-                    // Si no es JSON válido, intentamos extraer manualmente cualquier texto útil
-                    if (responseText.includes('"respuesta":')) {
-                        const match = responseText.match(/"respuesta":"([^"]*)"/);
-                        if (match && match[1]) {
-                            botResponseText = match[1];
-                        } else {
-                            botResponseText = "Respuesta con formato incorrecto. Respuesta recibida:\n\n" + responseText;
-                        }
-                    } else {
-                        botResponseText = "La respuesta no es un JSON válido. Respuesta recibida:\n\n" + responseText;
-                    }
+                    botResponseText = responseText;
                 }
             } else {
-                botResponseText = "Respuesta vacía del servidor. Verifica la configuración del webhook en n8n.";
+                botResponseText = "Respuesta vacía del servidor. Por favor, revisa la configuración del nodo 'AI Agent' en n8n.";
             }
             
             // Remove typing indicator
@@ -186,9 +155,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 role: 'system',
                 content: `
                     <p>Lo siento, ha ocurrido un error al comunicarse con el servidor.</p>
-                    <p>Por favor, verifica que el flujo de trabajo en n8n esté activo y configurado correctamente.</p>
+                    <p>Por favor, intenta con estas acciones:</p>
+                    <ul>
+                        <li>Verifica que el flujo de trabajo en n8n esté activo (indicador verde)</li>
+                        <li>Comprueba la configuración de los nodos 'AI Agent' y 'Respond to Webhook'</li>
+                        <li>Asegúrate de que la base de datos Qdrant esté respondiendo</li>
+                    </ul>
                     <p><small>Detalles técnicos: ${error.message}</small></p>
-                    <p><small>Webhook URL: ${webhookUrl}</small></p>
                 `
             };
             addMessageToUI(errorMessage);
