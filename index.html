@@ -4,67 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COLEPA - Consulta de Leyes del Paraguay</title>
-    <meta name="description" content="Consulta inteligente sobre leyes del Paraguay">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/balanza.png">
 </head>
 <body>
-    <div class="app-container">
-        <!-- Sidebar -->
+    <div class="container">
         <aside class="sidebar">
-            <div class="logo-container">
-                <h1 class="logo">COLEPA</h1>
-                <p class="tagline">Consulta de Leyes del Paraguay</p>
+            <div class="logo">
+                <img src="assets/img/balanza.png" alt="Logo Balanza de Justicia">
+                <h1>COLEPA</h1>
             </div>
-            <button class="new-chat-btn">
-                <i class="fas fa-plus"></i> Nueva Consulta
-            </button>
-            <div class="chat-history">
-                <!-- Chat history will be populated by JavaScript -->
-            </div>
-            <div class="sidebar-footer">
-                <a href="#" class="footer-link">
-                    <i class="fas fa-shield-alt"></i> Versión Demo
-                </a>
-            </div>
+            <button id="new-conversation">Nueva conversación</button>
+            <h2>Historial</h2>
+            <ul id="history-list"></ul>
         </aside>
-        <!-- Main Content -->
-        <main class="main-content">
-            <div class="chat-container">
-                <div class="chat-messages" id="chat-messages">
-                    <!-- Welcome message displayed initially -->
-                    <div class="message system">
-                        <div class="message-content">
-                            <div class="message-header">
-                                <div class="bot-avatar">
-                                    <i class="fas fa-balance-scale"></i>
-                                </div>
-                                <div class="bot-name">COLEPA</div>
-                            </div>
-                            <div class="message-text">
-                                <p>¡Bienvenido a COLEPA - Consulta de Leyes del Paraguay!</p>
-                                <p>Soy tu asistente legal virtual. Puedo responder preguntas sobre leyes paraguayas y brindarte información legal precisa.</p>
-                                <p>¿En qué puedo ayudarte hoy?</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Messages will be added here dynamically -->
-                </div>
-                <div class="chat-input-container">
-                    <form id="chat-form">
-                        <div class="input-wrapper">
-                            <textarea id="chat-input" placeholder="Escribe tu consulta legal aquí..." rows="1"></textarea>
-                            <button type="submit" id="send-button" disabled>
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </div>
-                    </form>
-                    <p class="disclaimer">COLEPA proporciona información legal general. No sustituye el asesoramiento de un abogado profesional.</p>
-                </div>
+        <main class="chat-main">
+            <div class="chat-header">
+                <h2>Asistente Legal Paraguayo</h2>
+                <span id="status-indicator"></span>
             </div>
+            <div id="chat-window" class="chat-window"></div>
+            <form id="chat-form" autocomplete="off">
+                <input type="text" id="user-input" placeholder="Escribe tu consulta legal..." required autofocus>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="typing-indicator" class="typing-indicator" style="display:none;">
+                COLEPA está escribiendo...
+            </div>
+            <div id="error-message" class="error-message" style="display:none;"></div>
         </main>
     </div>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
