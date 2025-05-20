@@ -98,26 +98,58 @@ document.addEventListener('DOMContentLoaded', function() {
                 throw new Error(`Error: ${response.status}`);
             }
             
-            const data = await response.json();
+            let botResponseText = "";
+            
+            try {
+                // Primero intentamos procesar como JSON
+                const data = await response.json();
+                console.log("Respuesta completa del webhook:", data);
+                
+                // Determinar cuál es el campo de respuesta
+                if (data.response && data.response !== "") {
+                    botResponseText = data.response;
+                } else if (data.respuesta && data.respuesta !== "") {
+                    botResponseText = data.respuesta;
+                } else if (data.answer && data.answer !== "") {
+                    botResponseText = data.answer;
+                } else if (data.text && data.text !== "") {
+                    botResponseText = data.text;
+                } else {
+                    botResponseText = "Lo siento, no he podido procesar tu consulta. El servicio de consulta legal podría estar temporalmente no disponible. Por favor, intenta de nuevo más tarde.";
+                }
+            } catch (jsonError) {
+                console.error('Error al procesar JSON:', jsonError);
+                
+                // Si falla el parsing JSON, intentamos obtener el texto plano
+                try {
+                    const rawText = await response.text();
+                    console.log("Respuesta en texto plano:", rawText);
+                    
+                    // Intentamos extraer manualmente la respuesta
+                    if (rawText.includes('"respuesta":')) {
+                        try {
+                            // Intenta extraer el valor entre comillas
+                            botResponseText = rawText.match(/"respuesta":"([^"]*)"/)[1];
+                        } catch (e) {
+                            // Si la extracción falla, usa todo el texto
+                            botResponseText = rawText;
+                        }
+                    } else {
+                        botResponseText = rawText;
+                    }
+                    
+                    // Si el texto es muy corto o vacío, usar mensaje por defecto
+                    if (!botResponseText || botResponseText.length < 5) {
+                        botResponseText = "Lo siento, hubo un problema al procesar tu consulta. Por favor, intenta nuevamente.";
+                    }
+                } catch (textError) {
+                    console.error('Error al obtener texto:', textError);
+                    botResponseText = "Error en la comunicación con el servidor. Por favor, intenta nuevamente más tarde.";
+                }
+            }
             
             // Remove typing indicator
             hideTypingIndicator();
-            
-            console.log("Respuesta completa del webhook:", data);
-            
-            // Determinar cuál es el campo de respuesta
-            let botResponseText = "";
-            if (data.response && data.response !== "") {
-                botResponseText = data.response;
-            } else if (data.respuesta && data.respuesta !== "") {
-                botResponseText = data.respuesta;
-            } else if (data.answer && data.answer !== "") {
-                botResponseText = data.answer;
-            } else if (data.text && data.text !== "") {
-                botResponseText = data.text;
-            } else {
-                botResponseText = "Lo siento, no he podido procesar tu consulta. El servicio de consulta legal podría estar temporalmente no disponible. Por favor, intenta de nuevo más tarde.";
-            }
             
             // Add bot response to UI
             const botMessage = {
@@ -355,56 +387,26 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Create toggle button if it doesn't exist
             if (!document.querySelector('.menu-toggle')) {
-                const menuToggle = document.createElement('button');
-                menuToggle.classList.add('menu-toggle');
+                const menuToggle = document.createElement('div');
+                menuToggle.className = 'menu-toggle';
                 menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                document.querySelector('.chat-header').prepend(menuToggle);
                 
-                const logoContainer = document.querySelector('.logo-container');
-                logoContainer.appendChild(menuToggle);
-                
-                // Add toggle functionality
+                // Add event listener
                 menuToggle.addEventListener('click', function() {
-                    sidebar.classList.toggle('expanded');
+                    sidebar.classList.toggle('open');
                 });
             }
         }
     }
     
-    // Add futuristic design elements
-    function addFuturisticElements() {
-        const mainContent = document.querySelector('.main-content');
-        
-        // Add flag gradient
-        const flagGradient = document.createElement('div');
-        flagGradient.classList.add('flag-gradient');
-        mainContent.appendChild(flagGradient);
-        
-        // Add decorative circles
-        const circle1 = document.createElement('div');
-        circle1.classList.add('futuristic-circle', 'circle-1');
-        mainContent.appendChild(circle1);
-        
-        const circle2 = document.createElement('div');
-        circle2.classList.add('futuristic-circle', 'circle-2');
-        mainContent.appendChild(circle2);
-    }
+    // Initialize sidebar for mobile
+    setupMobileSidebar();
     
-    // Initialize app
-    function init() {
-        loadChatHistory();
-        setupMobileSidebar();
-        addFuturisticElements();
-        
-        // Ensure textarea is properly sized
-        chatInput.style.height = 'auto';
-        chatInput.style.height = (chatInput.scrollHeight) + 'px';
-        
-        // Handle window resize
-        window.addEventListener('resize', function() {
-            setupMobileSidebar();
-        });
-    }
+    // Add resize listener for mobile sidebar
+    window.addEventListener('resize', setupMobileSidebar);
     
-    // Initialize app
-    init();
+    // Initialize chat
+    loadChatHistory();
+    startNewChat();
 });
