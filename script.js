@@ -81,19 +81,25 @@ document.addEventListener('DOMContentLoaded', function() {
         showTypingIndicator();
         
         try {
-            // Enviamos un JSON con una estructura muy simple - solo el mensaje
-            console.log("Enviando mensaje simple:", message);
-            console.log("Webhook URL:", webhookUrl);
+            // Preparar y enviar la solicitud
+            console.log("Enviando pregunta:", message);
+            
+            const requestBody = {
+                pregunta: message  // Usamos "pregunta" como clave
+            };
+            
+            console.log("Datos enviados:", JSON.stringify(requestBody));
             
             const response = await fetch(webhookUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({
-                    pregunta: message  // Cambiado de 'texto' a 'pregunta'
-                })
+                body: JSON.stringify(requestBody)
             });
+            
+            console.log("Código de estado:", response.status);
+            console.log("Headers:", Object.fromEntries([...response.headers]));
             
             if (!response.ok) {
                 throw new Error(`Error HTTP: ${response.status}`);
@@ -112,16 +118,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     const data = JSON.parse(responseText);
                     console.log("Respuesta parseada como JSON:", data);
                     
-                    // Según tu configuración en Respond to Webhook, buscamos 'respuesta'
+                    // Buscar campo de respuesta
                     if (data.respuesta) {
                         botResponseText = data.respuesta;
                     } else if (data.output) {
                         botResponseText = data.output;
+                    } else if (data.response) {
+                        botResponseText = data.response;
+                    } else if (data.text) {
+                        botResponseText = data.text;
                     } else if (typeof data === 'string') {
                         botResponseText = data;
                     } else {
-                        // Si llegamos aquí, no encontramos un campo de respuesta conocido
-                        botResponseText = JSON.stringify(data, null, 2);
+                        // Mostrar estructura completa si no encontramos campo conocido
+                        botResponseText = "La respuesta del servidor no contiene un campo reconocible:\n\n" + 
+                                         JSON.stringify(data, null, 2);
                     }
                 } catch (jsonError) {
                     console.error('Error al parsear JSON:', jsonError);
