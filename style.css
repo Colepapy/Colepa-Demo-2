@@ -478,3 +478,32 @@ body {
         height: 36px;
     }
 }
+/* Estilos para el indicador de escritura y mensajes de error */
+.bot-message.typing .dot {
+    animation: typing 1.5s infinite;
+    display: inline-block;
+    opacity: 0;
+}
+
+.bot-message.typing .dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.bot-message.typing .dot:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.bot-message.typing .dot:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes typing {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.bot-message.error {
+    background-color: #ffebee;
+    border-color: #f44336;
+}
