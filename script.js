@@ -84,6 +84,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Enviamos un JSON con una estructura muy simple - solo el mensaje
             console.log("Enviando mensaje simple:", message);
             
+            // Mostrar detalles de diagnóstico en la consola
+            console.log("Webhook URL:", webhookUrl);
+            console.log("Datos enviados:", JSON.stringify({texto: message}));
+            
             const response = await fetch(webhookUrl, {
                 method: 'POST',
                 headers: {
@@ -94,6 +98,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 })
             });
             
+            console.log("Código de estado HTTP:", response.status);
+            console.log("Headers de respuesta:", Object.fromEntries([...response.headers]));
+            
             if (!response.ok) {
                 throw new Error(`Error HTTP: ${response.status}`);
             }
@@ -101,6 +108,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Primero capturamos el texto completo de la respuesta para diagnóstico
             const responseText = await response.text();
             console.log("Respuesta completa (texto):", responseText);
+            console.log("Longitud de la respuesta:", responseText.length);
+            
+            // Versión codificada para ver caracteres invisibles
+            console.log("Respuesta codificada:", JSON.stringify(responseText));
             
             let botResponseText = "";
             
@@ -128,41 +139,31 @@ document.addEventListener('DOMContentLoaded', function() {
                         botResponseText = data;
                     } else {
                         // Si llegamos aquí, no encontramos un campo de respuesta conocido
-                        // Convertimos todo el objeto a una cadena legible
-                        botResponseText = JSON.stringify(data, null, 2);
+                        // Mostramos la estructura completa de la respuesta
+                        botResponseText = "Respuesta sin un campo reconocible. Datos recibidos:\n\n" + 
+                                         JSON.stringify(data, null, 2);
                     }
                 } catch (jsonError) {
                     console.error('Error al parsear JSON:', jsonError);
                     
                     // Si no es JSON válido, intentamos extraer manualmente cualquier texto útil
-                    
-                    // Intento 1: Buscar patrones comunes de respuesta
                     if (responseText.includes('"respuesta":')) {
                         const match = responseText.match(/"respuesta":"([^"]*)"/);
                         if (match && match[1]) {
                             botResponseText = match[1];
                         } else {
-                            botResponseText = responseText;
+                            botResponseText = "Respuesta con formato incorrecto. Respuesta recibida:\n\n" + responseText;
                         }
-                    } 
-                    // Intento 2: Eliminar caracteres problemáticos y usar el texto tal cual
-                    else {
-                        botResponseText = responseText
-                            .replace(/\\n/g, '\n')  // Convertir \n literales en saltos de línea
-                            .replace(/\\"/g, '"');  // Convertir \" literales en "
+                    } else {
+                        botResponseText = "La respuesta no es un JSON válido. Respuesta recibida:\n\n" + responseText;
                     }
                 }
             } else {
-                botResponseText = "Respuesta vacía del servidor. Por favor, intenta de nuevo.";
+                botResponseText = "Respuesta vacía del servidor. Verifica la configuración del webhook en n8n.";
             }
             
             // Remove typing indicator
             hideTypingIndicator();
-            
-            // Verificación final: si la respuesta sigue siendo muy corta o está vacía, mostrar mensaje de error
-            if (!botResponseText || botResponseText.trim().length < 3) {
-                botResponseText = "Lo siento, no pude obtener una respuesta adecuada del servidor. Por favor, intenta nuevamente.";
-            }
             
             // Add bot response to UI
             const botMessage = {
@@ -185,8 +186,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 role: 'system',
                 content: `
                     <p>Lo siento, ha ocurrido un error al comunicarse con el servidor.</p>
-                    <p>Por favor, intenta de nuevo más tarde.</p>
+                    <p>Por favor, verifica que el flujo de trabajo en n8n esté activo y configurado correctamente.</p>
                     <p><small>Detalles técnicos: ${error.message}</small></p>
+                    <p><small>Webhook URL: ${webhookUrl}</small></p>
                 `
             };
             addMessageToUI(errorMessage);
