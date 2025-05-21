@@ -498,12 +498,141 @@ body {
 }
 
 @keyframes typing {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
+    0% { opacity: 0.3; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(-2px); }
+    100% { opacity: 0.3; transform: translateY(0); }
 }
 
-.bot-message.error {
-    background-color: #ffebee;
-    border-color: #f44336;
+/* Botón para borrar conversaciones */
+.clear-chat-btn {
+    background-color: rgba(216, 0, 39, 0.2);
+    color: var(--white);
+    border: 1px solid rgba(216, 0, 39, 0.3);
+    border-radius: var(--radius-md);
+    padding: var(--space-sm) var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    font-size: var(--font-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: var(--space-md);
+    font-weight: 500;
+    width: 100%;
+}
+
+.clear-chat-btn:hover {
+    background-color: rgba(216, 0, 39, 0.4);
+    transform: translateY(-1px);
+}
+
+.clear-chat-btn:active {
+    transform: translateY(0);
+}
+
+/* Estilo para botón de enviar deshabilitado con más contraste */
+#send-button:disabled {
+    background-color: var(--gray);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Estilos adicionales para mejorar mensajes de error */
+.message.error .message-content {
+    background-color: rgba(216, 0, 39, 0.1);
+    border-left: 3px solid var(--accent);
+}
+
+/* Estilo para enlaces en los mensajes */
+.message-text a {
+    color: var(--primary);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.message-text a:hover {
+    color: var(--primary-dark);
+}
+
+.message.user .message-text a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+/* Mejora de accesibilidad - focus visible */
+*:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Mejoras para modo oscuro si el sistema lo tiene activado */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light-gray: #2D2D33;
+        --white: #1E1E24;
+        --dark-gray: #ECECF1;
+        --gray: #8E8EA0;
+    }
+    
+    .message.system .message-content {
+        background-color: #2D2D33;
+        color: #ECECF1;
+    }
+    
+    .input-wrapper {
+        background-color: #2D2D33;
+    }
+    
+    #chat-input {
+        color: #ECECF1;
+    }
+    
+    .typing-indicator {
+        background-color: #2D2D33;
+    }
+}
+
+/* Mejoras para impresión */
+@media print {
+    .sidebar, .chat-input-container {
+        display: none;
+    }
+    
+    .main-content {
+        width: 100%;
+    }
+    
+    .message {
+        break-inside: avoid;
+        max-width: 100%;
+    }
+}
+
+/* Mejora de scrollbars personalizados */
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 82, 180, 0.3);
+    border-radius: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 82, 180, 0.5);
+}
+
+/* Efecto para las tarjetas de mensaje */
+.message-content {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.message-content:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
