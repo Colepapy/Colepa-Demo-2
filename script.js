@@ -5,6 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const sendButton = document.getElementById('send-button');
     const chatMessages = document.getElementById('chat-messages');
     const newChatBtn = document.querySelector('.new-chat-btn');
+    const clearChatBtn = document.createElement('button');
+    
+    // Agregar botón para borrar conversaciones
+    clearChatBtn.className = 'clear-chat-btn';
+    clearChatBtn.innerHTML = '<i class="fas fa-trash"></i> Borrar Conversaciones';
+    document.querySelector('.sidebar-footer').prepend(clearChatBtn);
     
     // State variables
     let isWaitingForResponse = false;
@@ -23,9 +29,26 @@ document.addEventListener('DOMContentLoaded', function() {
         chatInput.style.height = (chatInput.scrollHeight) + 'px';
     });
     
+    // Manejar la tecla Enter para enviar mensaje
+    chatInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            if (!sendButton.disabled) {
+                chatForm.dispatchEvent(new Event('submit'));
+            }
+        }
+    });
+    
     // Handle new chat button click
     newChatBtn.addEventListener('click', function() {
         startNewChat();
+    });
+    
+    // Handle clear chat button click
+    clearChatBtn.addEventListener('click', function() {
+        if (confirm('¿Estás seguro de que deseas borrar todas las conversaciones?')) {
+            clearAllChats();
+        }
     });
     
     // Handle form submission
@@ -37,6 +60,14 @@ document.addEventListener('DOMContentLoaded', function() {
         
         sendMessage(message);
     });
+    
+    // Function to clear all chats
+    function clearAllChats() {
+        chatHistory = [];
+        localStorage.removeItem('colepa_chat_history');
+        updateChatHistory();
+        startNewChat();
+    }
     
     // Function to start a new chat
     function startNewChat() {
@@ -81,8 +112,8 @@ document.addEventListener('DOMContentLoaded', function() {
         showTypingIndicator();
         
         try {
-            // Enviamos un JSON con una estructura muy simple - solo el mensaje
-            console.log("Enviando mensaje simple:", message);
+            // IMPORTANTE: Actualizamos el formato del mensaje para que use el campo "pregunta"
+            console.log("Enviando mensaje a n8n:", message);
             
             const response = await fetch(webhookUrl, {
                 method: 'POST',
@@ -90,12 +121,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    texto: message  // Usamos "texto" como clave única
+                    pregunta: message  // CAMBIADO: Usamos "pregunta" como clave
                 })
             });
             
             if (!response.ok) {
-                throw new Error(`Error: ${response.status}`);
+                throw new Error(`Error del servidor: ${response.status}`);
             }
             
             const data = await response.json();
@@ -107,14 +138,16 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Determinar cuál es el campo de respuesta
             let botResponseText = "";
-            if (data.response && data.response !== "") {
-                botResponseText = data.response;
-            } else if (data.respuesta && data.respuesta !== "") {
+            if (data.respuesta && typeof data.respuesta === 'string') {
                 botResponseText = data.respuesta;
-            } else if (data.answer && data.answer !== "") {
+            } else if (data.response && typeof data.response === 'string') {
+                botResponseText = data.response;
+            } else if (data.answer && typeof data.answer === 'string') {
                 botResponseText = data.answer;
-            } else if (data.text && data.text !== "") {
+            } else if (data.text && typeof data.text === 'string') {
                 botResponseText = data.text;
+            } else if (typeof data === 'string') {
+                botResponseText = data;
             } else {
                 botResponseText = "Lo siento, no he podido procesar tu consulta. El servicio de consulta legal podría estar temporalmente no disponible. Por favor, intenta de nuevo más tarde.";
             }
@@ -232,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         chatHistory.push(chatEntry);
         
-        // Only keep the most recent 10 chats
+        // Only keep the most recent 50 chats
         if (chatHistory.length > 50) {
             chatHistory = chatHistory.slice(-50);
         }
@@ -294,13 +327,13 @@ document.addEventListener('DOMContentLoaded', function() {
         chatMessages.innerHTML = '';
         
         // Filter chat history for the selected chat
-        const chatMessages = chatHistory.filter(chat => chat.chatId === chatId);
+        const chatEntries = chatHistory.filter(chat => chat.chatId === chatId);
         
         // Sort by timestamp
-        chatMessages.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+        chatEntries.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
         
         // Add messages to UI
-        for (const chat of chatMessages) {
+        for (const chat of chatEntries) {
             const userMessage = {
                 role: 'user',
                 content: chat.userMessage
@@ -355,56 +388,29 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Create toggle button if it doesn't exist
             if (!document.querySelector('.menu-toggle')) {
-                const menuToggle = document.createElement('button');
-                menuToggle.classList.add('menu-toggle');
-                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                
                 const logoContainer = document.querySelector('.logo-container');
-                logoContainer.appendChild(menuToggle);
+                const toggleBtn = document.createElement('button');
+                toggleBtn.className = 'menu-toggle';
+                toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                logoContainer.appendChild(toggleBtn);
                 
-                // Add toggle functionality
-                menuToggle.addEventListener('click', function() {
+                // Toggle sidebar on button click
+                toggleBtn.addEventListener('click', function() {
                     sidebar.classList.toggle('expanded');
                 });
             }
         }
     }
     
-    // Add futuristic design elements
-    function addFuturisticElements() {
-        const mainContent = document.querySelector('.main-content');
-        
-        // Add flag gradient
-        const flagGradient = document.createElement('div');
-        flagGradient.classList.add('flag-gradient');
-        mainContent.appendChild(flagGradient);
-        
-        // Add decorative circles
-        const circle1 = document.createElement('div');
-        circle1.classList.add('futuristic-circle', 'circle-1');
-        mainContent.appendChild(circle1);
-        
-        const circle2 = document.createElement('div');
-        circle2.classList.add('futuristic-circle', 'circle-2');
-        mainContent.appendChild(circle2);
-    }
+    // Setup mobile sidebar
+    setupMobileSidebar();
+    window.addEventListener('resize', setupMobileSidebar);
     
-    // Initialize app
-    function init() {
-        loadChatHistory();
-        setupMobileSidebar();
-        addFuturisticElements();
-        
-        // Ensure textarea is properly sized
-        chatInput.style.height = 'auto';
-        chatInput.style.height = (chatInput.scrollHeight) + 'px';
-        
-        // Handle window resize
-        window.addEventListener('resize', function() {
-            setupMobileSidebar();
-        });
-    }
+    // Load chat history from localStorage
+    loadChatHistory();
     
-    // Initialize app
-    init();
+    // Show welcome message if it's the first visit
+    if (chatHistory.length === 0) {
+        // Already shown in HTML
+    }
 });
