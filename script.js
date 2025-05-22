@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let chatHistory = [];
     let currentChatId = generateChatId();
     
-    // Webhook URL de n8n - conexión directa
-    const webhookUrl = 'https://mgcapra314.app.n8n.cloud/webhook/Colepa2025';
+    // Chat Trigger URL de n8n - ACTUALIZADA
+    const webhookUrl = 'https://mgcapra314.app.n8n.cloud/webhook/c9e29053-c2a7-4215-adaa-12e95da840f0/chat';
     
     // Enable/disable send button based on input content
     chatInput.addEventListener('input', function() {
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
         sendButton.disabled = true;
     }
     
-    // Function to send message to n8n agent
+    // Function to send message to Chat Trigger
     async function sendMessage(message) {
         // Add user message to UI
         const userMessage = {
@@ -112,8 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showTypingIndicator();
         
         try {
-            // IMPORTANTE: Actualizamos el formato del mensaje para que use el campo "pregunta"
-            console.log("Enviando mensaje a n8n:", message);
+            console.log("Enviando mensaje a Chat Trigger:", message);
             
             const response = await fetch(webhookUrl, {
                 method: 'POST',
@@ -121,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    pregunta: message  // CAMBIADO: Usamos "pregunta" como clave
+                    chatInput: message  // FORMATO PARA CHAT TRIGGER
                 })
             });
             
@@ -134,12 +133,14 @@ document.addEventListener('DOMContentLoaded', function() {
             // Remove typing indicator
             hideTypingIndicator();
             
-            console.log("Respuesta completa del webhook:", data);
+            console.log("Respuesta completa del Chat Trigger:", data);
             
-            // Determinar cuál es el campo de respuesta
+            // Determinar cuál es el campo de respuesta para Chat Trigger
             let botResponseText = "";
             if (data.respuesta && typeof data.respuesta === 'string') {
                 botResponseText = data.respuesta;
+            } else if (data.output && typeof data.output === 'string') {
+                botResponseText = data.output;
             } else if (data.response && typeof data.response === 'string') {
                 botResponseText = data.response;
             } else if (data.answer && typeof data.answer === 'string') {
@@ -364,53 +365,70 @@ document.addEventListener('DOMContentLoaded', function() {
                 '>': '&gt;',
                 "'": '&#39;',
                 '"': '&quot;'
-            }[tag]));
+            }[tag] || tag)
+        );
     }
     
-    // Load chat history from localStorage on page load
-    function loadChatHistory() {
+    // Helper function to load saved chat history from localStorage
+    function loadSavedHistory() {
         try {
-            const savedHistory = localStorage.getItem('colepa_chat_history');
-            if (savedHistory) {
-                chatHistory = JSON.parse(savedHistory);
+            const saved = localStorage.getItem('colepa_chat_history');
+            if (saved) {
+                chatHistory = JSON.parse(saved);
                 updateChatHistory();
             }
         } catch (e) {
-            console.error('Error loading from localStorage:', e);
+            console.error('Error loading chat history:', e);
         }
     }
     
-    // Handle sidebar toggle on mobile
-    function setupMobileSidebar() {
-        // Check if we're on mobile
-        if (window.innerWidth <= 768) {
-            const sidebar = document.querySelector('.sidebar');
+    // Helper function to check if user is online
+    function isOnline() {
+        return navigator.onLine;
+    }
+    
+    // Helper function to show connection status
+    function showConnectionStatus() {
+        if (!isOnline()) {
+            const statusDiv = document.createElement('div');
+            statusDiv.className = 'connection-status offline';
+            statusDiv.innerHTML = '<i class="fas fa-wifi"></i> Sin conexión a internet';
+            document.body.appendChild(statusDiv);
             
-            // Create toggle button if it doesn't exist
-            if (!document.querySelector('.menu-toggle')) {
-                const logoContainer = document.querySelector('.logo-container');
-                const toggleBtn = document.createElement('button');
-                toggleBtn.className = 'menu-toggle';
-                toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                logoContainer.appendChild(toggleBtn);
-                
-                // Toggle sidebar on button click
-                toggleBtn.addEventListener('click', function() {
-                    sidebar.classList.toggle('expanded');
-                });
-            }
+            setTimeout(() => {
+                if (statusDiv.parentNode) {
+                    statusDiv.remove();
+                }
+            }, 3000);
         }
     }
     
-    // Setup mobile sidebar
-    setupMobileSidebar();
-    window.addEventListener('resize', setupMobileSidebar);
+    // Network status event listeners
+    window.addEventListener('online', function() {
+        console.log('Conexión restaurada');
+        const statusDiv = document.querySelector('.connection-status');
+        if (statusDiv) {
+            statusDiv.remove();
+        }
+    });
     
-    // Load chat history from localStorage
-    loadChatHistory();
+    window.addEventListener('offline', function() {
+        console.log('Conexión perdida');
+        showConnectionStatus();
+    });
     
-    // Show welcome message if it's the first visit
-    if (chatHistory.length === 0) {
-        // Already shown in HTML
+    // Initialize the application
+    function initializeApp() {
+        loadSavedHistory();
+        startNewChat();
+        
+        // Check connection status on startup
+        if (!isOnline()) {
+            showConnectionStatus();
+        }
     }
+    
+    // Start the application when DOM is ready
+    initializeApp();
+
 });
