@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const newChatButton = document.querySelector('.new-chat-btn');
 
     // --- 2. ¡CONFIGURACIÓN MÁS IMPORTANTE! ---
-    // Reemplaza el texto de abajo con tu URL pública real que te dio Railway
+    // Esta es tu URL pública real de Railway. Ya está configurada.
     const apiUrl = 'https://colepa-demo-2-production.up.railway.app/consulta';
 
     // --- LÓGICA DE LA INTERFAZ DE USUARIO ---
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Lógica para "Enter" (enviar) y "Shift + Enter" (nueva línea)
     chatInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter' && !event.shiftKey) {
-            event.preventDefault(); // Previene el salto de línea
+            event.preventDefault(); // Previene el salto de línea por defecto
             chatForm.dispatchEvent(new Event('submit')); // Dispara el envío del formulario
         }
     });
