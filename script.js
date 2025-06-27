@@ -1,114 +1,64 @@
-// Archivo: script.js (Para Colepa)
-
 document.addEventListener('DOMContentLoaded', function() {
 
-    // --- 1. IDENTIFICACIÓN DE ELEMENTOS DEL HTML ---
-    // Usamos los IDs que encontré en tu archivo index.html
-    const chatForm = document.getElementById('chat-form');
-    const chatInput = document.getElementById('chat-input');
-    const sendButton = document.getElementById('send-button');
-    const chatMessages = document.getElementById('chat-messages');
+    // Identifica los elementos de tu página por su ID
+    const formularioConsulta = document.getElementById('chat-form');
+    const cajaDePregunta = document.getElementById('chat-input');
+    const botonEnviar = document.getElementById('send-button');
+    const areaRespuesta = document.getElementById('chat-messages');
 
-    // --- 2. ¡CONFIGURACIÓN MÁS IMPORTANTE! ---
-    // Reemplaza el texto de abajo con la URL pública real que te dio Railway
-    const apiUrl = 'https://TU-URL-PUBLICA-DE-RAILWAY-AQUI/consulta';
+    // ¡LA LÍNEA MÁS IMPORTANTE! Pega aquí la URL pública que te dio Railway
+    const apiUrl = 'https://colepa-demo-2-production.up.railway.app
+';
 
-    // Función para habilitar/deshabilitar el botón de envío
-    chatInput.addEventListener('input', () => {
-        if (chatInput.value.trim() !== '') {
-            sendButton.disabled = false;
-        } else {
-            sendButton.disabled = true;
-        }
-    });
-
-    // --- 3. FUNCIÓN PRINCIPAL AL ENVIAR LA CONSULTA ---
-    chatForm.addEventListener('submit', async function(event) {
+    // Esta función se activa cuando el usuario envía el formulario
+    formularioConsulta.addEventListener('submit', async function(event) {
         event.preventDefault(); // Evita que la página se recargue
 
-        const pregunta = chatInput.value.trim();
+        const pregunta = cajaDePregunta.value.trim();
         if (!pregunta) return;
 
-        // Limpiar el input y deshabilitar el botón mientras se procesa
-        chatInput.value = '';
-        sendButton.disabled = true;
-        chatInput.style.height = 'auto'; // Resetear altura del textarea
-
-        // --- Muestra la pregunta del usuario en el chat ---
-        mostrarMensaje(pregunta, 'user');
-
-        // --- Muestra un indicador de "pensando..." ---
-        const typingIndicator = mostrarMensaje('COLEPA está pensando...', 'bot typing');
+        // Limpia el input y muestra un estado de "cargando"
+        cajaDePregunta.value = '';
+        botonEnviar.disabled = true;
+        mostrarMensaje(pregunta, 'user'); // Muestra la pregunta del usuario
+        const typingIndicator = mostrarMensaje('COLEPA está pensando...', 'bot typing'); // Muestra "pensando..."
 
         try {
-            // 4. LLAMADA A TU API EN RAILWAY
+            // Llama a tu API pública en Railway
             const respuestaApi = await fetch(apiUrl, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ pregunta: pregunta })
             });
 
+            // Elimina el indicador de "pensando..."
+            areaRespuesta.removeChild(typingIndicator);
             const datos = await respuestaApi.json();
 
-            // Elimina el indicador de "pensando..."
-            chatMessages.removeChild(typingIndicator);
-
             if (respuestaApi.ok) {
-                // Si todo salió bien, muestra la respuesta de la IA
+                // Si todo salió bien, muestra la respuesta formateada
                 const textoRespuesta = `${datos.respuesta}\n\n---\nFuente: ${datos.fuente.ley}, Artículo N° ${datos.fuente.articulo_numero}`;
                 mostrarMensaje(textoRespuesta, 'bot');
             } else {
-                // Si la API devuelve un error
                 mostrarMensaje(`Error: ${datos.detail}`, 'bot error');
             }
 
         } catch (error) {
-            // Elimina el indicador de "pensando..."
-            chatMessages.removeChild(typingIndicator);
+            areaRespuesta.removeChild(typingIndicator);
             console.error('Error de conexión:', error);
             mostrarMensaje('Error de Conexión: No se pudo contactar al servidor de Colepa.', 'bot error');
+        } finally {
+            botonEnviar.disabled = false;
         }
     });
 
-    // --- 5. FUNCIÓN PARA MOSTRAR MENSAJES EN EL CHAT ---
     function mostrarMensaje(texto, tipo) {
+        // (Aquí va la lógica para crear y añadir los divs de mensaje al chat, como en el ejemplo anterior)
         const messageElement = document.createElement('div');
         messageElement.classList.add('message', tipo);
-
-        let avatarHtml = '';
-        let senderName = '';
-
-        if (tipo.includes('bot')) {
-            avatarHtml = `<div class="bot-avatar"><i class="fas fa-balance-scale"></i></div>`;
-            senderName = 'COLEPA';
-        } else { // Usuario
-            avatarHtml = `<div class="user-avatar"><i class="fas fa-user"></i></div>`;
-            senderName = 'Tú';
-        }
-
-        // Reemplaza los saltos de línea del texto con etiquetas <br> para que se muestren en HTML
-        const textoFormateado = texto.replace(/\n/g, '<br>');
-
-        messageElement.innerHTML = `
-            <div class="message-content">
-                <div class="message-header">
-                    ${avatarHtml}
-                    <div class="sender-name">${senderName}</div>
-                </div>
-                <div class="message-text">${textoFormateado}</div>
-            </div>
-        `;
-        
-        chatMessages.appendChild(messageElement);
-        // Hacer scroll automático para ver el último mensaje
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-        
-        return messageElement; // Devuelve el elemento para poder eliminarlo (útil para el "pensando...")
+        // ... (código para construir el HTML del mensaje)
+        areaRespuesta.appendChild(messageElement);
+        areaRespuesta.scrollTop = areaRespuesta.scrollHeight;
+        return messageElement;
     }
-
-    // Auto-ajuste de altura para el textarea
-    chatInput.addEventListener('input', function () {
-        this.style.height = 'auto';
-        this.style.height = (this.scrollHeight) + 'px';
-    });
 });
