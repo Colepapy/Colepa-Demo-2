@@ -1,17 +1,23 @@
+// Archivo: script.js (Versión con Corrección de CORS y Errores)
+
 document.addEventListener('DOMContentLoaded', function() {
+
+    // --- 1. IDENTIFICACIÓN DE ELEMENTOS DEL HTML ---
     const chatForm = document.getElementById('chat-form');
     const chatInput = document.getElementById('chat-input');
     const sendButton = document.getElementById('send-button');
     const chatMessages = document.getElementById('chat-messages');
     const newChatButton = document.querySelector('.new-chat-btn');
 
-    // ✅ URL correcta del backend
-    const apiUrl = 'https://colepa-demo-2-production.up.railway.app/consultar';
+    // --- 2. URL PÚBLICA DE TU API EN RAILWAY ---
+    // CORRECCIÓN #1: Apuntamos a "/consulta" (sin la 'r' final)
+    const apiUrl = 'https://colepa-demo-2-production.up.railway.app/consulta';
 
+    // --- LÓGICA DE LA INTERFAZ DE USUARIO ---
     chatInput.addEventListener('input', () => {
         sendButton.disabled = chatInput.value.trim() === '';
     });
-
+    
     chatInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter' && !event.shiftKey) {
             event.preventDefault();
@@ -23,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
         this.style.height = 'auto';
         this.style.height = (this.scrollHeight) + 'px';
     });
-
-    if (newChatButton) {
+    
+    if(newChatButton) {
         newChatButton.addEventListener('click', () => {
             const welcomeMessageHTML = `
                 <div class="message system">
@@ -43,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // --- 3. FUNCIÓN PRINCIPAL AL ENVIAR LA CONSULTA ---
     chatForm.addEventListener('submit', async function(event) {
         event.preventDefault();
         const pregunta = chatInput.value.trim();
@@ -53,10 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
         sendButton.disabled = true;
 
         mostrarMensaje(pregunta, 'user');
-
-        const typingIndicator = mostrarMensaje("COLEPA está redactando la respuesta...", 'bot typing');
+        const typingIndicator = mostrarMensaje("COLEPA está pensando...", 'bot typing');
 
         try {
+            // --- 4. CONEXIÓN CON TU API DE FASTAPI ---
             const respuestaApi = await fetch(apiUrl, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -64,36 +71,29 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             const datos = await respuestaApi.json();
-
+            
             if (respuestaApi.ok) {
-                const textoRespuesta = datos.fuente
-                    ? `${datos.respuesta}\n\n---\nFuente: ${datos.fuente.ley}, Art. ${datos.fuente.articulo_numero}`
-                    : datos.respuesta;
-
+                const textoRespuesta = `${datos.respuesta}\n\n---\nFuente: ${datos.fuente.ley}, Art. ${datos.fuente.articulo_numero}`;
                 actualizarMensaje(typingIndicator, textoRespuesta, 'bot');
             } else {
-                actualizarMensaje(typingIndicator, `Error: ${datos.detail}`, 'bot error');
+                // CORRECCIÓN #2: Usamos 'bot-error' sin espacio
+                actualizarMensaje(typingIndicator, `Error: ${datos.detail}`, 'bot-error');
             }
 
         } catch (error) {
             console.error('Error de conexión:', error);
-            actualizarMensaje(typingIndicator, 'Error de Conexión: No se pudo contactar al servidor de Colepa.', 'bot error');
+            // CORRECCIÓN #2: Usamos 'bot-error' sin espacio
+            actualizarMensaje(typingIndicator, 'Error de Conexión: No se pudo contactar al servidor de Colepa.', 'bot-error');
         }
     });
 
+    // --- 5. FUNCIONES PARA MANEJAR EL CHAT ---
     function mostrarMensaje(texto, tipo) {
         const messageWrapper = document.createElement('div');
-        messageWrapper.classList.add('message');
-        if (tipo.includes(' ')) {
-            const clases = tipo.split(' ');
-            clases.forEach(c => messageWrapper.classList.add(c));
-        } else {
-            messageWrapper.classList.add(tipo);
-        }
-
-        const avatarIcon = tipo.includes('user') ? 'fa-user' : 'fa-balance-scale';
-        const senderName = tipo.includes('user') ? 'Tú' : 'COLEPA';
-
+        messageWrapper.classList.add('message', tipo);
+        const avatarIcon = tipo === 'user' ? 'fa-user' : 'fa-balance-scale';
+        const senderName = tipo === 'user' ? 'Tú' : 'COLEPA';
+        
         messageWrapper.innerHTML = `
             <div class="message-content">
                 <div class="message-header">
@@ -103,16 +103,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="message-text">${texto.replace(/\n/g, '<br>')}</div>
             </div>
         `;
-
+        
         chatMessages.appendChild(messageWrapper);
         chatMessages.scrollTop = chatMessages.scrollHeight;
         return messageWrapper;
     }
-
+    
     function actualizarMensaje(elementoMensaje, nuevoTexto, nuevaClase) {
         elementoMensaje.classList.remove('typing');
-        if (nuevaClase) elementoMensaje.classList.add(nuevaClase);
-
+        if(nuevaClase) elementoMensaje.classList.add(nuevaClase);
+        
         const textoElemento = elementoMensaje.querySelector('.message-text');
         textoElemento.innerHTML = nuevoTexto.replace(/\n/g, '<br>');
     }
