@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.616.- Los derechos que correspondan al asegurado contra un tercero, en
+razón del siniestro, se transfieren al asegurador hasta el monto de la indemnización
+abonada. El asegurado es responsable de todo acto que perjudique este derecho del
+asegurador.
+El asegurador no puede valerse de la subrogación en perjuicio del asegurado. La
+subrogación es inaplicable en los seguros de personas.
+PARÁGRAFO VI
+DE LA DESAPARICIÓN DEL INTERÉS O DEL CAMBIO DE TITULAR

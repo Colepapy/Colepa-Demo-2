@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: I
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 794.- Verificada la venta, el vendedor estará obligado:
+a) a entregar los bienes de la herencia que existan en el momento de formalizarse
+aquélla, incluso lo recibido con anterioridad, sea por la venta de los valores pertenecientes
+a la masa, por un acto jurídico relativo a ésta, o por resarcimiento en virtud de la pérdida,
+deterioro o substracción de cualquier objeto hereditario;
+b) a reintegrar al comprador el valor de lo que hubiere consumido o dispuesto a

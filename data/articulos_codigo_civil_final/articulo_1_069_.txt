@@ -1,0 +1,21 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.   1.069.-   El   estatuto   social    Art. 1.069. El estatuto social establecerá
+establecerá  las  formalidades de  las  las formalidades de las acciones y de los
+acciones   y  de   los   certificados  certificados provisionales.
+provisionales.  Son  esenciales   las  Son esenciales las siguientes
+siguientes menciones:                menciones:
+a)  denominación de  la sociedad,      a) denominación de la sociedad,
+domicilio,  fecha  y  lugar  de         domicilio, fecha y lugar de
+constitución,    duración    e         constitución, duración e
+inscripción;                              inscripción;
+b) el capital social;                      b) el capital social;
+c)  el número, valor nominal y clase      c)  el número, valor nominal y clase
+de acciones que representa  el       de acciones que representa el

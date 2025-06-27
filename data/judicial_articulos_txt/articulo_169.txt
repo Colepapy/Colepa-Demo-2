@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: Corregido por:
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 169.- Todo remate judicial deberá efectuarse, bajo pena de nulidad, en horas de la
+tarde, en la Secretaría del Juzgado en que radiquen los autos, o en el lugar establecido para el
+efecto en los Tribunales. Al mismo asistirá el Secretario, quien certificará el informe del
+rematador.

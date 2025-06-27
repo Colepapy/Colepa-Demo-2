@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: I
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.444.- La sucesión a título universal es la que tiene por objeto un todo ideal,
+sin consideración a su contenido especial, ni a los objetos de esos derechos. La herencia
+comprende todos los bienes, así como los derechos y obligaciones del causante que no se
+hubieren extinguido por su fallecimiento.

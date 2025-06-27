@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.647.- La indemnización debida por  el asegurador no incluye las penas
+aplicadas por autoridad judicial o administrativa.

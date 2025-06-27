@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: I
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.881.- Cuando las cosas muebles destinadas a ser parte de los predios,
+fuesen puestas en ellas por los usufructuarios, sólo se considerarán inmuebles mientras
+dure el usufructo.

@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: II
+CAPITULO: I
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 420.- El acreedor, como consecuencia de la obligación, queda facultado:
+a) para emplear los medios legales, a fin de que el deudor cumpla con la prestación;
+b) para procurarla por otro a costa del obligado; y
+c) para obtener las indemnizaciones pertinentes.

@@ -1,0 +1,75 @@
+CONTEXTO:
+LIBRO: I
+TITULO: III
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 28.- La Corte Suprema de Justicia     Art. 28.- La Corte Suprema de Justicia
+conocerá:                                   conocerá:
+1. En única instancia:                             1. En única instancia:
+a) De las acciones y excepciones para          a) de las acciones y excepciones para declarar
+declarar la inconstitucionalidad de las leyes y    la inconstitucionalidad de las leyes y la
+la inaplicabilidad de las disposiciones            inaplicabilidad de las disposiciones contrarias
+contrarias a la Constitución Nacional;         a la Constitución Nacional;
+b) Del recurso de Habeas Corpus;              b) del recurso de Habeas Corpus;
+c) De la nacionalidad y de su pérdida;            c) de la nacionalidad y de su pérdida;
+d) De los pedidos de exoneración del Servicio   d) de los pedidos de exoneración del Servicio
+Militar Obligatorio;                                   Militar Obligatorio;
+e) De las contiendas de competencia entre los  e) de las contiendas de competencia entre los
+Tribunales y Juzgados inferiores o entre éstos  Tribunales y Juzgados inferiores o entre éstos
+y los Tribunales Militares o los funcionarios del  y los Tribunales Militares o los funcionarios del
+Poder Ejecutivo;                           Poder Ejecutivo;
+f) del enjuiciamiento y remoción de los Jueces   f) del enjuiciamiento y remoción de los Jueces
+y Magistrados Judiciales, de los Miembros del  y Magistrados Judiciales, de los Miembros del
+Ministerio Público y de la Defensa Pública,      Ministerio Público y de la Defensa Pública,
+conforme a las disposiciones de este Código;   Auxiliares de la Justicia de Menores y del
+Síndico General de Quiebras, conforme a las
+disposiciones de este Código. Compete
+también a la Corte Suprema de Justicia
+enjuiciar por el mismo procedimiento, a los
+Abogados y Procuradores para la cancelación
+de la matrícula, y a los Escribanos Públicos,
+para la suspensión y destitución.
+La cancelación de la matrícula de los
+Rematadores, Oficiales de Justicia,
+Traductores y demás Peritos será
+reglamentada por la Corte Suprema de
+Justicia.
+El procedimiento será sumario, con audiencia
+del interesado;
+g) De la recusación, de la inhibición e           g) de la recusación, de la inhibición e
+impugnación de la inhibición de los Miembros   impugnación de inhibición de los Miembros de
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981
+de la misma Corte Suprema de Justicia, del      la misma Corte Suprema de Justicia, del
+Tribunal de Cuentas, y de los Tribunales de     Tribunal de Cuentas, y de los Tribunales de
+Apelación;                                    Apelación;
+h) De los recursos de reposición y aclaratoria,   h) de los recursos de reposición y aclaratoria,
+y de los pedidos de ampliatoria interpuestos    y de los pedidos de ampliatoria interpuestos
+contra sus decisiones; e                       contra sus decisiones; e
+i) De las quejas por denegación de recursos o    i) de las quejas por denegación de recursos o
+por retardo de justicia interpuestas contra el    por retardo de justicia interpuestas contra el
+Tribunal de Cuentas y los Tribunales de         Tribunal de Cuentas y los Tribunales de
+Apelación.                                    Apelación.
+2. Entenderá por vía de apelación y nulidad:     2. Entenderá por vía de apelación y nulidad:
+a) De las sentencias definitivas dictadas por el  a) de las sentencias definitivas dictadas por el
+Tribunal de Cuentas y de las de los Tribunales  Tribunal de Cuentas y de las de los Tribunales
+de Apelación que modifiquen o revoquen las   de Apelación que modifiquen o revoquen las
+de Primera Instancia; conforme a las         de Primera Instancia; conforme a las
+disposiciones de los Códigos Procesales y a    disposiciones de los Códigos Procésales y a
+las leyes respectivas;                            las leyes respectivas;
+b) De las resoluciones originarias de los         b) de las resoluciones originarias de los
+Tribunales de Apelación en lo Civil, Comercial  Tribunales de Apelación en lo Civil, Comercial
+y Criminal y de Cuentas; y,                   y Criminal y de Cuentas; y,
+c) De las sentencias de los Tribunales de        c) de las sentencias de los Tribunales de
+Apelación que impongan pena de muerte o     Apelación que impongan pena de muerte o
+penitenciaría desde quince a treinta años, las   penitenciaría desde quince a treinta años, las
+que no causarán ejecutoria sin el            que no causarán ejecutoria sin el
+pronunciamiento de la Corte Suprema de       pronunciamiento de la Corte Suprema de
+Justicia.                                             Justicia.
+Contra estas sentencias se entenderán        Contra estas sentencias se entenderá siempre
+siempre deducidos los recursos de apelación y deducidos los recursos de apelación y nulidad
+nulidad aunque las partes las consientan.      aunque las partes las consientan.

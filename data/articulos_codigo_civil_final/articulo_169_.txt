@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: III
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 169.- El juez homologará el acuerdo si se ratificaren ambos cónyuges, dentro
+del plazo que les fuere señalado. Si cualquiera de ellos se retractare, o guardare silencio,
+se rechazará el pedido de separación.

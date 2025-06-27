@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 417.- Quedan derogadas la Ley N° 325 de 1918 y toda otra disposición legal contraria
+a este Código.

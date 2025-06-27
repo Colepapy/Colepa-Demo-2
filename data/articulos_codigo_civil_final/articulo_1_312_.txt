@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XVI
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.312.- El endoso debe ser puro y simple. Toda condición a la cual se lo
+subordine, se tendrá por no escrita. El endoso parcial es nulo. El endoso al portador vale
+como endoso en blanco.

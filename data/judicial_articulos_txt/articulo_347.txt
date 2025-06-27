@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: IX
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 347.- En este Registro se inscribirán todas las obras científicas, artísticas y literarias,
+así como las obras plásticas en pintura, escultura o arquitectura, películas cinematográficas y
+otras obras de conformidad a  lo dispuesto en  la Ley N° 94 de 1951 de "Derechos
+Intelectuales".
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981

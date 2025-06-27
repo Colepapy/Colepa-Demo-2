@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XVIII
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.407.- El menor que ha cumplido diez y ocho años puede efectuar válidamente
+depósitos de ahorro y hacer cobros sobre  los mismos,  salvo  la  oposición de su
+representante legal.
+La libreta de depósito de ahorros librada al menor debe ser nominativa.

@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: I
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 790.- El que vende una herencia sin especificar los bienes incluidos en ella,
+sólo está obligado a responder de su calidad de heredero.

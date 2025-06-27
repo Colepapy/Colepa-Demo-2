@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: X
+SECCIÓN: N/A
+---
+ESTADO: Derogado Por: Artículo 98 de la Ley Nº 1/92
+---
+TEXTO DEL ARTÍCULO:
+Art. 219.- Serán válidas las estipulaciones de ventajas económicas concertadas por
+los concubinos entre sí, o contenidas en disposiciones testamentarias, salvo lo dispuesto
+por este Código sobre la legítima de los herederos forzosos.

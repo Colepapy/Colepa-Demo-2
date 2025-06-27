@@ -1,0 +1,29 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 102.- Las   condiciones   requeridas Artículo  102.- Las  condiciones  requeridas
+para desempeñar las funciones de Escribano para desempeñar las funciones de Escribano
+de Registro son:                          de Registro son:
+a) Ser paraguayo natural o naturalizado;        a) Ser paraguayo natural o naturalizado;
+b) Ser mayor de edad;                          b) Ser mayor de edad;
+c) Tener título de Notario y Escribano Público  c) Tener título de notario y escribano público
+expedido por una Universidad Nacional, o por expedido por una universidad nacional, o por
+una extranjera con equiparación o reválida por una  extranjera con equiparación  revalidada
+la Universidad Nacional; y                     por la Universidad Nacional;
+d) Ser de conducta, antecedentes y honradez  d) No registrar antecedentes de carácter penal
+intachables.                              con sentencia firme y ejecutoriada y gozar de
+notoria honorabilidad y buena conducta.
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981
+e) Fijar su asiento notarial en el lugar donde le
+fue asignado el usufructo del Registro Notarial;
+y
+f) Aprobar un concurso de oposición.
+Texto Anterior de la Ley N° 879/1981          Texto actual establecido por el artículo 1 de la
+Ley Nº 903/96

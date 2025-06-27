@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: I
+CAPITULO: VI
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 74.- La interdicción podrá ser solicitada por el cónyuge que no esté separado
+de hecho ni divorciado; por el cónyuge inocente; por parientes hasta el cuarto grado de
+consanguinidad o segundo de afinidad, y por el Defensor de Incapaces.
+Texto consolidado de la Ley Nº 1183/1985

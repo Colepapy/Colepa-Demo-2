@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.620.- La validez del testamento, en cuanto a  la forma, depende de  la
+observancia de la ley que rija al tiempo de su otorgamiento. Una ley posterior no trae
+cambio alguno, ni a favor ni en perjuicio del testamento, aunque sea dada en vida del
+testador.

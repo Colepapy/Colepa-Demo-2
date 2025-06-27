@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.687.- Cuando algunos de los herederos son instituidos por una única fracción,
+se aplicarán a ésta las disposiciones precedentes.

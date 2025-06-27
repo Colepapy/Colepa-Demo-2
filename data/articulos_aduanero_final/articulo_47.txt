@@ -1,0 +1,15 @@
+CONTEXTO:
+TITULO: II
+CAPITULO: 3
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 47.- Derecho de petición y de consulta ante la Dirección Nacional de
+Aduanas.
+1. Toda persona que tenga un interés legítimo podrá formular peticiones y consultas a
+la Dirección Nacional de Aduanas, de conformidad a este Código y sus normas
+reglamentarias.
+2. El peticionante deberá exponer con claridad y precisión todos los elementos e
+informaciones que hacen a su consulta.

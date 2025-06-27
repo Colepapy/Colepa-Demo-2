@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: III
+CAPITULO: II
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.995.- Será justo título para la usucapión aquél que teniendo por fin transmitir
+el dominio o un derecho real, reviste las solemnidades exigidas por la ley para su validez.

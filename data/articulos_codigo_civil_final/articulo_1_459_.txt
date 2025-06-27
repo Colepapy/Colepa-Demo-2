@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XXI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.459.- Puede afianzarse una deuda futura o condicional cuyo objeto se
+determinado, aunque su monto sea indeterminado. En este supuesto, sólo valdrá la fianza
+si se constituyere por una suma limitada dentro de la cual estará obligado el fiador por todo
+concepto.

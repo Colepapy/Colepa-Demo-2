@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.006.- Disuelta una sociedad se procederá a liquidar su activo. La sociedad
+subsistirá en la medida que lo requiera la liquidación, para concluir los asuntos pendientes,
+iniciar las operaciones nuevas que ella exija, y para administrar, conservar y realizar el
+patrimonio social.

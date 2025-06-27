@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.148.- Formalizado el reglamento de copropiedad y administración, de acuerdo
+con lo establecido en este Código, tendrá fuerza obligatoria respecto de los terceros
+adquirentes a cualquier título. La inscripción del reglamento podrá practicarse, aun cuando
+no esté construido el edificio.
+Las mismas reglas serán aplicadas para modificar dicho reglamento o dejarlo sin
+efecto.
+Texto consolidado de la Ley Nº 1183/1985

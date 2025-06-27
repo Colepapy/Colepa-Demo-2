@@ -1,0 +1,13 @@
+CONTEXTO:
+TITULO: I
+CAPITULO: 1
+SECCIÓN: 1
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 1º Anexo Decreto Nº 4.672/05 Artículo 2º Participación aduanera en normas de comercio exterior. Anexo Decreto Nº Artículo 3º Certificado de calidad
+---
+TEXTO DEL ARTÍCULO:
+Artículo 1°.- Función de la Aduana. Concepto. La Dirección Nacional de Aduanas es
+la Institución encargada de aplicar la legislación aduanera, recaudar los tributos a la
+importación y a la exportación, fiscalizar el tráfico de mercaderías por las fronteras y
+aeropuertos del país, ejercer sus atribuciones en zona primaria y realizar las tareas de
+represión del contrabando en zona secundaria.

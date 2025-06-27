@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: II
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.566.- Es aplicable a la garantía de los coherederos, lo dispuesto en este
+Código para la evicción, salvo las disposiciones especiales de este Capítulo. Deben,
+además, la garantía por los defectos ocultos de los objetos que se adjudicaren.

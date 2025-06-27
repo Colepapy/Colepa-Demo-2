@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 375.- El demandado deberá oponer, al contestar la demanda, todas las excepciones
+que tuviere y observará, en cuanto a la forma, lo que se establece para la demanda.

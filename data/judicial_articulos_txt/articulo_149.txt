@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: IV
+---
+ESTADO: Modificado por el artículo 1 de la Ley N° Texto actual establecido por el artículo 1 de la 963/1982, posteriormente modificado por el Ley N° 903/1996
+---
+TEXTO DEL ARTÍCULO:
+Artículo 149.- Toda queja sobre las actuaciones de los Escribanos, Escribanos de Registro,
+será llevada a conocimiento del Juez de Primera de Instancia en lo Civil o Comercial, de turno,
+según el caso, quien oirá al interesado y al Escribano, y resolverá sumariamente en juicio
+verbal, con derecho a apelación ante el Tribunal respectivo.
+Modificado por el artículo 1 de la Ley N°        Texto actual establecido por el artículo 1 de la
+963/1982, posteriormente modificado por el    Ley N° 903/1996

@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: I
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 709.- Las cláusulas del contrato se interpretan las unas por medio de las otras,
+atribuyendo a las dudosas el sentido que resulte del contexto general.

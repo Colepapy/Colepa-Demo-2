@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: II
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.279.- El usufructuario universal a título gratuito estará obligado a pagar en
+proporción a su goce, y sin derecho a repetir, las pensiones alimentarias, las rentas,
+sueldos e  intereses devengados, que  graviten sobre  el patrimonio por  créditos ya
+existentes.

@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: III
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 147.- El tutor que se casare con la pupila antes de aprobadas las cuentas de la
+tutela  perderá  la  retribución  que  le  habría  correspondido,  sin  perjuicio  de  su
+responsabilidad.
+La misma sanción se aplicará al tutor si el matrimonio con la pupila lo contrajere un
+descendiente suyo que está bajo su potestad.
+Esta disposición rige igualmente para la tutora.

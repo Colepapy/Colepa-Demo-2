@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: III
+CAPITULO: VIII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 178.- Corresponde al juez del domicilio conyugal conocer de la nulidad y sus
+efectos, si los esposos tienen domicilio en la República. Si el cónyuge demandado no lo
+tuviere en el país y el matrimonio se hubiere celebrado en él, la acción de nulidad podrá
+intentarse ante el juez del último domicilio matrimonial en la República.

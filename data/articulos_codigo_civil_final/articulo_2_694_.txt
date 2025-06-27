@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.694.- Serán de ningún valor las disposiciones del testador, por las que llame
+a un tercero al todo o parte de la herencia al morir el heredero instituido.
+Texto consolidado de la Ley Nº 1183/1985

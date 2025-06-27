@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: II
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.517.- Forman parte de la masa hereditaria:
+a) los bienes dejados por el causante;
+Texto consolidado de la Ley Nº 1183/1985
+b) lo adquirido en virtud de un derecho de la herencia, o como indemnización de un
+daño experimentado por ella, o por un acto jurídico referente a ella; y
+c) los frutos de los bienes sucesorios.

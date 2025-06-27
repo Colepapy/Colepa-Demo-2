@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: III
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.964.- Nadie puede ser privado del dominio o de alguna de sus facultades,
+sino por causa de utilidad pública o interés social, definido por la ley, ni desposeído de su
+propiedad sin justa indemnización.

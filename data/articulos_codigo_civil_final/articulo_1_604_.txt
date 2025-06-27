@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  1.604.-  Si  al tiempo  del  siniestro  el  valor asegurado excede  del  valor
+asegurable, el asegurador sólo está obligado a resarcir el perjuicio efectivamente sufrido;
+no obstante, tiene derecho a percibir la totalidad de la prima.
+Si el valor asegurado es inferior al valor asegurable, el asegurador sólo indemnizará
+el daño en la proporción que resulte de ambos valores, salvo pacto en contrario.
+Sin embargo, las partes quedan en libertad para convenir expresamente que, sin
+consideración al mayor valor de las cosas aseguradas, los daños serán compensados
+hasta la suma concurrente del importe íntegro de la cantidad asegurada.

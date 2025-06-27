@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: II
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.267.- Se aplicará al usufructo de derechos lo dispuesto sobre el de cosas,
+con las modificaciones que se establecen seguidamente. Los derechos intransmisibles no
+pueden ser objeto de usufructo.

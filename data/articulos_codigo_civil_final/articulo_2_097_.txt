@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: singular, siempre que se hubiere inscripto una medida cautelar relativa a la deuda. Si
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.097.- Siendo imposible, por la calidad de la cosa o por la oposición de
+algunos de los condóminos, el uso o goce o la posesión común, resolverá la mayoría si se
+la da en locación o se la administra por cuenta común, y fijará las condiciones, y nombrará
+o revocará administradores.
+Si se  resolviese  la  locación, será  preferido a un  tercero como  locatario,  el
+condómino que ofreciere las mismas ventajas, y entre condóminos con iguales ofertas,
+decidirá la suerte.

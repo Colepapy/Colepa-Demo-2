@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: N/A
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 507.- La suspensión de la prescripción establecida en beneficio de un acreedor,
+aprovechará a todos los demás.
+PARÁGRAFO III
+DE LAS OBLIGACIONES SOLIDARIAS

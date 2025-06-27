@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: II
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 322.- Si la relación de derecho fuere subordinada a una condición resolutoria,
+sus efectos cesan por el cumplimiento de ella. A partir de este momento se restablece el
+estado anterior a la celebración del acto.
+Debe restituirse lo que se hubiere recibido en virtud de la obligación.

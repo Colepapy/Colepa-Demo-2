@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: VII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 160.- El procedimiento para la suspensión y destitución de los Escribanos será el
+establecido en este Código para el enjuiciamiento y remoción de los magistrados.
+Ver Art. 24 de la Ley Nº 609/1995 Que Organiza la Corte Suprema de Justicia.

@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: VIII
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.867.- La acción de indemnización derivada de la comisión de un acto ilícito,
+se extingue por la renuncia de la persona directamente ofendida, sin perjuicio de la
+subsistencia de la acción que otra persona perjudicada por el mismo acto ilícito pueda
+ejercer contra el causante del daño.

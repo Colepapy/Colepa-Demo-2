@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: y por error de hecho o de derecho estuviere persuadido de su legitimidad. El título
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.945.- Las acciones posesorias del artículo precedente no proceden contra los
+terceros poseedores de cosas muebles, sucesores particulares de buena fe, sino en el
+caso de que hubieren sido robadas o perdidas.

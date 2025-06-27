@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: N/A
+SECCIÓN: VI
+---
+ESTADO: Derogado Por: Artículo 98 de la Ley Nº 1/92
+---
+TEXTO DEL ARTÍCULO:
+Art. 205.- Para los casos previstos en los incisos d) y e) del precedente artículo se
+requerirá autorización  judicial  previa,  la que será otorgada siempre que  el contrato
+contemple el interés de la familia y el de ambos cónyuges por igual.

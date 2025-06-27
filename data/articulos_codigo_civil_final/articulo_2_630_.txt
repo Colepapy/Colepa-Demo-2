@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.630.- No es indispensable que las indicaciones del día, mes y año de la
+fecha, sean según el calendario; pueden ser reemplazados por enunciaciones equivalentes
+que fijen de una manera precisa la fecha del testamento.
+La fecha puede oponerse antes o después de la firma.

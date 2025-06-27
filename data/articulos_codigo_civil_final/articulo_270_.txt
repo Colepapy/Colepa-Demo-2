@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: XIII
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 270.- Siempre que el incapaz tuviere hijos menores, el curador de aquél será
+también tutor de éstos. Si la curatela fuere de una mujer encinta, se extenderá al hijo
+concebido.

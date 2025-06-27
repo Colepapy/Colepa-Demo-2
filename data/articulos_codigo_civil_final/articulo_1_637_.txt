@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.637.- El asegurador tiene derecho a inspeccionar y examinar los animales
+asegurados en cualquier tiempo y a su costa.

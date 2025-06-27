@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 151.- Documentos notariales, son aquellos en los cuales el Escribano actúa fuera de
+su protocolo, con autorización de la ley.

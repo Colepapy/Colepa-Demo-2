@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XIX
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.443.- La prestación periódica sólo puede consistir en dinero; cualquiera otra
+prestación en frutos naturales, o en servicios, será pagadera por su equivalente en dinero.

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: XI
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 350.- La inscripción contendrá:
+a) Número, fecha y hora de inscripción;
+b) Nombre y apellido del autorizante;
+c) Nombre y apellido del mandante y mandatario; y,
+d) Clase de mandato.

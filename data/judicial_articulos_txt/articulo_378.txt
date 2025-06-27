@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 378.- Si hubieren hechos controvertidos,  el Juez convocará a las partes a una
+audiencia, que será realizada dentro de los diez días para que concurran con las pruebas de
+que intenten valerse.

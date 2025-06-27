@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Modificado por el artículo 3 inciso b) de la Ley N° 963/82
+---
+TEXTO DEL ARTÍCULO:
+Artículo 371.- Los Jueces de Paz Letrados, darán audiencia diariamente durante cuatro horas
+consecutivas, pudiendo habilitar horas y días feriados. Esas audiencias serán públicas, salvo el
+caso que convenga al decoro hacerlas en reserva.
+Modificado por el artículo 3 inciso b) de la Ley N° 963/82

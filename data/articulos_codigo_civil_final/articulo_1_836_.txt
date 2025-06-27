@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: VIII
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.836.- El hecho que no cause daño a la persona que lo sufre, sino por una
+falta imputable a ella, no engendra responsabilidad alguna.
+Texto consolidado de la Ley Nº 1183/1985
+Si en la producción del daño hubieren concurrido su autor y el perjudicado, la
+obligación y  el monto de  la indemnización dependerán de  las circunstancias, y en
+particular, de que el perjuicio haya sido principalmente causado por una u otra parte.

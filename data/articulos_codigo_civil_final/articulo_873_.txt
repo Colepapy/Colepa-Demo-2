@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: VI
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 873.- El editor está obligado a reproducir la obra en forma conveniente, sin
+ninguna modificación. Debe igualmente costear anuncios necesarios y proveer las medidas
+habituales enderezadas al éxito de la venta.
+El editor fijará el precio de venta de la obra, sin poder elevarlo al extremo de limitar
+su circulación.

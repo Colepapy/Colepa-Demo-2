@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XVI
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.313.- El endoso debe ser escrito en la letra de cambio o en una hoja unida a
+ella (hoja de prolongación). Debe ser firmado por el endosante.
+El endoso es válido, aunque el beneficiario no fuere designado en él, o se hubiere
+limitado el endosante a poner su firma al dorso de la letra de cambio, o en una hoja de
+prolongación.

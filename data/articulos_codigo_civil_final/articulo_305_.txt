@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: II
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 305.- La simulación no es reprobada por la ley cuando a nadie perjudica ni
+tiene un fin ilícito.

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XVI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.308.- El poder general de obligarse en nombre y por cuenta de otro no hace
+presumir la facultad de obligarse cambiariamente, salvo prueba en contrario.
+La facultad de obligarse en nombre y por cuenta de un comerciante comprende
+también la de obligarse cambiariamente, salvo que en el instrumento del mandato se
+dispusiere lo contrario.

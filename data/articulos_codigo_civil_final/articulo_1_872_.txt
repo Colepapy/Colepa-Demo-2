@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: I
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.872.- Se llaman cosas en este Código, los objetos corporales susceptibles de
+tener un valor.

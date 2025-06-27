@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: V
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.093.- El condómino acreedor por desembolso en concepto de cargas, por
+gastos conservatorios o de reparación, tendrá derecho a exigir el pago preferente de ellas,
+al ser dividida la comunidad. Esta facultad podrá hacerse valer, aun contra los sucesores a

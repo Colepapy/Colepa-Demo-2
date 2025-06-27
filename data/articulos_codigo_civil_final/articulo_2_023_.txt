@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: putativo no es suficiente, cualesquiera que sean los fundamentos del poseedor para
+CAPITULO: N/A
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.023.- El propietario de una heredad puede obligar al dueño del predio lindero
+a proceder con él a la demarcación de los dos predios, y a renovar mojones destruidos o
+desaparecidos,  repartiéndose  proporcionalmente  los  gastos  entre  los  propietarios
+colindantes.
+Texto consolidado de la Ley Nº 1183/1985

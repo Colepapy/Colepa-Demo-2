@@ -1,0 +1,22 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 404.- Las únicas excepciones admisibles en el juicio ejecutivo son:
+a) Incompetencia de jurisdicción;
+b) Falta de personería en  el demandante, en  el demandado o en sus procuradores o
+apoderados;
+c) Litis pendencia en otro Juzgado o Tribunal competente;
+d) Falsedad o inhabilidad del título con que se pide la ejecución, entendiéndose que ésta
+excepción se refiere únicamente a las formas externas del título;
+e) Prescripción;
+f) Pago;
+g) Compensación de crédito líquido que resulte de documento que traiga aparejada ejecución;
+h) Quita, espera o remisión comprobadas por escrito, que se presentará en el acto de oponer la
+excepción; e,
+i) Novación, transacción o compromiso, acreditados en la misma forma que la anterior.

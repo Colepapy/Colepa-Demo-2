@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: X
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.426.- En caso de doble inscripción, o de no existir ninguna, se juzgará que el
+derecho pertenece al que está en posesión de la cosa.
+Cuando se tratare de derechos reales sobre la cosa de otro, se presumirá que la
+propiedad es libre y plena, no obstante, la posesión y la inscripción.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: II
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 329.- Si hubiere condición resolutoria por falta de cumplimiento del cargo
+impuesto, será necesaria la sentencia del juez para que el beneficiario pierda el derecho
+adquirido.

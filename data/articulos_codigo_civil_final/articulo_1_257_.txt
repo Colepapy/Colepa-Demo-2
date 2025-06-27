@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XIII
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.257.- Si el depósito fuere irregular, de dinero o de otra cantidad de cosas
+fungibles, cuyo uso fue concedido por el depositante al depositario, queda este obligado a
+pagar el todo, y no por parte, o a entregar otro tanto de la cantidad de cosas depositadas,
+con tal que sean de la misma especie y calidad.
+Se presume que el depositante concedió al depositario el uso del depósito, si no
+constare que lo prohibió.
+Texto consolidado de la Ley Nº 1183/1985

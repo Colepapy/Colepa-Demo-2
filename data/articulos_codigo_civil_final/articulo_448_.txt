@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: II
+CAPITULO: I
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 448.- Son oponibles al acreedor las excepciones y causas extintivas referentes
+al derecho ejercido, aun en el caso de fundarse en hechos del deudor ulteriores a la
+demanda.

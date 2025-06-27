@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: XI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 229.- El hijo nacido dentro de los trescientos días posteriores a la disolución del
+matrimonio de la madre, se presume concebido en éste, aunque la madre o alguien que
+invoque la paternidad, lo reconozcan por hijo extramatrimonial.

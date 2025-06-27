@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: I
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 764.- Salvo estipulación en  contrario,  el comprador debe  recibir  la cosa
+comprada al concluirse el contrato.

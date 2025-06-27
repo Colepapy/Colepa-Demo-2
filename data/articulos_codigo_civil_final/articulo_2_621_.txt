@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.621.- La forma de una especie de testamento no puede extenderse a los
+testamentos de otra especie.
+La prueba de la observancia de las formalidades prescriptas para la validez de un
+testamento debe resultar del mismo y no de otros escritos, y no puede ser demostrada por
+testigos.
+Texto consolidado de la Ley Nº 1183/1985

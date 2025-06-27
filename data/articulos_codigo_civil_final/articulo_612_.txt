@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: IV
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 612.- La entrega del instrumento original que justifica el crédito, realizada
+voluntariamente por el acreedor al deudor, constituye prueba de liberación.
+Siempre que dicho título se halle en poder del obligado, se presume que el acreedor
+lo entregó voluntariamente.

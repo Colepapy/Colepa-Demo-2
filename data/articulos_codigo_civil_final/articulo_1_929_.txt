@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: y por error de hecho o de derecho estuviere persuadido de su legitimidad. El título
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.929.- La tradición de cosas muebles, se entenderá hecha también por la
+entrega de los conocimientos, facturas o cartas de porte, en los términos dispuestos por la
+legislación que los rija, o cuando fueren remitidas por cuenta y orden de otros, toda vez
+que las personas que las remiten las entreguen al agente que deba transportarlas, y con
+tal que el comitente hubiese determinado o aprobado el modo de la remisión.

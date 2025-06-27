@@ -1,0 +1,33 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: IV
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.328.- Esta  garantía  real podrá   Artículo 2.328.- Esta garantía real podrá
+constituirse sobre:                         constituirse sobre:
+a) ganado de  toda  especie y  sus      a) ganado de  toda  especie y  sus
+productos;                               productos;
+b) toda clase máquina destinadas a la      b) toda clase de máquinas destinadas
+explotación       industrial     o        a   la  explotación  industrial  o
+agropecuaria  y  cualquier  otro         agropecuaria  y  cualquier  otro
+instrumento de trabajo, esté o no        instrumento de trabajo, esté o no
+inmovilizado por su adhesión  al         inmovilizado por su adhesión al
+suelo;                                       suelo;
+c) los frutos de cualquier naturaleza,       c) los frutos de cualquier naturaleza,
+sean pendientes o ya separados,        sean pendientes o ya separados,
+así como las maderas cortadas y          así como las maderas cortadas y
+marcadas para su comercialización        marcadas        para        su
+y los productos de la minería y de         comercialización y los productos
+la industria; y                         de la minería y de la industria;
+d) los vehículos automotores y sus      d) los vehículos automotores y sus
+acoplados, con título inscripto en         acoplados, con título inscripto en
+el Registro respectivo y los carros           el registro respectivo y los carros
+que se hallen inscriptos.                que se hallen inscriptos; y,
+e) las  embarcaciones  de  cabotaje
+menor que se hallen inscriptas en
+la Dirección General de Registros
+Públicos.

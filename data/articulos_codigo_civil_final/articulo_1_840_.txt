@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: VIII
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.840.- La obligación de reparar el perjuicio causado por un acto ilícito existe,
+no sólo respecto de aquél a quien se ha dañado personalmente, sino también respecto de
+todas las personas directamente perjudicadas por consecuencia del acto.

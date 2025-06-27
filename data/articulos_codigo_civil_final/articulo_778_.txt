@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: I
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 778.- En caso de duda, la venta condicional se reputará subordinada a una
+condición resolutoria.
+Texto consolidado de la Ley Nº 1183/1985

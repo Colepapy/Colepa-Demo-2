@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: IV
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.316.- Si lo prendado fuere un crédito o título no negociable por endoso, para
+que la prenda quede constituida deberá ser notificada al deudor del crédito dado en
+prenda, y entregarse el título al acreedor, o a un tercero, aunque su monto excediere de la
+deuda.
+No podrán darse en prenda créditos que no consten de un título por escrito, ni sean
+cesibles.

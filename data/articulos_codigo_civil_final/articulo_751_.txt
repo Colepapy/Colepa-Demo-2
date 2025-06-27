@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: I
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 751.- Siempre que el comprador optare por la resolución del contrato, los
+gastos producidos por éste y por la medición serán a cargo del vendedor, así como los
+intereses del precio pagado, si el adquirente no hubiere percibido los frutos de la cosa.
+Cuando se decidiere por el cobro o abono de las diferencias, recibirá o entregará
+respectivamente, los intereses legales sobre aquéllas, a partir del pago o de la mora.

@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: singular, siempre que se hubiere inscripto una medida cautelar relativa a la deuda. Si
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.119.- En los predios rústicos los cerramientos medianeros deben hacerse a
+comunidad de gastos, si las dos heredades se encerrasen. Cuando una de las heredades
+está sin cerca alguna, el dueño de ella no está obligado a contribuir para las paredes,
+fosos y cercas divisorias.

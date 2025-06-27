@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: III
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 809.- Es nula toda cláusula por la que se pretenda excluir de la casa, pieza o
+departamento arrendado o subarrendado, a los menores que se hallaren bajo la patria
+potestad o guarda del locatario o sublocatario.

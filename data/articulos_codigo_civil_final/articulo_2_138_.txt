@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: VI
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.138.- Cada propietario atenderá los gastos de conservación y reparación del
+piso o departamento que le pertenece.

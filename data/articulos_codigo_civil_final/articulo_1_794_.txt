@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: traslativo del dominio.
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.794.- Entre adquirente y enajenante que no sean comprador y vendedor, el
+vicio redhibitorio de la cosa, sólo dará derecho a la acción redhibitoria, pero no a la que
+tienda a obtener que se rebaje de lo entregado, el menor valor de aquellas.

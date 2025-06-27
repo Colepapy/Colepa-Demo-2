@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.642.- El testamento expresará el lugar en que se le otorga, su fecha, el
+nombre, edad y domicilio de los testigos, como también si fue dictado o redactado por el
+testador.
+El escribano dará fe de la identidad del testador si lo conociere personalmente, o en
+su defecto, por declaración de dos testigos de su conocimiento.

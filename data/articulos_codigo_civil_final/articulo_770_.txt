@@ -1,0 +1,25 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: I
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 770.- Se prohíbe la venta con pacto   Artículo 770.- Se prohíbe la venta con
+de retroventa, así como la promesa de  pacto de  retroventa de  inmuebles  y
+venta de una cosa que haya sido objeto demás bienes registrables, así como la
+de  compraventa  entre   los  mismos  promesa de venta de un inmueble u otro
+contratantes.                            bien registrable que haya sido objeto de
+Se  prohíbe  igualmente  el  pacto de  compra-venta    entre    los   mismos
+reventa.                                   contratantes. Se prohíbe igualmente el
+pacto de reventa de inmuebles y bienes
+Texto consolidado de la Ley Nº 1183/1985
+registrables.
+Quedan  exceptuados de  la  presente
+prohibición los títulos, valores, acciones
+y demás documentos e instrumentos
+negociados a través de casas de bolsa
+debidamente    autorizadas   por    la
+Comisión Nacional de Valores.

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.558.- El asegurado tiene derecho, mediante el pago de los gastos, a que se le
+entregue copia de las declaraciones que formuló para la celebración del contrato y copia
+no negociables de la póliza.
+PARAGRAFO IV
+DE LAS DENUNCIAS Y LAS DECLARACIONES

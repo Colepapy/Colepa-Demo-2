@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 3
+SECCIÓN: 9
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 211.- Responsabilidad solidaria. El usuario del régimen y el depositario de
+las mercaderías serán solidariamente responsables de los tributos y multas que resulten
+de las diferencias constatadas.

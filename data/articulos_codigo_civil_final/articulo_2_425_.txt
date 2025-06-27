@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: X
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.425.- Cuando el demandante y el demandado presentare cada uno títulos de
+adquisición derivados de personas distintas, se presumirá que el inmueble pertenece al
+que lo hubiere inscripto.

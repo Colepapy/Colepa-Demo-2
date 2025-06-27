@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 398.- Si en los casos previstos se denegase la apelación podrá recurrirse en queja
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981
+dentro de las cuarenta y ocho horas al Tribunal de Apelación. La queja deberá resolverse en
+igual término, previo requerimiento de autos.

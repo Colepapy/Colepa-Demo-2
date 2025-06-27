@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: I
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 43.- Toda persona tiene derecho a suscribir con su nombre sus actos públicos y
+privados, en la forma que acostumbre a usarlo. También tiene derecho a adoptar la firma
+que prefiera.

@@ -1,0 +1,20 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: IV
+---
+ESTADO: Modificado por el artículo 1 de la Ley N° Texto actual establecido por el artículo 1 de la 963/1982, posteriormente modificado por el Ley Nº 903/1996, posteriormente modificado
+---
+TEXTO DEL ARTÍCULO:
+Artículo 117.- Queda prohibido a los notarios públicos:
+a) Actuar en la formalización de actos o negocios jurídicos en que intervenga en cualquier
+carácter, su cónyuge, parientes consanguíneos hasta el cuarto grado o afines hasta el segundo
+grado; y,
+b) Tener personalmente interés en el acto que autoricen, así como su cónyuge o parientes
+mencionados en el inciso anterior.
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981
+DE LA ESCRITURA Y SU REGISTRO
+Modificado por el artículo 1 de la Ley N°        Texto actual establecido por el artículo 1 de la
+963/1982, posteriormente modificado por el    Ley Nº 903/1996, posteriormente modificado

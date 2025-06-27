@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: III
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 52.- La renuncia de los recursos, sin embargo, no obsta a la interposición de nulidad
+fundado en haber fallado los árbitros fuera del término, o sobre puntos no comprometidos o por
+falta esencial en el procedimiento.

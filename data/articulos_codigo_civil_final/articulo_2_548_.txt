@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: II
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.548.- No deben ser colacionados:
+a) los gastos de alimentos y curación, por crecidos que sean;
+b) los destinados a educar los hijos o descendientes, o los que se hicieren a fin de
+prepararlos para el ejercicio de un arte o profesión;
+c) los regalos de costumbre, o de amistad; y
+d) el importe invertido en un seguro de vida.
+Texto consolidado de la Ley Nº 1183/1985

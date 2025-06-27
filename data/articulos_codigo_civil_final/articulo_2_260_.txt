@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: II
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.260.- Los acreedores del usufructuario podrá embargar  el derecho del
+usufructo, y obtener se les conceda el ejercicio de éste para cobrar sus créditos, prestando
+en tal caso fianza suficiente de conservación y restitución de la cosa tenida en usufructo.

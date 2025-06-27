@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: II
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.248.- En caso de siniestro, el derecho del usufructuario se extiende al valor
+del resarcimiento. Tanto aquél como el dueño, podrán exigir que el importe se invierta en
+reconstruir o restablecer la cosa, cuando así lo impongan las reglas de una imprudente
+administración.
+El nudo  propietario  podrá  encargarse de  esas  obras, o  delegarlas en  el
+usufructuario, sin que éste deba ser retribuido.
+El usufructo continuará en tal caso sobre la cosa restablecida.

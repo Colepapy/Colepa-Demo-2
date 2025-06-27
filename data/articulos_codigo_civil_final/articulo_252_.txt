@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: XII
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 252.- En ambas líneas hay tantos grados como persona, menos una. En la
+línea recta se sube hasta el ascendiente. En la colateral se sube desde una de las
+personas hasta la ascendiente común, y luego se baja hasta la otra persona con la que se
+quiere establecer el grado de parentesco.

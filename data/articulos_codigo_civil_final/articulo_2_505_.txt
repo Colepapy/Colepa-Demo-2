@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: II
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.505.- La declaratoria de herederos crea la presunción de ser el titular del
+derecho sucesorio.

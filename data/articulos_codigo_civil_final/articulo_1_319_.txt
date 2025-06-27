@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XVI
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.319.- Si el endoso lleva a la cláusula "valor en garantía", "valor en prenda", o
+cualquier otra que implique una caución, el portador puede ejercer todos los derechos
+derivados de la letra de cambio, pero un endoso hecho por él sólo vale como endoso a

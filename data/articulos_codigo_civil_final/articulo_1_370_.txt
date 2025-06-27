@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: N/A
+SECCIÓN: VIII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.370.- En los otros casos de intervención,  el portador puede rehusar  la
+aceptación por intervención. Sin embargo, si la admite, pierde el derecho de ejercer la
+acción de regreso antes del vencimiento contra aquél por quien se ha dado la aceptación y
+contra los firmantes subsiguientes.

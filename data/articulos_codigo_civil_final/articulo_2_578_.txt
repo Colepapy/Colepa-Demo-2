@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: V
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.578.- Se puede representar a aquél a cuya sucesión se ha renunciado.
+Puede también representarse al desaparecido con presunción de fallecimiento.

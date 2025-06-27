@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: III
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 172.- Toda clase de prueba será admitida en este juicio, con excepción de la
+confesión y el testimonio de los ascendientes y descendientes de los cónyuges.

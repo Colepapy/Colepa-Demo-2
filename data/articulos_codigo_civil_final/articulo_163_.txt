@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: III
+CAPITULO: VI
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.   163.-   El   matrimonio   válido    Art.   163.-   El   matrimonio   válido
+celebrado en la República no se disuelve  celebrado en  la República se disuelve
+sino  por  la  muerte  de uno  de  los  por la muerte de uno de los esposos y
+esposos.                              por el divorcio vincular. Igualmente se
+disuelve  en  el  caso  del  matrimonio
+celebrado por el cónyuge del declarado
+presuntamente fallecido.

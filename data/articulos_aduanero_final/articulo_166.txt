@@ -1,0 +1,12 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 3
+SECCIÓN: 3
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 223º Autorización Aduanera para la Admisión Temporaria Anexo Decreto Nº 4.672/05 Artículo 224º Plazos de Permanencia Sesquicentenario de la Epopeya Nacional 1864-1870 Anexo Decreto Nº 4.672/05 Artículo 225º Mercaderías Susceptibles de utilizar el Régimen de Admisión Temporaria
+---
+TEXTO DEL ARTÍCULO:
+Artículo 166.- Admisión temporaria. El régimen aduanero de admisión temporaria
+permite la permanencia de mercadería extranjera en el territorio aduanero para fines
+determinados, con suspensión total o parcial del pago del tributo aduanero, debiendo la
+misma ser reexportada en el plazo fijado sin sufrir modificaciones.

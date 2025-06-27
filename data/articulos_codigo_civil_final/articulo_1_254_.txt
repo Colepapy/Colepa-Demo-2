@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XIII
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.254.- El depositario tiene el derecho de retener la cosa depositada, hasta el
+pago íntegro de lo que se le deba por razón de depósito; pero no por ninguna otra causa
+extraña al mismo.

@@ -1,0 +1,19 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: múltiple, a petición y a costa del poseedor. Los títulos de créditos pueden ser
+CAPITULO: N/A
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.536.- El título al que le falte algunos de los requisitos indicados en el artículo
+anterior no es válido como pagaré a la orden, salvo en los casos determinados en los
+apartados siguientes.
+Texto consolidado de la Ley Nº 1183/1985
+El pagaré en el cual no se haya indicado el plazo del pago, se considera pagadero a
+la vista.
+A falta de indicación expresa, el lugar de emisión del título se considera lugar del
+pago y al mismo tiempo, domicilio del emisor.
+El pagaré en el que no se indique el lugar de emisión, se considera firmado en el
+lugar indicado junto al nombre del emisor.

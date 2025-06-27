@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VI
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.763.- El legado caduca cuando el legatario muere antes que el testador, o
+cuando la adquisición del legado está subordinada a una condición suspensiva o a un
+término  incierto, y  el legatario muere antes del cumplimiento de  la condición o del
+vencimiento del término, a menos que del testamento resultare que el legado era extensivo
+a sus herederos.

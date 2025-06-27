@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.695.- Lo dispuesto sobre  las  sustituciones de herederos es  aplicable
+igualmente a los legatarios.

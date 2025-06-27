@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: IV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 563.- El pago debe hacerse en  el lugar designado. Si no se  lo hubiere
+establecido y se tratare de una cosa cierta, donde ella existía al constituirse la obligación;
+en cualquier otro caso, en el domicilio del deudor.

@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: N/A
+SECCIÓN: IV
+---
+ESTADO: Derogado Por: Artículo 98 de la Ley Nº 1/92
+---
+TEXTO DEL ARTÍCULO:
+Art. 195.- El marido es el administrador de los bienes de la comunidad, salvo las
+excepciones previstas en este Capítulo.

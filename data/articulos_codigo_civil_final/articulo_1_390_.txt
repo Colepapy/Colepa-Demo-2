@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: N/A
+SECCIÓN: XII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.390.- El pago de una letra de cambio que vence en día feriado legal no puede
+ser exigido sino el primer día hábil siguiente. Asimismo, todos los actos relativos a la letra
+de cambio y en particular su presentación para la aceptación y el protesto, no pueden
+cumplirse sino en día hábil.
+Texto consolidado de la Ley Nº 1183/1985
+Si uno de estos actos debe cumplirse en un determinado plazo cuyo último día sea
+feriado, dicho plazo queda prorrogado hasta el primer día hábil siguiente. Los días feriados
+intermedios quedan comprendidos en el cómputo del plazo.

@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: I
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 765.- Cuando proceda la resolución de la compraventa, el comprador deberá
+restituir la cosa, y el vendedor lo que hubiere recibido a cuenta del precio, con una
+disminución equitativa fijada por el juez, en concordancia con la desvalorización y el uso
+que hubiere hecho de ella el comprador.

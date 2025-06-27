@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 268.- En cada sección, habrá un Registro de Inhibiciones, Embargos y otras medidas
+cautelares.

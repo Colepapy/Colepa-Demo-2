@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XX
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.451.- Se consideran deudas de juego o apuestas no sólo las que resulten
+directamente de ellos, sino también las contraídas con un mandatario que, a sabiendas, ha
+servido de intermediario en las operaciones de juego, o con uno de los jugadores por
+adelantos hechos en la partida.

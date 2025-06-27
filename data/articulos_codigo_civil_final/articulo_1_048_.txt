@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.048.- La sociedad anónima responde de las obligaciones sociales sólo con su
+patrimonio.
+Las cuotas de participación de los socios están representadas por acciones.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: V
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.389.- No obstante,  el abandono,  el  tercer poseedor puede retomar  el
+inmueble pagando los capitales y los intereses exigibles, aunque no posea sino una parte
+del inmueble hipotecado, o, aunque la suma debida fuera mayor que el valor del inmueble.

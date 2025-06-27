@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: II
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.270.- El usufructuario de un crédito no comprendido en el artículo anterior
+tendrá derecho a cobrarlo, y cuando su exigibilidad dependiere de una declaración y
+opción del acreedor, le será lícito efectuarla. Estará aquel obligado a realizar todos los
+actos judiciales para obtener el cobro del crédito, sin poder extinguirlo o modificarlo por
+otros medios que no sean el pago efectivo, o la compensación. En caso de rentas vitalicias
+o temporarias, pensiones u otros derechos semejantes, la prestación que pueda exigirse
+corresponderá al usufructuario.

@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.674.- Cuando en el caso del artículo precedente, el asegurado interrumpa el
+pago de las primas sin manifestar opción entre las soluciones consignadas, dentro de un
+mes de interpelado por el asegurador, el contrato se convertirá automáticamente en un
+seguro saldado por una suma reducida.

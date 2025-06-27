@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: N/A
+SECCIÓN: VIII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.375.- El portador que rechaza el pago por intervención pierde su acción de
+regreso contra aquéllos que por el pago hubiesen quedado liberados.

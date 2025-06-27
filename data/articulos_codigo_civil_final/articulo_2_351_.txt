@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: IV
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.351.- En las ejecuciones prendarias de bienes que obligatoriamente deben
+registrarse, el juez pedirá previamente informe al Registro de Créditos Prendarios sobre la
+existencia de gravámenes.
+En caso de existir éstos, se citará al deudor antes de ordenar la subasta.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: N/A
+TITULO: PRELIMINAR
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  3.- La capacidad  civil se rige por las nuevas leyes, aunque supriman o
+modifiquen las cualidades establecidas por las leyes anteriores, pero sólo para los actos y
+efectos posteriores.

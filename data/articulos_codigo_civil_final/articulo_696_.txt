@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: I
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 696.- Son anulables los contratos que tuviesen por objeto la entrega de cosas
+litigiosas, gravadas o embargadas, si se hubiese ocultado su condición al adquirente.

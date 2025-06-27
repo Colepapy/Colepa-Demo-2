@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: V
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.090.- Todo condómino puede obligar a sus copartícipes, en proporción a sus
+partes, a abonar los gastos de conservación o reparación de la cosa común, con los
+intereses sobre las sumas que con ese fin hubiere pagado. Los condóminos requeridos
+podrán liberarse de la obligación de contribuir, haciendo abandono de su derecho.

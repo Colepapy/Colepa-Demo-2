@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 799.- Por el contrato de permuta las partes se transfieren recíprocamente la
+propiedad de cosas u otro derecho patrimonial.

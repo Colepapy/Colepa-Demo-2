@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: V
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.088.- Cada copropietario tiene derecho a pedir en cualquier tiempo la división
+de la cosa común, cuando no se encuentre sometida a una indivisión forzosa.

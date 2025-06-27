@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: VI
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.818.- La acción de enriquecimiento no será viable si el perjudicado puede
+ejercer otra para resarcirse del daño sufrido.
+Se considera que falta causa cuando ésta dejó de existir después de producido el
+enriquecimiento.

@@ -1,0 +1,10 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 2
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 142.- Control de los datos. Registrada la declaración, el servicio aduanero
+controlará los datos declarados y la correcta aplicación de la normativa vigente.

@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.120.- Los estatutos establecerán el plazo por el cual serán designados los
+síndicos, hasta un máximo de tres ejercicios, sin perjuicio de su obligación de desempeñar
+el cargo hasta que sean reemplazados. La asamblea de accionistas puede dejar sin efecto
+su designación, sin que esta facultad sea susceptible de limitación.

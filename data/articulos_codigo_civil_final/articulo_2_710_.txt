@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.710.- Si el testamento hubiere sido destruido, aunque fuere por un caso
+fortuito o fuerza mayor, los herederos instituidos o los legatarios no serán admitidos a
+probar las disposiciones que el testamento contenía.

@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: VIII
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 259.- El Jefe del Archivo General expedirá testimonio de las escrituras, expedientes y
+demás documentos del Archivo, así como los certificados que se le pidieren pudiendo hacerlo
+en fotocopias debidamente autenticadas, observando las mismas formalidades prescriptas
+para los Escribanos de Registro.

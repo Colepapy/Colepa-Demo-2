@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.100.- Cuando la acción sea intentada por la mayoría de los directores, los
+accionistas que votaron favorablemente designarán por mayoría un representante ad-hoc,
+en asamblea convocada especialmente al efecto.
+Si no se alcanzare esa mayoría, el representante será designado de entro ellos por
+el juez.

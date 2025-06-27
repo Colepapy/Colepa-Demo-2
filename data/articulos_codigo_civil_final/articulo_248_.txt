@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: XI
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 248.- La patria potestad, la adopción y la tutela se rigen por las disposiciones
+de la Ley N° 903/81 del Código del Menor.
+LEY 903/1981 DEROGADA POR LA LEY N° 1.680 “CÓDIGO DE LA NIÑEZ Y
+ADOLESCENCIA

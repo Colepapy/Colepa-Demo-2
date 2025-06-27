@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.791.- El testador no puede dispensar al albacea de la obligación de hacer
+inventario de los bienes de la sucesión.
+Texto consolidado de la Ley Nº 1183/1985

@@ -1,0 +1,24 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: II
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.261.- El nudo propietario podrá:
+a) ejecutar los actos que exigiere la conservación de la cosa;
+b) reconstruir los edificios destruidos por accidentes;
+c) inspeccionar con moderación el bien dado en usufructo;
+d) enajenar e hipotecar la cosa, y constituir servidumbres activas y pasivas. Estas
+últimas no podrán ejercerse sin el asentimiento del usufructuario, mientras subsista su
+derecho;
+e) demandar la cesación del empleo abusivo por parte del usufructuario, que cause
+peligro a la cosa;
+Texto consolidado de la Ley Nº 1183/1985
+f) exigir del usufructuario el cumplimiento de todas sus obligaciones, sin esperar que
+termine el usufructo;
+g) cobrar las reparaciones a cargo del usufructuario; y
+h) en general, ejercer todas las facultades cuyo uso no irrogue perjuicio o molestias
+al usufructuario.

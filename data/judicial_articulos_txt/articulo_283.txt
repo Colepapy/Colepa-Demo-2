@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 283.- Las inscripciones hipotecarias expresarán en todo caso el importe y plazo de la
+obligación garantizada y el interés estipulado.

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XXIII
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.507.- El poseedor de un  título de crédito tiene derecho a la prestación
+indicada en él, contra su presentación, siempre que su posesión esté justificada conforme
+a lo prescripto por la ley.
+El deudor que sin dolo ni culpa cumple las prestaciones a favor del poseedor, queda
+librado aun cuando éste no sea el titular del derecho.

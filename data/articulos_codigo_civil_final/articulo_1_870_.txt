@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: VIII
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.870.- Si la acción penal dependiere de cuestiones prejudiciales cuya decisión
+corresponda exclusivamente al juicio civil, no se sustanciará el juicio criminal antes que la
+sentencia civil estuviese ejecutoriada. Será cuestiones prejudiciales las que versen sobre
+validez o nulidad del matrimonio y las que se declaren tales por la ley.

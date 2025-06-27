@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: V
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.577.- El representante tiene vocación exclusivamente por la ley y no de la
+voluntad del representado.
+Para que la representación tenga lugar es menester que el representante mismo
+sea hábil para suceder a aquél cuya sucesión se trate.
+No se puede representar a aquél que fue excluido de una sucesión por indigno o
+que fue desheredado.

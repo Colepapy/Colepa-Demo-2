@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: de propiedad entre las partes y sus sucesores, siempre que haya sido inscripta en el
+CAPITULO: III
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.037.- El que encontró y tomó la cosa responderá de los perjuicios causados
+al propietario o poseedor legítimo, cuando hubiese procedido con dolo. Este resultará del
+deterioro intencional que aquél causare a la cosa, del uso indebido que hiciere de esta o
+de la omisión de las obligaciones impuestas por la ley.

@@ -1,0 +1,10 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 3
+SECCIÓN: 9
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 210.- Vencimiento del plazo. Vencido el plazo acordado y su prórroga, sin
+haberse realizado la transformación, las mercaderías serán consideradas en abandono.

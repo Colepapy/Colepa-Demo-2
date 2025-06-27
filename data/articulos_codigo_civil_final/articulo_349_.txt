@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: II
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 349.- El representado deberá atenerse a la fecha de los instrumentos que su
+representante hubiere suscrito, salvo que pruebe que aquellos fueron antedatados.
+PARÁGRAFO II
+DE LA AUTORIZACIÓN Y DE LA RATIFICACIÓN DE LOS ACTOS JURÍDICOS

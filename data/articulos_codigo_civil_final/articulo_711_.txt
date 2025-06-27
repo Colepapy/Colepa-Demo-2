@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: I
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 711.- Cuando en un contrato se hubiere hecho referencia a un caso con el fin
+de explicar un pacto, no se presumirá excluidos los casos no expresados, a los que, de
+acuerdo con la razón, puede extenderse dicho pacto.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XII
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.226.- Se reputará inoficiosa la donación, cuyo valor excediere de la parte
+disponible del donante en la fecha de su liberalidad. A este respecto se aplicarán los
+preceptos sobre la legítima.

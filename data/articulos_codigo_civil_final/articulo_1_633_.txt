@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.633.- Puede asegurarse todo riesgo que afecte la vida o la salud de cualquier
+especie de animales.

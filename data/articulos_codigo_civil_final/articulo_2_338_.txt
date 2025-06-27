@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: IV
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.338.- Si los bienes dados en prenda debieren abonar patentes, o de cualquier
+modo estuvieren sometidos  al control de oficinas fiscales o municipales,  el Jefe del
+Texto consolidado de la Ley Nº 1183/1985
+Registro Prendario comunicará la inscripción del contrato, dentro de las veinticuatro horas,
+a la oficina que corresponda, para que se tome razón y no se expida ni tramite documento
+alguno de transferencia de los bienes gravados sin estar cancelado el gravamen.
+En la misma forma se comunicará a dichas oficinas la cancelación de la prenda.

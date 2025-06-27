@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: II
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.564.- Los coherederos son garantes, los uno hacia los otros, de toda evicción
+de los objetos que les han correspondido por la partición, y de toda turbación de derecho
+en el goce pacífico de los objetos mismos, o de las servidumbres activas, cuando la causa
+de la evicción o turbación es de una época anterior a la partición.

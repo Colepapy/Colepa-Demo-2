@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: traslativo del dominio.
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.796.- Si se vendieren dos o más cosas a la vez, sea por un solo precio, sea
+asignando un valor a cada una de ellas, el vicio de una sólo dará lugar a su redhibición,
+salvo prueba de que el comprador no habría adquirido la sana sin la dañada, o si la venta
+fuere de un rebaño, y se tratare de una enfermedad contagiosa.

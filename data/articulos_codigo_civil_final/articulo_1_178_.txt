@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.178.- Cada cuota da derecho a un voto, rigiendo para el caso las limitaciones de
+orden personal impuestas a los accionistas de las sociedades anónimas.

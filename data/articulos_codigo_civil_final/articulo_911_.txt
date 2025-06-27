@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: VII
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 911.- Será facultativo para los terceros, obligar o no al mandante por los
+contratos que hubieren hecho con el apoderado, ignorando la cesación de éste, pero el
+primero no podrá prevalecerse de  tal circunstancia, para obligarles por  lo realizado
+después de la extinción del mandato.

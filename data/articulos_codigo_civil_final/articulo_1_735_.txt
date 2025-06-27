@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXVI
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.735.- El librador responde por los perjuicios:
+a)  si  la  falsificación de su  firma no es visiblemente manifiesta y  el cheque
+corresponde a su propio talonario; y
+b) si el cheque ha sido firmado por dependiente o persona autorizada.
+Texto consolidado de la Ley Nº 1183/1985

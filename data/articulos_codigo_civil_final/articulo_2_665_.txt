@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.665.- Los militares embarcados en un buque del Estado para una expedición,
+pueden otorgar testamento militar o marítimo.

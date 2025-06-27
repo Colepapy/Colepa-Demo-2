@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: I
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 712.- Las cláusulas susceptibles de dos sentidos, del uno de los cuales
+resultaría la validez, y del otro la nulidad del acto, deben entenderse en el primero. Si
+ambos dieren igualmente validez al acto, deben tomarse en el sentido que más convenga
+a la naturaleza de los contratos y a las reglas de la equidad.

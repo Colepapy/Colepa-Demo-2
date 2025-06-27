@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: oneroso antes de solicitada la separación de patrimonios, y cuyo precio haya sido
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.497.- La acción de indignidad no puede intentarse antes de la apertura de la
+sucesión. Prescribe si el indigno ha poseído la herencia o legado durante tres años,
+aunque se alegare que lo ignoraba el demandante, o que estuvo imposibilitado de iniciar la
+acción.
+El plazo no corre si la acción de exclusión queda subordinada a la resolución de un
+juicio criminal.

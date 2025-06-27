@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 100.- Habrá registros de contratos civiles y comerciales.
+Los registros marítimos y aeronáuticos quedarán comprendidos en los comerciales.
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981

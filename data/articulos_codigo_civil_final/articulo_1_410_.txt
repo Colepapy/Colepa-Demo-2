@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XVIII
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.410.- Si la caja figura a nombre de varias personas, la apertura de ella será
+permitida singularmente a cada uno de los titulares, salvo pacto en contrario.
+En caso de muerte del titular o de uno de los titulares, el banco que haya recibido
+comunicación al efecto no podrá consentir la apertura de la caja sino con el acuerdo de
+todos los derechohabientes, o según las modalidades establecidas por el juez.

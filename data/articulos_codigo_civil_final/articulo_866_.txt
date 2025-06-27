@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 866.- Quienes hubieren trabajado o suministrado materiales en obras ajustadas
+por precio determinado, sólo tendrán acción contra quien las encomendó hasta el importe
+que éste adeudare a su contratante.

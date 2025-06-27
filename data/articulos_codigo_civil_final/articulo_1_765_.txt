@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: traslativo del dominio.
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.765.- No obstante, la renuncia a la responsabilidad, el transmitente quedará
+obligado por la derivada de un hecho suyo, anterior o ulterior.

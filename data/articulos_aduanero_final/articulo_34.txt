@@ -1,0 +1,12 @@
+CONTEXTO:
+TITULO: II
+CAPITULO: 1
+SECCIÓN: 4
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 34.- Representación del transportista.
+Todo transportista o empresa de transporte para el tráfico internacional que opera en el
+Paraguay, deberá contar con agente de transporte que ejerza su representación ante la
+Dirección Nacional de Aduanas.

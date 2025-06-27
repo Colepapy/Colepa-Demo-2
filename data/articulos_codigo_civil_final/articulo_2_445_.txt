@@ -1,0 +1,10 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: I
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.445.- Toda persona es capaz de suceder salvo lo dispuesto por este Código.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: X
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.407.- La acción reivindicatoria compete al propietario de la cosa y a los
+titulares de derechos reales que se ejercen por la posesión.
+La acción de reivindicación y las demás acciones reales son imprescriptibles.

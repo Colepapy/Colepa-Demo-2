@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: V
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.364.- La hipoteca es activa y pasivamente indivisible. Cada una de las cosas
+afectadas a una deuda y cada parte de ellas, garantizan el pago de toda la deuda y de
+cada parte de la misma. Pero si al ejecutarse el crédito o al dividirse el inmueble gravado,
+fuere éste susceptible de un útil fraccionamiento, la venta o la partición se hará en esta
+forma.

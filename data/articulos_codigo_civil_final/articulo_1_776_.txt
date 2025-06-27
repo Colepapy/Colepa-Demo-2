@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: traslativo del dominio.
+CAPITULO: N/A
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.776.- Si la evicción fuere parcial, el comprador podrá optar entre que se le
+indemnice proporcionalmente a la pérdida sufrida, o rescindir el contrato, cuando la parte
+que se le ha quitado, o la carga o servidumbre que resultare, fueren de tal importancia que,
+de haberlo sabido no habría comprado la cosa.
+Le asistirá igual derecho, si versando el contrato sobre varios objetos comprados
+conjuntamente, se demostrare que no se habría adquirido el uno sin el otro.

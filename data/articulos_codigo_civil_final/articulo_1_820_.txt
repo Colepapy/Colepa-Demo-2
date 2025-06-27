@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: VI
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.820.- No procede la repetición de lo pagado espontáneamente cumpliendo
+deberes morales o sociales, salvo caso de incapacidad del que pagó. Tampoco procede la
+repetición de  la prestación cumplida con finalidad contraria a  la ley o a las buenas
+costumbres.

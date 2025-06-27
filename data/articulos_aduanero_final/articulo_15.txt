@@ -1,0 +1,14 @@
+CONTEXTO:
+TITULO: I
+CAPITULO: 2
+SECCIÓN: N/A
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 15º Circulación en Áreas de Vigilancia Especial Anexo Decreto Nº 4.672/05 Artículo 16º Requisitos específicos en Zona de Vigilancia Especial
+---
+TEXTO DEL ARTÍCULO:
+Artículo 15º.- Areas aduaneras de vigilancia especial. La Dirección Nacional de
+Aduanas podrá establecer en  la zona secundaria áreas aduaneras de  vigilancia
+especial,  precisar  las  mercaderías que  dentro de  ellas  estarán  sometidas a
+fiscalizaciones especiales, y determinar los requisitos que se deben cumplir para la
+entrada, salida, movilización, permanencia y comercialización de las mercaderías dentro
+de ellas.

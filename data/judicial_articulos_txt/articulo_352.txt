@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: XI
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 352.- La inscripción es indispensable para que los poderes puedan sufrir efecto legal
+entre mandante y mandatario y con relación a terceros.
+Esta obligación está a cargo de los Escribanos.

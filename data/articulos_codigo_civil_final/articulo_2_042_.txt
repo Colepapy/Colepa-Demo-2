@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: de propiedad entre las partes y sus sucesores, siempre que haya sido inscripta en el
+CAPITULO: III
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.042.- Está prohibido buscar tesoros en predios ajenos, sin licencia expresa de
+sus dueños o representantes.
+El que fuere coposeedor del predio o poseedor inmediato, podrá buscarlos, con tal
+que el predio sea restablecido al estado en que se hallaba.

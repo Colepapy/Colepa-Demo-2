@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.622.- Los daños causados por explosión o rayo quedan equiparados a los de
+incendio, pero el asegurador no responde por el daño  si el incendio o explosión es
+causado por terremoto, salvo convención en contrario.
+Texto consolidado de la Ley Nº 1183/1985

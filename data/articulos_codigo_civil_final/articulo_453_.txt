@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: II
+CAPITULO: I
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 453.- En  las obligaciones de dar sumas de dinero  la indemnización se
+determinará en la forma establecida en el parágrafo correspondiente.
+PARÁGRAFO II
+DE LA CLÁUSULA PENAL

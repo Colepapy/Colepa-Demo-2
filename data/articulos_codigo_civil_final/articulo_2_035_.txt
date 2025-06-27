@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: de propiedad entre las partes y sus sucesores, siempre que haya sido inscripta en el
+CAPITULO: III
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.035.- El que hallare una cosa, presumiblemente perdida, si la tomare asumirá
+la responsabilidad del depositario, y estará obligado, como tal, a restituirla a su dueño o
+legítimo poseedor.
+Está obligado además a informar al propietario y, no pudiendo hacerlo, avisará a la
+autoridad policial del lugar o tomará las medidas aconsejadas por las circunstancias.

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: de propiedad entre las partes y sus sucesores, siempre que haya sido inscripta en el
+CAPITULO: III
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.062.- La entrega hecha por el propietario de una cosa mueble, transfiere el
+dominio al adquirente cuando existe acuerdo entre ellos para transmitir la propiedad.
+Si el adquirente está ya en posesión de la cosa, la propiedad se transmite por el
+acuerdo. Si el propietario posee la cosa,  la tradición se efectúa por  el convenio de
+constituir al adquirente en poseedor mediato.

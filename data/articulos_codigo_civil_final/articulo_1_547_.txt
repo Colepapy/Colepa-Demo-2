@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.547.- El contrato de seguro es nulo si al tiempo de su celebración el siniestro
+se hubiere producido o desaparecido el riesgo.
+Si se ha convenido que comprenda un período anterior a su celebración, el contrato
+es nulo sólo si al tiempo de su conclusión el asegurador conocía la imposibilidad de que
+ocurriese el siniestro, o el tomador sabía que se había producido.

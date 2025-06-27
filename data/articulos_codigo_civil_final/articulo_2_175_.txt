@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: VIII
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.175.- El autor de una película cinematográfica gozará de la protección de este
+Código, sin perjuicio de los derechos del autor de la obra adaptada o reproducida.
+El que obtuviere la imagen fotográfica original de un panorama, paisaje o vista,
+gozará también en su calidad de propietario de ella, de todos los derechos conferidos por
+este Código a la producción artística.

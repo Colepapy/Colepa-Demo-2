@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: VIII
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 242.- La Oficina de Estadística estará a cargo de un Jefe y de los funcionarios que la
+ley determine.

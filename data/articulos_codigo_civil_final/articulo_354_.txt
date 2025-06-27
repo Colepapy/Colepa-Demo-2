@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: II
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 354.- El asentamiento previo ulterior no exige formas especiales, pero si fuere
+relativo a cualquier acto que deba celebrarse por escritura pública, será nulo cuando se
+otorgare sin este requisito.

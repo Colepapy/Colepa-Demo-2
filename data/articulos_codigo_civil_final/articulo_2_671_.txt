@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.671.- Si efectuadas esas diligencias resultare intacto el testamento, el juez lo
+abrirá rubricará el principio y fin de cada página, lo mandará protocolizar y dará a los
+interesados las copias que pudieren.

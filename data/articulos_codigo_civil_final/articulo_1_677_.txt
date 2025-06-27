@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  1.677.- No  obstante,  la reducción  prevista en  artículos precedentes,  el
+asegurado puede, en cualquier momento, restituir el contrato en sus términos originarios
+con el pago de las primas correspondientes al plazo en el que rigió la reducción, con sus
+intereses al tipo aprobado por la autoridad de contralor, de acuerdo con la naturaleza
+técnica del plan y en las condiciones que determine.
+PARÁGRAFO II
+DEL SEGURO DE VIDA EN BENEFICIO DE TERCEROS

@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 194.- Si el parentesco por afinidad sobreviniese después del nombramiento del Juez
+por haber éste contraído matrimonio, se dispondrá su traslado.

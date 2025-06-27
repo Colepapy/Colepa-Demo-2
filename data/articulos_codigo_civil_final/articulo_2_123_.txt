@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: singular, siempre que se hubiere inscripto una medida cautelar relativa a la deuda. Si
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.123.- La adquisición de la medianería queda subordinada a su inscripción en
+el Registro de Inmuebles y al pago de su valor, si constare la deuda en la inscripción.
+También deben  inscribirse  el abandono y  la renuncia de  la medianería, para que
+produzcan sus efectos legales.

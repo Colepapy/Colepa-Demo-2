@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: III
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.957.- El dominio de la cosa corpórea, se presume exclusivo e ilimitado, hasta
+prueba en contrario y sin perjuicio de  lo dispuesto en  el artículo anterior, y de las
+restricciones establecidas por la ley, sea en razón de vecindad, impuestos, prohibiciones
+Texto consolidado de la Ley Nº 1183/1985
+municipales,  expropiación  por causa de  utilidad  pública, o  interés  social, u  otras
+limitaciones legales.

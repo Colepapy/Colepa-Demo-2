@@ -1,0 +1,10 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 2
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo  138.- Fecha de  registro.  La  fecha  de  registro  de  la  declaración
+correspondiente determina el régimen legal aplicable.

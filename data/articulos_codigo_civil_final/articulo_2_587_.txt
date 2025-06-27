@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: V
+CAPITULO: III
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.587.- La sucesión entre esposos no tendrá lugar:
+a) cuando hallándose enfermo uno de los cónyuges al celebrar el matrimonio,
+muriese de esa enfermedad dentro de los treinta días siguientes, salvo que el matrimonio
+se hubiere celebrado para regularizar una unión de hecho, haya o no hijos;
+b) si se hallaren separados por sentencia judicial, respecto del que hubiere dado
+causa para ello; y
+c) si lo estuvieren por mutuo consentimiento, o, de hecho, sin voluntad de unirse.

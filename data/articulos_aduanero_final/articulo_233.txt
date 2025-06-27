@@ -1,0 +1,12 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 4
+SECCIÓN: 7
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 308º Suministros en Depósitos Aduaneros Anexo Decreto Nº 4.672/05 Artículo 309º Transporte Aéreo. Suministros y Provisiones Anexo Decreto Nº 4.672/05 Artículo 310º Transferencia de Propiedad Resolución General DNIT N° 14/2024 Artículo 1°.
+---
+TEXTO DEL ARTÍCULO:
+Artículo 233.- Abastecimiento del medio de transporte. Para el abastecimiento del
+medio de transporte internacional en el país, la autoridad aduanera competente otorgará
+autorización escrita. El embarque de las provisiones se hará bajo control aduanero, libre
+de gravámenes a la exportación.

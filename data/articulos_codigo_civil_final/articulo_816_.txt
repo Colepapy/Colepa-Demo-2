@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: III
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 816.- Las fianzas o garantías de la locación o sublocación, obligan a quienes
+las otorgan, tanto al pago del precio, como a todas las demás prestaciones, si no existiere
+reserva expresa.

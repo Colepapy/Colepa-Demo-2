@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: múltiple, a petición y a costa del poseedor. Los títulos de créditos pueden ser
+CAPITULO: N/A
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.528.- Si por cláusula inserta en el endoso se expresase que importa la
+constitución de prenda  del  título,  el  endosatario podrá  ejercer todos  los derechos
+inherentes al título, pero el endoso hecho por él sólo valdrá como endoso por procuración.
+Texto consolidado de la Ley Nº 1183/1985
+El emisor no puede oponer al endosatario en garantía las excepciones fundadas en
+sus propias relaciones personales con el endosante, a menos que el endosatario, al recibir
+el título, haya obrado intencionalmente en perjuicio del emisor.

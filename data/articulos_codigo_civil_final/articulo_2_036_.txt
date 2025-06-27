@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: de propiedad entre las partes y sus sucesores, siempre que haya sido inscripta en el
+CAPITULO: III
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.036.- El que restituyere la cosa hallada tendrá derecho a una recompensa y a
+una indemnización por los gastos que hubiere hecho para la conservación y transporte de
+la cosa, si el propietario no prefiriese abandonarla. La recompensa y la indemnización
+serán fijadas por el juez.
+Si el dueño hubiese ofrecido recompensa por el hallazgo, el que la encontró podrá
+optar entre el premio ofrecido y la recompensa e indemnización establecidas judicialmente.
+Texto consolidado de la Ley Nº 1183/1985

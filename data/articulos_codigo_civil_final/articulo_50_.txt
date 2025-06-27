@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: I
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Derogado Por: Artículo 98 de la Ley Nº 1/92
+---
+TEXTO DEL ARTÍCULO:
+Art. 50.- El hijo matrimonial llevará el apellido paterno, pudiendo agregar a éste el
+de la madre.
+El hijo extramatrimonial llevará el apellido del padre o el de la madre que le
+reconoció, voluntariamente o por sentencia judicial.

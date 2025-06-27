@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XII
+SECCIÓN: VIII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  1.240.-  Serán  aplicables a  la  revocación  por  causa de  ingratitud  las
+disposiciones sobre resolución de los contratos sinalagmáticos. Los bienes se restituirán
+con arreglo a los principios del enriquecimiento sin causa.

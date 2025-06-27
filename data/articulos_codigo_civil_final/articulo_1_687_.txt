@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.687.- En el caso de contratación de seguro colectivo sobre la vida, o de
+accidentes personales, en interés exclusivo de los integrantes del grupo, éstos o sus
+beneficiarios tienen un derecho propio contra el asegurador desde que ocurra el hecho
+previsto.

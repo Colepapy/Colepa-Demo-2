@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.618.- Las formas  ordinarias de  testar son:  el testamento  ológrafo,  el
+testamento por acto público y el testamento cerrado, los cuales están sometidos a las
+mismas reglas en lo que concierne a la naturaleza y extensión de las disposiciones que
+contengan, y tienen la misma eficacia jurídica.

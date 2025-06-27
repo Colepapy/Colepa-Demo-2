@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: III
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 133.- Los derechos y deberes de los cónyuges se rigen por la ley del domicilio
+matrimonial.

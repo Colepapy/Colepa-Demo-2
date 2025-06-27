@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: VII
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 905.- Quien sustituyó sus poderes podrá revocar el acto cuando lo juzgue
+conveniente; pero, entretanto estará obligado a  vigilar  al  sustituto, a menos que  el
+nombramiento proviniere del mandante.

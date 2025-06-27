@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo  122.- Toda  escritura deberá  iniciarse en  la  primera plana o  carilla  del  sello
+inmediatamente siguiente al de la escritura anterior debiendo considerarse plana o carilla
+aquella en que constar el número del sello y la rúbrica o foliatura respectiva. Los espacios
+libres del papel sellado y el comienzo de otra, pueden ser utilizados por los notarios para las
+notas de expedición de testimonios, constancias de oficios judiciales y demás anotaciones que
+se refieran a esa escritura. El espacio sobrante deberá anularse.

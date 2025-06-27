@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.737.- El legatario de cosa determinada no tiene derecho a la garantía de la
+evicción; pero si el legado fuere de cosas sólo determinadas por su género, o de varias
+cosas legadas bajo alternativa, sucedida la evicción, puede demandar otra cosa de la
+especie indicada en la alternativa.

@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: XII
+CAPITULO: 3
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 322.- Autoridad de aplicación. Las sanciones por faltas aduaneras serán
+aplicadas por el Administrador de Aduanas y las sumas percibidas constituirán recursos
+institucionales, en los términos del Artículo 263 de esta Ley.

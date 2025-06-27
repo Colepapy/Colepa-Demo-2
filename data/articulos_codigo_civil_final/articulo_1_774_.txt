@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: traslativo del dominio.
+CAPITULO: N/A
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.774.- El vendedor de mala fe, que conoció al tiempo de la venta el peligro de
+la evicción deberá, al arbitrio del comprador, el mayor precio de la cosa, o todas las sumas
+desembolsadas, aunque fueren gastos de lujo o de mero placer.

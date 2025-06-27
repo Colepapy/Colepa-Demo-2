@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.026.- La sociedad colectiva actúa bajo una razón social constituida con el
+nombre de uno o varios de los socios, con inclusión de las palabras "sociedad colectiva", o
+su abreviatura.
+Debe contener las palabras "y compañía", cuando en ella no figura el nombre de
+todos los socios.

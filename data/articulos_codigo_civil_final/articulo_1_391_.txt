@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: N/A
+SECCIÓN: XII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.391.- En los plazos legales o convencionales no se computa el día desde el
+cual comienzan a correr.

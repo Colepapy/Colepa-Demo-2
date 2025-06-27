@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: I
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.457.- La aceptación pura y simple deber ser siempre expresa en el juicio
+sucesorio. Ella resultará también por haber cesado el beneficio de inventario, por hecho del
+heredero, en los casos previstos por este Código.

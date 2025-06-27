@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: I
+TITULO: III
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 27.- La Corte Suprema de Justicia, además de la potestad de juzgar, ejercerá la
+superintendencia, con poder disciplinario sobre los Tribunales, Juzgados, Auxiliares de la
+Justicia y las oficinas dependientes del Poder Judicial.
+Ejercerá la facultad de superintendencia a través de los Tribunales de Apelación de las
+Circunscripciones Judiciales del interior sobre los Juzgados y oficinas existentes en dicha
+jurisdicción.
+Texto Anterior de la Ley N° 879/1981          Texto actual establecido por el artículo 1 de la
+Ley Nº 963/1982

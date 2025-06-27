@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: VII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.182.- El acto constitutivo debe indicar el nombre y domicilio de los socios
+colectivos.
+Los socios colectivos son, de derecho, administradores y están sujetos a las
+obligaciones de los administradores de la sociedad anónima, excluida la de la caución. La
+administración podrá ser igualmente conferida a terceros.

@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 216.- En caso de desistimiento de la denuncia, la Corte Suprema de Justicia podrá
+disponer la prosecución del proceso hasta dictar sentencia definitiva.

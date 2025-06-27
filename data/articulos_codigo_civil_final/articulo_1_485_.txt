@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XXI
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.485.- El fiador que fuere obligado a pagar más de lo que corresponde, queda
+subrogado por el exceso en los derechos del acreedor contra los cofiadores, y puede exigir
+una parte proporcional de todos ellos.

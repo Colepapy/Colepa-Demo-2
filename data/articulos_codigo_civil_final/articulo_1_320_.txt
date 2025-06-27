@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.320.- El endoso posterior al vencimiento produce los mismos efectos de un
+endoso anterior. Sin embargo, el endoso posterior al protesto por falta de pago, o hecho
+después de la expiración del término fijado para diligenciarlo, sólo produce los efectos de
+una cesión ordinaria.
+El endoso sin fecha se presume hecho antes del vencimiento del plazo fijado para
+efectuar el protesto, salvo prueba en contrario.

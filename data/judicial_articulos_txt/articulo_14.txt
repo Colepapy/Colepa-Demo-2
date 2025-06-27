@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: I
+TITULO: II
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 14.- En los juicios de cualquier naturaleza en que sea parte el Estado, como actor o
+demandado, será competente el Juez del lugar en que tenga su domicilio legal el representante
+del Estado.
+En las acciones contra funcionarios públicos, derivados del ejercicio de sus funciones, será
+competente el Juez de su domicilio legal.

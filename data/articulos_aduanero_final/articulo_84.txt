@@ -1,0 +1,14 @@
+CONTEXTO:
+TITULO: IV
+CAPITULO: 1
+SECCIÓN: 3
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.372/05 Artículo 134º Tolerancia en la Descarga de Mercadería con Diferencia sin Necesidad de Justificación
+---
+TEXTO DEL ARTÍCULO:
+Artículo 84.- Tolerancias. Las diferencias en más o en menos de las mercaderías
+descargadas, con relación a la declaración de llegada, manifiesto de carga, o documento
+equivalente, serán admitidas sin necesidad de justificación y no configurarán falta o
+infracción aduanera, siempre que no superen los límites de las tolerancias establecidas
+en las normas reglamentarias, de hasta el 4% (cuatro por ciento) según la naturaleza de
+las mercaderías.

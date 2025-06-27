@@ -1,0 +1,27 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: II
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 91.- Son personas jurídicas:            Artículo   91°.     -  SON  PERSONAS
+a) el Estado;                          JURÍDICAS:
+b) las Municipalidades;                      a) El Estado;
+c) la Iglesia Católica;                       b) Los Gobiernos Departamentales y las
+d) los entes autárquicos, autónomos y  Municipalidades;
+los de economía mixta y demás entes de    c)  Las   Iglesias  y   las  confesiones
+Derecho Público, que, conforme con la  religiosas;
+respectiva legislación, sean capaces de   d) Los entes autárquicos, autónomos y
+adquirir bienes y obligarse;                 los de economía mixta y demás entes de
+e) las universidades;                   derecho público, que conforme con  la
+f)  las  asociaciones que  tengan  por  respectiva legislación, sean capaces de
+objeto el bien común;                      adquirir bienes y obligarse;
+g)   las  asociaciones  inscriptas  con   e) Las Universidades;
+capacidad restringida;                                f)  Las  asociaciones que  tengan  por
+h) las fundaciones;                      objeto el bien común;
+i)  las  sociedades  anónimas  y  las   g)  Las  asociaciones  inscriptas  con
+cooperativas; y                         capacidad restringida;
+j) las demás sociedades reguladas en el   h) Las fundaciones;

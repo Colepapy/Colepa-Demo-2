@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: múltiple, a petición y a costa del poseedor. Los títulos de créditos pueden ser
+CAPITULO: N/A
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.534.- Las normas de esta Sección se aplican a los  títulos a  la orden
+regulados por leyes especiales, salvo disposición contraria.

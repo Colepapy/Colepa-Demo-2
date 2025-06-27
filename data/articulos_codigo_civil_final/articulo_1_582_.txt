@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.582.- Cuando la agravación se deba a un hecho del tomador, la cobertura
+queda suspendida. El asegurador, en el plazo de siete días, deberá notificar su decisión de
+rescindir el contrato.

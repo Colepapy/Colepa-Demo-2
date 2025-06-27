@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.052.-De las operaciones realizadas en nombre de la sociedad antes de su
+registro son ilimitada y solidariamente responsables respecto de terceros aquéllos que las
+hayan autorizado.
+PARÁGRAFO II
+DE LA CONSTITUCIÓN MEDIANTE SUSCRIPCIÓN PÚBLICA

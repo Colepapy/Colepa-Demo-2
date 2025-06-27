@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.676.- Cuando el asegurado se halla al día en el pago de las primas tiene
+derecho a un préstamo cuyo monto resultará de la póliza, después de transcurridos tres
+años desde la celebración del contrato. Se calculará según la reserva correspondiente al
+contrato, de acuerdo a los planes técnicos del asegurador, aprobados por la autoridad de
+contralor.
+Se puede pactar que el préstamo se acordará automáticamente para pago de las
+primas no abonadas en término.

@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XVIII
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.426.- El banco responde según las reglas del mandato por la ejecución de los
+encargos recibidos del cuentacorrentista o de otro cliente. Si el encargo debe cumplirse en
+una plaza donde no existen filiales del banco, podrá éste encargar su ejecución a otro
+banco o corresponsal suyo.

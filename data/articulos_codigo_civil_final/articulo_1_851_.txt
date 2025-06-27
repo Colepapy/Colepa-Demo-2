@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: VIII
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.851.- El que habita una casa o una de sus partes, responderá por el daño
+proveniente de las cosas que de ella caigan o fueren arrojadas en un lugar indebido.

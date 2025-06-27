@@ -1,0 +1,21 @@
+CONTEXTO:
+LIBRO: I
+TITULO: VI
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 183.- Son atribuciones del médico forense:
+a) Dictaminar por mandato  judicial en  los casos de enfermedad, impedimento  físico o
+incapacidad de procesados y condenados que requieran tratamiento especial fuera  del
+establecimiento penal;
+b) Establecer el diagnóstico y pronóstico en los atentados a la vida, a la salud y al pudor de las
+personas que den lugar a procedimiento judicial;
+c)  Practicar  el reconocimiento del cadáver y  la autopsia en  los casos exigidos por  la
+investigación judicial, describiendo exactamente la operación e informando sobre el origen del
+fallecimiento y sus causas; y,
+d) Intervenir en todas las demás cuestiones médico-legales que se plantean en los procesos
+judiciales y asesorar al Juzgado sobre las diligencias de orden científico conducentes a la
+investigación del hecho.

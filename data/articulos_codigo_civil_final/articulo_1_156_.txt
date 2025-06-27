@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.156.- La sociedad que ha emitido debentures sólo podrá reducir el capital
+social en proporción a los debentures reembolsados, salvo los casos de reducción forzosa.

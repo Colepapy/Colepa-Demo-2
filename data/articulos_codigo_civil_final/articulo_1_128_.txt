@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.128.- Los debentures pueden ser omitidos con garantía flotante, común, o
+especial. La emisión cuyo privilegio no se límite a bienes inmuebles determinados se
+considerará realizada con garantía flotante.

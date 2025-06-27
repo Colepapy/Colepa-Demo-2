@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: N/A
+TITULO: PRELIMINAR
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 8.- La ignorancia de la ley no exime de su cumplimiento, salvo que la excepción
+esté prevista por la ley.

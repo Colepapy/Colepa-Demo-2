@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 345.- Se inscribirán en el Registro de las Personas Jurídicas y Asociaciones:
+a) El acto constitutivo y los estatutos de las personas jurídicas de derecho privado debidamente
+aprobados en la forma establecida por el Código Civil, y las modificaciones de estos estatutos;
+b) Los estatutos de las personas jurídicas de derecho privado del extranjero que hayan sido
+autorizados para funcionar en la República, y,
+c) La liquidación de las entidades mencionadas en los incisos anteriores.
+Podrán  inscribirse también  el acto  constitutivo y  los estatutos de  las Asociaciones  sin
+personería jurídica y sus modificaciones.

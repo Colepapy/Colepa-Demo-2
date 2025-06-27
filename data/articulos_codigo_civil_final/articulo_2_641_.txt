@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.641.-  El  testador deberá  manifestar verbalmente sus  disposiciones  al
+escribano, en presencia de los testigos del acto. En su defecto, le entregará un escrito
+firmado por él y declarando verbalmente, o si no hablare, bajo su firma, en presencia de los
+testigos del acto, que dicho escrito contiene su última voluntad.

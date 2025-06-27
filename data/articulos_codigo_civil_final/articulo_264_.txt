@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: XII
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 264.- El que debe suministrar los alimentos puede hacerlo mediante una
+pensión alimentaria o recibiendo y manteniendo en su propia casa al que tiene derecho a
+los alimentos. El juez decidirá cuando estime conveniente admitir o no esta última forma de
+prestarlos.

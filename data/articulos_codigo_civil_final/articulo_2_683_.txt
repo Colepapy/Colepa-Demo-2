@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.683.- La institución puede hacerse a favor de varias personas conjuntamente,
+o con designación de fracciones. En el primer caso heredan por partes iguales.
+Texto consolidado de la Ley Nº 1183/1985

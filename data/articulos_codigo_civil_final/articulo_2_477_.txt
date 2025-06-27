@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: I
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.477.- Los gastos a que dé lugar el inventario, la administración de los bienes
+hereditarios, o la seguridad y defensa de ellos, serán a cargo de la herencia; y si el
+heredero lo hubiere pagado con su dinero, será reembolsado con privilegio sobre todos los
+bienes de la sucesión.

@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 314.- En el Registro de Embargos e Inhibiciones se anotarán las restricciones a la
+libre disposición de los bienes, ordenadas por los Jueces, así como su cancelación.
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.114.- Si la acción no fuere iniciada dentro del plazo de tres meses, contado
+desde la fecha del acuerdo, cualquier accionista puede promoverla, sin perjuicio de la
+responsabilidad que resulte del incumplimiento de la medida ordenada. La acción social
+también podrá ser ejercida por los accionistas que se hubieren opuesto a la renuncia o
+transacción.

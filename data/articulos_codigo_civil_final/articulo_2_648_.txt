@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.648.- Lo dispuesto en relación al escribano, se aplicará a los demás oficiales
+públicos que autorizaren un testamento.
+Lo prescripto sobre instrumentos públicos y escrituras se aplica a los testamentos
+por acto público.

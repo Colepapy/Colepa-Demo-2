@@ -1,0 +1,24 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: V
+CAPITULO: III
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.591.- Los hijos y descendientes   Artículo    2.591.-   Los    hijos   y
+extramatrimoniales  tendrán  el  mismo  descendientes       extramatrimoniales
+derecho     hereditario    que     los  tendrán  el mismo derecho  hereditario
+matrimoniales sobre los bienes propios y  que los matrimoniales sobre los bienes
+gananciales del causante.                propios y gananciales del causante.
+Con respecto a los bienes gananciales,
+recibirán la mitad de lo que corresponda
+a los hijos matrimoniales.
+Si aquéllos concurrieren con el cónyuge
+supérstite   y   no   hubieren    hijos
+matrimoniales, les corresponderá el total
+del haber hereditario de gananciales, con
+deducción del veinte y cinco por ciento
+asignado al cónyuge sobreviviente como
+beneficiario.

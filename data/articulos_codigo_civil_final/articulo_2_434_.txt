@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: X
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.434.- Procederá la compensación entre reivindicante y poseedor, en cuanto a
+las sumas que respectivamente debieran pagarse. El segundo podrá retener la cosa
+reivindicada hasta percibir el importe de las indemnizaciones que le correspondan, y si la
+entregare, subsistirán sus créditos.

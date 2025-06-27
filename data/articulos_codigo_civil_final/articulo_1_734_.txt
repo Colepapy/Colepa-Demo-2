@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXVI
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.734.- El banco que pague un cheque falsificado sufrirá las consecuencias:
+a) si la firma del librador o del último endosante está visiblemente falsificada;
+b) si el cheque tiene alteraciones en algunas de sus enunciaciones; y
+c) si el cheque no corresponde al talonario entregado al librador.

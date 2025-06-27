@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: I
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.462.- Se juzgará que el renunciante nunca fuere heredero. Los bienes se
+transmitirán como si él no hubiese existido, salvo el derecho de representación.

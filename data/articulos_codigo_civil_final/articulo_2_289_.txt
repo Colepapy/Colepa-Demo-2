@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.289.- El usuario, para obtener el goce que le es debido, tiene una acción real
+en virtud de la cual puede obrar no sólo contra el propietario del fundo, sino también contra
+Texto consolidado de la Ley Nº 1183/1985
+terceros poseedores en cuyo poder se encuentre la heredad, y tiene también las acciones
+posesorias del usufructuario.

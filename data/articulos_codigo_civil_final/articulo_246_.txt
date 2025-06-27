@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: XI
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 246.- Los efectos jurídicos previstos en el artículo anterior se extienden a los
+descendientes del hijo que asume la calidad de matrimonial, y alcanzan a los fallecidos al
+tiempo de celebrarse el matrimonio, cuando dejaren descendientes, y beneficiará también
+a éstos.

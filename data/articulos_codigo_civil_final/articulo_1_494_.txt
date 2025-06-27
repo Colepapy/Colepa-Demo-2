@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XXI
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.494.- Si el acreedor acepta en pago de la deuda otra cosa que la que le era
+debida, aunque después la pierda por evicción, queda libre el fiador.

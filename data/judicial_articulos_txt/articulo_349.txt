@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: XI
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 349.- En el Registro de Poderes se inscribirán los mandatos que se otorguen en el
+país, o en el extranjero debidamente legalizados referentes a la administración de bienes,
+transacciones, percepción de sumas de dinero y celebración de contratos sobre derechos
+reales y las revocaciones, sustituciones, ampliaciones, limitaciones, suspensiones y renuncia
+de los mismos.

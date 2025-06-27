@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: y, supletoriamente, por las de la sección anterior.
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.033.- El acreedor particular del socio, mientras dure la sociedad, no puede
+pedir la liquidación de la cuota del socio deudor.

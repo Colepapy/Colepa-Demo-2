@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: I
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.453.- Durante  el plazo establecido para  la renuncia de  la herencia,  el
+heredero podrá manifestar ante el juez de la sucesión, su propósito de hacer inventario
+para deliberar y decidir.

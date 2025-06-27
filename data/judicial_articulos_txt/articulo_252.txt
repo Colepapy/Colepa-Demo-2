@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: I
+TITULO: VIII
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 252.- Los expedientes y protocolos notariales serán remitidos por el Jefe, previo
+examen de su estado, haciendo constar  el número de sus páginas y las circunstancias
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981
+especiales que se observaren, y si encontrasen alguna irregularidad o infracción a las leyes
+fiscales, darán cuenta de ello a la autoridad competente.

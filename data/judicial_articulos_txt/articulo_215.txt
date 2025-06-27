@@ -1,0 +1,18 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 215.- Si el particular que promoviere la denuncia y se mostrare parte de ella, no
+ofreciere suficiente arraigo, la Corte Suprema de Justicia podrá exigirle una fianza de persona
+de reconocida honorabilidad y solvencia o bien una fianza real para garantizar las resultas del
+juicio.
+Si el denunciante no satisficiere esta exigencia, la Corte Suprema de podrá darle por desistido
+de la acción.
+La caución podrá ser dispensada, por la Corte Suprema de Justicia, cuando a su juicio
+concurrieren graves presunciones, o teniendo en consideración la situación económica del
+denunciante.

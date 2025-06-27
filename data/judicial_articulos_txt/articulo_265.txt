@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 265.- El Registro de Inmuebles se dividirá en Secciones y cada Sección comprenderá
+las siguientes secciones: Primera sección: Propiedad. Segunda sección: Hipotecas. Tercera
+sección: Inhibiciones, Embargos y otras medidas cautelares. Cuarta sección: Certificado.
+Quinta sección: Entradas y Salidas, Archivo y Estadística.

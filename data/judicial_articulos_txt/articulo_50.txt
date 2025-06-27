@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: III
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 50.- Contra las sentencias de los árbitros se darán los mismos recursos que contra las
+de los Jueces ordinarios si no hubieran sido renunciados en el compromiso.

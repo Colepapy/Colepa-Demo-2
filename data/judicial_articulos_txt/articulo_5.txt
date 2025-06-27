@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: II
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 5°.- La jurisdicción consiste en la potestad de conocer y decidir en juicio y de hacer
+ejecutar lo juzgado. No habrá más jurisdicciones especiales que las creadas por la Constitución
+y la ley.

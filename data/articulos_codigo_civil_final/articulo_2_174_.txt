@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: VIII
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.174.- Para que el poseedor de manuscritos de obras póstumas inéditas
+pueda invocar el dominio de ellos y ejercer todos los derechos garantizados por este
+Código a la propiedad literaria, científica o artística, debe justificar haberlos adquirido del
+autor o de sus herederos.

@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: I
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 683.- En la subasta el contrato queda concluido por la adjudicación. Si ésta no
+se realiza, la oferta caduca, lo mismo que cuando se formula una oferta mayor.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 341.- En  el Registro de Marcas y Señales serán inscriptas las adoptadas para
+distinguir la propiedad de cualquier clase de ganado existente en la República.
+Ley Nº 1.248/31 Código Rural

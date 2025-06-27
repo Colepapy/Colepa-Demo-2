@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: IV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 579.- Los acreedores que han concluido el contrato o que se han adherido a él,
+deben  anticipar  los  gastos  necesarios  para  la  liquidación  y  tienen  el derecho a
+reembolsarse del producto de ella.

@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VI
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.769.- Los acreedores del legatario pueden aceptar el legado que él hubiere
+repudiado, dentro de los treinta días de la renuncia.

@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.061.- Salvo disposición contraria de los estatutos, el suscriptor moroso será
+intimado a cumplir su obligación en el plazo de treinta días. El vencimiento del plazo
+producirá automáticamente la caducidad de los derechos del suscriptor con pérdida de la
+suma abonada.
+PARÁGRAFO III
+DE LAS ACCIONES

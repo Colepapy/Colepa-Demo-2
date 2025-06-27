@@ -1,0 +1,22 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.156.- Se requiere también la mayoría de votos de los asambleístas que
+representen al menos la mitad del valor del edificio para las resoluciones que conciernen al
+otorgamiento y revocación de los poderes del administrador, o para estar en juicio como
+actor o demandado, cuando excedan de sus atribuciones, asimismo como para las
+decisiones relativas a reparaciones extraordinarias de notable importancia.
+Las resoluciones que tienen por objeto de disponer las innovaciones que tiendan al
+mejoramiento o al uso más cómodo o al mayor rendimiento de las cosas comunes, deben
+Texto consolidado de la Ley Nº 1183/1985
+ser aprobadas siempre con un número de  votos que  representen  la mayoría de
+propietarios y los dos tercios del valor del edificio. La asamblea no puede deliberar si no
+consta que todos los propietarios han sido invitados a la reunión.
+Las deliberaciones de la asamblea se harán constar en un libro de actas llevado por
+el administrador y que suscribirán con él dos asambleístas designados por la asamblea.

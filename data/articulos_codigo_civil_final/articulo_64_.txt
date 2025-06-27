@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: I
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 64.- La incertidumbre por falta de noticias de la existencia de las personas
+desaparecidas o ausentes de su domicilio o última residencia en la República, durante
+cuatro años consecutivos, contados desde la última información que de ellas se tuvo,
+causa la presunción de su fallecimiento, a los efectos previstos por las disposiciones de
+este capítulo.

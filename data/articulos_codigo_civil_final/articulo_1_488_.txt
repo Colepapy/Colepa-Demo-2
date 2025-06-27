@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XXI
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.488.- La fianza quedará extinguida, aunque exista plazo, si el fiador falleciere
+antes del vencimiento de éste, pero las obligaciones derivadas de ella, hasta el día de su
+fallecimiento, pasarán a cargo de sus herederos.

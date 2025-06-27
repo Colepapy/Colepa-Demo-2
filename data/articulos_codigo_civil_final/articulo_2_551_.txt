@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: II
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.551.- Los valores colacionados se imputarán como anticipo a  la parte
+hereditaria, a menos que el causante hubiere establecido la dispensa en su testamento,
+dentro de los límites de su porción disponible. Podrá también otorgarse en  el  título
+constitutivo de la liberalidad. No se entenderá concedida por la mera disimulación de
+aquella, bajo la apariencia de un acto oneroso, o realizado por interpuesta persona.

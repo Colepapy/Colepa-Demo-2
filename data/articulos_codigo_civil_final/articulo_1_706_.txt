@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXVI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.706.- Toda firma debe expresar el    Art.  1.706.-  Los  cheques  bancarios
+nombre y apellido, o la razón social de  deberán ser suscriptos por el librador en
+aquél que por el cheque se obliga.           la forma que acostumbre hacerlo, de
+Es válida la firma en la cual el nombre  conformidad con  lo que establece  el
+de pila esté abreviado o sólo indicado por  artículo 43.
+su inicial.                               Dicha firma deberá estar previamente
+registrada en el banco girado.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.136.- La transferencia no podrá ser opuesta a la sociedad ni a los terceros
+sino desde su inscripción en dicho registro. Tratándose de títulos endosables se registrará
+el último endoso.

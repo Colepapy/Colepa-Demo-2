@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: I
+CAPITULO: 1
+SECCIÓN: 2
+---
+ESTADO: Reglamentado por:: Ley Nº 621/95 Artículo 1º Protocolo relativo al Código Aduanero del Mercosur Anexo Decreto Nº 4.672/05 Artículo 2º Participación aduanera en normas de comercio exterior. Anexo Decreto Nº 4.672/05 Artículo 3º Certificación de Calidad
+---
+TEXTO DEL ARTÍCULO:
+Artículo 4°.- Legislación aduanera. El presente Código, sus normas reglamentarias y
+complementarias, así como los Acuerdos y Tratados Internacionales sobre aspectos
+aduaneros suscritos por la Repúblaguay, constituyen la legislación aduanera.

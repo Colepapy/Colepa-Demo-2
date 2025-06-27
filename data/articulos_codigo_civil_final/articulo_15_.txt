@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: N/A
+TITULO: PRELIMINAR
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Derogado Por: Artículo 98º de la Ley Nº 1/92
+---
+TEXTO DEL ARTÍCULO:
+Art. 15.- La capacidad de derecho y de hecho es igual para el hombre y la mujer,
+cualquiera sea el estado civil de ésta, salvo las limitaciones expresamente establecidas por
+la ley.

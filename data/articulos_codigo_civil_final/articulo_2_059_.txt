@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: de propiedad entre las partes y sus sucesores, siempre que haya sido inscripta en el
+CAPITULO: III
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.059.-  Serán  consideradas  cosas  robadas,  las  sustraídas  violenta  o
+clandestinamente, pero no aquéllas que salieren del poder de su propietario por abuso de
+confianza, violación de depósito u otro acto de engaño o estafa.

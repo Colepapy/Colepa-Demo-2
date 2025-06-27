@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: IX
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  1.201.- La  citación y emplazamiento de una sociedad  constituida en  el
+extranjero pueden cumplirse en la República en la persona de su representante general, o
+del apoderado que intervino en el acto o contrato que origine el litigio.

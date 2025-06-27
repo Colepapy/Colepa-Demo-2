@@ -1,0 +1,12 @@
+CONTEXTO:
+TITULO: VIII
+CAPITULO: 4
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 285.- Acción para exigir el reintegro al fisco. La acción para exigir el
+reintegro del impuesto aduanero u otros tributos autorizados devueltos indebidamente,
+prescribe en el plazo de cinco años, contado a partir del 1 de enero del año siguiente al
+de la devolución.

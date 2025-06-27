@@ -1,0 +1,66 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.   989.-  Los  socios    Art.   989.-  Los   socios    Art.   989.-  Los  socios
+podrán:                  podrán:                     podrán:
+a) exigir de la sociedad el   a) exigir de  la sociedad  el  a) exigir de la sociedad el
+reembolso     de      lo  reembolso de lo anticipado  reembolso de lo anticipado
+anticipado          con  con  conocimiento de  ella  con conocimiento de  ella
+conocimiento de ella para  para obligaciones sociales,  para obligaciones sociales,
+obligaciones sociales, así  así como el reintegro de las  así como el reintegro de las
+como el reintegro de las  pérdidas por ellos sufridas.   pérdidas por ellos sufridas.
+pérdidas    por     ellos                            Los socios responderán a
+sufridas.                 Los socios responderán a  prorrata  de  su   interés
+Los socios responderán a  prorrata de su interés social,  social, y  la parte de los
+prorrata  de  su  interés  y la parte de los insolventes  insolventes se dividirá de
+social, y la parte de los  se dividirá de igual manera;   igual manera;
+insolventes se dividirá de
+igual manera;               b) exigir  que  los  demás  b) exigir  que  los  demás
+permanezcan     en      la  permanezcan    en      la
+b) exigir que los demás  sociedad, mientras no tenga  sociedad,   mientras   no
+permanezcan   en     la  justa causa de separación.  tengan   justa  causa  de
+sociedad,  mientras  no  Se  entenderá que  la hay  separación. Se  entenderá
+tenga  justa  causa  de  cuando   el   administrador  que   la  hay  cuando   el
+separación. Se entenderá  nombrado  en  el  contrato  administrador   nombrado
+que  la  hay  cuando  el  social  renunciare o  fuere  en    el   contrato   social
+administrador nombrado  removido, o  si  existiendo  renunciare    o     fuere
+en   el  contrato   social  derecho para  la exclusión  removido, o  si existiendo
+renunciare    o    fuere  de algún  socio, no se  le  derecho para la exclusión
+removido, o si existiendo  permitiere  hacer  uso  del  de algún socio, no se  le
+derecho para la exclusión  mismo; y                     permitiere  hacer uso  del
+de algún socio, no se le                           mismo;
+permitiere hacer uso del   c) renunciar  en  cualquier
+mismo; y                 tiempo cuando la sociedad  c) renunciar  en  cualquier
+fuere       por       plazo  tiempo cuando la sociedad
+c) renunciar en cualquier  indeterminado, a no ser que  fuere      por      plazo
+tiempo    cuando      la  dicha renuncia sea de mala  indeterminado,  a  no  ser
+sociedad fuere por plazo   fe o intempestiva.          que dicha renuncia sea de
+indeterminado, a no ser                            mala fe o intempestiva; y,
+que dicha renuncia sea  d) resolver por unanimidad
+de mala fe o intempestiva.  de  votos  la reconducción
+Texto consolidado de la Ley Nº 1183/1985
+tácita   de    la   sociedad,  d) resolver por unanimidad
+cuando  su   término  de  de votos  la reconducción
+duración haya  fenecido  y  de la sociedad, cuando su
+siempre   que   entre    el  término de duración haya
+vencimiento      y        la  fenecido  y  siempre  que
+reconducción  no   hayan  entre  el vencimiento y  la
+transcurrido más  de  dos  reconducción  no  hayan
+años.”                        transcurrido más de dos
+años. En estos casos, no
+se aplicará lo dispuesto en
+el  inciso  a)  del  Artículo
+1003, hasta tanto se haya
+cumplido       el     plazo
+establecido en este inciso,
+sin que los socios hayan
+resuelto   la  prórroga  o
+reconducción    de      la
+sociedad cuyo término de
+duración se haya cumplido.

@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Modificado por:
+---
+TEXTO DEL ARTÍCULO:
+Artículo 97.- El ejercicio de la profesión de abogado o procurador es incompatible con la
+calidad de funcionario público dependiente del Poder Ejecutivo o Judicial, o miembro de las
+Fuerzas Armadas y Policiales en servicio activo.
+Esta prohibición no rige:
+a) Cuando se trate de asuntos propios o de sus padres, esposas, hijos menores de edad, o
+personas bajo su tutela o curatela;
+b) cuando se ejerciere la docencia; y,
+Modificado por:

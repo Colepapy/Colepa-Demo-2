@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XII
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.217.- Siempre que la donación fuere sin cargo, el donatario deberá prestar
+alimentos al donante que no tuviere medios de subsistencia; pero podrá liberarse de ello,
+restituyendo los bienes, o el valor de los mismos cuando los hubiere enajenado.

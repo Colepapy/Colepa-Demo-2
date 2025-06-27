@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: IV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.301.- El acreedor no puede servirse de la cosa dada en prenda. Está obligado
+a conservarla con la diligencia exigida por su naturaleza, y a responder de la pérdida o
+deterioro, si provienen de su culpa o negligencia.
+El dueño debe al acreedor las expensas necesarias para la conservación de la
+cosa, aunque ésta pereciese después. No debe los gastos útiles o de mejoras, sino
+cuando hubieren dado mayor valor al objeto prendado y en la medida del aumento. El
+dueño no podrá reclamar la devolución de su cosa si el acreedor hubiere pagado esas
+impensas.

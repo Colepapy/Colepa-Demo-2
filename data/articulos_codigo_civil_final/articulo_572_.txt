@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: IV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 572.- Si el acreedor pretende haber perdido su título, el deudor que paga le
+puede obligar a otorgarle una declaración auténtica, en  la cual se haga constar  la
+anulación del título y la extinción de la deuda.

@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: VIII
+CAPITULO: 1
+SECCIÓN: 3
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 252.- Sujeto activo. Concepto. El sujeto activo del tributo aduanero es el
+Estado, que es competente para exigir su cumplimiento a través de la Dirección Nacional
+de Aduanas.

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: V
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.369.- La hipoteca no producirá efectos respecto de tercero sino desde su
+inscripción en el Registro respectivo. Las partes contratantes, sus herederos y los demás
+que han intervenido en el acto, así como el Escribano y los testigos, no pueden prevalerse
+de la falta o defecto de inscripción. Respecto de ellos, la hipoteca constituida por escritura
+pública, se considera registrada.

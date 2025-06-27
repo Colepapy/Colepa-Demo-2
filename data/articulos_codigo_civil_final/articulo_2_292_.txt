@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.292.- El que tiene el uso de los frutos de una cosa por un título gratuito no
+puede dar a otro por cesión o locación, el derecho de percibirlos, pero puede ceder el uso,
+si fue obtenido a título oneroso. En uno y otro caso, el uso de los frutos no puede ser
+embargado por los acreedores del usuario cuando tiene la calidad de alimentario.

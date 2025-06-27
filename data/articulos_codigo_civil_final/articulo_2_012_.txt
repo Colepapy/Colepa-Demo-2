@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: putativo no es suficiente, cualesquiera que sean los fundamentos del poseedor para
+CAPITULO: N/A
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.012.- Se prohíbe a los ribereños alterar la corriente natural o el cauce, o
+efectuar derivaciones sin permiso de la autoridad. En los ríos navegables queda vedado el
+uso de las aguas que estorbe o perjudique el tránsito fluvial.

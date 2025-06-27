@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: I
+TITULO: III
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 33.- El Presidente de la Sala del Tribunal de Apelación en lo Civil y Comercial que
+esté de turno, o los vocales o miembros que ésta designe, inspeccionarán las oficinas de los
+Notarios Públicos cada tres meses ordinariamente o antes si lo juzgasen oportuno, a fin de
+determinar si los registros están bien llevados y conservados en la forma que este Código y los
+reglamentos determinan, pudiendo decretar medidas disciplinarias por los efectos o abusos
+que constataren. Dicha función en el interior del país corresponderá al Tribunal de Apelación
+de la respectiva Circunscripción Judicial.

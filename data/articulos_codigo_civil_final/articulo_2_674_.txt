@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: VII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.674.- El testamento en que haya intervenido algún testigo incapaz será nulo,
+si no quedaren testigos capaces en número legal suficiente para la validez del testamento.

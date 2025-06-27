@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 4
+SECCIÓN: 10
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 316º Exención de Tributos Aduaneros a la importación Anexo Decreto Nº 4.672/05 Artículo 317º Formalidades de los Envíos de Emergencia Anexo Decreto Nº 4.672/05 Artículo 318º Exportación de Mercaderías con Fines de Asistencia
+---
+TEXTO DEL ARTÍCULO:
+Artículo 240.- Exención de tributos. Las mercaderías sometidas al régimen de envío
+de asistencia y salvamento estarán exentas del pago de tributo aduanero y de toda
+restricción o prohibición de carácter económico.

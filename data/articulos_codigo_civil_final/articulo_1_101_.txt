@@ -1,0 +1,19 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  1.101.-  Los  accionistas  que  conociendo   el   vicio  hubieran  votado
+favorablemente  las  resoluciones  que  se  declaren  nulas,  responden  ilimitada  y
+solidariamente de las consecuencias de las mismas, sin perjuicio de la responsabilidad que
+correspondan a los directores y síndicos.
+La asamblea podrá revocar el acuerdo impugnado. Esta resolución surtirá efecto
+inmediatamente y no procederá la iniciación o la continuación del proceso de impugnación.
+Subsistirá la responsabilidad por los efectos producidos, o que sean su consecuencia
+directa.
+PARÁGRAFO V
+DE LA ADMINISTRACIÓN Y REPRESENTACIÓN DE LA SOCIEDAD

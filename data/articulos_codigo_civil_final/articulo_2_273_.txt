@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: II
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.273.- Si el ejercicio de un usufructo hubiere sido confiado a un administrador,
+la entrega sólo producirá efecto con respecto al obligado, después de notificársele del auto
+por el que se le nombrare, o cuando tuviere conocimiento de su existencia. Lo mismo
+ocurrirá respecto de la cesación del administrador.

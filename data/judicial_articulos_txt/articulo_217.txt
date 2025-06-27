@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 217.- Admitida la denuncia se correrá traslado de ella por nueve días hábiles al
+magistrado o funcionario denunciado.

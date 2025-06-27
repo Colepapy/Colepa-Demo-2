@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: I
+TITULO: Corregido por:
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 178.- Son obligaciones de los peritos:
+a) Cumplir su misión con puntualidad y diligencia;
+b) Ejecutar la operación técnica, el examen o reconocimiento real y directo, siendo posible, y
+con sujeción a los principios y reglas de su ciencia o arte; y,
+c) Formular su dictamen de palabra o por escrito, según la importancia del asunto, expresando
+con claridad las razones que les sirven de fundamentos.
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981

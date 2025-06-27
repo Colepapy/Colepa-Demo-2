@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: X
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.421.- Si la cosa sobre que versa la reivindicación fuere mueble y hubiese
+motivos de temer que se pierda o deteriore en manos del poseedor, el reivindicante puede
+pedir el secuestro de ella, o que el poseedor le dé suficiente seguridad de restituir la cosa
+en caso de ser condenado.
+El que ejerce la acción de reivindicación puede, durante el juicio, impedir que el
+poseedor haga deterioros en la cosa que se reivindica, sea mueble o inmueble.

@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: II
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 337.- Si el plazo se fijare por meses o por años, se contará el mes de treinta
+días, y el año de trescientos sesenta y cinco días, por el calendario gregoriano.

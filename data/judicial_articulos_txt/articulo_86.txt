@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 86.- Corresponde al Procurador de Menores e Incapaces intervenir en los juicios en
+que estuvieren comprometidos la persona o bienes de los menores e incapaces en los casos
+en que fuere expresamente designado por el Defensor General de Menores e Incapaces,
+debiendo ceñir su actuación a las instrucciones del mismo.
+Derogado Por:

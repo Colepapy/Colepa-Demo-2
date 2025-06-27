@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.619.- El artículo anterior se aplica a la venta forzosa, computándose los
+plazos desde la aprobación de la subasta. No se aplica a la transmisión hereditaria,
+supuesto en el que los herederos y legatarios suceden en el contrato.
+PARÁGRAFO VII
+DE LA HIPOTECA Y DE LA PRENDA

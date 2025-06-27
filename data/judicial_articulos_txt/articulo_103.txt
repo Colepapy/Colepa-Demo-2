@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 103.- Los  Escribanos  Titulares  de  Art.   103.- Los   Escribanos   Titulares  de
+Registro y sus Adscriptos, antes de tomar  Registro, antes de tomar posesión de sus
+posesión de sus cargos  prestarán ante  la cargos, prestarán juramento o promesa ante la
+Corte Suprema de Justicia o ante el Miembro Corte Suprema de Justicia o ante el Miembro
+designado, el juramento de cumplir fielmente designado por ella, de cumplir los deberes y
+los deberes y obligaciones de su cargo y serán obligaciones  inherentes a sus  funciones y
+personal,     solidaria    e    ilimitadamente serán personal e ilimitadamente responsables
+responsables de la legalidad de su proceder.   de la legalidad de los actos que formalicen.

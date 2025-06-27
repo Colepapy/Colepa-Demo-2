@@ -1,0 +1,10 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: I
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.887.- Son cosas principales las que pueden existir por sí mismas.

@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: VIII
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.842.- El que cometiere un acto ilícito actuando bajo la dependencia o con
+autorización de otro, compromete también la responsabilidad de éste.
+El principal quedará exento de responsabilidad si prueba que el daño se produjo por
+culpa de la víctima o por caso fortuito.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: III
+CAPITULO: II
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.976.- Los acrecentamientos de tierra formados paulatina e insensiblemente
+por causas naturales, pertenecen a los propietarios de las tierras ribereñas.
+Esta disposición es aplicable a los lagos y lagunas.

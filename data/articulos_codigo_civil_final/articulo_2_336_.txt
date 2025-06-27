@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: IV
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.336.-  Verificada  la  inscripción,  el encargado  del  Registro expedirá un
+certificado en  el que consten  el nombre y apellido de los contratantes, importe del
+préstamo, fecha de su vencimiento, especie, cantidad y ubicación de los bienes dados en
+prenda y fecha de la inscripción del contrato.

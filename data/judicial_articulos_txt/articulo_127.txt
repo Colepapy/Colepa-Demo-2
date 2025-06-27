@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 127.- La copia o fotocopia de las escrituras mencionadas en los artículos anteriores,
+hace plena fe, como la escritura matriz.

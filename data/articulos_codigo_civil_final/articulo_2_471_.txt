@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: I
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.471.- El heredero beneficiario no está obligado con los bienes que el autor de
+la sucesión le dio en vida, aunque debiese colacionarlos entre sus coherederos, ni con los
+bienes que el causante haya dado en vida a sus coherederos, y que él tenga derecho a
+hacer colacionar.

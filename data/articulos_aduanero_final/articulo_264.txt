@@ -1,0 +1,12 @@
+CONTEXTO:
+TITULO: VIII
+CAPITULO: 2
+SECCIÓN: 5
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 343º Tasa por Servicios Aduaneros Extraordinarios
+---
+TEXTO DEL ARTÍCULO:
+Artículo 264.- Tasas por servicios extraordinarios. La Dirección Nacional de
+Aduanas queda facultada para fijar y modificar las tasas por servicios extraordinarios
+prestados por funcionarios, en sede, fuera de ella, o en otro país, en las tareas de control
+y fiscalización de operaciones aduaneras.

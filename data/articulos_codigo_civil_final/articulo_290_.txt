@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: I
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 290.- Acción dolosa para conseguir la ejecución de un acto, es toda aserción
+falsa o disimulación de lo verdadero, cualquier astucia, artificio o maquinación que se
+emplee con ese fin. Las reglas se aplicarán igualmente a las omisiones dolosas.

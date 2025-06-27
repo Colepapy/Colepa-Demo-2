@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: VIII
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.866.- No se juzgará renunciada la acción civil por no haberla intentado los
+ofendidos durante su vida, o por haber desistido de la acción penal.

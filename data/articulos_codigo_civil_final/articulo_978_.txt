@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 978.- El poder para administrar será revocable, aunque resultare del contrato
+social, cuando el nombrado no fuere socio. En este caso, la revocación no da derecho para
+disolver la sociedad.
+El administrador nombrado por acto posterior al contrato, podrá renunciar, tuviere o
+no justa causa para hacerlo.

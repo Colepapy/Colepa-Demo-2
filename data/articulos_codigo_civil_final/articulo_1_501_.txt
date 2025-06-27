@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XXII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.501.- La transacción extingue los derechos y las obligaciones que las parte
+hubieren renunciado, y tiene para con ellas y sus sucesores la misma autoridad que la
+cosa juzgada.

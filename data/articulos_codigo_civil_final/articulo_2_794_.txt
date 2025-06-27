@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.794.- El albacea puede demandar a los herederos y legatarios para  la
+ejecución de las cargas que el testador les hubiere impuesto en su propio interés.

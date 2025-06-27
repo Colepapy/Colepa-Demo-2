@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 82.- Los Defensores de Pobres deberán necesariamente interponer los recursos
+correspondientes contra toda resolución desfavorable a sus defendidos.

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: N/A
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 521.- La sentencia dictada en el juicio que siguió el acreedor contra uno de los
+deudores solidarios, no producirá efecto en cuanto a los demás; pero éstos podrán
+invocarla, a menos que se fundare en una causa personal para el deudor litigante.
+Se observará la misma regla cuando el juicio hubiese sido promovido por uno de los
+acreedores contra el único obligado.

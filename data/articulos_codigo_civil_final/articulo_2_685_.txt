@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.685.- Si los herederos instituidos deben ser, según la voluntad del testador,
+los únicos herederos, y cada uno de ellos es instituido por una fracción, sin que éstas
+reunidas absorban toda la herencia, se las aumentará proporcionalmente.
+Si, en el mismo caso, las fracciones de cada uno, unidas exceden el total de la
+herencia, se las reducirá en la misma forma.

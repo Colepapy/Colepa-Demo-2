@@ -1,0 +1,12 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 4
+SECCIÓN: 6
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 228.- Efectos no considerados equipajes. Los efectos de los tripulantes que
+no sean considerados equipajes y cuya importación no esté prohibida, serán declarados
+ante  la autoridad aduanera competente, a  los efectos del pago de  los  tributos
+correspondientes.

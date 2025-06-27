@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 228.- El magistrado o funcionario removido cargará con el pago de las costas. En
+caso de absolución serán a cargo del denunciante, si la Corte Suprema no hallare motivos para
+eximirlo de ellas, para lo cual deberá dar los fundamentos.
+No se impondrán, en ningún caso, las costas al Ministerio Público.

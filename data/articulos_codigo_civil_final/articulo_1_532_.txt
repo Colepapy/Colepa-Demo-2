@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: múltiple, a petición y a costa del poseedor. Los títulos de créditos pueden ser
+CAPITULO: N/A
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.532.- Durante el plazo establecido por el juez, el recurrente puede realizar
+todos los actos enderezados a conservar sus derechos, y, si el título está vencido o es
+pagadero a la vista, puede exigir su pago mediante caución o pedir el depósito judicial de
+la suma.

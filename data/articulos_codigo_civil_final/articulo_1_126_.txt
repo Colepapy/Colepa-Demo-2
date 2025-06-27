@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.126.- También son responsables solidariamente con los directores por los
+hechos u omisiones de éstos, cuando el daño no se hubiere producido si hubieran actuado
+de conformidad con las obligaciones de su cargo.
+PARÁGRAFO VII
+DE LAS OBLIGACIONES NEGOCIABLES O DEBENTURES

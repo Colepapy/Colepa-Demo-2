@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VI
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.774.- Los legados pueden ser revocados, después de la muerte del testador,
+por la inejecución de los cargos impuestos al legatario, cuando éstos fueren el motivo
+determinante de la liberalidad.
+La revocación de los legados por inejecución de los cargos impuestos, se regirá por
+las disposiciones relativas a la revocación por la misma causa de las donaciones entre
+vivos.

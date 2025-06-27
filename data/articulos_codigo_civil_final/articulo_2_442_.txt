@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: X
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.442.- Si el hecho que se opusiere al libre ejercicio del derecho, no importare
+arrogarse un derecho real, la acción por el daño causado, si procediere, sólo será juzgada
+como personal.

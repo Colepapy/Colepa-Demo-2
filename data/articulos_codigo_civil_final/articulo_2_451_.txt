@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: I
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.451.- La facultad de renunciar pasa a los herederos de quien hubiere fallecido
+antes de vencer el plazo sin ejercerla. El plazo legal se juzgará en este caso prorrogado
+por el tiempo necesario para aceptar o repudiar la herencia del propio causante.

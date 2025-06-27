@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 219.- El término para la contestación podrá ser prorrogado por otro igual siempre que
+la prórroga fuese solicitada dentro del término y con motivo fundado.

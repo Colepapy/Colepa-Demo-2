@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: VII
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 880.- Por el contrato de mandato una persona acepta de otro poder para
+representarla en el manejo de sus intereses o en la ejecución de ciertos actos.
+El mandato tácito resultará de hechos inequívocos del mandante, de su inacción o
+silencio, o cuando en conocimiento de que alguien gestiona sus negocios o invoca su
+representación no lo impidiere, pudiendo hacerlo.

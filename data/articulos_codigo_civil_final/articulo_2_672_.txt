@@ -1,0 +1,20 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: VII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.672.- Pueden ser testigos en los testamentos los mayores de edad que gocen
+de la plenitud de sus facultades mentales en el momento del otorgamiento, salvo lo
+dispuesto para los testamentos especiales.
+No podrán atestiguar los que evidenciaren en el mismo acto hallarse en estado de
+perturbación mental; los ciegos, sordos y mudos; los ascendientes, descendientes y
+cónyuge  del  testador;  el  heredero  instituido  y  su  cónyuge,  sus  ascendientes  y
+Texto consolidado de la Ley Nº 1183/1985
+descendientes;  los  legatarios y ninguno que reciba beneficios por  las disposiciones
+testamentarias o que tuviere parentesco con el escribano dentro del cuarto grado; los
+dependientes de su oficina y sus servidores domésticos, ni los dependientes de otros
+notarios.

@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XIII
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.261.- El depositario puede retener el depósito por compensación de una
+cantidad concurrente que el depositante le deba también por depósito, pero si se hubiere
+hecho cesión del crédito, el cesionario no podrá embargar en poder del depositario la
+cantidad depositada.

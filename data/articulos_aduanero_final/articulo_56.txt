@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: II
+CAPITULO: 5
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 56.- Anotación de sanciones en el registro.
+Las sanciones de apercibimiento, suspensión y eliminación del registro serán anotadas
+en el registro y legajo personal del infractor.

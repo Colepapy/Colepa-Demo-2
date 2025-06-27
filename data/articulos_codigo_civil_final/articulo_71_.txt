@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: I
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 71.- Si dada la posesión provisional, se presentare el desaparecido o se
+probare su existencia, cesarán los efectos de la declaración del fallecimiento presunto.

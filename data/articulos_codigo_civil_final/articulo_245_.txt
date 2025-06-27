@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: XI
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 245.- La sentencia judicial anterior al matrimonio, que reconozca la filiación
+extramatrimonial del hijo, seguida del matrimonio de sus padres, confiere a aquél la calidad
+de hijo matrimonial.
+Texto consolidado de la Ley Nº 1183/1985

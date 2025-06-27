@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: putativo no es suficiente, cualesquiera que sean los fundamentos del poseedor para
+CAPITULO: N/A
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.020.- Ningún propietario o medianero podrá abrir ventanas o troneras en
+pared medianera, sin consentimiento del condómino.

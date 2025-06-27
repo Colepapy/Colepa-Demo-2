@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: X
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.420.- El que de mala fe se da por poseedor sin serlo, será condenado a la
+indemnización de cualquier perjuicio que de ese hecho resultare al reivindicante.
+Esta disposición se aplicará igualmente al que dejare de poseer para dificultar o
+imposibilitar la reivindicación.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: I
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 774.- El pacto de mejor comprador autoriza la resolución del contrato si un
+tercero ofreciere un precio más ventajoso. Sólo podrá convenirse tratándose de inmuebles,
+y por un plazo no mayor de tres meses.

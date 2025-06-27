@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XVII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.393.- Por el contrato de cuenta corriente dos corresponsales se obligan a
+anotar en una cuenta los créditos derivados de recíprocas remesas, considerándose
+inejecutables e indisponibles hasta el cierre de la cuenta.
+El saldo de la cuenta es exigible al vencimiento establecido. Si no se exige el pago,
+el saldo se considerará como primera remesa de una cuenta nueva, y el contrato se
+entiende renovado por tiempo indeterminado.

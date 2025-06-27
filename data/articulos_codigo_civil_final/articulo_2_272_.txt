@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: II
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.272.- En caso de reembolso del título, se procederá conforme a lo dispuesto
+para los créditos productivos de interés; si hubiere prima, o sin en los cupones estuviere
+incluida la amortización del capital, la prima y la amortización formarán parte de éste.

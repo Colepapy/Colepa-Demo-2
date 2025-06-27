@@ -1,0 +1,24 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXVI
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.725.- El cheque es pagadero a la    Art. 1.725.- El cheque bancario podrá ser
+vista.                                de pago a la vista o de pago diferido.
+Toda disposición contraria se tiene por   El cheque bancario a la vista es pagadero
+no escrita.                            en  el acto de su presentación  al banco
+girado. Presentado antes del día indicado
+como fecha de su emisión es pagadero el
+día de su presentación. Toda disposición
+contraria se tendrá por no escrita.
+El cheque bancario de pago diferido será
+pagadero en el acto de su presentación al
+banco girado desde la fecha de pago fijada
+en   el  mismo.  Presentado  antes  del
+vencimiento  el banco deberá devolverlo
+por presentación extemporánea.
+Texto consolidado de la Ley Nº 1183/1985

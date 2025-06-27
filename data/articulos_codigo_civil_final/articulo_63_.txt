@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: I
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 63.- Podrá declararse judicialmente la muerte de una persona desaparecida en
+un terremoto, naufragio, accidente aéreo o terrestre, incendio, u otra catástrofe, o en
+acción de guerra, cuando por las circunstancias de la desaparición no quepa admitir
+razonablemente su supervivencia.

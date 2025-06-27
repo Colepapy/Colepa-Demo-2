@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: putativo no es suficiente, cualesquiera que sean los fundamentos del poseedor para
+CAPITULO: N/A
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.019.- Si para cualquier obra fuese indispensable poner andamios, u otro
+servicio provisional en el inmueble del vecino o pasar obreros o materiales, el dueño de
+este no tendrá derecho a impedirlo, siendo a cargo del que construyere  la obra  la
+indemnización del daño que causare.

@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXVI
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.713.- El endoso debe ser escrito en el dorso del cheque, o en una hoja unida
+al mismo y firmado por el endosante.
+Puede el endoso no designar al beneficiario o consistir simplemente en la firma del
+endosante.

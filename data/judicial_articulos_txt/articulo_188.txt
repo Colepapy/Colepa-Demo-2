@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: I
+TITULO: VI
+CAPITULO: III
+SECCIÓN: II
+---
+ESTADO: Modificado por:
+---
+TEXTO DEL ARTÍCULO:
+Artículo  188.- Es  función de  la  Oficina de  Notificaciones  diligenciar  las  cédulas de
+notificaciones en el domicilio de las partes. Estará a cargo de un Jefe y de los ujieres que
+establezca la ley, cuyas funciones serán reglamentadas por la Corte Suprema de Justicia.
+Los ujieres, al practicar las notificaciones observarán estrictamente las disposiciones de las
+leyes procesales y de este Código. Los ujieres serán responsables civil y penalmente de las
+irregularidades  cometidas en  el  cumplimiento de  sus  funciones,  sin  perjuicio de  ser
+sancionados por la Corte Suprema de Justicia.
+Modificado por:

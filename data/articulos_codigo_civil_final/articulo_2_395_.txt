@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: V
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.395.- Las servidumbres y derechos reales que el tercero poseedor tenía
+sobre el inmueble hipotecado antes de la adquisición que había hecho, y que se habían
+extinguido por  la consolidación o confusión, renacen después de  la enajenación, y
+recíprocamente, ésta hace revivir las servidumbres activas debidas al inmueble del tercer
+poseedor.
+Texto consolidado de la Ley Nº 1183/1985

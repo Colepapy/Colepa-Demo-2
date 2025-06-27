@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: III de este Código.                                 i) Las sociedades anónimas;
+TITULO: N/A
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 111.- La exclusión de un asociado no puede ser acordada por la asamblea sino
+por graves motivos justificados. El excluido podrá recurrir a la autoridad judicial dentro de
+los treinta días contados desde el día en que se le hizo saber la decisión.

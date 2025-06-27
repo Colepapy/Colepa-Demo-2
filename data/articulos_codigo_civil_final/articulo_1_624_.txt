@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.624.- Cuando en el seguro de incendio se incluye el resarcimiento del lucro
+cesante, no se puede convenir su valor al contratar. Cuando respecto del mismo bien se
+asegura el daño emergente con un asegurador, y con otro, el lucro cesante, u otro interés
+especial expuesto al mismo riesgo, el asegurado debe notificarles sin demora los diversos
+contratos.

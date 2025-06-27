@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: VIII
+CAPITULO: 2
+SECCIÓN: 1
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 255.- Formas de aplicación. El impuesto aduanero de importación será
+determinado mediante la aplicación de la alícuota fijada en el arancel aduanero sobre el
+valor en aduana de las mercaderías.

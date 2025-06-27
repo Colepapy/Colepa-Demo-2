@@ -1,0 +1,10 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: II
+CAPITULO: I
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 417.- Las obligaciones derivan de alguna de las fuentes establecidas por la ley.

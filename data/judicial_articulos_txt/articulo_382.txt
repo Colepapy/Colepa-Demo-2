@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 382.- La prueba pericial será producida por un perito único, nombrado de oficio, si las
+partes no se pusieren de acuerdo para proponerlo. El perito deberá pronunciarse en presencia
+del Juez y de las partes, en la audiencia.

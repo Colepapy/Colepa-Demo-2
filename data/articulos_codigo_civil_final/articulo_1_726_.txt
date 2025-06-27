@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXVI
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.   1.726.-   El  cheque  debe   ser    Art. 1.726.- El cheque bancario a la vista
+presentado  al pago dentro  del plazo de  debe ser presentado  al pago dentro  del
+treinta días de su emisión.                   plazo de treinta días de su emisión.
+El cheque bancario de pago diferido debe
+ser presentado al pago dentro del plazo de
+treinta días siguientes a la de fecha de pago

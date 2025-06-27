@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: XII
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 256.- La obligación de prestar alimentos que nace del parentesco comprende lo
+necesario para la subsistencia, habitación y vestido, así como lo indispensable para la
+asistencia en las enfermedades. Tratándose de personas en edad de recibir educación,
+incluirá lo necesario para estos gastos.

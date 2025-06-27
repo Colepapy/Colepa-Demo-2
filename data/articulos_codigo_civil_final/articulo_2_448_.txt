@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: I
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.448.- Si un procedimiento sucesorio ha sido iniciado en la República y fuera
+de ella, los sucesores domiciliados en el país tomarán de los bienes situados en él, una
+Texto consolidado de la Ley Nº 1183/1985
+parte igual al valor de aquéllos de que hayan sido excluidos en el extranjero en virtud de
+leyes locales.

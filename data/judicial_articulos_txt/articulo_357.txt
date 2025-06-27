@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: XIII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 357.- En éste Registro se anotarán las resoluciones y sentencias judiciales que
+decreten la inhibición general para disponer de bienes y las que levanten dichas inhibiciones.
+Asimismo, se inscribirán las resoluciones que declaren incapaces a las personas, las que dejen
+sin efecto tal declaración y las que designe curador provisorio o definitivo.

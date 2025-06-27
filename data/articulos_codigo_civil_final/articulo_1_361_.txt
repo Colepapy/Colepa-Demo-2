@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: N/A
+SECCIÓN: VII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.361.- Si el portador ha perdido la acción cambiaria contra todos los obligados
+y no tiene contra los mismos acción causal, puede accionar contra  el librador o  el
+aceptante por la suma en que se hubieren enriquecido injustamente en su perjuicio.

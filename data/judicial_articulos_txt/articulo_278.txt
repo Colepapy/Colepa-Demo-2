@@ -1,0 +1,24 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 278.- Toda inscripción deberá contener, bajo pena de nulidad, lo siguiente:
+a) La fecha de la presentación del título o la de los documentos presentados en el Registro,
+con expresión de la hora;
+b) La naturaleza, situación, medida superficial y linderos de los inmuebles objeto de  la
+inscripción;
+c) La naturaleza, valor, extensión, condiciones y carga de cualquier especie de derecho que se
+inscriba;
+d) La naturaleza del título o de los documentos que se inscriban y su fecha;
+e) El nombre, apellido y domicilio de la persona a cuyo favor se haga la inscripción;
+f) El nombre, apellido y domicilio de quien proceda inmediatamente los bienes o derechos que
+se deba inscribir;
+g) La designación de la oficina o archivo en que exista el título original;
+h) El nombre y la jurisdicción del Juez o Tribunal que haya expedido la sentencia ejecutoriada u
+ordenado la inscripción; e,
+i) La firma del Jefe de Sección correspondiente.

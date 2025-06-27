@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: N/A
+SECCIÓN: VI
+---
+ESTADO: Derogado Por: el artículo 98 de la Ley Nº 1/92
+---
+TEXTO DEL ARTÍCULO:
+Art. 207.- Las convenciones matrimoniales y sus modificaciones deberán hacerse
+por escrito y sólo surtirán efecto contra terceros desde su inscripción en el Registro
+correspondiente.

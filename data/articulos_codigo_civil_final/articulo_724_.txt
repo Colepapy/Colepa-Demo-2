@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: I
+CAPITULO: VI
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 724.- No procederá la resolución del contrato si el incumplimiento de una de las
+partes reviste escasa importancia y no compromete el interés de la otra.

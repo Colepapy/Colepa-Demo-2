@@ -1,0 +1,22 @@
+CONTEXTO:
+LIBRO: I
+TITULO: III
+CAPITULO: VIII
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 58.- Competerá además a los Juzgados de Paz en lo Civil, Comercial y Laboral:
+a) Practicar las diligencias que les fueren encomendadas por los Juzgado y Tribunales;
+b) Realizar el inventario de los bienes de las personas fallecidas sin parientes conocidos o con
+heredero ausentes o menores de edad que no tengan representantes legales, y disponer la
+guarda de los mismos,
+c) Certificar la existencia de personas y sus domicilios;
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981
+d) Comunicar a los Juzgados Tutelares los casos de abandono material o moral, malos tratos y
+orfandad de menores;
+e) Autenticar firmas; y
+f) Ejercer funciones notariales dentro de su jurisdicción, siempre que no existan en ellas
+Escribanos Públicos con Registro.

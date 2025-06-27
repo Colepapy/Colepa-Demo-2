@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: II
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 327.- Pendiente la condición, los interesados podrán usar de todas las medidas
+conservatorias de los derechos que les corresponderían en  el caso de que  ella se
+cumpliera.
+PARÁGRAFO II
+DEL CARGO

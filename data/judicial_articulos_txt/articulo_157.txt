@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: VII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 157.- Las suspensiones, de acuerdo a la gravedad, podrán aplicarse hasta el plazo de
+seis meses por la Corte Suprema de Justicia.

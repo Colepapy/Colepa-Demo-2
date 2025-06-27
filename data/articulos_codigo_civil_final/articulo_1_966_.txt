@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: III
+CAPITULO: II
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.966.- Adquiérese la propiedad de bienes inmuebles por:
+a) contrato;
+b) accesión;
+c) usucapión; y
+d) sucesión hereditaria.

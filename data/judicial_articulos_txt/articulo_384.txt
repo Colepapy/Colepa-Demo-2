@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 384.- Las partes no presentarán interrogatorio alguno y el Juez indagara al perito y a
+los testigos sobre los hechos articulados en la demanda y contestación y dejará constancia en
+acta de las preguntas y respuestas.

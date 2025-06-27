@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: II
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.565.- La garantía de los coherederos es por el valor que tenía la cosa al
+tiempo de la evicción. Si a los coherederos no les conviniere satisfacer este valor, pueden
+exigir que se hagan de nuevo las particiones por el valor actual de los bienes, aunque
+algunos de ellos estuvieren ya enajenados.

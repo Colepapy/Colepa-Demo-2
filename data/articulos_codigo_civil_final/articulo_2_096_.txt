@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: singular, siempre que se hubiere inscripto una medida cautelar relativa a la deuda. Si
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.096.- Las reglas relativas a la división en las sucesiones, a la manera de
+hacerla y a los efectos que produce, se aplican a la división de cosas particulares.
+Producen los efectos de la partición, la licitación y todos los actos a título oneroso
+por los cuales uno de los condóminos adquiere el dominio exclusivo de la cosa común.

@@ -1,0 +1,24 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IV
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 67.- Corresponde a los Agentes Fiscales del Trabajo:
+a) Velar por el cumplimiento de las leyes, reglamentos y demás disposiciones normativas del
+derecho laboral;
+b) Intervenir en todas las causas del trabajo y contienda de jurisdicción y competencia;
+c) Impulsar el procedimiento laboral, realizando las gestiones conforme a los términos de la ley,
+para que  las resoluciones, sentencias y acuerdos, sean dictadas dentro de  los plazos
+establecidos;
+d) Asistir a los acuerdos plenarios que celebren los Tribunales de Apelación del Trabajo con
+voz pero sin voto;
+e) Representar y defender los intereses fiscales; y
+f) Recibir denuncia sobre incumplimiento de las leyes del trabajo o de los fallos judiciales, y
+realizar investigaciones a su respecto, personalmente o por medio de funcionarios autorizados.
+Los Agentes Fiscales del Trabajo en ningún caso podrán asumir la representación y defensa
+en juicio de los trabajadores y aprendices, sean o no estos menores de edad o incapaces.
+DE LOS AGENTES FISCALES EN LO CRIMINAL

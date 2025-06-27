@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.169.- En defecto de los socios, la sociedad podrá adquirir la cuota ofrecida
+con utilidades líquidas o reduciendo el capital, debiendo ejercer la opción dentro de los
+diez días de vencido el plazo otorgado a los socios.

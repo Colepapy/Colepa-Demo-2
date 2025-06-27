@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.019.- El acreedor particular del socio, mientras dure la sociedad, puede hacer
+valer sus derechos sobre las utilidades correspondientes al deudor, y llevar a cabo actos
+de conservación sobre la cuota correspondiente a este último en la liquidación.

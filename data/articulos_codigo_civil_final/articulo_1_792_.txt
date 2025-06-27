@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: traslativo del dominio.
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.792.- Las partes podrán renunciar, restringir o ampliar su responsabilidad por
+los vicios redhibitorios, siempre que no mediare dolo en el enajenante. La exoneración en
+términos generales, no eximirá a éste, respecto de los que hubiere conocido, y no los
+declaró al adquirente.

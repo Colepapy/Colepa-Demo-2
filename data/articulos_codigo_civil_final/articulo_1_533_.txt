@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: múltiple, a petición y a costa del poseedor. Los títulos de créditos pueden ser
+CAPITULO: N/A
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.533.- Transcurrido el plazo fijado, el título quedará privado de toda eficacia,
+salvo los derechos del detentador frente a quien ha obtenido la sentencia.
+El acto, presentando una copia fehaciente de la sentencia, puede exigir el pago. Si
+el título es en blanco o no está vencido todavía, podrá obtener un duplicado.

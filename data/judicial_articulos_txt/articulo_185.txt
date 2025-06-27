@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: I
+TITULO: VI
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 185.- El médico forense de turno debe estar siempre accesible en cualquier momento
+en que su intervención fuere requerida por la autoridad judicial o por cualquier otra, y no podrá
+abandonar el lugar de sus funciones sin autorización de la Corte Suprema de Justicia.
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981

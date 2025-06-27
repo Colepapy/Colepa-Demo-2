@@ -1,0 +1,18 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: N/A
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.221.- El acueducto deberá construirse:
+a) con acequia abierta, cuando no sea peligrosa por su profundidad o situación, ni
+ofrezca otros inconvenientes;
+b) con acequia  cubierta, cuando  lo  exijan su hondura, su contigüidad a  las
+habitaciones o caminos, o cualquier análogo motivo, según el criterio del juez; y
+c) con cañerías o tuberías, cuando puedan sus aguas ser absorbidas por las
+pertenecientes a  terceros o haya  peligro de que infeccionen a  otras, o lleguen a
+contaminarse con substancias nocivas a causen daños a obras o edificios, y siempre que
+resulte necesario según las circunstancias.

@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: VII
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 897.- Si el mandatario efectuare los actos de su encargo en su propio nombre,
+no obligará al mandante respecto de terceros, aunque éstos tuvieren noticias del mandato.
+Texto consolidado de la Ley Nº 1183/1985
+Podrá el mandante exigir una subrogación judicial en los derechos que nazcan de los actos
+ejecutados y ser obligado por los acreedores que ejercen los derechos del mandatario,
+según las reglas generales.

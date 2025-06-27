@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: X
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 348.- En este Registro se inscribirán todos los actos e instrumentos cuya anotación
+disponga el Código de Comercio y leyes complementarias.

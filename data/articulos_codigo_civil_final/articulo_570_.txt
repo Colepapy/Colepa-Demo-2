@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: IV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 570.- El acreedor que reciba el pago debe librar recibo y hacer anotación de
+dicho pago sobre el título, si éste no se restituye al deudor. Los gastos del pago son a
+cargo del deudor.

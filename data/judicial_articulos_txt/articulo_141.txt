@@ -1,0 +1,19 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 141.- Si cualquiera de los otorgantes fuera sordomudo o mudo que sepa a darse
+entender por escrito en forma inequívoca, la escritura se hará de acuerdo a una minuta, cuyas
+firmas deberán reconocer ante el Notario cuando no la hubieran suscrito delante de él, las
+partes, los testigos y el autorizante deberán leer por  sí mismos la escritura, y  el sordo
+consignará antes de la firma, escribiendo de su puño y letra, que la ha leído y está conforme
+con ella.
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981
+El Escribano dará fe de las circunstancias mencionadas transcribiendo e incorporando la
+minuta como parte de la escritura.

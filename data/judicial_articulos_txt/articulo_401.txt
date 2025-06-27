@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 401.- Presentada la demanda con documentos que traigan aparejada ejecución, se
+hará la intimación de pago dentro del plazo de cuarenta y ocho horas.

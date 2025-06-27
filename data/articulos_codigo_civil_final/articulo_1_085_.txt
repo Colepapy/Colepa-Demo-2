@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.085.- Los accionistas pueden hacerse representar en las asambleas. No
+pueden ser mandatarios los directores, los síndicos, lo gerentes y demás empleados de la
+sociedad.  Para  otorgar  representación  será  suficiente una  carta  poder con  firma
+autenticada o registrada en la sociedad, salvo disposición en contrario del estatuto.

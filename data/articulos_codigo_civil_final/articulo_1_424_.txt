@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XVIII
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.424.- Si la cuenta estuviere a nombre de varias personas, con facultad para
+todas  de  realizar  operaciones,  aunque  sea  separadamente,  los  titulares  serán
+considerados acreedores o deudores solidarios de los saldos de la cuenta.

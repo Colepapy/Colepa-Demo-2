@@ -1,0 +1,12 @@
+CONTEXTO:
+TITULO: XIII
+CAPITULO: 2
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 380.- Legislación supletoria. En todos los aspectos del procedimiento
+sumarial no contemplados expresamente en  el Código Aduanero, se  aplicarán
+supletoriamente  las  disposiciones  del  Código  de  Procedimientos  Penales  y
+disposiciones modificatorias.

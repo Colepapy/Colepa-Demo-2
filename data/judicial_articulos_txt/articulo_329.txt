@@ -1,0 +1,19 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 329.- Podrán expedirse certificados:
+a) De los asientos de toda clase que existan en el Registro, relativos a bienes que los
+interesados señalen;
+b) De asientos determinados que los mismos interesados designen;
+c) De las inscripciones hipotecarias y cancelaciones hechas a cargo o en provecho de
+personas individualizadas, y,
+d) De no existir asiento de especie alguna o de especie determinada sobre fincas señaladas a
+cargo de ciertas personas.
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981

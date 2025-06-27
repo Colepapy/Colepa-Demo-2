@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.197.- El propietario de la heredad dominante deberá ejercer la servidumbre
+del modo menos perjudicial para el fundo sirviente. No podrá introducir en éste cambios
+innecesarios y estará obligado, si posee una construcción sobre él para el ejercicio de la
+servidumbre, a mantenerla conforme lo requiera el interés del propietario del inmueble
+gravado.

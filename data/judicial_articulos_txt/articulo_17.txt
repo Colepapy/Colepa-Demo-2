@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: I
+TITULO: II
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 17.- En las acciones personales será competente el Juez del lugar convenido para el
+cumplimiento de la obligación, y a falta de éste, a elección del demandante, el del domicilio del
+demandado, o el del lugar del contrato, con tal que el demandado se halle en él aunque sea
+accidentalmente.
+Si hubiere varios coobligados, prevalecerá la competencia del Juez ante quien se instaure la
+demanda.
+El que no tuviere domicilio conocido podrá ser demandado en el lugar en que se encuentre.

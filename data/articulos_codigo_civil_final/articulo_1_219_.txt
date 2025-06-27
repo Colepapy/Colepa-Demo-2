@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XII
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.219.- En las prestaciones periódicas, la obligación se extinguirá por muerte
+de cualquiera de las partes, salvo cláusula contraria.

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: de propiedad entre las partes y sus sucesores, siempre que haya sido inscripta en el
+CAPITULO: III
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.041.- Se reputa descubridor del tesoro el primero que lo haga visible, aunque
+sea en parte, siquiera no lo aprehenda ni reconozca que es un tesoro, y haya otros que
+trabajasen con él.
+Si en el mismo sitio o inmediato a él, hubiese otro tesoro, su descubridor será el
+primero que lo hiciere visible.

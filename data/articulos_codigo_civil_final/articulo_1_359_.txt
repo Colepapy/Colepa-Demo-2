@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: N/A
+SECCIÓN: VII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.359.- El portador de una letra debidamente protestada por falta de pago tiene
+acción ejecutiva por el importe del capital y los accesorios.
+Texto consolidado de la Ley Nº 1183/1985

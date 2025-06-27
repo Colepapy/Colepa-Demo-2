@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XIV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.274.- El derecho de servirse de la cosa y la obligación de  restituirla al
+comodante, nacen para el comodatario desde que adquiera la tenencia de ella.

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: traslativo del dominio.
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.761.- Si el derecho que causó la evicción, fuere de origen anterior a la
+transferencia de la cosa, pero adquirido ulteriormente, no responderá el que transmitió o
+dividió los bienes, cuando se hubiere consolidado por incuria del vencido.
+Los jueces resolverán, sin embargo, apreciando las circunstancias, si procede o no
+hacer efectiva la responsabilidad.

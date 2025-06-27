@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: II
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.509.- Si un tercero hubiere adquirido, del heredero aparente, a título gratuito,
+bienes de la herencia, podrá reclamársele la restitución de dichos bienes.

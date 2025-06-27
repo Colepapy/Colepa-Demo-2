@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: oneroso antes de solicitada la separación de patrimonios, y cuyo precio haya sido
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.500.- La desheredación deberá formalizarse, únicamente, por medio de un
+testamento válido y las causas alegadas por el testador deberán ser probadas en juicio.

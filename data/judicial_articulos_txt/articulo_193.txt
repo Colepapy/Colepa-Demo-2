@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 193.- No podrán ser nombrados simultáneamente miembros del mismo Tribunal, ni
+aún para los casos de integración, los parientes consanguíneos o afines en línea recta, y los
+colaterales dentro del cuarto grado inclusive de consanguinidad o segundo de afinidad.
+Tampoco se permitirá que uno de dichos parientes sea Juez inferior y el otro del Tribunal
+Superior de la misma jurisdicción.

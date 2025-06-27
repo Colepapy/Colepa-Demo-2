@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 312.- Los asientos relativos a cada finca se numerarán correlativamente y serán
+firmados por el Jefe de Sección.

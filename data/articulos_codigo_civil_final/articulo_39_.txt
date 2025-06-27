@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: I
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Derogado Por: Artículo 2 de la Ley Nº 2.169/03 b) de los varones de diez y seis años, y las mujeres de catorce años cumplidos, por su matrimonio, con las limitaciones establecidas en este Código; y c) por la obtención de título universitario. La emancipación es irrevocable.
+---
+TEXTO DEL ARTÍCULO:
+Art. 39.- Cesará la incapacidad de hecho de los menores:
+a) de los varones y mujeres de diez y ocho años cumplidos, por sentencia de juez
+competente ante quien se acredite su conformidad y la de sus padres, y en defecto de
+ambos, la de su tutor, que los habilite para el ejercicio del comercio u otra actividad lícita;

@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: N/A
+SECCIÓN: IV
+---
+ESTADO: Derogado Por: Artículo 98 de la Ley Nº 1/92 Texto consolidado de la Ley Nº 1183/1985
+---
+TEXTO DEL ARTÍCULO:
+Art. 200.- La administración de los bienes de la comunidad confiada al marido, no
+se extiende a los bienes reservados de la esposa.

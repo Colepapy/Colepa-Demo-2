@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: IX
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 946.- El comisionista tendrá derecho a ser  retribuido de acuerdo con  lo
+establecido para la remuneración del mandatario.

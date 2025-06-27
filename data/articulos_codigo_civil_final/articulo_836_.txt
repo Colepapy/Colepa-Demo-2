@@ -1,0 +1,18 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: III
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 836.- Si no obstante la prohibición del contrato, el locatario subarrendare la
+cosa, o lo hiciere sin la venia del locador, cuando ésta fuere necesaria, el subarrendatario
+no podrá negarse a recibirla alegando esas circunstancias, si contrató en conocimiento de
+ellas. En tal caso, la sublocación producirá sus efectos, si el locador la tolerase, o hasta
+que se opusiere.
+Por su parte,  el locador podrá exigir  el desalojo del subarrendatario y que el
+locatario vuelva a la posesión de la cosa total o parcialmente subarrendada. También le
+asistirá derecho para demandar los daños y perjuicios, limitándose a ellos, o bien que se
+rescinda la locación, con el resarcimiento que proceda.

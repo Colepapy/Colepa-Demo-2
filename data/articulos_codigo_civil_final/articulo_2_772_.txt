@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VI
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.772.- La afectación de la cosa legada por derechos reales, no causa la
+revocación de la liberalidad, pero pasa al legatario con el gravamen impuesto.

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.118.- Los síndicos deben ser idóneos para que el control que les corresponde
+ejercer sea eficiente, atendiendo a la importancia y complejidad de las actividades de la
+sociedad.
+Deben estar domiciliados en la República y ser hábiles para el cargo, conforme
+establece el artículo siguiente.

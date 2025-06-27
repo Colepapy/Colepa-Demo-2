@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: I
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 34.- Si dos o más hubiesen muerto en una misma ocasión, sin que pueda
+determinarse quién murió primero, se presume, a los efectos jurídicos, que fallecieron al
+mismo tiempo.
+Texto consolidado de la Ley Nº 1183/1985

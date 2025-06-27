@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XXI
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.486.- La fianza concluye por la extinción de la obligación principal, y por las
+mismas causas que las obligaciones en general, y las accesorias en particular.
+La fianza se extingue también, cuando la subrogación en los derechos del acreedor,
+como hipotecas o  privilegios, se ha hecho imposible por un hecho  positivo o por
+negligencia del acreedor.

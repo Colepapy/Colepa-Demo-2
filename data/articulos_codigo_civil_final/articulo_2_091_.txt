@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: V
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.091.- Cualquier comunero tiene derecho a reivindicar su cuota-parte contra
+los otros condóminos, y a hacer valer respecto de terceros los derechos resultantes del
+dominio sobre la totalidad de la cosa. Si ésta hubiere de restituirse, la entrega se hará por
+consignación o secuestro por cuenta de todos los copartícipes, con arreglo a los principios
+relativos a las obligaciones indivisibles.

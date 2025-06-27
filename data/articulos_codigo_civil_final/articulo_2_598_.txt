@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: V
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.598.- La legítima de los descendientes es de cuatro quintas partes de la
+herencia.
+La de los ascendientes es de dos tercios.
+La del cónyuge, cuando no existan descendientes ni ascendientes, es la mitad.
+La legítima del adoptante y del adoptado será la mitad de la herencia.

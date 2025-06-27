@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XVI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.307.- El que libra una letra de cambio como representante de una persona de
+quien no tiene poder para el efecto, queda obligado cambiariamente como si la hubiese
+firmado en su propio nombre; y si ha pagado, tiene los mismos derechos que habría tenido
+la persona cuya representación invocó.
+La misma disposición se aplica al representante que se haya excedido en sus
+poderes.

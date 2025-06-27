@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.798.- Los herederos no pueden disponer de los bienes de la masa antes de
+estar cubiertos los legados y deudas que deben ser satisfechos por el albacea.

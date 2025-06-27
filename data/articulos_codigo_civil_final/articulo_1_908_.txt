@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: I
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.908.- Las vertientes que nacen y mueren dentro de una misma heredad,
+pertenecen en propiedad, uso y goce al dueño de la heredad.

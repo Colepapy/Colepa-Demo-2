@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 326.- Corresponden a los Jefes de cada Sección:
+a) Conservar y llevar los Registros con arreglo a las disposiciones de éste Código; y,
+b) Formar anualmente un estado del movimiento de la Sección, con arreglo a los datos que
+suministre el Registro.

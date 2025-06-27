@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.711.- Pueden ser objeto de legados todas las cosas y derechos que estén en
+el comercio, inclusive las que no existan todavía, pero que se espera que lleguen a existir.
+Pueden, además, ser legados los sepulcros desocupados, la correspondencia y los
+objetos que constituyan recuerdos personales o de familia.

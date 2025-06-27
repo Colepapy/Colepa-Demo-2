@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: I
+TITULO: III
+CAPITULO: VIII
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 60.- Los Juzgados de Paz en lo Criminal conocerán de las faltas previstas por la ley,
+siendo sus resoluciones apelables. Instruirán sumario en los casos de delito siempre que no
+haya Juez de Instrucción o de Primera Instancia en lo Criminal en el distrito asiento del
+Juzgado.
+Asegurarán las personas de los procesados y podrán disponer el allanamiento de domicilio,
+librando orden por escrito y practicarán todas las diligencias necesarias para el esclarecimiento
+de los hechos punibles.
+Ampliado Por:

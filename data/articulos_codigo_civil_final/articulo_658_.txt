@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: al portador.
+CAPITULO: V
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 658.- No prescriben:
+a) la acción de impugnación de los actos nulos;
+b) la de partición de bienes hereditarios o en condominio, mientras subsista la
+indivisión; y
+c) la acción para demandar a los herederos por la restitución de los bienes de que
+fueron puestos en posesión definitiva en virtud de la declaración de muerte presunta.

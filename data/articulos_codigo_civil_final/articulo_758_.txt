@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: I
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 758.- Si no hubiere pacto en contrario, los gastos de entrega son a cargo del
+vendedor; los de transporte y recibo corresponden al comprador.

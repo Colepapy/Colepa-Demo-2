@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.553.- En todos los casos, si el siniestro ocurre durante el plazo para impugnar
+el contrato, el asegurador no adeuda prestación alguna, salvo el valor de rescate que
+corresponda en los seguros de vida.

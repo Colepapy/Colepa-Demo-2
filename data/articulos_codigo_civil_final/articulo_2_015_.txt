@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: putativo no es suficiente, cualesquiera que sean los fundamentos del poseedor para
+CAPITULO: N/A
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.015.- Todo propietario debe mantener sus edificios de manera que la caída, o
+los materiales que de ellos se desprendan no puedan dañar a los vecinos o transeúntes,
+bajo la pena de satisfacer los daños e intereses que por su negligencia les causare.
+En caso de que haya peligro de perjuicio para la propiedad vecina, su dueño podrá
+exigir las medidas de seguridad necesarias.

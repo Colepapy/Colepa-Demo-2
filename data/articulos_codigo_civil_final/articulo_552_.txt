@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: IV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 552.- El pago hecho a quién no tiene autorización para recibirlo es válido si el
+acreedor lo ratifica, o en la medida en que se convierte en su utilidad.
+En igual medida producirá efectos el pago a un incapaz para administrar sus bienes.

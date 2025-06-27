@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.669.- El asegurado puede rescindir el contrato sin limitación alguna después
+del primer período de seguro. El contrato se juzgará rescindido si no se paga la prima en
+los términos convenidos.
+El tercero beneficiario a título oneroso, se halla facultado para pagar la prima.

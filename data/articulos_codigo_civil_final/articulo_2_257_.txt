@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: II
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.257.- Si el usufructo se constituye sobre un rebaño o un conjunto de animales
+de cualquier especie,  el usufructuario está obligado a reemplazar, con las crías, las
+cabezas que falten por cualquier causa.
+Si el rebaño perece en parte, sin culpa del usufructuario, continuará el usufructo en
+la parte que queda, y lo que falte se repondrá con las crías.

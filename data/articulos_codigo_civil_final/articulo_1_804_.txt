@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: IV
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.804.- La promesa puede ser revocada antes del vencimiento del plazo
+indicado por el artículo anterior sólo por justa causa, siempre que la revocación se haya
+hecho pública en la misma forma de la promesa, o en otra equivalente.
+Texto consolidado de la Ley Nº 1183/1985
+En ningún caso podrá tener efecto la revocación  si la situación prevista en la
+promesa se ha realizado o si la acción se ha cumplido.

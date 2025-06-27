@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: V
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.358.- En la escritura pública de constitución de la hipoteca deberá constar la
+aceptación del acreedor. Si éste no la hubiere prestado, deberá hacerlo posteriormente en
+la misma forma, para la validez del acto, con efectos desde el día de su inscripción.
+La promesa de constituir hipoteca por documentos privados no será exigible.

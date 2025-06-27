@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.146.- En los casos del inciso c) del artículo anterior el juez, a pedido del
+fiduciario y sin más trámite, dispondrá la suspensión del directorio y nombrará en su
+reemplazo  al  fiduciario, quien  recibirá  la  administración y  los bienes  sociales bajo
+inventario.
+Texto consolidado de la Ley Nº 1183/1985

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: al portador.
+CAPITULO: V
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 637.- El plazo para exigir la restitución de la cosa gravada con usufructo, uso o
+prenda, empieza a correr desde la extinción de los respectivos derechos reales o del pago
+del crédito prendario.

@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: VIII
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.855.- Para apreciar la culpa o el dolo del responsable del daño, así como
+para la liquidación de éste, se aplicarán, en cuanto sean pertinentes, las normas de este
+Código sobre incumplimiento de las obligaciones provenientes de los actos jurídicos.
+Texto consolidado de la Ley Nº 1183/1985

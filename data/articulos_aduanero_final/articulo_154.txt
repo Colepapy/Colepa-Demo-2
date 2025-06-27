@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 3
+SECCIÓN: 1
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 207º Garantía para las Operaciones de Tránsito Internacional
+---
+TEXTO DEL ARTÍCULO:
+Artículo 154.- Garantía en el tránsito aduanero. Salvo lo dispuesto en los convenios
+internacionales vigentes, el responsable deberá otorgar una garantía sobre los tributos
+aduaneros y accesorios tendientes a asegurar el cumplimiento de sus obligaciones.

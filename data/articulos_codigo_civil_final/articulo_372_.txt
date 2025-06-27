@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: III
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 372.- Los derechos deben ser ejercidos de buena fe. El ejercicio abusivo de los
+derechos no está amparado por la ley y compromete la responsabilidad del agente por el
+perjuicio que cause, sea cuando lo ejerza con intención de dañar, aunque sea sin ventaja
+propia, o cuando contradiga los fines que la ley tuvo en mira al reconocerlos. La presente
+disposición no se aplica a los derechos que por su naturaleza o en virtud de la ley pueden
+ejercerse discrecionalmente.
+Texto consolidado de la Ley Nº 1183/1985

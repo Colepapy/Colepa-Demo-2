@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: X
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.435.- La responsabilidad del propietario por las indemnizaciones debidas al
+poseedor, sólo se hará efectiva en la cosa reivindicada. Podrá aquél liberarse de ella,
+haciendo abandono. Serán  aplicables en este caso  las  disposiciones que  rigen  el
+abandono que hiciere el tercer poseedor de un bien hipotecado.

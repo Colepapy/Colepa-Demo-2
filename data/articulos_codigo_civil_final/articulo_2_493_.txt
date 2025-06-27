@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: oneroso antes de solicitada la separación de patrimonios, y cuyo precio haya sido
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.493.- Los descendientes  el indigno y del desheredado concurren a  la
+sucesión por derecho propio, sin necesidad de invocar el derecho de representación,
+recibiendo en su conjunto  la hijuela que hubiere correspondido a aquél. No quedan
+excluidos por las faltas o delitos del ascendiente, pero éste no puede reclamar en caso
+alguno el usufructo que la ley acuerda a los padres respecto al patrimonio de sus hijos.

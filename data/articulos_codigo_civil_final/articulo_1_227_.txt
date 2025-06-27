@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XII
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.227.- Si por el avalúo de los bienes del causante resultaren inoficiosa las
+donaciones realizadas, los herederos necesarios existentes a la fecha de ellas, podrán
+exigir la reducción hasta quedar cubiertas sus legítimas.

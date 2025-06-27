@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.754.- Cuando la sucesión es solvente, los legatarios no son responsables de
+las deudas y cargas de la sucesión, aunque las deudas hubieren sido contraídas para la
+adquisición, conservación o mejora de la cosa legada.

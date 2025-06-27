@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: I
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.877.- Son inmuebles por su carácter representativo los instrumentos públicos
+de donde constare  la adquisición de derechos reales sobre bienes inmuebles, con
+excepción de la hipoteca.

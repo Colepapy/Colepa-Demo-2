@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: VII
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  889.-  Aceptado  el mandato  por uno de  los  nombrados,  su  renuncia,
+fallecimiento o incapacidad sobreviniente, dará derecho a cada uno de los otros para
+aceptarlo, según el orden de su designación.

@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 3
+SECCIÓN: 6
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 238º Mercaderías Susceptibles de ser sometidas al Régimen de Admisión Temporaria para Perfeccionamiento Activo
+---
+TEXTO DEL ARTÍCULO:
+Artículo 179.- Mercaderías susceptibles.
+Las mercaderías susceptibles de ser sometidas al régimen de admisión temporaria para
+perfeccionamiento activo, serán establecidas en las normas reglamentarias.

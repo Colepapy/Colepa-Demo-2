@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: al portador.
+CAPITULO: V
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 636.- En las obligaciones con intereses, la prescripción del capital comienza
+desde el último pago de ellos.
+El tiempo para prescribir la obligación de rendir cuentas, principia desde el día en
+que los obligados cesaron en sus cargos. El de la prescripción contra el resultado líquido
+de las cuentas, corre desde el día en que hubo conformidad de partes, o ejecutoria judicial.

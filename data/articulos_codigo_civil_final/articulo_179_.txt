@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: III
+CAPITULO: VIII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 179.- El matrimonio es nulo:
+a) cuando se realiza con alguno de los impedimentos establecidos en los artículos
+140, 141 y 142; y
+b) cuando se ha contraído entre personas del mismo sexo.
+Texto consolidado de la Ley Nº 1183/1985

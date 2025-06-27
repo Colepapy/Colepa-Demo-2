@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: al portador.
+CAPITULO: N/A
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 626.- La confusión entre uno de los acreedores solidarios y el deudor, o entre
+uno de los codeudores solidarios y el acreedor, extingue la obligación principal y sus
+accesorios con el efecto del pago.

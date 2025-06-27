@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 299.- Cuando la anotación preventiva de un derecho se convierta en inscripción
+definitiva del mismo, surtirá ésta sus efectos desde la fecha de la anotación preventiva.

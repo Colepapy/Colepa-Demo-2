@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.692.- Podrán ser sustituidas dos o más personas por una sola, y, asimismo,
+una sola por dos o más personas.
+Cuando el testador sustituye recíprocamente los herederos instituidos en partes
+desiguales, tendrán éstos en la sustitución las mismas partes que en la institución, si el
+testador no ha dispuesto lo contrario.
+El sustituto del sustituto se entiende también serlo del heredero nombrado en primer
+lugar.

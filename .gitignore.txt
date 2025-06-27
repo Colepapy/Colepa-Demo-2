@@ -1,0 +1,9 @@
+# Archivo de secretos
+.env
+
+# Entorno virtual y caché de Python
+venv/
+__pycache__/
+
+# Archivos de sistema operativo (comunes)
+.DS_Store

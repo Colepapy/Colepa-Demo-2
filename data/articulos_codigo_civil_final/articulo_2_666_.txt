@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.666.- Si en caso de epidemia grave no hubiere en una población escribano
+ante el cual pueda otorgarse testamento, podrá hacerse ante un miembro de la Junta
+Municipal, un sacerdote o el Director del Hospital o Centro de Salud.

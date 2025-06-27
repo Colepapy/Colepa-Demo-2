@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.585.- El derecho a rescindir se extingue  si no se ejerce en los plazos
+previstos, o si la agravación del riesgo ha desaparecido.

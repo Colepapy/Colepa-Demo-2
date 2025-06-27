@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.177.- El cambio de objeto, transformación, fusión y toda otra modificación que
+imponga mayor responsabilidad a los socios, deberá resolverse por unanimidad de votos.
+Cualquier otra deliberación social se decidirá por mayoría de capital.

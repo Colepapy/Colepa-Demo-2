@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: N/A
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.339.- El portador de una letra de cambio pagadera a día fijo o a cierto tiempo
+fecha a vista, debe presentarle para ser pagada el día en que ella es pagadera, o al día
+hábil siguiente, si fuese feriado.
+La presentación de  la  letra a una Cámara de Compensación equivale a su
+presentación para el pago.

@@ -1,0 +1,18 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: singular, siempre que se hubiere inscripto una medida cautelar relativa a la deuda. Si
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.098.- Las resoluciones sobre administración se adoptarán con citación de
+todos los copropietarios, por mayoría absoluta de votos computados según el valor de las
+partes indivisas, aunque dicha mayoría correspondiese a uno solo de los condóminos.
+Si  hubiere  empate,  decidirá  la  suerte.  Cualquier  dificultad  sobre  asuntos
+administrativos,  será  sumariamente  decidida  por  el  juez, a  solicitud de  cualquier
+condómino y con audiencia de los demás.
+En caso de  duda, se presume  iguales  las  partes. Los  frutos se  dividirán
+proporcionalmente a los valores de ellas.
+Texto consolidado de la Ley Nº 1183/1985

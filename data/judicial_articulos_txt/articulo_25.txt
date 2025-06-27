@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: I
+TITULO: II
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 25.- Es competente también  la  justicia de  la República en los hechos y actos
+producidos a bordo de aeronaves paraguayas en vuelo sobre alta mar, o cuando no fuere
+posible determinar sobre qué territorio volaba la aeronave cuando se ejecutó el acto o se
+produjo el hecho.
+Si los actos se hubieran efectuado a bordo de una aeronave paraguaya en vuelo sobre
+territorio extranjero los Jueces y Tribunales nacionales sólo serán competentes si se hubieran
+afectado legítimos intereses nacionales.

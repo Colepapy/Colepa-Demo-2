@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 203.- Los Jueces de Paz de la Capital se reemplazarán unos a otros de conformidad a
+lo que disponga la reglamentación de la Corte Suprema de Justicia, y los del Interior por otro
+titular de la misma población o por el suplente, y en ausencia, o impedimento de éste, por el
+Juez de Paz titular o suplente de la población más cercana.

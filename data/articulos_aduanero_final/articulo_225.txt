@@ -1,0 +1,14 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 4
+SECCIÓN: 5
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.675/05 Artículo 289º Concepto Anexo Decreto Nº 4.672/05 Artículo 290º Mercaderías Exentas de Tributos Aduaneros Anexo Decreto Nº 4.672/05 Artículo 291º Declaración Aduanera Anexo Decreto Nº 4.672/05 Artículo 292º Valoración Aduanera del Equipaje Anexo Decreto Nº 4.672/05 Artículo 293º Carácter Intransferible de los Equipajes Anexo Decreto Nº 4.672/05 Artículo 294º Prohibiciones o Restricciones Anexo Decreto Nº 4.672/05 Artículo 295º Exclusiones del Tratamiento de Equipaje Anexo Decreto Nº 4.672/05 Artículo 296º Extravío de Equipaje Anexo Decreto Nº 4.672/05 Artículo 297º Obligación Tributaria Anexo Decreto Nº 4.672/05 Artículo 298º Tratamiento para los Viajeros que Ingresan a Residir en Forma Permanente Anexo Decreto Nº 4.672/05 Artículo 299º Tiendas Libres de Impuestos o Duty Free Shop Anexo Decreto Nº 4.672/05 Artículo 300º Plazos de Arribo de Equipajes No Acompañados Anexo Decreto Nº 4.672/05 Artículo 301º Exención de Tributos a Mercaderías de Exportación Sesquicentenario de la Epopeya Nacional 1864-1870
+---
+TEXTO DEL ARTÍCULO:
+Artículo 225.- Equipaje. Concepto. El régimen de equipaje es aplicable a los objetos
+nuevos o usados destinados al uso o consumo personal del viajero, que entre o salga
+del territorio aduanero, de acuerdo con las circunstancias de su viaje o para ser
+obsequiados, siempre que por su cantidad, naturaleza o variedad, no permita presumir
+que se importan o exportan con fines comerciales, conforme a lo establecido en los
+acuerdos y convenios internacionales vigentes.

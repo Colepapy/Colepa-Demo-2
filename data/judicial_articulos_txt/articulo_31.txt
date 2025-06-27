@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: III
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo  31.- Habrá Tribunales de Apelación en  los  distintos fueros y Circunscripciones
+Judiciales, divididos en tantas salas como fuese necesario. Cada sala estará integrada por no
+menos de tres miembros.

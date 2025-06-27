@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.285.- El que tiene el uso de los frutos de un fundo tiene derecho a usar de
+todos los frutos naturales que produzca. Pero si éstos provienen del trabajo del propietario,
+sólo tiene derecho a usarlos, pagados que sean todos los costos para producirlos.
+El usuario tiene preferencia sobre el propietario, aunque por su uso todos los frutos
+fuesen consumidos.

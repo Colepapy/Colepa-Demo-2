@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: IV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 562.- Si el título constitutivo facultare al deudor para pagar cuando pudiere o
+tuviere medios suficientes, el juez, a instancia de parte, fijará el día en que deba cumplirse
+la prestación.
+Si el plazo se ha dejado a voluntad del acreedor, podrá el juez señalarlo a instancia
+del deudor que quiera liberarse.

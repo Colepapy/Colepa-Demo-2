@@ -1,0 +1,10 @@
+CONTEXTO:
+TITULO: XV
+CAPITULO: 1
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo  394.- Normas reglamentarias.  El Poder  Ejecutivo  dictará  las normas
+reglamentarias del presente Código.

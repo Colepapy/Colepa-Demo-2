@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: XV
+CAPITULO: 1
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 395.- Vigencia de disposiciones y reglamentos. Hasta tanto se reglamente
+este Código, seguirán vigentes las actuales disposiciones en todo aquello que no se
+oponga a lo dispuesto en el mismo.

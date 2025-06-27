@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: V
+CAPITULO: III
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.584.- A falta de descendientes, heredan los ascendientes, sin perjuicio de los
+derechos del cónyuge supérstite.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: III
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.965.- Si la cosa expropiada no se destinare al fin que motivó la expropiación
+dentro de un plazo razonable, podrá el dueño anterior demandar su recuperación en el
+estado en que fue enajenada, consignando el precio o la indemnización pagada.

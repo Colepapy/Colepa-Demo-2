@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XXII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.495.- Por  el contrato de transacción  las partes, mediante concesiones
+recíprocas, ponen fin a un  litigio o lo previenen. Por medio de ella se pueden crear,
+Texto consolidado de la Ley Nº 1183/1985
+modificar o extinguir, además, relaciones jurídicas diversas de las que fueron objeto del
+litigio o motivo de la controversia.

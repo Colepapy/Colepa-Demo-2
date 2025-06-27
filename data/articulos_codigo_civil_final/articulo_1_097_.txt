@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.097.- Cuando  la asamblea deba adoptar resoluciones que afecten  los
+derechos de una clase de acciones, se requerirá el consentimiento o ratificación de los
+titulares de ellas. Para ese efecto se regirá por las normas de la asamblea ordinaria.

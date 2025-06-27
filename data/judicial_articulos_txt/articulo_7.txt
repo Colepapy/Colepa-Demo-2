@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: II
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo  7°.- Los Jueces y Tribunales ejercerán  jurisdicción dentro de los límites de su
+competencia.

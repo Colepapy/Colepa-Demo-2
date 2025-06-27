@@ -1,0 +1,19 @@
+CONTEXTO:
+LIBRO: I
+TITULO: II
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 16.- En las acciones reales sobre inmuebles será competente el Juez del lugar de su
+situación.
+Si el bien raíz estuviere ubicado en más de una circunscripción  judicial, la competencia
+pertenecerá al Juez de aquella donde se hallare su mayor parte.
+Si los inmuebles fueren varios y situados en distintas circunscripciones, será competente el
+Juez del lugar de situación del inmueble de mayor valor.
+Cuando se ejerzan acciones reales sobre muebles, será competente al Juez del lugar donde se
+hallen, o el del dominio del demandado, a elección del demandante.
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981

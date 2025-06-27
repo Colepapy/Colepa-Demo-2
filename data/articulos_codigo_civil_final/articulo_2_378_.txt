@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: V
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.378.- En  los  casos de  los  tres  artículos  anteriores,  los  acreedores
+hipotecarios podrán, aunque sus créditos no estén vencidos, demandar que el deudor sea
+privado del beneficio del plazo otorgado por el contrato.

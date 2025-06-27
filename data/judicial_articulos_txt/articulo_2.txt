@@ -1,0 +1,10 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: XIV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 2 de la Ley N° 963/1982

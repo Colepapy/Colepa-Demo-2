@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: V
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.381.- Los acreedores hipotecarios gozan de privilegio sobre el precio del
+inmueble, en  el orden de  prioridad determinado por  la fecha de  las  inscripciones
+respectivas.
+Cuando fueron efectuadas en el mismo día, la preferencia se determinará por la
+hora de presentación. El privilegio subsiste sobre el precio no pagado de los accesorios
+vendidos.

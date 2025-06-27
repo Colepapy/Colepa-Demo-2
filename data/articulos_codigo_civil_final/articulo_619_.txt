@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: IV
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 619.- En el caso previsto en el inciso b) del artículo anterior, si la deuda del
+concursado estuviere pendiente de plazo, se descontarán los intereses por el tiempo no
+transcurrido.
+Cuando uno de los créditos fuese bajo condición suspensiva, el acreedor podrá
+exigir las garantías necesarias para reintegrarse de lo que debiese abonar por su parte.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 125.- Los testimonios o fotocopias de las escrituras matrices contendrán la citación
+del Registro y número que en él tenga la escritura con que concuerdan, y deberán expedirse
+firmados y sellados por el Escribano de Registro con las demás formalidades de ley.

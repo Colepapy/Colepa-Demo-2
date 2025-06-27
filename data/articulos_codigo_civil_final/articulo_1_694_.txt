@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.694.- El asegurado carece de acción contra el reasegurador. En caso de
+liquidación voluntaria o forzosa del asegurador, el conjunto de los asegurados gozará de
+privilegio especial sobre el saldo acreedor que arroje la cuenta del asegurador con el
+reasegurador.

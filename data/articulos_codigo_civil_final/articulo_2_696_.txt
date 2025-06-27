@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.696.- Toda persona física o jurídica que existiere en el momento de la muerte
+del testador podrá recibir bienes por testamento.
+Los que sólo estén concebidos podrán adquirirlos también a condición de que
+nazcan con vida.

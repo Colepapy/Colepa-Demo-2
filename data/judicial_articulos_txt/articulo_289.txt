@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 289.- Para determinar la preferencia entre dos o más inscripciones de una misma
+fecha, relativas al mismo bien, se atenderá a la hora de presentación en el Registro de los
+títulos respectivos.

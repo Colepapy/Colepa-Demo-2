@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: N/A
+SECCIÓN: VII
+---
+ESTADO: Derogado Por: Artículo 98 de la Ley Nº 1/92
+---
+TEXTO DEL ARTÍCULO:
+Art. 212.- El juzgado llamará por edictos a quienes tengan interés en reclamar
+contra la comunidad, para que comparezcan en el término perentorio de treinta días a
+deducir sus acciones. El edicto se publicará durante quince días consecutivos en uno de
+los diarios de la jurisdicción del juzgado.
+Texto consolidado de la Ley Nº 1183/1985
+Los interesados que no comparezcan dentro del término sólo tendrán acción sobre
+los bienes propios del deudor.

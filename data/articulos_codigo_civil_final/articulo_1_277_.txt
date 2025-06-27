@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XIV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.277.- El comodatario no responde de los deterioros producidos en la cosa por
+el uso normal de ella, ni de los que provengan de su propia calidad, vicio o defecto.
+Pero si la cosa ha sido valorada al tiempo del contrato su perecimiento está a cargo
+del comodatario, aunque haya ocurrido por causa que no le sea imputable.

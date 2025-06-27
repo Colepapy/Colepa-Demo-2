@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: I
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 762.- El vendedor de un inmueble, o de un derecho sobre un inmueble, está
+obligado a cancelar todas las inscripciones y anotaciones preventivas que perjudicaren los
+derechos del comprador.

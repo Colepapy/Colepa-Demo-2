@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: N/A
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.217.- El titular del derecho de acueducto deberá llevar las aguas por el rumbo
+que permita su  libre descenso, siempre que por  la naturaleza del suelo no resulte
+excesivamente dispendiosa la obra.
+Verificadas estas condiciones, el acueducto se establecerá en la dirección que
+menos perjuicio ocasione al predio sirviente, juzgándose tal, el trayecto más corto para la
+heredad sirviente, y el menos costo para el interesado, salvo prueba en contrario.

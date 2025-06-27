@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: al portador.
+CAPITULO: V
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 651.- La interrupción hecha por uno de los coacreedores no aprovecha a los
+demás.
+Y recíprocamente, la interrupción causada contra uno o varios de los codeudores no
+puede oponerse a los otros.

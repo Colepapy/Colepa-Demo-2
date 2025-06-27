@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.166.- Las cuotas no pueden ser cedidas a extraños sino con el acuerdo de
+socios que representen tres cuartos del capital, cuando la sociedad tenga más de cinco
+socios. No siendo más de cinco, se requerirá unanimidad.
+La cesión de cuotas es libre entre socios, salvo disposición en contrario del acto
+constitutivo.

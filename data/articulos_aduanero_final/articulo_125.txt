@@ -1,0 +1,17 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 1
+SECCIÓN: N/A
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 180º Entrega Anticipada de Mercaderías con Garantía
+---
+TEXTO DEL ARTÍCULO:
+Artículo 125.- Libramiento. Concepto.
+1. Libramiento es el acto del despacho aduanero en virtud del cual se autoriza la entrega
+de las mercaderías al declarante.
+2. Se procederá al libramiento de las mercaderías una vez cumplidas integralmente las
+obligaciones y formalidades exigidas para la aplicación del régimen aduanero.
+3. La autoridad aduanera podrá disponer la entrega anticipada de las mercaderías,
+mediante el pago del importe del crédito determinado antes del cumplimiento integral de
+las formalidades y procedimientos previstos para la aplicación del régimen aduanero, de
+conformidad a las normas reglamentarias.

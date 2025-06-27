@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: y por error de hecho o de derecho estuviere persuadido de su legitimidad. El título
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.923.- Si fueren varios los poseedores, la naturaleza de la posesión se juzgará
+respecto de cada uno de ellos.
+Tratándose de personas representadas, se aplicará lo dispuesto en este Código
+sobre representación en los actos jurídicos.

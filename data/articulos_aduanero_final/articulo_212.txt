@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 3
+SECCIÓN: 9
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 212.- Plazo para realizar la importación definitiva. La autoridad aduanera
+establecerá el plazo de doce meses prorrogables, con causas justificadas, para la
+importación definitiva de los productos transformados.

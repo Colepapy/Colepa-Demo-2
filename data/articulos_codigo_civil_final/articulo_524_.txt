@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: III
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 524.- El acreedor puede transferir a título oneroso o gratuito su crédito, aun sin
+consentimiento  del deudor, siempre que  el  crédito no tenga  carácter estrictamente
+personal, o que su transferencia no esté prohibida por la ley.
+Las partes pueden excluir la cesibilidad del crédito, pero el pacto no es oponible al
+cesionario, si no se prueba que él lo conocía al tiempo de la cesión.

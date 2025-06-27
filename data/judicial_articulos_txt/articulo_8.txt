@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: II
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 8°.- Los Juzgados y Tribunales en lo criminal procederán de oficio a instancia de
+parte, según la naturaleza de la acción nacida del delito. Los demás Juzgados y Tribunales
+sólo ejercerán su ministerio a pedido de parte, salvo los casos en que la ley los faculte a
+proceder de oficio.

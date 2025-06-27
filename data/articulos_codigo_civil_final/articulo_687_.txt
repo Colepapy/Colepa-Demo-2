@@ -1,0 +1,10 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: I
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 687.- El contrato se considera celebrado en el lugar en que se formula la oferta.

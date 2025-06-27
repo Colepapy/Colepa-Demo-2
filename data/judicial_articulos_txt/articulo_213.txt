@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 213.- La denuncia deberá ser hecha por escrito ante la Corte Suprema de Justicia con
+enunciación circunstanciada de los hechos en que se fundare y con determinación clara y
+precisa de los medios de prueba.

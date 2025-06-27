@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: oneroso antes de solicitada la separación de patrimonios, y cuyo precio haya sido
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.488.- La separación de patrimonios puede ser pedida a los cesionarios de la
+herencia o de parte alícuota de ella, aunque la cesión fuere a título oneroso, o anterior a la
+separación.

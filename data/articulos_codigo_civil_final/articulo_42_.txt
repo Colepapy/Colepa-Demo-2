@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: I
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 42.- Toda persona tiene derecho a un nombre y apellido que deben ser
+inscriptos en el Registro del Estado Civil.
+Sólo  el juez podrá autorizar, por justa causa, que se introduzcan cambios o
+adiciones en el nombre y apellido.

@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo  337.- Las  inscripciones de  dominio de buques  provenientes de  construcción
+contendrán una transcripción del permiso expedido por la autoridad competente para el efecto
+el informe del arqueador naval y cualquier otro documento que probare  el origen de  la
+propiedad.
+Texto Anterior de la Ley Nº 879/1981          Texto actual establecido por el artículo 2º de la
+Ley Nº 1.448/1999

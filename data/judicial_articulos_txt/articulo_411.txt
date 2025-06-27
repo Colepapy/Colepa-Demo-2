@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 411.- Resultando de la demanda o de la contestación que existen sub-inquilinos, se
+les dará conocimiento de la demanda, sin que esto importe reconocerles personería en el
+juicio. Además, se les notificará la sentencia de desalojo.

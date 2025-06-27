@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 397.- Sólo serán apelables:
+Las sentencias definitivas en juicio ordinario la que ordene o deniegue el desalojo; la que
+rechace  la ejecución o  la que mande llevar ésta adelante cuando se hubieran opuesto
+excepciones y producidas pruebas sobre ellas; el auto que rechace de oficio la demanda por
+no ajustarse a las formas previstas y el que declare la nulidad de las actuaciones y el que
+decrete la perención de instancia.

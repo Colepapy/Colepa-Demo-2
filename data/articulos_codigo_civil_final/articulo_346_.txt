@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: II
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 346.- Si el representante careciere de poderes, o los hubiere excedido, y el
+representado, o la autoridad competente en su caso, no ratificare el acto obrado en su
+nombre, éste no obligará al representado.

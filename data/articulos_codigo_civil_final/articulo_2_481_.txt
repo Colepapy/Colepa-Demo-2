@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: I
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.481.- El heredero beneficiario no podrá aceptar o repudiar  la herencia
+deferida al autor de la sucesión, sin la venia del juez, y si éste la diere, deberá hacerlo a
+beneficio de inventario.

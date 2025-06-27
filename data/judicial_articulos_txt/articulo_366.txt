@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 366.- Cuando el objeto de la demanda no sea una cantidad de dinero el acto deberá
+manifestar su valor bajo juramento al entablar la demanda.

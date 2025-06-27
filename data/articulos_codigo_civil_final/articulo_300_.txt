@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: II
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 300.- La calificación jurídica errónea que del acto hagan las partes no perjudica
+su eficacia, que se juzgará según el contenido real del mismo. Cuando hubiese en un
+instrumento palabras que no armonicen con la intención reflejada en el acto, prevalecerá
+ésta.

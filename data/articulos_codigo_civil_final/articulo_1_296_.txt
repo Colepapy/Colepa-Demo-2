@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.296.- Cuando el mutuario no pudiere cumplir su obligación, deberá el precio
+de la cantidad o cosa recibida, según regía en el lugar y tiempo en que debió restituirse.

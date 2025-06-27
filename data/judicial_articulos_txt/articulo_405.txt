@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 405.- Habiendo hechos controvertidos, se fijará audiencia dentro de cinco días para el
+juicio oral, en el cual se deberá presentar toda la prueba y se procederá en lo demás como se
+establece a este respecto por el artículo 379 y siguientes.

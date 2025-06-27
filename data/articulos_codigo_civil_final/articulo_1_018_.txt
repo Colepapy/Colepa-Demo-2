@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.018.- El que entra a formar parte de una sociedad ya constituida responde
+con los otros socios por las obligaciones sociales anteriores a la adquisición de su calidad
+de socio.

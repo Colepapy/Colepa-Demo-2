@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: singular, siempre que se hubiere inscripto una medida cautelar relativa a la deuda. Si
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.102.- Habrá también indivisión forzosa, cuando la ley prohibiere la división de
+una cosa común, o cuando  la prohibiere una estipulación válida y temporal de los
+condóminos, o el acto de última voluntad también temporal que no exceda, en uno y otro
+caso, el término de cinco años, o cuando la división fuere nociva por cualquier motivo, en
+cuyo caso debe ser demorada cuando sea necesario para que no haya perjuicio a los
+condóminos.

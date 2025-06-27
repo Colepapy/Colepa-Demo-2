@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: X
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.437.- Las antecedentes disposiciones se aplicarán, en lo pertinente, a las
+acciones confesoria y negatoria, y también a las cosas muebles que deben inscribirse para
+su adquisición.

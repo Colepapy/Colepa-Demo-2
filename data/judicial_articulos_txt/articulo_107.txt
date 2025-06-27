@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 107.- En caso de impedimento del Escribano del interior con cualquiera de las partes
+por razones de parentesco, actuará en el Registro un Juez de Paz local, sin el requisito de
+obtención del permiso a que se refiere el artículo anterior.

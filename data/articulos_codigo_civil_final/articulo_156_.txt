@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: III
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 156.- Los esposos no pueden contratar entre sí, salvo los casos expresamente
+previstos en este Código o en leyes especiales.

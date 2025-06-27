@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: I
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 732.- El que obrando en su propio nombre estipule una obligación a favor de un
+tercero, tiene el derecho de exigir su ejecución en provecho de ese tercero.

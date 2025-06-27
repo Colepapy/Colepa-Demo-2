@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.673.- Transcurridos tres años desde la celebración del contrato y hallándose
+el asegurado al día en el pago de las primas, podrá en cualquier momento exigir, de
+acuerdo con los planes técnicos aprobados por la autoridad de contralor que se insertarán
+en la póliza:
+a) la conversión del seguro en otro saldado por una suma reducida o de plazo
+menor; y
+b) la rescisión con el pago de una suma determinada.

@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: II
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 298.- La incapacidad de una de las partes no puede ser invocada en provecho
+propio por la parte capaz. Pero, si de una parte se obligan simultáneamente una persona
+capaz y otra incapaz, sólo ésta podrá demandar la anulación parcial del acto y aprovechar
+los efectos de su anulación, salvo que el objeto sea indivisible, caso en el cual la nulidad
+declarada aprovechará igualmente a la parte capaz.
+Texto consolidado de la Ley Nº 1183/1985

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.078.- La asamblea debe reunirse en el domicilio social. Tiene competencia
+exclusiva para  tratar  los asuntos mencionados en  los dos  artículos siguientes. Sus
+resoluciones conformes a la ley y los estatutos son obligatorias para todos los accionistas,
+sin perjuicio a lo dispuesto en el artículo 1.092.
+Texto consolidado de la Ley Nº 1183/1985

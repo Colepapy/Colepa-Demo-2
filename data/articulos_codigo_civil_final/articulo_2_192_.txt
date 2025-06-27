@@ -1,0 +1,18 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.192.- Sólo podrán constituir servidumbres prediales los propietarios de los
+fundos que hayan de ser beneficiados o gravados con ellas. Si quien aparezca inscripto en
+el Registro como dueño, la estableciere a favor de ese predio, la servidumbre subsistirá
+respecto del verdadero titular, sin necesidad de declaración alguna.
+Las constituidas a favor del fundo por el usufructuario, o usuario expresando que
+estipulan para el dueño, sólo producirán efecto desde que se inscriba en el Registro la
+ratificación de  éste. A  falta de  tal extremo,  valdrá personalmente para quienes  la
+estipularon, siempre que mediare inscripción. Los mismo resultará del convenio que
+limitare sus consecuencias a las partes.

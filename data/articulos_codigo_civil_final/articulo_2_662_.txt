@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.662.- En los buques mercantes de bandera paraguaya se podrá testar en la
+misma forma que en los buques de la Armada Nacional.
+Texto consolidado de la Ley Nº 1183/1985

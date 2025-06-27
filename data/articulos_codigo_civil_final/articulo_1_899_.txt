@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: I
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.899.- Las personas particulares tienen el uso y goce de los bienes públicos
+del Estado, pero estarán sujetas a las disposiciones de este Código y a las leyes o
+reglamentos de carácter administrativo.

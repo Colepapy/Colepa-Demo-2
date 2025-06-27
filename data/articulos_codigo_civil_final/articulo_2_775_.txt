@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VI
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.775.- La revocación por causa de ingratitud sólo puede tener lugar en los
+casos siguientes:
+a) si el legatario ha atentado contra la vida o la integridad física del testador;
+Texto consolidado de la Ley Nº 1183/1985
+b) si le ha hecho objeto de sevicia, o cometido algún delito o injurias graves contra
+el testador después de otorgado el testamento; y
+c) si ha inferido una injuria grave a su memoria.

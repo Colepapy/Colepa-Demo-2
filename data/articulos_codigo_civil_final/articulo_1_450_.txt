@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XX
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.450.- Si una obligación de juego o apuesta hubiere sido revestida de la forma
+de un título a la orden, el firmante debe pagarla al portador de buena fe; pero tendrá acción
+para repetir su importe del que recibió el título. La entrega de él no equivaldrá al pago. El
+deudor puede oponer la excepción al cesionario del documento que sea a la orden.

@@ -1,0 +1,19 @@
+CONTEXTO:
+LIBRO: I
+TITULO: VIII
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 245.- Los datos estadísticos se anotarán en Libros de Registros llevados con tal fin.
+Se destinarán un libro para cada tipo de asuntos o datos a que se refieren los incisos del
+artículo anterior. Se llevará, además, índices de referencia. Las penas impuestas por sentencia
+definitiva, se anotarán después de quedar ejecutoriadas.
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981
+Los libros de Registro de la Oficina de Estadística sólo pueden ser registrados de la misma
+mediando orden judicial.
+La Corte Suprema de Justicia dispondrá oportunamente la actualización de los métodos de
+registro.

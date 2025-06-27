@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: y por error de hecho o de derecho estuviere persuadido de su legitimidad. El título
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.920.- La posesión de buena fe sólo pierde este carácter en el caso y desde el
+momento que las circunstancias hagan presumir que el poseedor no ignoraba que poseía
+indebidamente.

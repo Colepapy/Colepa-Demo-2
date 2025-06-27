@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 120.- El protocolo notarial se pedirá en civil y comercial. Cada uno de ellos se pedirá,
+a su vez, en dos secciones individualizadas con las letras "A" y "B". Las escrituras formalizadas
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981
+en cada una de las secciones, estarán numeradas progresivamente a partir del número uno al
+comienzo de cada año.

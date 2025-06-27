@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XXI
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.474.- Si se ha estipulado  el beneficio de división, todo fiador que sea
+demandado para el pago de la deuda entera, puede exigir que el acreedor reduzca su
+acción a la parte debida por él.
+Si alguno de los fiadores era insolvente en el momento en que otro ha hecho valer
+el beneficio de división, éste será obligado por dicha insolvencia en proporción de su cuota,
+pero no responderá de las insolvencias que sobrevengan.

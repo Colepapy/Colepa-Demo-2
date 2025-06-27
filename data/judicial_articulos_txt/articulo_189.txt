@@ -1,0 +1,18 @@
+CONTEXTO:
+LIBRO: I
+TITULO: VI
+CAPITULO: III
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 189.- Son atribuciones y funciones de los ujieres:
+a) Asistir diariamente a la oficina;
+b) Recibir de los Secretarios las cédulas para practicar las notificaciones en el domicilio de las
+partes, dejando constancia de su diligenciamiento en el original de las mismas;
+c) Devolver, debidamente diligenciados, las cédulas recibidas para practicar las notificaciones;
+d) Dar cuenta a los Secretarios de los inconvenientes que se les presenten en el desempeño
+de su cargo o en el cumplimiento de las órdenes que reciban;
+e) Anotar en un libro, con intervención de los Secretarios, las cédula recibidas o devueltas; y,
+f) Cumplir las órdenes emanadas de los Jueces y Secretarios.

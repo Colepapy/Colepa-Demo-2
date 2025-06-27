@@ -1,0 +1,12 @@
+CONTEXTO:
+TITULO: II
+CAPITULO: 1
+SECCIÓN: 3
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 25.- Prohibición.
+Los despachantes no podrán sustituir la autorización o mandato que se les hubiere
+conferido, sin el expreso consentimiento del mandante, ni transferir o transmitir derechos
+de ninguna clase que correspondan a sus comitentes.

@@ -1,0 +1,13 @@
+CONTEXTO:
+TITULO: XIII
+CAPITULO: 3
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 382.- Título ejecutivo. Documentos. A los efectos del cobro compulsivo,
+constituyen título ejecutivo para reclamo judicial:
+a) la liquidación o contraliquidación del tributo aduanero.
+b) la resolución aduanera firme y ejecutoriada que impone tributos, multas y accesorios.
+c) los instrumentos por los que se otorgan garantías aduaneras.

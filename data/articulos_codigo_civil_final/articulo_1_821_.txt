@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: VI
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.821.- El que por error excusable paga una deuda ajena creyéndola propia,
+puede repetir lo pagado siempre que el acreedor no se haya despojado de buena fe del

@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: Corregido por:
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 170.- Las personas que se inscriban en la matrícula de Oficiales de Justicia habilitada
+en  la Corte Suprema de  Justicia, son las que pueden  realizar  la función que a estos
+corresponda por las leyes procesales y por este Código.
+Los requisitos de la inscripción serán establecidos por la Corte Suprema de Justicia.

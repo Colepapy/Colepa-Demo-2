@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: N/A
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 515.- Cuando se hiciere imposible la prestación por culpa o durante la mora de
+algunos de los codeudores solidarios, subsistirá para todos la obligación de pagar su valor;
+pero por los daños o intereses a que hubiere lugar, sólo responderá el culpable o el
+moroso.

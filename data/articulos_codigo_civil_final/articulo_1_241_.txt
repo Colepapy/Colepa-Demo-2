@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XII
+SECCIÓN: VIII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.241.- No se admitirá  la revocación por  ulterior nacimiento de hijos del
+donante, si expresamente no se lo hubiere estipulado.

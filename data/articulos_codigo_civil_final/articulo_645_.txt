@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: al portador.
+CAPITULO: V
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 645.- El beneficio de la suspensión de la prescripción no puede ser invocado
+sino por las personas, o contra las personas, en perjuicio o a favor de las cuales está
+establecida, y no por sus cointeresados, o contra sus cointeresados. Esta disposición no
+comprende las obligaciones indivisibles.

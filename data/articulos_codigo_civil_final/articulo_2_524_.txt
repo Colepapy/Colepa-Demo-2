@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: II
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.524.- Se procederá de acuerdo con el artículo anterior, cuando no se hubiere
+convocado a los acreedores, o estuviere pendiente el término para su presentación.
+La  audiencia a que se  refiere  el  artículo  precedente  consistirá en  oír  las
+observaciones y admitir las pruebas de los que manifestaren oposición.

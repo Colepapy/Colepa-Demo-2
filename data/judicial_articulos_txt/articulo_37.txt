@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: III
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 37.- Todos los Tribunales, para dictar sentencia actuarán con el número total de sus
+miembros, y sus decisiones deberán fundarse en la opinión coincidente de la mayoría de los
+mismos, aunque los motivos de dichas opiniones sean distintas.

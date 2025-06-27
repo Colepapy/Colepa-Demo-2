@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: V
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.370.- Al constituirse una hipoteca en garantía de un crédito, deben liquidarse
+los intereses atrasados y expresarse en una suma cierta. La sola indicación de que la
+hipoteca comprende los intereses vencidos, sin indicación de su cuantía, no produce
+efecto alguno.

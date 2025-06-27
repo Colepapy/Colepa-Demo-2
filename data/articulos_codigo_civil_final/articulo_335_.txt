@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: II
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 335.- El plazo en los actos jurídicos se presume establecido a favor de todos
+los interesados, a no ser que resultare lo contrario del objeto de aquellos o de otras
+circunstancias. El pago no podrá hacerse antes del término sino de común acuerdo. En los
+testamentos, el plazo es a favor del beneficiario.

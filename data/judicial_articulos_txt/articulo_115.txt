@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 115.- La    función     notarial    es  Art. 115.- La función notarial es incompatible:
+incompatible:
+a) Con el ejercicio de una función o empleo de a) con el ejercicio de una función o empleo de
+carácter público o privado; y,                   carácter público o privado; y,
+b) Con el ejercicio del comercio por cuenta b) con el ejercicio del comercio por cuenta
+propia o ajena, o de cualquier otra profesión.    propia o ajena, o de cualquier otra profesión,
+salvo la de mediador.

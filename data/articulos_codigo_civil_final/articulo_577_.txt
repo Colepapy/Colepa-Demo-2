@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: IV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 577.- La administración de los bienes cedidos corresponde a los acreedores
+cesionarios. Estos pueden ejercer todas las acciones de carácter patrimonial relativas a
+dichos bienes.

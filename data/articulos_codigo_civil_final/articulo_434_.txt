@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: II
+CAPITULO: I
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 434.- Los acreedores tienen derecho igual a ser satisfechos en proporción a
+sus créditos sobre el producto de los bienes del deudor, salvo las causas legítimas de
+prelación.
+Texto consolidado de la Ley Nº 1183/1985
+Fuera de los casos expresamente determinados por la ley, ningún crédito tendrá
+preferencia en el pago.

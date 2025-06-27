@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: IV
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.802.- Aquél que, dirigiéndose al público, promete una prestación a favor de
+quien se encuentre en una determinada situación, o lleve a cabo una determinada acción,
+queda vinculado por la promesa tan pronto como ésta se hace pública, aún a favor de
+quien procediere sin interés por la recompensa.

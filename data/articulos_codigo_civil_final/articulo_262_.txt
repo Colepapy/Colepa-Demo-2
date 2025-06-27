@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: XII
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 262.- La obligación de alimentos, no puede ser objeto de compensación ni
+transacción. El derecho a reclamarlos es irrenunciable e incesible y la pensión alimentaria
+no puede ser gravada ni embargada.

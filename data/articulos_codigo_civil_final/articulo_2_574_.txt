@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: V
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.574.- Las sucesiones intestadas corresponden a las personas llamadas a
+heredar en el orden y según las reglas establecidas en este Código.

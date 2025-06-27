@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.040.- A la sociedad en comandita simple se aplican las disposiciones relativas
+a las sociedades colectivas, en cuanto sean compatibles con las normas establecidas en
+esta sección.

@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: VI
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.131.-  El derecho de cada  propietario sobre  las cosas comunes será
+proporcional al valor de su piso o departamento, el que será determinado por acuerdo de
+partes, o en su defecto, por el valor oficial fijado por la Dirección de Impuesto Inmobiliario a
+los efectos del pago del impuesto correspondiente.
+El condómino no puede renunciar al derecho sobre las cosas comunes, ni eximirse
+de la obligación de contribuir a los gastos de conservación de dichas cosas.

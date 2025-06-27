@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 95.- Los abogados y procuradores tienen el derecho de cobrar honorarios por sus
+servicios profesionales en la forma que determinen las disposiciones legales respectivas.
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981

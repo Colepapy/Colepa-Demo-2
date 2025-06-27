@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: IV
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 602.- Las obligaciones pueden extinguirse por novación. La voluntad de novar
+no se presume.

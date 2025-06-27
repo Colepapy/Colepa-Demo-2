@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.014.- El contrato de sociedad simple no está sujeto a forma especial alguna,
+salvo las exigidas por la naturaleza de los bienes aportados.

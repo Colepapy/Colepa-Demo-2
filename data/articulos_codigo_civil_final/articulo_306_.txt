@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: II
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 306.- Se podrá anular el acto jurídico, cuando por la simulación se perjudica a
+un tercero o se persigue un fin ilícito. En tal caso, los autores de aquella sólo podrán
+ejercer entre sí la acción para obtener la nulidad, con arreglo a lo dispuesto por este
+Código sobre el enriquecimiento sin causa.

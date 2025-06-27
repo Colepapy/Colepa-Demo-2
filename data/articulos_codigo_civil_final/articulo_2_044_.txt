@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: de propiedad entre las partes y sus sucesores, siempre que haya sido inscripta en el
+CAPITULO: III
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.044.- El obrero que trabajando en un fundo ajeno descubriere un tesoro, tiene
+derecho a la mitad de  él, aunque el propietario le hubiere predicho la posibilidad de
+hallarlo.

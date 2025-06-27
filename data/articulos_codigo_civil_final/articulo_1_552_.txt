@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.552.- Si la reticencia fuese dolosa o de mala fe, el asegurador tiene derecho a
+las primas de los períodos transcurridos y del período en cuyo transcurso invoque la
+reticencia o falsa declaración.

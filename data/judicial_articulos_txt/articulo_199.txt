@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 199.- Los jueces y Tribunales dictarán sentencia y demás resoluciones dentro de los
+plazos fijados en la ley. Si no lo hicieren de un plazo perentorio, bajo apercibimiento de ser
+suspendido por quince días sin goce de sueldo. La reincidencia en el curso del mismo año será
+causal de enjuiciamiento.

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: VII
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 899.- El mandatario no estará obligado a esperar la presentación de sus
+cuentas, o el total cumplimiento del mandato, para exigir los adelantos o gastos por él
+efectuados.
+Hasta el pago de éstos y de su retribución, podrá retener los bienes o valores del
+mandante que se hallaren en su poder.

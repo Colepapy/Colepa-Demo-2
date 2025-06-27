@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: II
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 341.- Todos los plazos será continuos y completos, debiendo siempre terminar
+en la media noche del último día.
+Se computarán  los  días domingos y  feriados,  salvo  disposición expresa en
+contrario.

@@ -1,0 +1,10 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: III
+CAPITULO: II
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.996.- El título debe ser verdadero y corresponder al inmueble poseído. El

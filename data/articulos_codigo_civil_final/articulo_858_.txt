@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 858.- El que encarga la obra puede introducir variaciones en el proyecto,
+siempre que su monto no exceda de la sexta parte del precio total convenido. El que la
+ejecuta tiene derecho en este caso a la compensación por los mayores trabajos realizados,
+aun cuando el precio de la obra hubiese sido determinado globalmente.
+La disposición del parágrafo anterior no se aplicará cuando las variaciones, aun
+estando contenidas dentro de los límites indicados, importasen notables modificaciones de
+la naturaleza de la obra o de las cantidades en las diversas categorías singulares de
+trabajo, previstos en el contrato para la ejecución de dicha obra.

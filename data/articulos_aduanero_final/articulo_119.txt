@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 1
+SECCIÓN: N/A
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 171º Momento de Aceptación del Régimen Solicitado
+---
+TEXTO DEL ARTÍCULO:
+Artículo 119.- Consecuencias de la aceptación. La aceptación del despacho deja al
+consignatario o declarante sujeto a las obligaciones legales y reglamentarias vigentes a
+la fecha de la numeración y determina la legislación aplicable a la operación.

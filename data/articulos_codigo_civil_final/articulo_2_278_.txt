@@ -1,0 +1,18 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: II
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.278.- El adquirente a título gratuito de un usufructo universal, podrá anticipar
+el pago de las deudas de la sucesión del donante, y en este caso, le será restituido el
+capital sin intereses  al  fin del usufructo. Pero  si no las abonare,  el heredero o  el
+constituyente podrá elegir entre el vender los bienes necesarios, o pagar las obligaciones,
+y en tal supuesto, el usufructuario deberá de pleno derecho, los réditos, mientras gozare
+del beneficio.
+Texto consolidado de la Ley Nº 1183/1985
+Si al usufructuario que abonó las deudas no se le reembolsare su importe al finalizar
+el usufructo, correrán, de pleno derecho, los intereses a su favor.

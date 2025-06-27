@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: múltiple, a petición y a costa del poseedor. Los títulos de créditos pueden ser
+CAPITULO: N/A
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.523.- El endoso debe escribirse en el título y ser firmado por el endosante. Es
+válido el endoso, aunque no contenga indicación del endosatario.
+El endoso al portador vale como endoso en blanco.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: múltiple, a petición y a costa del poseedor. Los títulos de créditos pueden ser
+CAPITULO: N/A
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.519.- El poseedor de un título deteriorado que ya no sea idóneo para la
+circulación, pero que, a pesar de eso, sea con seguridad identificable, podrá exigir del
+emisor un título equivalente, restituyendo el primitivo y reembolsando los gastos.

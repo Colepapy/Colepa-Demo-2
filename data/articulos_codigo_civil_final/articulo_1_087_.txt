@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.087.- Los directores y los gerentes no pueden votar sobre la aprobación de
+los balances y demás cuentas y actos relacionados con su gestión administrativa, ni en las
+resoluciones referentes a su responsabilidad y remoción.

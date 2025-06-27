@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: en el momento de la presentación de una doble firma conforme al tomador.
+CAPITULO: N/A
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.748.- El que ha pagado el cheque puede repetir de sus garantes:
+a) la suma íntegra pagada;
+b) los intereses de ella a partir del día del pago, calculado a la tasa legal;
+c) los gastos irrogados.

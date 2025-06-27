@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: traslativo del dominio.
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.771.- La responsabilidad por la evicción es indivisible, y podrá demandarse u
+oponerse a cualquiera de los herederos del enajenante o copartícipe, pero será divisible la
+obligación de restituir lo recibido en el acto de la transmisión, como la de abonar los daños
+y perjuicios.

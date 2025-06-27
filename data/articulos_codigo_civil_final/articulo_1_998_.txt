@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: putativo no es suficiente, cualesquiera que sean los fundamentos del poseedor para
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.998.- El título subordinado a una condición suspensiva, no es eficaz para la
+usucapión sino desde su cumplimiento. El sometido a condición resolutoria es útil desde su
+origen para la usucapión, salvo el caso de que haya acaecido aquélla.

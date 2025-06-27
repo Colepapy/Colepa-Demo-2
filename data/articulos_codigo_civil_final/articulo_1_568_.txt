@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.568.- Los derechos que derivan del contrato corresponden al asegurado, si
+posee la póliza. En su defecto, no puede disponer de esos derechos ni hacerlos valer
+judicialmente sin el consentimiento del tomador.

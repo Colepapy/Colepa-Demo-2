@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  1.125.- Los  síndicos son  ilimitada y  solidariamente responsables por  el
+cumplimiento de las obligaciones que las leyes y el estatuto les imponen.
+Su responsabilidad se hará efectiva por decisión de la asamblea. La decisión de la
+asamblea, que declare la responsabilidad, importa la remoción del síndico.

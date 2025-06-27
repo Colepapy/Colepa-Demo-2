@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: VIII
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 925.- En los transportes acumulativos cada porteador responde en la extensión
+del propio recorrido.
+Sin embargo, el daño por el retardo o por la interrupción del viaje se determina en
+razón del recorrido entero.

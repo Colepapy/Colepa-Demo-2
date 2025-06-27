@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: putativo no es suficiente, cualesquiera que sean los fundamentos del poseedor para
+CAPITULO: N/A
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.022.- Sólo pueden tenerse vistas sobre el predio vecino cerrado o abierto, por
+medio de ventanas, balcones u otros voladizos, guardando las distancias exigidas por los
+reglamentos municipales.
+PARÁGRAFO VI
+DE LA DEMARCACIÓN ENTRE PREDIOS

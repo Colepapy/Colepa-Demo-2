@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: I
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 734.- El estipulante puede reservarse  el derecho de  subsistir  al tercero
+designado en el contrato, independientemente de la anuencia del otro contratante.
+Tal sustitución puede hacerse por actos entre vivos o por disposición de última
+voluntad.

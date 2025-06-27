@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: III de este Código.                                 i) Las sociedades anónimas;
+TITULO: N/A
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 103.- Las asociaciones se regirán por las reglas de este Capítulo y por sus
+estatutos.

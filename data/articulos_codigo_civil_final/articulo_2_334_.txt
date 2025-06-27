@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: IV
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.334.- El contrato de prenda con registro debe formalizarse por instrumento
+público o privado, pero sólo producirá efectos con relación a terceros desde el día de su
+Texto consolidado de la Ley Nº 1183/1985
+inscripción en el registro correspondiente. El contrato por instrumento privado se hará en
+formularios suministrados por la oficina registradora.

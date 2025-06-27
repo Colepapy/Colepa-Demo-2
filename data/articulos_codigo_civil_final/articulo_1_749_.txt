@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: en el momento de la presentación de una doble firma conforme al tomador.
+CAPITULO: N/A
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.749.- El obligado contra quien se ejerza la acción de regreso, puede exigir,
+contra pago, la entrega del cheque con el protesto o la comprobación equivalente, y la
+cuenta de retorno con el recibo.
+Todo endosante que ha pagado el cheque puede testar su propio endoso y los de
+los endosantes subsiguientes.

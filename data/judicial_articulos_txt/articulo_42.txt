@@ -1,0 +1,25 @@
+CONTEXTO:
+LIBRO: I
+TITULO: III
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 42.- Créase la Justicia de Paz          Art. 42.- Créase la Justicia de Paz Letrada en
+Letrada en lo Civil y Comercia en la Capital de  lo Civil, Comercial y Laboral en la Capital de la
+la República y en las capitales de los          República y en las Capitales de los
+departamentos, la que será administrada por   Departamentos, la que será administrada por
+los Magistrados y funcionarios que prescribe    los Magistrados y funcionarios que establece
+este Código y en la forma que esta determine.  este Código.
+Habrá en la Capital el número de Juzgados de
+Paz Letrados que requiera la importancia y
+cantidad de los asuntos de su competencia.
+Los Jueces de Paz Letrados de la Capital
+tendrán competencia dentro de los límites de
+ella y del Departamento Central y los de las
+Capitales de Departamentos en todo el
+Departamento. Créanse los cargos de Agentes
+Fiscales de la Justicia de Paz Letrada en las
+Capitales de Departamentos.

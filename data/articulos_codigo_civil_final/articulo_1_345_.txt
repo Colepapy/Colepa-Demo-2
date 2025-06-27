@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: N/A
+SECCIÓN: VII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.345.- La acción cambiaria es directa o de regreso. Directa contra el aceptante
+y sus avalistas; de regreso, contra otro obligado.

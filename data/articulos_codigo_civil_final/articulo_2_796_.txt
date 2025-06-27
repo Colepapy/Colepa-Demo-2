@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.796.- El nombramiento de un albacea deja a los herederos y legatarios todos
+los derechos cuyo ejercicio no se atribuye especialmente a aquél.

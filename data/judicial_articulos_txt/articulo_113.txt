@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 113.- Las prohibiciones impuestas a los Secretarios son extensivas a los Escribanos
+de Registro.

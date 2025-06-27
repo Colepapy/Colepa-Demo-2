@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: I
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  669.- Los  interesados pueden  reglar  libremente sus derechos mediante
+contratos observando las normas imperativas de la ley, y en particular, las contenidas en
+este título y en el relativo a los actos jurídicos.

@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: I
+TITULO: Corregido por:
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 168.- Los rematadores, además de dar cumplimiento a las disposiciones del Código
+de Comercio y de la Ley Procesal, están obligados a publicar con claridad el nombre del
+ejecutante y del propietario, número de finca, cuenta corriente catastral o padrón en su caso, la
+localidad y  la dirección y nombre actual de las calles de los inmuebles urbanos a ser
+subastados; y en los rurales, el pueblo, localidad, paraje o compañía donde estuvieren los
+bienes.
+El incumplimiento de esta disposición hará pasible de la cancelación de la matrícula a los
+rematadores, de la pérdida de la comisión que correspondiere y la nulidad del remate.

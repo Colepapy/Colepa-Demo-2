@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 317.- El Jefe de cada Sección llevará, además, un libro llamado diario en el que
+extenderá un breve asiento de todo título que se lleve a la inscripción, en el acto de recibirlo.
+Los asientos del diario se enumerarán correlativamente en el acto de realizarlos.

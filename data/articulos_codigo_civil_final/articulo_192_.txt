@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: III
+CAPITULO: IX
+SECCIÓN: I
+---
+ESTADO: Derogado Por: Artículo 98 de la Ley Nº 1/92
+---
+TEXTO DEL ARTÍCULO:
+Art. 192.- Se presume que son gananciales todos los bienes existentes al terminar
+la comunidad, salvo prueba en contrario. No valdrá contra los acreedores de la comunidad
+o de cualquiera de los cónyuges, la sola confesión de éstos.

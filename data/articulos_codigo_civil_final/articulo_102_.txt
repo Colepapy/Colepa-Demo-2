@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: III de este Código.                                 i) Las sociedades anónimas;
+TITULO: N/A
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 102.- Las personas que quieran constituir una asociación que no tenga fin
+lucrativo, cuyo objeto sea el bien común, expresarán su voluntad mediante estatutos
+formalizados en escritura pública.

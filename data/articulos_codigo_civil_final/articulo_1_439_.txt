@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XIX
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.439.- El acreedor que exige el pago de una renta vencida, debe justificar la
+existencia de la persona sobre cuya vida ha sido constituida. Toda clase de prueba es
+admitida a este respecto.
+La obligación de pagar la renta vitalicia se extingue por la muerte de la persona por
+la duración de cuya vida ha sido constituida.

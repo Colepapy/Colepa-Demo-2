@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.784.- La posesión de los bienes corresponde a los herederos, pero quedará
+en poder de los albaceas la parte necesaria para cumplir el testamento y pagar las cargas,
+legados y deudas, salvo disposición contraria al testador.

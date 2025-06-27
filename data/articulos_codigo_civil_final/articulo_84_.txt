@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: I
+CAPITULO: VI
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 84.- La sentencia de interdicción, o la de su cesación, no hace cosa juzgada en
+el juicio penal para determinar la imputabilidad del procesado.

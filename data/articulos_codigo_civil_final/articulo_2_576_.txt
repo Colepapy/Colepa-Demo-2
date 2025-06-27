@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: V
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.576.- Los descendientes de un heredero muerto antes del causante, entran
+en su lugar a recoger su parte en la herencia. Puede representarse al renunciante.

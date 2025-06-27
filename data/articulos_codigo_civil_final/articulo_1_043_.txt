@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.043.- Los socios colectivos tienen los derechos y las obligaciones de los
+socios de la sociedad colectiva.
+La administración de la sociedad debe ser conferida a los socios colectivos.

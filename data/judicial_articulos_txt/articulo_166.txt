@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: Corregido por:
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 166.- El rematador está obligado a dar lectura de la notificación judicial de suspensión
+de remate a los presentes en el acto, en el día y hora señalados para su realización, y el
+incumplimiento de ésta disposición lo hará pasible de suspensión de su matrícula.

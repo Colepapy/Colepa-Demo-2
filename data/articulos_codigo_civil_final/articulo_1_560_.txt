@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.560.- Se prohíbe la constitución de domicilio especial fuera de la República.
+Es admisible la prórroga de la jurisdicción dentro del país. El domicilio en el que las partes
+deben efectuar las denuncias y declaraciones previstas en la ley o en el contrato es el
+último declarado.
+PARÁGRAFO VI
+DEL PLAZO

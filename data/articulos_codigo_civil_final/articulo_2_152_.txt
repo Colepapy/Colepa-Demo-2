@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.152.- Las medidas tomadas por  el administrador en los límites de sus
+atribuciones serán obligatorias para los propietarios. Contra ellas se admite recurso ante la
+asamblea, sin perjuicio del que pueda interponerse ante la autoridad judicial en los casos y
+dentro del plazo establecido por este Código.

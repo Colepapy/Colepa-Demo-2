@@ -1,0 +1,10 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 1
+SECCIÓN: 2
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 184º Declaración Anticipada
+---
+TEXTO DEL ARTÍCULO:
+Artículo 133.- Declaración anticipada. La solicitud puede ser presentada por el
+importador o declarante antes del arribo del medio de transporte.

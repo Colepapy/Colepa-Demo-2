@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  1.074.- Tampoco puede  invertir su  capital en  acciones de  sociedades
+controladas por ella.
+Se consideran sociedades controladas aquéllas en las que otra sociedad posee un
+número de acciones tal que le asegure la mayoría de los votos en las asambleas, o
+aquéllas que, en virtud de vínculos contractuales particulares, están bajo la influencia
+dominante de otra sociedad.

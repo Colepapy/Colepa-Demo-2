@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 324.- Los Libros del Registro no se sacarán de las oficinas sino en caso de fuerza
+mayor, o por orden judicial.

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VI
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.758.- Cuando un mismo objeto sea legado a varias personas y una de ellas
+no pudiere recoger su parte por causa anterior o posterior a la apertura de la sucesión, esa
+parte acrece a las demás en proporción de las suyas, aunque el testador hubiere fijado las
+partes. Si alguno de los legatarios es llamado conjuntamente a  la misma parte,  el
+acrecimiento se efectúa primeramente entre ellos.

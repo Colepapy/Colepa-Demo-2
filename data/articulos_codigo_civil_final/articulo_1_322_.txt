@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: N/A
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.322.- La letra de cambio puede ser presentada por el portador o por un
+simple tenedor para la aceptación por el girado en el domicilio indicado, hasta el día del
+vencimiento.

@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: II
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 21.- El turno de los Juzgados y Tribunales será establecido por la Corte Suprema de
+Justicia.

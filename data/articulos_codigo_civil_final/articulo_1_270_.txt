@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XIII
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.270.- Los almacenistas, dando aviso al depositante con quince días por lo
+menos de anticipación, pueden proceder a la venta de las mercaderías, cuando al término
+Texto consolidado de la Ley Nº 1183/1985
+del contrato no sean retiradas éstas, o no se renueve el depósito, o tratándose de depósito
+por tiempo indeterminado, hubiere transcurrido un año desde la fecha de depósito. En todo
+tiempo podrán hacerlo, si las mercaderías estuviesen amenazadas de perecer.
+El producto de la venta, deducidos los gastos y todo lo demás que corresponda a
+los almacenes generales, debe ser puesto a disposición de los depositantes.

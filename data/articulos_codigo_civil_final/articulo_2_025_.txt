@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: putativo no es suficiente, cualesquiera que sean los fundamentos del poseedor para
+CAPITULO: N/A
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.025.- Si hubiese confusión de límites o contestación sobre ellos, se fijarán por
+el juez, de acuerdo con los títulos respectivos, y en defecto de datos suficientes, de
+acuerdo con la posesión. Si no pudiesen determinarse por esos medios, resolverá el juez,
+teniendo en consideración los hechos demostrados.
+Si se  plantearen  acciones  reales, o  posesorias,  la  decisión se  dictará de
+conformidad con las disposiciones que las rigen.

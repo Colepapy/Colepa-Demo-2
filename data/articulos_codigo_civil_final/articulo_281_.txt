@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: I
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 281.- Se tendrá como declaración positiva de la voluntad, aquélla que se
+manifieste verbalmente, o por  escrito, o por signos  inequívocos, con  referencia a
+determinados  objetos. No  valdrá,  sin embargo,  la que no  revista  las solemnidades
+prescriptas, cuando la ley exigiere una forma determinada para ciertos actos jurídicos.

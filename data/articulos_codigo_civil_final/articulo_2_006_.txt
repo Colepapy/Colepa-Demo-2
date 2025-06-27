@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: putativo no es suficiente, cualesquiera que sean los fundamentos del poseedor para
+CAPITULO: N/A
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.006.- Los  terrenos  inferiores  están  sujetos a  recibir  las aguas que
+naturalmente descienden de los terrenos superiores, sin que para eso hubiese contribuido
+el trabajo del hombre. No pueden ser ellas empleadas en forma que perjudique a las
+heredades inferiores. El propietario superior no puede hacer acto alguno que agrave la
+sujeción del fundo inferior.

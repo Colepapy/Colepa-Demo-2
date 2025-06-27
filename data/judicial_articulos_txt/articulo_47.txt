@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: III
+CAPITULO: VI
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 47.- Los Juzgados de Instrucción en lo Criminal entenderán de los procesos hasta la
+terminación de estado sumario; salvo los sobreseimientos y artículos de previo y especial
+pronunciamiento que pongan término a la causa, en los que entenderán los Jueces de Primera
+Instancia en lo Penal.

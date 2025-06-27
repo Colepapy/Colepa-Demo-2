@@ -1,0 +1,10 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 416.- Este Código entrará en vigencia a los noventa días de su promulgación.

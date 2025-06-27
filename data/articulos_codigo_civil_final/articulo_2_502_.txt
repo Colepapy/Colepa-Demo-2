@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: II
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.502.- Podrá el juez proceder de oficio para la adopción de medidas de
+seguridad, en los siguientes casos:
+a) cuando el heredero fuere incapaz, tenga o no representante legal;
+b) si mediare ausencia prolongada del heredero conocido que no hubiere dejado
+representante; y
+c) siempre que los bienes de la sucesión estuvieren abandonados, o en poder de
+intrusos.

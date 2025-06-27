@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: oneroso antes de solicitada la separación de patrimonios, y cuyo precio haya sido
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.498.- El perdón del causante, expresado en testamento o instrumento
+público, hace desaparecer en el orden civil la indignidad y la desheredación.

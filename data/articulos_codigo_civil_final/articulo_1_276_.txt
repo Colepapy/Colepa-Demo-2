@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XIV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.276.- Si la cosa se deteriorare por culpa del comodatario y este menoscabo
+fuere  tal que la cosa no sea ya apta para ser empleada en uso ordinario, podrá el
+comodante hacerle dejación de ella, y exigirle el pago de su valor anterior.

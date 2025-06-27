@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: y por error de hecho o de derecho estuviere persuadido de su legitimidad. El título
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.922.- En la percepción de frutos, la buena fe debe existir en cada acto. La
+buena o mala fe del sucesor del poseedor, sea universal o particular, será juzgada con
+relación a él, y no por la de su antecesor.

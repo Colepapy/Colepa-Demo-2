@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: VIII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 346.- En el Registro de Derechos Patrimoniales de orden familiar se inscribirán:
+a) Las capitulaciones matrimoniales celebradas por los cónyuges, debiendo archivarse una
+copia auténtica del instrumento respectivo;
+b) Los bienes reservados de la mujer;
+c) Las sentencias de disolución y liquidación de la sociedad conyugal;
+d) Las sentencias de liquidación de los matrimonios aparentes debidamente reconocidos y,
+e) Las resoluciones judiciales que ordenen el registro del bien de familia.

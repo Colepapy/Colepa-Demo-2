@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: putativo no es suficiente, cualesquiera que sean los fundamentos del poseedor para
+CAPITULO: N/A
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.002.- El propietario podrá cortar en su finca y guardarse las raíces de los
+árboles o arbustos que procedan del predio vecino. Lo mismo sucederá con las ramas que
+caigan sobre su finca, cuando el propietario haya fijado al poseedor del predio vecino un
+plazo conveniente para hacerlas cortar y éste no lo haya hecho durante dicho plazo.
+De este derecho no gozará el propietario si las raíces o ramas no perjudicasen el
+uso de su finca.
+PARÁGRAFO III
+DEL PASO OBLIGATORIO

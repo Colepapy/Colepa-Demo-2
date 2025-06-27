@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: VI
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 870.- No habiendo plazo estipulado para la entrega de la obra, se entiende que
+el autor puede entregarla cuando lo conviniere, salvo el derecho del editor, en caso de
+demora excesiva, para pedir al juez la fijación del término y, en defecto de cumplimiento, la
+resolución del contrato.

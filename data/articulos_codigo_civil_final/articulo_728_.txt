@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: I
+CAPITULO: VI
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 728.- Salvo  estipulación  diversa,  el contratante que quiera  optar por  la
+resolución podrá intimar al otro para que ejecute su obligación dentro de un plazo no
+inferior a quince días, vencido el cual, podrá demandar el cumplimiento, o dar por resuelto
+el contrato, con la sola comunicación fehaciente hecha al moroso de haber optado por la
+resolución.
+Texto consolidado de la Ley Nº 1183/1985
+No será necesario el otorgamiento de plazo cuando el moroso hubiere manifestado
+su decisión de no cumplir el contrato.

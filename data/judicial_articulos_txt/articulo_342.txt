@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 342.- La inscripción de éste Registro se regirá en todo por las disposiciones
+pertinentes del Código Rural.
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981

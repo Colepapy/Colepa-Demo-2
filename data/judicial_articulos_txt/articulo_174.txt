@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: Corregido por:
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 174.- Los peritos llamados a desempeñar sus funciones deberán estar matriculados si
+la profesión o arte estuviese reglamentada. Si no hubiese perito titulado, se nombrará a
+persona idónea o práctica.

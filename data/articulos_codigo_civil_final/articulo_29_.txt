@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: I
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 29.- Se presume, sin admitir prueba en contra, que el máximo legal de duración
+del embarazo es de trescientos días, incluso el día del matrimonio o el de su disolución, y
+el mínimo, de ciento ochenta días, computados desde el día anterior al del nacimiento, sin
+incluir en ellos ni el día del matrimonio, ni el de su disolución.
+Se presume también, sin admitir prueba en contra, que la época de la concepción
+de los que nacieren vivos queda fijada en todo el espacio del tiempo comprendido entre el
+máximum y mínimum de la duración del embarazo.

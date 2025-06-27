@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: III
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Derogado por: Ley N° 6.059/18 Artículo 8°.
+---
+TEXTO DEL ARTÍCULO:
+Artículo 38, inc. b) Derogado por:
+Ley N° 6.059/18 Artículo 8°.

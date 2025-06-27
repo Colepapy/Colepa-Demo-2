@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: VIII
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 927.- El remitente debe entregar al porteador una carta de porte con su firma,
+en la que deberá consignar las indicaciones enunciadas en el artículo anterior y las
+condiciones convenidas para el transporte.
+A pedido del remitente debe el porteador entregarle un duplicado de la carta de
+porte con su firma o, en su defecto, un recibo de carga, con las mismas indicaciones. Salvo
+disposiciones contraria de la ley, el duplicado de dichos documentos puede ser librado con
+la cláusula "a la orden".

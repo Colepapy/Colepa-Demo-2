@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: III
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 835.- Los derechos y privilegios del locador sobre las cosas introducidas en el
+predio se extienden a las que lo fueren por el subarrendatario, pero sólo hasta donde
+alcanzaren las obligaciones que incumben a éste.
+Por su parte, el sublocador gozará por el precio del subarriendo, de los derechos y
+privilegios del arrendamiento sobre las mismas cosas.

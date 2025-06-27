@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: XII
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 263.- Cesará la obligación de prestar alimentos:
+a) tratándose de hijos, cuando llegaren a la mayoría de edad, o siendo menores,
+cuando abandonaren sin autorización la casa de sus padres;
+b) si el que recibe los alimentos cometiere algún acto que lo haga indigno de
+heredar al que los presta;
+c) por la muerte del obligado o del alimentista; y
+d) cuando hubieren desaparecido las causas que la determinaron.

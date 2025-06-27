@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 412.- Si la sentencia del Juez fuere apelada se elevará el expediente al Tribunal de
+Apelación respectivo, en  el término de veinte y cuatro horas. Una vez  allí,  las partes
+presentarán una memoria dentro del término de tres días. Si el apelante no la presentara, se
+declarará desierto el recurso.

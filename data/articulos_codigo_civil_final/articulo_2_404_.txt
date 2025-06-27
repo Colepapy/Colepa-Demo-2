@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: V
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.404.- La inscripción de la hipoteca será cancelada en virtud de escritura
+pública en la que el acreedor hipotecario declare la extinción de su crédito, o su renuncia a
+él, o por resolución judicial.

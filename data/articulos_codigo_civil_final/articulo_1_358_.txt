@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: N/A
+SECCIÓN: VII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.358.- Entre varios obligados que hayan asumido en la letra una posición de
+igual grado no tiene lugar la acción cambiaria, y sus relaciones se rigen por las normas
+relativas a las obligaciones solidarias.

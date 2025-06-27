@@ -1,0 +1,24 @@
+CONTEXTO:
+LIBRO: I
+TITULO: III
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 40.- Serán competentes los Juzgados de Primera Instancia en lo laboral para conocer
+y decidir de:
+a) Las cuestiones de carácter judicial y contencioso que suscite la aplicación del Código del
+Trabajo o las cláusulas del contrato individual o colectivo de trabajo;
+b) Los litigios sobre reconocimiento sindical promovidos entre un empleador u organización
+patronal y los sindicatos de trabajadores o entre éstos exclusivamente, a efecto de celebrar
+contrato colectivo de trabajo;
+c) Todo conflicto entre un sindicato y sus afiliados derivado del incumplimiento de los estatutos
+sociales o del contrato colectivo de condiciones de trabajo;
+d) Las controversias entre los trabajadores motivadas por el trabajo en equipo; y
+e) En los juicios sobre desalojo de inmuebles ocupados por empleados como parte integrante
+de su retribución o por motivo de la relación laboral.
+Cuando el valor del objeto litigioso no exceda del importe de treinta jornales mínimo legal para
+actividades persas no especificadas en la Capital de la República, las resoluciones causarán
+ejecutoria.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 330.- La libre disposición o gravámenes de los bienes inmuebles o de los derechos
+reales, sólo podrá acreditarse respecto de terceros, por los certificados enunciados en el
+artículo anterior.

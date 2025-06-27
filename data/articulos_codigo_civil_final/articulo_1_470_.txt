@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XXI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.470.- No tendrá lugar la responsabilidad prevista en el artículo anterior, si el
+que dio la carta probase que no fue su recomendación la que indujo a contratar con su
+recomendado, o que después de su recomendación le sobrevino la insolvencia.

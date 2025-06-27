@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.623.- El testador no puede confirmar por un acto posterior las disposiciones
+contenidas en un testamento nulo por vicios de forma, sin reproducirlas, aunque dicho acto
+esté revestido de todas las formalidades requeridas para la validez de los testamentos.
+Pero el testador puede referirse a otro testamento válido por su forma, que ha quedado sin
+efecto por haber caducado por incapacidad o muerte de los legatarios o de los herederos
+instituidos.
+Los herederos no podrán impugnar el testamento nulo por defecto de forma, si lo
+hubieren ejecutado con conocimiento de él.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: IV
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 603.- El libramiento de un documento o su renovación, la adición o eliminación
+de un vocablo y cualquier otra modificación accesoria, como las alteraciones relativas al
+tiempo, lugar o modo de cumplimiento sólo modifican la obligación, pero no la extinguen.

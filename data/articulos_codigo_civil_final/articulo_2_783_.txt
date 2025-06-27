@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.783.- El testador puede disponer que el albacea tome posesión de los bienes
+de la masa, y los liquide en la medida necesaria para la ejecución del testamento y el pago
+de las deudas y cargas hereditarias.

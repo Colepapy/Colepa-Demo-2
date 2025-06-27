@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: II
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.563.- La inscripción de la partición de bienes registrables confiere a cada
+heredero el dominio exclusivo de los bienes comprendidos en su hijuela.
+Producirá el mismo efecto, la inscripción de cualquier acto por el cual se pusiere fin
+a la indivisión y se adjudicare bienes en propiedad exclusiva a un coheredero.

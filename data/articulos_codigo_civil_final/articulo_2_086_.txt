@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: V
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.086.- La  enajenación,  constitución de  servidumbre o  hipotecas,  y  el
+arrendamiento hecho por uno de los condóminos vendrán a ser parcial o íntegramente
+eficaces, si por el resultado de la división el todo o parte de la cosa común le tocase en su
+lote.

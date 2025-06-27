@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: I
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 44.- El que es perjudicado por el uso indebido de su nombre, tiene acción para
+hacerlo cesar y para que se le indemnicen los daños y perjuicios. Esta disposición es
+aplicable a las personas jurídicas.
+La acción puede ser ejercida no sólo por el titular del nombre, sino también, sino
+también, en caso de fallecimiento, por cualquiera de sus parientes en grado sucesible.

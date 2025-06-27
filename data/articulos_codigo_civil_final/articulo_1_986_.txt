@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: III
+CAPITULO: II
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.986.- El dueño no está obligado, en caso alguno a abonar las impensas y
+mejoras útiles, posteriores a la notificación de la demanda. Sólo debe las necesarias.

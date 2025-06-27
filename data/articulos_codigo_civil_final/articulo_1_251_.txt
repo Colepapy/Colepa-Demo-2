@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XIII
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.251.- Los herederos del depositario que hubieren vendido de buena fe la cosa
+mueble cuyo depósito ignoraban, sólo están obligados a devolver el precio que hubieren
+recibido. Si la cosa no ha sido pagada todavía, el depositante se subroga en el derecho de
+los enajenantes.

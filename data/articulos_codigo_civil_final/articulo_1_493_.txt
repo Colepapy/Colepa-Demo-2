@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XXI
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.493.- La renuncia onerosa o gratuita del acreedor hecha a favor del deudor
+principal, extingue la fianza, con excepción de las renuncias en acuerdo con acreedores,
+aunque ellas importen la remisión de la deuda y aunque los acreedores no se reserven
+expresamente sus derechos contra el fiador.

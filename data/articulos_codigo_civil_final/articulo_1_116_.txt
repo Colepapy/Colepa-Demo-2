@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.116.- Las disposiciones de los artículos anteriores no perjudican el derecho al
+resarcimiento del daño del socio o del tercero que hayan sido directamente perjudicados
+por actos culposos o dolosos de los administradores.
+PARÁGRAFO VI
+DE LA FISCALIZACIÓN DE LA SOCIEDAD

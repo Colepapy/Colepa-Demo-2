@@ -1,0 +1,18 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: traslativo del dominio.
+CAPITULO: N/A
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.785.- Si la cosa donada fuere objeto de la evicción, el donatario no tendrá
+recurso contra el donante, ni aún por los gastos que hubiere hecho con motivo de la
+donación, salvo en los casos siguientes:
+a) si el donante prometió expresamente la garantía;
+b) cuando la donación fue hecha de mala fe, sabiendo el donante que la cosa no
+era suya;
+c) siempre que existieren cargos;
+d) cuando la donación fuere remuneratoria; y
+e) en caso de evicción producida por culpa del donante.

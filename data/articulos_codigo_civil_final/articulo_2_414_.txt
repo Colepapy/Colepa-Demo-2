@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: X
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.414.- El anuncio público de que una cosa haya sido hurtada o perdida, no
+bastará para hacer presumir la mala fe del poseedor de cosas hurtadas o perdidas que las
+adquirió después del anuncio, si no se probare que tenía conocimiento de aquél cuando
+adquirió las cosas.

@@ -1,0 +1,14 @@
+CONTEXTO:
+TITULO: XIII
+CAPITULO: 1
+SECCIÓN: 2
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 356.- Tramitación y plazos del sumario. Todos los plazos establecidos en
+este Código son perentorios e improrrogables, produciendo el efecto respectivo por el
+solo transcurso del tiempo, salvo disposición expresa en contrario. Los plazos se
+entenderán de días hábiles. En los casos de plazos no fijados, serán de seis días
+hábiles.
+Sesquicentenario de la Epopeya Nacional 1864-1870

@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: II
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 20.- El Juez que discernió la tutela o la curatela será competente para entender en las
+acciones relativas a la gestión de los tutores o curadores.
+El cambio de domicilio o residencia del tutor o curador, o del menor o incapaz, no altera la
+competencia.

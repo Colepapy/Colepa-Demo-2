@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XII
+SECCIÓN: VII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.232.- La reversión tiene efecto retroactivo. Hace de ningún valor los actos de
+disposición hechos sobre la cosa donada, cuya propiedad vuelve al donante, salvo los
+derechos de terceros o adquirentes de buena fe.

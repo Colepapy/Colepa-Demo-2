@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: III
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 389.- Las escrituras y demás actos públicos, sólo podrán ser autorizados por
+los Notarios y Escribanos de Registro. En los lugares donde no haya escribanos públicos,
+serán autorizados por los jueces de Paz.
+Los escribanos recibirán personalmente las declaraciones de los interesados y
+serán responsables de su redacción y de la exactitud del contenido, aunque fueren escritos
+por sus dependientes.

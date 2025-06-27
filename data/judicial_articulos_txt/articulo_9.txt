@@ -1,0 +1,18 @@
+CONTEXTO:
+LIBRO: I
+TITULO: II
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 9°.- Los Jueces y Tribunales aplicarán la Constitución, los Tratados Internacionales,
+los Códigos y otras leyes, los decretos, ordenanzas municipales y reglamentos, en el orden de
+prelación enunciado.
+No podrán negarse a administrar justicia. En caso de insuficiencia, obscuridad o silencio de la
+ley, aplicarán las disposiciones de leyes análogas y los principios generales del derecho y
+tendrán en consideración los precedentes judiciales.
+La ley extranjera competente será aplicada de  oficio por los Jueces y Tribunales de  la
+República, sin perjuicio del derecho de las partes de alegar y probar su existencia, contenido y
+vigencia.

@@ -1,0 +1,26 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 335.- En  el Registro de Buques se Artículo 335.- En el Registro de Buques se
+inscribirán,  previo  registro en  la  Prefectura  inscribirán,  previo  registro en  la  Prefectura
+General de Puertos, solamente  los buques General de Puertos,  las embarcaciones de
+que tengan más de seis toneladas en registro ultramar, de cabotaje mayor, medio y menor,
+bruto.                                   con  excepción  de  las  embarcaciones  de
+cabotaje   menor,   cuya   anotación   será
+facultativa por parte del propietario.
+A los efectos de la inscripción en la Dirección
+General  de   Registros   Públicos,  deberá
+presentarse   la   correspondiente   escritura
+pública, en la que se hará constar el número
+de matrícula otorgado por la Prefectura Naval
+de  Puertos,  tonelaje, arqueo  bruto,  eslora,
+manga y puntal, la marca, modelo y número
+de serie de la embarcación, su valor, la marca,
+modelo, número de serie y potencia del motor
+o motores.

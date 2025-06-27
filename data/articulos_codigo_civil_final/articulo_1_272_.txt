@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XIV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.272.- El contrato de préstamo será comodato, cuando una de las partes
+entregare a la otra gratuitamente, con facultad de usarla, alguna cosa no fungible, siempre
+que fuere individualizada a los efectos de su restitución.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: V
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.398.- Después del pago de los créditos hipotecarios, el excedente del precio
+de  la  enajenación  pertenecerá  al  tercer  poseedor,  con  exclusión  del  precedente
+propietario, y de los acreedores quirografarios de éste.

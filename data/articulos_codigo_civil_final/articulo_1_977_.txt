@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: III
+CAPITULO: II
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.977.- El terreno de aluvión accede a las heredades ribereñas dentro de sus
+respectivas líneas de demarcación, prolongadas directamente hasta el agua, respetadas
+las disposiciones concernientes a la navegación.

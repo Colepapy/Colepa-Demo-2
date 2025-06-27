@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 205.- Las controversias que originen la sustitución de Jueces y funcionarios judiciales
+de la Capital, serán resueltas por la Corte Suprema de Justicia. En el interior, las resolverá el
+Tribunal de Apelación de  la misma circunscripción  judicial, siempre que no se  trate de
+contiendas de competencia.
+Las que produzcan en la sustitución de otros empleados, serán resueltas por el Tribunal o Juez
+que entienda en el juicio.

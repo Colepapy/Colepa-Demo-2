@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XIII
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.264.- El viajero o la persona que se aloje en un hotel llevando consigo efectos
+de valor o sumas de dinero deberá entregarlas al hotelero o depositarlas en las cajas de
+seguridad habilitadas para el efecto. Si no lo hiciere, cesará la responsabilidad de éste en
+caso de pérdida o sustracción.

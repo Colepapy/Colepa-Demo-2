@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: múltiple, a petición y a costa del poseedor. Los títulos de créditos pueden ser
+CAPITULO: N/A
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.517.- La transferencia del título al portador se opera por la entrega del título.
+El poseedor del título al portador queda habilitado para el ejercicio del derecho
+mencionado en él con su presentación.
+Texto consolidado de la Ley Nº 1183/1985

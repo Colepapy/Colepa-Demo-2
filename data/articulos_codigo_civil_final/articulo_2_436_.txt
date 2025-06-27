@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: X
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.436.- Se considera que la buena fe del poseedor cesa cuando ha conocido la
+falta de su derecho a poseer en virtud de circunstancias incompatibles con una creencia
+razonable de su legitimidad.
+Los actos de percepción de frutos, disposición y construcción o destrucción, se
+reputarán de buena o mala fe, con referencia a la época en que se hubieren realizado.
+El heredero de un poseedor de mala fe será juzgado según buena fe personal
+respecto de los hechos cumplidos por él.
+Texto consolidado de la Ley Nº 1183/1985

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.733.- El legatario, bajo una condición suspensiva o un término incierto,
+puede, antes de llegar el término o la condición, ejercer los actos conservatorios de su
+derecho.

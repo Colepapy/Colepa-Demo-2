@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.780.- El legado hecho con el fin de asegurar la ejecución del testamento, no
+puede ser recibido por el beneficiario si éste no aceptare la función de albacea para la que
+fue designado.

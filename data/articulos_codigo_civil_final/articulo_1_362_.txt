@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: N/A
+SECCIÓN: VII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.362.- El protesto de las letras de cambio debe ser hecho por escritura pública,
+debiendo dejarse constancia del protesto en el mismo título, bajo firma del escribano.

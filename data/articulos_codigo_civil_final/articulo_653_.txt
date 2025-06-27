@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: al portador.
+CAPITULO: V
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 653.- Siendo  indivisible  la  obligación, o  el objeto de  la  prescripción,  la
+interrupción de ésta, hecha por uno solo de los interesados, aprovecha y puede oponerse
+a los otros.

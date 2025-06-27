@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: VII
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  921.-  El mandato  conferido a  varias  personas  designada  para  operar
+conjuntamente se extingue, aunque la causa de extinción concierna a solo uno de los
+mandatarios, salvo pacto en contrario.

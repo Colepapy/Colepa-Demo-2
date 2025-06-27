@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: N/A
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 499.- Son indivisibles las obligaciones cuyo objeto consista en prestaciones que
+no pueden cumplirse parcialmente.

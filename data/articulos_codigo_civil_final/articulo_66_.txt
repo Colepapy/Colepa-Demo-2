@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: I
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 66.- En el caso del artículo anterior, aunque el desaparecido hubiese dejado
+apoderado con poder bastante para administrar sus bienes, pero que no quiera o no pueda
+desempeñar su mandato, proveerá el juez, a requerimiento de parte con interés legítimo, el
+nombramiento de un curador a sus bienes, quien deberá ceñirse estrictamente en el
+Texto consolidado de la Ley Nº 1183/1985
+desempeño de su cometido, a las normas de este Código y las del Menor que regulan la
+tutela y la curatela.

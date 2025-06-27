@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.551.- En los seguros de vida, cuando el asegurado fuese de buena fe y la
+reticencia se alegase dentro de los tres meses después de ocurrido  el  siniestro,  la
+prestación debida se reducirá si el contrato fuese reajustable a juicio de peritos, y se había
+celebrado de acuerdo a la práctica comercial del asegurador.

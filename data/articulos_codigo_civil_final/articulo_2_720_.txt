@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.720.- La cosa legada se debe en el estado que exista al tiempo de la muerte
+del testador, comprendiendo los útiles necesarios para su uso, que existan en ella.

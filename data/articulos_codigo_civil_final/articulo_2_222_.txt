@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: N/A
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.222.- El titular de la servidumbre tendrá derecho para alcanzar o rebajar el
+terreno del inmueble sirviente, a fin de que las aguas lleguen a su destino, pudiendo
+también tomar la tierra o arena que para esos trabajos le fuere menester. Si el acueducto
+hubiere de atravesar cursos naturales de aguas u  otros acueductos,  el dominante
+construirá y conservará las obras necesarias para que no se retarde o acelere la corriente
+de aquéllos, ni disminuya su caudal, ni se dañe la calidad del agua del curso atravesado.

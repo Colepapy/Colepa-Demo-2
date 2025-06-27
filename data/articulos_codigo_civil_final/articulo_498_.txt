@@ -1,0 +1,19 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: N/A
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 498.- Cuando en virtud del acto constitutivo, o del testamento, o de la partición,
+alguno de los deudores o de sus herederos tuviese a su cargo el pago de toda la
+prestación divisible, no se entenderá que exista una obligación solidaria.
+Texto consolidado de la Ley Nº 1183/1985
+El acreedor podrá en tal caso exigir el cumplimiento íntegro al encargado del pago,
+sin perjuicio de los derechos que uno y otro tuviesen sobre los codeudores o coherederos.
+De igual modo, puede atribuirse a uno o más de los acreedores, o a sus herederos, el
+derecho de exigir la prestación total.
+PARÁGRAFO II
+DE LAS OBLIGACIONES INDIVISIBLES

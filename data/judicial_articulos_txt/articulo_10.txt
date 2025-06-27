@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: I
+TITULO: II
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 10.- Las autoridades prestarán el concurso necesario para el cumplimiento de las
+diligencias, mandatos y resoluciones judiciales. Siempre que un funcionario judicial o auxiliar
+de  la  justicia presente orden  escrita de Juez o Tribunal competente para  ejecutar un
+allanamiento, detención, prisión, libertad, desalojo, embargo o secuestro de bienes u otra
+medida  cautelar,  los  funcionarios o agentes  del Poder  Ejecutivo  les darán  inmediato
+cumplimiento.
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981

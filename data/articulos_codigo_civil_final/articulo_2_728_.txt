@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.728.- Los legatarios están obligados a pedir la entrega de los legados,
+aunque se encuentren a la muerte del testador en posesión, por un título cualquiera, de los
+objetos comprendidos en sus legados.

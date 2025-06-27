@@ -1,0 +1,21 @@
+CONTEXTO:
+LIBRO: I
+TITULO: III
+CAPITULO: VIII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 56.- La Justicia de Paz será ejercida   Art. 56.- Habrá Jueces de Paz en lo Civil,
+por los Jueces de Paz en lo Civil, Comercial y   Comercial y Laboral y en lo Criminal en cada
+Laboral, y por los Jueces de Paz en lo        una de las Parroquias de la Capital, y en las
+Criminal.                                   ciudades y demás poblaciones del interior.
+Se designará Jueces de Paz Suplentes en las
+poblaciones donde exista un solo Juez de Paz.
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981
+Los Jueces de Paz en la Capital tendrán
+competencia en su Parroquia y los del interior
+en el distrito del asiento del Juzgado, salvo
+disposición en contrario de la ley.

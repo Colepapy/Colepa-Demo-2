@@ -1,0 +1,19 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: putativo no es suficiente, cualesquiera que sean los fundamentos del poseedor para
+CAPITULO: N/A
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.013.- Si las aguas se estancasen, corriesen más lentas o impetuosas, o
+torciesen su curso natural, los ribereños a quienes tales alteraciones perjudiquen, podrán
+remover los obstáculos, construir obras defensivas, o reparar las destruidas, con el fin que
+el curso de las aguas se restituya a su estado anterior.
+Si  tales  alteraciones  fueren  causadas  por  caso  fortuito  o  fuerza  mayor,
+corresponden al Estado los gastos necesarios para volver las aguas a su estado anterior.
+Si fueren motivadas por culpa de alguno de los ribereños, que hiciese obra perjudicial, o
+Texto consolidado de la Ley Nº 1183/1985
+destruyese  las obras  defensivas,  los gastos serán pagados  por  él, a más de  la
+indemnización del daño.

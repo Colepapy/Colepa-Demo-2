@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: X
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.440.-  Si  el  inmueble  dominante o  sirviente  perteneciere a  diversos
+poseedores con derecho de poseer, la acción confesoria corresponderá a cada uno de
+ellos y contra cada uno de ellos, en los casos previstos en los artículos anteriores, y la
+sentencia perjudicará o aprovechará a todos en su efecto principal, pero no en el accesorio
+de la indemnización del daño causado.

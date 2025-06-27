@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: I
+CAPITULO: VI
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 79.- Cuando apareciendo notoria e indudable la enfermedad mental, resulte
+urgente la adopción de medidas cautelares, el juez ordenará el inventario de los bienes del
+denunciado y su entrega a un curador provisional para que los administre.

@@ -1,0 +1,12 @@
+CONTEXTO:
+TITULO: III
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 76.- Salida de vehículos.
+Todo vehículo que abandone el país con carga o en lastre deberá contar con la
+autorización de  la autoridad aduanera competente, mediante  el otorgamiento del
+respectivo pasavante.

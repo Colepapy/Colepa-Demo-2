@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.730.- La entrega voluntaria del legado que quiera hacer el heredero no está
+sujeta a formalidad alguna, sin perjuicio de los dispuesto por las leyes tributarias.

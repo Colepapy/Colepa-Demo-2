@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 139.- Las escrituras y demás documentos protocolares, deben redactarse en el idioma
+oficial. Si los otorgantes del acto no  lo hablase,  la instrumentación se hará con entera
+conformidad a una minuta escrita en el idioma extranjero y firmada por los mismos en
+presencia del Escribano autorizante, quien dará fe del acto o del reconocimiento de las firmas
+cuando éstas no se hubiesen estampado en su presencia. Dicha minuta será vertida al idioma
+oficial y suscripta ante el Notario por traductor matriculado. En su defecto, por la persona que el
+Juez designe a petición de parte.

@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: IV
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.345.- Cuando se demandare  el pago por consignación de un  crédito
+prendario, el deudor podrá pedir al juez que, previa audiencia del acreedor, levante el
+gravamen y ordene su cancelación en el Registro, siempre que se haya depositado el
+Texto consolidado de la Ley Nº 1183/1985
+importe del crédito y obligaciones accesorias convenidas, quedando embargada a las
+resultas del  juicio  la suma depositada. La orden de cancelación de  la prenda será
+recurrible al solo efecto devolutivo.

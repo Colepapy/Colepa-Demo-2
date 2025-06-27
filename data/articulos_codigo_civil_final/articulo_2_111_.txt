@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: singular, siempre que se hubiere inscripto una medida cautelar relativa a la deuda. Si
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.111.- Todo  propietario puede  obligar a su vecino a  la construcción y
+reparación de paredes del material y espesor expresados en el artículo anterior, que
+separen las heredades contiguas. En defecto de reglamentos municipales que determinen
+la altura, ésta será de dos metros.
+El vecino requerido no puede liberarse de esa obligación por el abandono del
+terreno o de la pared de cerramiento ya existente.

@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: al portador.
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 622.- Cuando existen varias deudas compensables a cargo de una misma
+persona, se aplicarán las disposiciones sobre imputación del pago.

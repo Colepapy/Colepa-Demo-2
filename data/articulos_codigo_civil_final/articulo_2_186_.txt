@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: VIII
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.186.- El Registro publicará por cinco días en un diario de la Capital el pedido
+de inscripción de la obra, con indicación de su autor, título, pie de imprenta y demás datos
+que la individualicen. Transcurrido un mes desde la última publicación y no habiendo
+Texto consolidado de la Ley Nº 1183/1985
+reclamación alguna, el Jefe del Registro otorgará al interesado la constancia definitiva de
+inscripción, con el número de orden que le corresponda.

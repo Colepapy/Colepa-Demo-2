@@ -1,0 +1,20 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 94.- La Corte Suprema de Justicia casará o anulará la matrícula del abogado o
+procurador por mala conducta, faltas graves en el ejercicio de la profesión, incapacidad física o
+mental inhabilitante debidamente comprobada, o por condena judicial que importe inhabilitación
+para el ejercicio de la profesión, o por la existencia de alguna de las incompatibilidades
+previstas en este Código.
+El procedimiento para la casación de la matrícula será el establecidos por la ley para el
+enjuiciamiento de magistrados  judiciales,  sin  perjuicio de  la suspensión  del abogado o
+procurador en  el  ejercicio de su profesión durante  la substanciación, cuando mediaren
+presunciones graves.
+Ver Art. 24 de la Ley Nº 609/95 Que Organiza la Corte Suprema de Justicia que deroga en su
+segunda parte al precedente Articulo

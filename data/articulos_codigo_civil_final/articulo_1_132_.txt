@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.132.- Emitidos debentures con garantía flotante, no pueden emitirse otros que
+tengan prioridad o deban pagarse al mismo tiempo con los primeros, sin consentimiento de
+la asamblea de debenturistas.
+Texto consolidado de la Ley Nº 1183/1985

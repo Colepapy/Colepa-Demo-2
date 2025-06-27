@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IV
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 69.- Corresponde al Procurador Fiscal desempeñar las funciones de Auxiliar del Fiscal
+General del Estado, a quien deberá  substituir en los  juicios y diligencias en que dicho
+funcionario lo designe expresamente representante suyo.

@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.724.- El error sobre el nombre de la cosa legada no afecta su validez si se
+puede identificar la cosa que el testador ha tenido la intención de legar.

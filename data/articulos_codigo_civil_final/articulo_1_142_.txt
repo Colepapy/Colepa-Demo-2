@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.142.- No pueden pertenecer a la institución fiduciaria los directores, síndicos
+o empleados de la sociedad emisora; ni quienes no puedan ser administradores, directores
+ni síndicos de sociedades anónimas.
+Tampoco podrán serlo los accionistas de la sociedad emisora que posean más de la
+vigésima parte del capital social.

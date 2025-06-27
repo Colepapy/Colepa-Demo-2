@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: singular, siempre que se hubiere inscripto una medida cautelar relativa a la deuda. Si
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.107.- Los condóminos de una pared u otra  divisoria medianera, están
+obligados  en  la  proporción  de  sus  derechos  a  los  gastos  de  reparaciones  o
+reconstrucciones de la pared o muro.
+Cada uno de los condóminos de una pared puede liberarse de contribuir a los
+gastos de conservación de la misma, renunciando a la medianería, con tal que la pared no
+Texto consolidado de la Ley Nº 1183/1985
+haga parte de un edificio que le pertenece, o que la reparación o construcción no haya
+llegado a ser necesaria por un hecho suyo.

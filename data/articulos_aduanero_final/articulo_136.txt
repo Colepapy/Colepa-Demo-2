@@ -1,0 +1,13 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 1
+SECCIÓN: 2
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 186º Mercaderías con Tratamiento o Despacho Inmediato Anexo Decreto Nº 4.672/05 Artículo 187º Procedimientos para Despachos Acelerados
+---
+TEXTO DEL ARTÍCULO:
+Artículo 136.- Prioridad en la tramitación. La tramitación de las mercaderías indicadas
+en este Capítulo, tendrá prioridad sobre cualquier otro. Las distintas dependencias que
+participen en ella le impondrán un trámite inmediato y acelerado, con el fin de que las
+mercaderías sean retiradas al momento de la llegada del medio de transporte, previa
+verificación y cumplimiento de las formalidades.

@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.655.- El sordo puede otorgar testamento cerrado. El que no sabe leer no
+puede testar en esa forma.
+El que sepa escribir, aunque no pueda hablar, puede otorgar testamento cerrado. El
+testamento debe estar escrito y firmado de su mano y la presentación al escribano y
+testigos la hará escribiendo sobre la cubierta que aquel pliego contiene su testamento,
+observándose en  los demás  las  prescripciones  establecidas  para  esta  clase de
+testamento.

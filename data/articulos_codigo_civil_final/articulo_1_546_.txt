@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.546.- Por el contrato se seguro el asegurador se obliga mediante una prima, a
+indemnizar el daño causado por un acontecimiento incierto, o a suministrar una prestación
+al producirse un evento relacionado con la vida humana.
+Puede tener por objeto toda clase de riesgos si existe interés asegurable, salvo
+prohibición de la ley.

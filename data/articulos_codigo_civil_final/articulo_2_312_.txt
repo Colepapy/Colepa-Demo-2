@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: IV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.312.- La prenda de  la cosa ajena, aunque no afecte los derechos del
+propietario sobre la cosa, produce sin embargo obligaciones personales entre las partes.
+El acreedor constreñido a restituir al propietario la cosa ajena recibida de buena fe
+en prenda, podrá exigir que el constituyente le entregue otra de igual valor. Si no lo hiciere,
+podrá exigir el pago de la deuda, aunque estuviere pendiente el plazo, sin perjuicio de sus
+derechos por la evicción.

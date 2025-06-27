@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XVIII
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.427.- A las operaciones bancarias ajustadas en cuenta corriente se aplican
+las normas establecidas en el capítulo de la cuenta corriente.

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: oneroso antes de solicitada la separación de patrimonios, y cuyo precio haya sido
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.499.- El testador puede privar de la herencia a un heredero por las siguientes
+causas:
+a) haber atentado contra la vida del autor;
+b) haber acusado al testador por delitos que merezcan pena privativa de libertad; y
+c) por otras injurias graves.

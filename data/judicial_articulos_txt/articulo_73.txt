@@ -1,0 +1,21 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 73.- A todo el que solicite en forma la  Art.  73.- El  certificado  autentico  del  auto
+declaración de pobreza para contestar una ejecutoriado bastará para que el Defensor de
+demanda, se le expedirá certificado de dicha Pobres, Ausentes e Incapaces Mayores de
+presentación, el cual bastará para que se le Edad pueda promover o contestar la acción
+defienda como pobre, sin perjuicio de lo que correspondiente.
+se resuelva posteriormente en  el  juicio de
+declaración de pobreza.
+En caso de denegarse dicha declaratoria, el
+que  haya  solicitado  abonará  los  gastos
+causados   y   cesará   inmediatamente   la
+intervención del Defensor, siendo válidas, no
+obstante, las actuaciones practicadas.

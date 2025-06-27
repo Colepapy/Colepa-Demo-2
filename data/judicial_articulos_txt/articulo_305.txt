@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 305.- Las inscripciones o anotaciones preventivas se cancelarán mediante escritura
+pública, en la cual manifiesten su consentimiento la persona a cuyo favor se hayan otorgado,
+sus sucesores o representantes legítimos, o en virtud de providencia ejecutoriada.

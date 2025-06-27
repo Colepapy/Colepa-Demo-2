@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: III
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 48.- Toda controversia entre partes, antes o después de deducida en  juicio, y
+cualquiera sea  el estado de éste, puede someterse a  la decisión de Jueces árbitros o
+arbitradores.

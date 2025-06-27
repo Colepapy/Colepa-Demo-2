@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.632.-  El testador puede dejar de  indicar  el  lugar donde ha hecho  el
+testamento, y el error en la indicación del mismo no influirá en la validez del testamento.

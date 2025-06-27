@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: N/A
+SECCIÓN: XI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.388.- Transcurrido dicho plazo sin haberse deducido oposición, o rechazada
+ésta por sentencia definitiva, la letra queda desprovista de eficacia.
+El que ha obtenido la cancelación podrá, con la constancia judicial de que no se
+dedujo oposición, o de que ésta fue definitivamente rechazada, exigir su pago, y si la letra
+fuese en blanco o no hubiese vencido aún, exigir un duplicado de ella. Este deberá ser
+pedido por el portador desposeído a su endosante, y así sucesivamente de un endosante
+al que le precede hasta llegar a su librador.

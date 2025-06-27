@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XIV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.291.- El comodante debe pagar las expensas extraordinarias causadas
+durante el contrato para la conservación de la cosa prestada, siempre que el comodatario
+lo ponga en su conocimiento antes de hacerlas, salvo que fueren tan urgentes que no
+pueda demorarlas sin grave peligro.
+Texto consolidado de la Ley Nº 1183/1985

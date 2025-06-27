@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XVI
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.314.- El endoso transfiere todos los derechos resultantes de la letra de
+cambio.
+Si el endoso es en blanco, el portador puede:
+a) llenarlo con el propio nombre o el de otra persona;
+b) endosar nuevamente en blanco la letra, o a la orden de persona determinada; y
+c) entregar la letra de cambio a un tercero, sin llenar el blanco y sin endosarla;

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 332.- Los mandamientos de los jueces expresarán con toda claridad:
+a) La especie de certificación que de acuerdo con el artículo 329 se exige;
+b) Los datos que según la especie de certificación basten para dar a conocer los bienes o
+personas de que se trate, y,
+c) Período a que la certificación debe referirse.

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: I
+---
+ESTADO: Modificado por:
+---
+TEXTO DEL ARTÍCULO:
+Artículo 276.- Pasados los términos legales desde la presentación del documento, u ocho días
+después, si la ley no fija término, el interesado podrá requerir apremio contra el Registro de
+Inmuebles, del Juez de la causa, en su caso, o del Juez de Paz Letrado, y el Juez lo expedirá
+siempre que según el informe de la Dirección no resulte justificada la demora.
+Modificado por:

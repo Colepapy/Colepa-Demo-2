@@ -1,0 +1,14 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 1
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 122.- Infracciones aduaneras. El funcionario aduanero que durante el trámite
+del despacho aduanero detectare o tuviera indicios de alguna  falta o infracción
+aduanera, deberá formular inmediatamente la denuncia por escrito ante la autoridad
+aduanera competente y suspender el trámite del despacho, con la extracción en su caso,
+de las muestras representativas necesarias para evaluar la seriedad o verosimilitud de
+la misma.

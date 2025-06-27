@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 290.- Se considera como fecha de la inscripción para todos los efectos que ésta deba
+producir, la fecha del asiento de la presentación que deberá constar en la inscripción misma.

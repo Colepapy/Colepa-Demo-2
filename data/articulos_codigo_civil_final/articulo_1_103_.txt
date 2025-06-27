@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  1.103.- Los  directores pueden no ser  accionistas; son  reelegibles y su
+designación es revocable. Los estatutos no pueden suprimir ni restringir la revocabilidad de
+la designación, pero el administrador designado en el acto constitutivo, tendrá derecho a
+resarcimiento cuando fuere excluido sin justa causa.

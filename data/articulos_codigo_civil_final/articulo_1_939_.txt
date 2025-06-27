@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: y por error de hecho o de derecho estuviere persuadido de su legitimidad. El título
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.939.- Son derechos inherentes a  la posesión de cosas inmuebles,  las
+servidumbres activas y son obligaciones propias de ellas las restricciones y límites del
+dominio establecidas en este Código.

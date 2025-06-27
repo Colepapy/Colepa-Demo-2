@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: singular, siempre que se hubiere inscripto una medida cautelar relativa a la deuda. Si
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.127.- Puede dirigirse contra el Estado respecto de los terrenos del dominio
+privado. El deslinde de los fundos del dominio público corresponde a  la jurisdicción
+administrativa.

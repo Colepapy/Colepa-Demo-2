@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 985.- El socio no podrá servirse, sin consentimiento de los otros socios, de las
+cosas pertenecientes al patrimonio social para fines extraños a los de la sociedad.

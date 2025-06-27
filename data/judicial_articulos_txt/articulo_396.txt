@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 396.- Toda petición improcedente será resuelta inmediatamente por el Juez, de oficio,
+ordenando la devolución del escrito.

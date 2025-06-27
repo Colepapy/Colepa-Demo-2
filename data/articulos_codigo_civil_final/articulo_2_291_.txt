@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.291.- Cuando el uso fuere establecido sobre cosas muebles, el usuario no
+tiene facultad sino para emplearlas en su servicio personal, y el de su familia, sin poder
+cederlo a otros, aunque se trate de objetos que el propietario tenía costumbre de alquilar.

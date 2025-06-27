@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: II
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.545.- Sólo pueden demandar la colación:
+a) Un coheredero a otro;
+b) los acreedores personales del coheredero que puedan exigir la colación; y
+c) los acreedores del causante y los legatarios, sólo cuando el heredero a quien la
+colación fuere debida, aceptare la herencia pura y simplemente, y no mediare separación
+de patrimonios.

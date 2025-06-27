@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XX
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.448.- Sólo podrán demandarse en juicio las deudas provenientes de juegos
+que se decidan por la fuerza, la destreza o la inteligencia de los jugadores, y no por el
+azar.
+Si la deuda de juego no prohibido excediere la vigésima parte de la fortuna del
+perdedor, el juez reducirá a este límite la acción del ganador.

@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: XIII
+CAPITULO: 1
+SECCIÓN: 5
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 375.- Plazo de pronunciamiento. El Director Nacional de Aduanas deberá
+pronunciarse sobre la resolución apelada en el término de veinte días hábiles, pudiendo
+ampliarse por causas justificadas por igual término.

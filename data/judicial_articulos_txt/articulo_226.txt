@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 226.- Esta audiencia no podrá  diferirse por más de quince días, y en  ella se
+concederá la palabra, primero a la parte denunciante y luego a la denunciada.
+Cada una podrá hacer uso de ella dos veces. La última vez al sólo efecto de las rectificaciones.

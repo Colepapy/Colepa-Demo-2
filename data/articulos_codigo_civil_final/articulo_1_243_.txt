@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XIII
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.243.- El depósito se presume gratuito, salvo que, de la calidad profesional del
+depositario, o de otras circunstancias, se deba deducir que tácitamente las partes han
+convenido una retribución por la custodia.

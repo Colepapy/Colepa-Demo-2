@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Modificado por el artículo 3 inciso b) de la Ley N° 963/82
+---
+TEXTO DEL ARTÍCULO:
+Artículo 368.- Las resoluciones de los Jueces de Paz Letrados, así como sus despachos,
+deberán ser firmados por ellos y autorizados por sus secretarios. Las providencias de mero
+trámite podrán ser suscritas con media firma, en las demás actuaciones deberá emplearse
+firma entera.
+Modificado por el artículo 3 inciso b) de la Ley N° 963/82

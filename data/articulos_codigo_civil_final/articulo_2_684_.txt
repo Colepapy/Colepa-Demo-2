@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.684.- Cuando el testador ha instituido uno o varios herederos limitando la
+institución a una fracción de la herencia, o a varias separadas que, unidas no absorben
+toda la sucesión, la parte restante corresponde a los sucesores legítimos.

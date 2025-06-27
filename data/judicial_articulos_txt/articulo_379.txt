@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 379.- El Juez procurará, al abrir la audiencia de prueba, avenir a las partes y sólo en
+el caso de no poderlo conseguir, se continuarán los procedimientos establecidos.

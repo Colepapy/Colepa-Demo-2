@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.613.- El asegurado podrá hacerse representar en las diligencias para verificar
+el siniestro y liquidar el daño; es nulo todo pacto en contrario. Los gastos serán por cuenta
+suya.

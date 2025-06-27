@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XVI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.300.- La letra de cambio puede ser pagadera a la orden del mismo librador y
+ser girada a cargo de él, o por cuenta de un tercero.

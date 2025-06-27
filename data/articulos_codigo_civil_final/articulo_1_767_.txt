@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: traslativo del dominio.
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.767.- Si  al transmitírsele  el bien conoció  el adquirente  el peligro de  la
+evicción, no tendrá derecho a ser indemnizado, ni podrá exigir al enajenante que le
+defienda en juicio, salvo convenio expreso en contrario.

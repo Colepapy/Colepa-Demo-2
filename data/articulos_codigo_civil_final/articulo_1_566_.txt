@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.566.- El seguro por cuenta ajena obliga al asegurador, aun cuando el tercero
+asegurado invoque el contrato después de ocurrido el siniestro.
+Texto consolidado de la Ley Nº 1183/1985

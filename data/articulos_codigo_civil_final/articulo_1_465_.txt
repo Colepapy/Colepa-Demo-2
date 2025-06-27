@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XXI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.465.- El obligado a dar una fianza, no puede sustituirla por prenda o hipoteca,
+y recíprocamente, contra la voluntad del acreedor.
+Esta disposición no rige para las fianzas legales ni judiciales.

@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 91.- A más de los requisitos exigidos en los artículos anteriores, los abogados y
+procuradores deberán estar inscriptos en el libro de matrícula, y haber prestado juramento ante
+la Corte Suprema de Justicia. Esta inscripción es de carácter permanente y sólo podrá ser
+casada o anulada en los casos y en la forma previstos en este Código.

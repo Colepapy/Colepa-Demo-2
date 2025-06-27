@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: II
+SECCIÓN: VII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 363.- Todos los derechos reales o personales transmitidos a terceros sobre un
+inmueble por una persona que ha llegado a ser propietaria en virtud del acto anulado,
+quedan sin ningún valor y pueden ser reclamados directamente del poseedor actual.
+Los terceros podrán siempre ampararse en las reglas que protegen la buena fe en
+las transmisiones.

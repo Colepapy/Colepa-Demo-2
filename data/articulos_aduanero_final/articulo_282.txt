@@ -1,0 +1,12 @@
+CONTEXTO:
+TITULO: VIII
+CAPITULO: 3
+SECCIÓN: 3
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 282.- Prescripción para exigir el pago del tributo aduanero. La acción para
+exigir el pago del tributo aduanero, las sanciones pecuniarias y los tributos percibidos
+de menos prescribe en el plazo de cinco años, contados a partir del 1 de enero del año
+siguiente al de la fecha en que fuera exigible.

@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: VIII
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 258.- Los expedientes sólo pondrán ser retirados del Archivo en virtud del mandato
+judicial, por  el término máximo de sesenta días, vencidos los cuales  el Jefe exigirá  la
+devolución que no podrá ser demorada sino por causa  justificada, bajo  la misma pena
+establecida en el artículo 256.

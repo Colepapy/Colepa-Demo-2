@@ -1,0 +1,13 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 3
+SECCIÓN: 8
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 228º Garantía en la Admisión Temporaria b) la prórroga de los plazos. Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 263º Plazos de Permanencia de la Mercadería sometida al Régimen de Exportación Temporaria c) el deterioro, destrucción o pérdida de las mercaderías introducidas bajo el régimen y tratamiento aduanero de las mismas y de los desechos o residuos resultantes de la destrucción o deterioro. Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 265º Deterioro, Destrucción o Pérdida Irremediable de la Mercadería durante su permanencia bajo el Régimen de Exportación Temporaria d) la transferencia de las mercaderías sometidas al régimen. Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 266º Transferencia de la Mercadería sometida al Régimen de Exportación Temporaria e) el momento en que se determinan los elementos necesarios para la aplicación de los tributos y las restricciones económicas. f) el cumplimiento de la exportación temporaria mediante la reimportación de las mercaderías sometidas al régimen. g) el cumplimiento del régimen mediante la inclusión de las mercaderías en el régimen de depósito temporario. Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 267º Exportación Definitiva Previa a la Finalización del Plazo de Permanencia Anexo Decreto Nº 4.672/05 Artículo 268º Cumplimiento de la Exportación Temporaria mediante la Reimportación de la Mercadería sometida al Régimen ) el incumplimiento de las obligaciones propias del régimen de exportación temporaria. i) la reimportación de las mercaderías cuyo plazo de permanencia hubiera vencido. Sesquicentenario de la Epopeya Nacional 1864-1870 Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 269º Otras Formas del Cumplimiento de la Obligación de Reimportar
+---
+TEXTO DEL ARTÍCULO:
+Artículo 198.- Aplicación supletoria de las normas del régimen de exportación
+temporaria. Serán aplicables supletoriamente a este régimen, las normas del régimen
+de exportación temporaria de mercaderías para ser reexportadas en el mismo estado,
+referidas a:
+a) la garantía.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 406.- Si el título no trae aparejada ejecución por sí mismo, ésta se preparará en la
+forma autorizada por el Código de Procedimientos Civil y Comercial.
+JUICIO DE DESALOJO

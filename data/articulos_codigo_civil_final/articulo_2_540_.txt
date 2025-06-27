@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: II
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.540.- Será anulable la partición privada o judicial cuando no se hubieren
+reservado bienes suficientes para el pago de los créditos y legados, cuya existencia
+constare en autos.

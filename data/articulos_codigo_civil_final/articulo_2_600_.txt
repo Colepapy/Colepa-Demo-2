@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: V
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.600.- Las disposiciones testamentarias y las donaciones entre vivos que
+menguaren  la  legítima, se reducirán a  la cuota disponible, a  solicitud del heredero
+perjudicado, una vez abierta la sucesión.

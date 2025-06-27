@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: III
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 815.- Si la cosa arrendada fuere inmueble, compete al locador acción ejecutiva
+para el cobro del precio del arrendamiento.
+El inquilino no será condenado al pago si tuviere que compensar mejoras o gastos
+necesarios, o autorizados según lo prescripto en el artículo anterior.

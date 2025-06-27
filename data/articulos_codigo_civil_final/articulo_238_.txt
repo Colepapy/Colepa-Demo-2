@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: XI
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 238.- Fallecido el marido, sus herederos presuntos que debieren concurrir con
+el hijo, o ser excluidos por él, así como los ascendientes del extinto, podrán continuar la
+acción de desconocimiento iniciada por éste.

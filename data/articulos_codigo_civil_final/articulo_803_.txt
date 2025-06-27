@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: III
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 803.- La locación tiene por objeto la cesión del uso y goce de una cosa o de un
+derecho patrimonial, por un precio cierto en dinero.
+Se aplicarán a este contrato, en lo pertinente, las disposiciones de la compraventa.

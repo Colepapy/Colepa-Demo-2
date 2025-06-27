@@ -1,0 +1,26 @@
+CONTEXTO:
+LIBRO: I
+TITULO: III
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 32.- Los Tribunales de Apelación conocerán, en sus respectivos fueros:
+a) De los recursos concedidos contra las sentencias definitivas y resoluciones recurribles de los
+Jueces de Primera Instancia, de los Jueces de Paz Letrada y de los Jueces de Instrucción.
+Las decisiones en los recursos contra las resoluciones de los Jueces de Paz Letrada y de los
+Jueces de Instrucción causarán ejecutoria;
+b) De los incidentes que se promuevan durante la sustanciación de los juicios, causando su
+resolución ejecutoria;
+c) De los recursos por retardo o denegación de justicia de los Jueces de Primera Instancia, de
+los Jueces de Paz Letrada y de los Jueces de Instrucción;
+d) De las recusaciones e inhibiciones de los mismos Jueces;
+e) De las cuestiones de competencia relativas a los Jueces de Primera Instancia, a los Jueces
+de Paz Letrada y a los Jueces de Instrucción;
+f) De los recursos de reposición contra las providencias dictadas por el Presidente y de
+aclaratoria  de  las  sentencias  y  autos  interlocutorios  dictados  por   el  Tribunal;   y,
+g) Los Tribunales de Apelación de las Circunscripciones Judiciales del interior del país, tendrán
+en sus respectivos fueros la superintendencia y potestad disciplinaria sobre los Juzgados y
+oficinas del Poder Judicial.

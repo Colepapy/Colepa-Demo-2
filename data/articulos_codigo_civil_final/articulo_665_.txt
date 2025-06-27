@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: al portador.
+CAPITULO: V
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 665.- La prescripción de las acciones derivadas del contrato individual o
+colectivo de condiciones de trabajo se regirá por las disposiciones del Código del Trabajo.

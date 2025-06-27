@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.807.- Los gastos hechos por el albacea en el ejercicio de sus funciones serán
+a cargo de la sucesión.
+Texto consolidado de la Ley Nº 1183/1985

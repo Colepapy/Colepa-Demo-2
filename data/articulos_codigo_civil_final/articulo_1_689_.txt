@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.689.- Quienes dejan de pertenecer al grupo asegurado, quedan excluidos del
+seguro desde ese momento, salvo pacto en contrario.

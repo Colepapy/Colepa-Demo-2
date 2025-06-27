@@ -1,0 +1,20 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 303.- La cancelación de las inscripciones y anotaciones preventivas podrán ser total o
+parcial.
+Será total:
+a) Cuando se extinga por completo la cosa objeto de la inscripción;
+b) Cuando se extinga también por completo el derecho inscripto;
+c) Cuando se declare la nulidad del título en cuya virtud se hizo la inscripción; y,
+d) cuando se declare la nulidad de la inscripción por la falta de alguno de sus requisitos
+esenciales, conforme a lo dispuesto en el artículo 308.
+Será parcial:
+a) Cuando se reduzca la cosa objeto de la inscripción o anotación preventiva; y,
+b) Cuando se reduzca el derecho inscripto.

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: I
+CAPITULO: VI
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 721.- Si por un hecho posterior a la celebración del contrato bilateral, y sin
+culpa de ninguna de las partes,  la prestación se hiciere imposible, las obligaciones
+recíprocas de ambos contratantes quedan sin efecto.
+Si la contraprestación hubiere sido efectuada en todo o en parte, se la restituirá
+según las reglas generales de este Código.

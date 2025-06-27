@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.005.- En la disolución judicial de la sociedad la sentencia tendrá efecto
+retroactivo al día en que tuvo lugar la causa generadora.
+PARÁGRAFO VI
+DE LA LIQUIDACIÓN Y PARTICIÓN

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: XI
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 362.- Se establece el mes de enero como feria judicial.
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981

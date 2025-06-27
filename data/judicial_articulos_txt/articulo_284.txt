@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 284.- Las inscripciones de servidumbre se harán constar:
+a) En la inscripción de propiedad del predio sirviente; y,
+b) En la inscripción de propiedad del predio dominante.

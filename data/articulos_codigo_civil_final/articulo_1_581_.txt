@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.581.- Toda agravación del riesgo que, si hubiese existido al tiempo de la
+celebración del contrato habría impedido esta o modificado sus condiciones, es causa de
+rescisión del seguro.

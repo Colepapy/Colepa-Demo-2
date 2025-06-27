@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.625.- El testamento debe ser firmado por  el testador en  la forma que
+habitualmente lo hace. No se tendrá por firmado el testamento suscripto de otra manera, o
+con simples  iniciales. Los  errores de  ortografía, o  la omisión de  letras, no  vician
+necesariamente la firma, quedando su validez librada a la apreciación del juez, según las
+circunstancias. La alteración manifiesta de la firma anula el testamento.

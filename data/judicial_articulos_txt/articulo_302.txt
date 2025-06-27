@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 302.- Las inscripciones no se extinguen respecto de terceros sino por su cancelación
+o por la inscripción de las transferencias del dominio o derecho real inscripto a nombre de otras
+personas. Las inscripciones de hipotecas y prendas, y las anotaciones preventivas, embargos
+e inhibiciones caducan automáticamente a los diez años de su presentación, si antes no
+fueran reinscriptos. Las inscripciones de hipotecas y prendas constituidas a favor de un Banco
+o de las Sociedades de Ahorro y Préstamo para la Vivienda, o de la Caja de Jubilaciones y
+Pensiones de Empleados  Bancarios  subsistirán  hasta  la completa  cancelación de  las
+obligaciones que garantizan, lapso que no podrá exceder de veinte y cinco años.

@@ -1,0 +1,21 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 294.- Podrán pedir anotaciones preventivas de sus respectivos derechos:
+a) El que demandare en juicio la propiedad de bienes inmuebles, o la constitución, declaración,
+modificación o extinción de cualquier derecho real;
+b) El que en juicio ejecutivo obtuviere a su favor mandamiento de embargo o que se haya
+hecho efectivo, de bienes raíces del deudor;
+c) El que en cualquier juicio obtuviere sentencia ejecutoriada, que afecte derechos reales;
+d) El que en juicio ordinario obtuviere providencia que ordene el embargo preventivo, o prohíba
+la enajenación de bienes raíces;
+e) El que presente algún título cuya inscripción no pueda hacerse definitivamente por falta de
+algún requisito subsanable; y,
+f) El que en cualquier caso tuviese derecho a exigir anotación preventiva, de acuerdo con las
+leyes, o en virtud de resolución judicial.

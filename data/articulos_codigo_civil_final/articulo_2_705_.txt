@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.705.-  El testamento no puede ser revocado sino por  otro testamento
+posterior, hecho en alguna de las formas autorizadas por este Código.
+El testamento posterior revoca  el anterior en todas sus partes  si no contiene
+confirmación de éste.

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 234.- Los Tribunales y Juzgados en su respectivo orden jerárquico, podrán sancionar
+disciplinariamente las mismas faltas. Los Jueces pueden ser pasibles de apercibimiento o
+multas que no excedan de quince  jornales mínimo  legal para actividades diversas no
+especificadas en la Capital de la República, y los empleados subalternos de las mismas
+sanciones o la de suspensión temporaria aplicada por la Corte Suprema de Justicia.

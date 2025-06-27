@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: XII
+CAPITULO: 4
+SECCIÓN: 3
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo  342.-  Tentativa de contrabando. Concepto.  Incurre en  tentativa de
+contrabando el que, con el fin de cometer la infracción de contrabando, comienza su
+ejecución pero no lo consuma por circunstancias ajenas a su voluntad.

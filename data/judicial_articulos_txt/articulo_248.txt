@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: VIII
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 248.- Ninguna orden de extracción de fondos o entrega de bienes comprendidos en el
+artículo anterior se hará efectiva sin la intervención y conformidad de la Contaduría.

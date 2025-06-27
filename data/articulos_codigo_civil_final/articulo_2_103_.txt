@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: singular, siempre que se hubiere inscripto una medida cautelar relativa a la deuda. Si
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.103.- El condominio de los muros, fosos y cercas que sirven de separación
+entre dos heredades, es de indivisión forzosa.
+Un muro es medianero y común de los vecinos de las heredades contiguas que lo
+han hecho construir a su costa, en el límite separativo de las dos heredades.

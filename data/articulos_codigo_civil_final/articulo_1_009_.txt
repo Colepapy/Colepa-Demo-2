@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.009.- Los liquidadores deben realizar los actos necesarios para la liquidación,
+y si lo socios no han dispuesto otra cosa, pueden vender en bloque los bienes sociales y
+hacer transacciones y compromisos.
+Representan también a la sociedad en juicio.

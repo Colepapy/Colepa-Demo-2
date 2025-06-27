@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 222.- Si hubiere de producirse pruebas testimoniales, la Corte Suprema fijará el día de
+audiencia para el examen de los testigos que hubieren indicado las partes con arreglo a los
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981
+interrogatorios admitidos. El examen de los testigos comenzará por los propuestos por el
+denunciante y seguirá por los del denunciado.

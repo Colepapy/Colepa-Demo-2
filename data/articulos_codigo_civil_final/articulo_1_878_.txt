@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: I
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.878.- Son cosas muebles las que pueden transportarse de un lugar a otro,
+sea moviéndose o por sí mismas, sea que sólo se muevan por una fuerza externa, con
+excepción de las que sean accesorias a los inmuebles.

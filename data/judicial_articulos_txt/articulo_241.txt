@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: VI
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 241.- La infracción a las normas establecidas en los artículos precedentes será
+sancionada con suspensión o destitución. Tratándose de Magistrados y Escribanos Públicos se
+seguirá el procedimiento establecido por éste Código.

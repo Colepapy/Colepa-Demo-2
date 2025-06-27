@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: III
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 840.- Concluido el contrato de locación, el locatario debe devolver la cosa
+arrendada como la recibió, si se hubiere hecho descripción de su estado, salvo lo que
+hubiere perecido o se hubiere deteriorado por el tiempo o por causas inevitables.
+Si el locatario recibió la cosa sin descripción de su estado, se presume que la
+recibió en buen estado, salvo prueba en contrario.

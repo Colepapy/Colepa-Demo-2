@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.801.- El albaceazgo concluye con la ejecución completa del testamento, por
+la incapacidad sobreviniente, por la muerte del albacea, por su remoción ordenada por el
+juez, y por renuncia.

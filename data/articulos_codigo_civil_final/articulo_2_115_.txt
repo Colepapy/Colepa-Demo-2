@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: singular, siempre que se hubiere inscripto una medida cautelar relativa a la deuda. Si
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.115.- En el caso del artículo anterior, el nuevo muro, aunque construido por
+uno de los propietarios, es medianero hasta la altura del antiguo y en todo su espesor,
+salvo el derecho del que ha puesto el excedente del terreno para volver a tomarlo, si la
+pared llega a ser demolida.

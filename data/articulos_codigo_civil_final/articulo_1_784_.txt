@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: traslativo del dominio.
+CAPITULO: N/A
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.784.- Siempre que los copartícipes deban indemnizar a uno de ellos,  si
+alguno resultare insolvente, la cuota de éste se dividirá entre los demás obligados.

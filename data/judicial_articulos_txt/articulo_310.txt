@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 310.- Cada sección tendrá  libros diferentes numerados por orden de fecha, de
+conformidad a las secciones que comprenda.

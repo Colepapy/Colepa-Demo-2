@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: III
+CAPITULO: VIII
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 59.- Los jueces de Paz en lo Civil, Comercial y Laboral conocerán de las faltas e
+instruirán sumarios en los casos de comisión de delitos cuando en su jurisdicción no hubiere
+Juez de Paz en lo Criminal o Juez de Instrucción.

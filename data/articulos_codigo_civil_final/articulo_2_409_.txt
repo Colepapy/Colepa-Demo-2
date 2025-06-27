@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: X
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.409.- Pueden reivindicarse las cosas muebles o inmuebles, y los títulos de
+créditos que no fueren al portador, aunque hayan sido endosados sin transferencia de
+dominio, mientras permanezcan en poder del simple tenedor.

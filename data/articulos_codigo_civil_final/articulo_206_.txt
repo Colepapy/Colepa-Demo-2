@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: N/A
+SECCIÓN: VI
+---
+ESTADO: Derogado Por: Artículo 98 de la Ley Nº 1/92
+---
+TEXTO DEL ARTÍCULO:
+Art. 206.- Las donaciones que, por las convenciones matrimoniales, o por acto
+separado, hiciese el futuro esposo a su prometida, o las que los terceros hiciesen a
+cualquiera de ellos o ambos, con motivo de su casamiento, quedarán sin efecto si el
+matrimonio no se celebra, o si celebrado fuese anulado, salvo los derechos reconocidos
+por este Código al cónyuge de buena fe.

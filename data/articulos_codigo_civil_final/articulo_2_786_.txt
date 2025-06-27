@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.786.- Cuando las disposiciones del testador tuvieren sólo por objeto hacer
+legados, no habiendo herederos legítimos o herederos  instituidos,  la posesión de  la
+herencia corresponde al albacea.

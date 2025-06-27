@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: IV
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.077.- El bien de familia no podrá ser objeto de arrendamiento ni de hipoteca,
+sino con la conformidad de todas las personas beneficiadas por el mismo o de sus
+representantes legales, previa autorización judicial, que será otorgada en caso de que el
+juez lo considere conveniente al interés de la familia.

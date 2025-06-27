@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: Corregido por:
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 167.- El peticionante de la suspensión de un remate deberá consignar la suma que el
+Juzgado fije para el reembolso al rematador de los gastos de publicación o transporte de las
+cosas, si los hubiere, más el cincuenta por ciento de la comisión que le correspondería de
+haberse llevado a cabo la subasta.

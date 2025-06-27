@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 210.- Si la causa de enjuiciamiento fuere la comisión de delitos, la Corte Suprema de
+Justicia ordenará que el magistrado o funcionario denunciado sea puesto a disposición de Juez
+competente, al cual se pasarán los antecedentes del caso.
+Si hubiere presunciones graves de culpabilidad contra el magistrado o el funcionario, éste será
+suspendido en sus funciones.
+El enjuiciamiento quedará suspendido hasta que recaiga sentencia definitiva en el proceso
+penal.

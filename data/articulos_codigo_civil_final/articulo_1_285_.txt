@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XIV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.285.- Si la cosa ha sido prestada por un incapaz de contratar, que usaba de
+ella con asentimiento de su representante legal, será válida su restitución al comodante
+incapaz.

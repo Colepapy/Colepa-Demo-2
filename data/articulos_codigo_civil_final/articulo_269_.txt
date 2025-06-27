@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: XIII
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 269.- Serán curadores legítimos:
+a) el marido, de su esposa, y recíprocamente, si no estuvieren separados;
+Texto consolidado de la Ley Nº 1183/1985
+b) los hijos mayores de edad, del padre o madre viudos. Cuando hubiere más de
+uno, el juez elegirá al más idóneo;
+c) el padre, o la madre, respecto de sus hijos solteros, o viudos que no tuvieren
+hijos en condiciones de ejercer la curatela; y
+d) los hermanos y los tíos que podrían ser tutores.

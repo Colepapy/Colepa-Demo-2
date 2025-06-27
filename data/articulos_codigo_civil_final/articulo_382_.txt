@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: III
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 382.- Los testigos de un instrumento público y el oficial que lo autorizó no
+podrán contradecir, variar ni alterar su contenido, a no ser que lo hubiere suscripto por dolo
+o violencia.

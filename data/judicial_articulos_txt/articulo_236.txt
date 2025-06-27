@@ -1,0 +1,22 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 236.- Los Tribunales y Juzgados podrán sancionar con apercibimiento, multas o
+arrestos las faltas de los litigantes, sus abogados o procuradores u otras personas cometan
+contra su autoridad o decoro en las audiencias, en los escritos, en el diligenciamiento de sus
+mandatos u órdenes, o en cualquier otra circunstancia con motivo del  ejercicio de sus
+funciones.
+Las multas no podrán exceder de treinta jornales mínimo legal para actividades diversas no
+especificadas en la Capital de la República ni el arresto de veinte días. Este último podrá ser
+domiciliario.
+Los Jueces de Paz podrán aplicar apercibimientos y multas hasta quince jornales mínimo legal
+para actividades diversas no especificadas en la Capital de la República.
+El importe de las multas será depositado en el Banco Central del Paraguay en una Cuenta
+Especial abierta a la orden de la Corte Suprema de Justicia, y destinado a mejoras en la
+administración de justicia.

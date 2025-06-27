@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 80.- La defensa de los procesados que no designen Defensor estarán a cargo de los
+defensores cuyo número establezca la Ley de Presupuesto General de la Nación.

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 223.- Será admitidos todos los medios de prueba propuestos por las partes dentro del
+término, siempre que  ellos  fueran conducentes a  la averiguación de  la verdad, y su
+diligenciamiento podrá producirse en la Capital, a más tardar, en los diez días siguientes al
+vencimiento del término de prueba, y fuera de ella dentro de los veinte días siguientes, como
+máximo, incluida la ampliación en razón de la distancia.

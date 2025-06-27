@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 288.- Sin perjuicio de lo dispuesto en el Código Civil respecto de las hipotecas, los
+actos o contratos a que se refiere el presente Código, sólo tendrán efecto contra terceros
+desde la fecha de su inscripción en el Registro.
+La inscripción en el Registro, de títulos de transmisión de propiedad de inmuebles inhabilitados,
+importa su tradición a los efectos de la adquisición del dominio.

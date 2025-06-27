@@ -1,0 +1,10 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 370.- El procedimiento será sumario, debiendo labrarse acta de todas las actuaciones.

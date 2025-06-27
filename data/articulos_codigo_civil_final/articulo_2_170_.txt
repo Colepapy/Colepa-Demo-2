@@ -1,0 +1,18 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: VIII
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.170.- Corresponde, dentro de los límites establecidos por este Código, a los
+artistas, actores o intérpretes de obras artísticas o literarias, aunque ellas hayan pasado al
+dominio público, una compensación equitativa por su interpretación, por parte de quienes
+las difunden o transmitan por cualquier medio idóneo para la reproducción sonora o visual.
+Esta retribución se deberá independientemente de la que corresponda por la recitación,
+representación o ejecución.
+Los artistas o intérpretes tienen derecho a oponerse a la difusión, transmisión, o
+reproducción que pueda dañar a su honor o reputación.
+Texto consolidado de la Ley Nº 1183/1985

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: I
+CAPITULO: VI
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 725.- En los contratos bilaterales, el incumplimiento por una de las partes
+autoriza a la que no sea responsable de  él, a pedir la ejecución del contrato, o su
+resolución con los daños e intereses, o ambas cosas.
+Demandada la resolución, ya no podrá pedirse el cumplimiento, pero después de
+reclamado éste, podrá exigirse de aquélla.

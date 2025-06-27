@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: XIII
+CAPITULO: 1
+SECCIÓN: 2
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 358.- Representación fiscal. La representación del fisco en los sumarios será
+ejercida por un abogado designado de una  lista preestablecida de profesionales,
+inscripta en el Departamento Jurídico de la Dirección Nacional de Aduanas.

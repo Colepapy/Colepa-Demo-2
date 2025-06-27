@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: VII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.676.- Los testigos deben entender el idioma del testador y aquél en que se
+extendiere del testamento. Deben, además, estar domiciliados en la población donde el
+escribano tenga su registro.

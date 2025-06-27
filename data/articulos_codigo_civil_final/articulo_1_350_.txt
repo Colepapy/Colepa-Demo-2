@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: N/A
+SECCIÓN: VII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.350.- Todos los que hayan girado, aceptado, endosado o avalado una letra
+de cambio están solidariamente obligados hacia el portador.
+El  portador  tiene  el  derecho  de  accionar  contra  todos  ellos  individual  o
+colectivamente, sin que deba observar el orden en que se haya obligado.
+El mismo derecho pertenece a todo signatario de una letra de cambio que ha
+reembolsado su importe.
+La acción intentada contra uno de los obligados no impide la acción de portador
+contra los otros, aunque sean posteriores al que ha sido demandado en primer término.

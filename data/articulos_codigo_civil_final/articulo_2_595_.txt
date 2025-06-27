@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: V
+CAPITULO: III
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.595.- El adoptado sea por adopción plena o simple hereda al adoptante como
+hijo matrimonial con derecho de representación.

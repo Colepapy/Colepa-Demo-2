@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.571.- El asegurador no puede rehusar el pago de la prima ofrecida por un
+tercero, con la limitación establecida en el seguro de vida, salvo oposición del asegurado.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XII
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.216.- El donante está obligado a entregar la cosa al donatario. En caso de
+mora, no deberá resarcir los frutos ni intereses.
+El donante sólo responde por su dolo o culpa.

@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: I
+TITULO: III
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 43.- Los Juzgados de Paz Letrados conocerán, siempre que la cuantía de la demanda
+no exceda del equivalente a trescientos jornales mínimo legal para actividades diversas no
+especificadas en la Capital de la República, en los siguientes juicios:
+a) Los asuntos civiles y comerciales y las demandas reconvencionales;
+b) Los juicios sucesorios; y,
+c) Las demandas  por  desalojo,  rescisión,  cumplimiento, cobro de  alquileres y demás
+cuestiones vinculadas al contrato de locación.
+Entenderán en todos los casos de informaciones sumarias de testigos.

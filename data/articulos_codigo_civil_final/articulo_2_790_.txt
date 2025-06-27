@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.790.-  El albacea debe tomar  las determinaciones  necesarias para  la
+seguridad de los bienes dejados por el testador, y proceder al inventario de ellos, con
+citación de los herederos, legatarios y otros interesados.

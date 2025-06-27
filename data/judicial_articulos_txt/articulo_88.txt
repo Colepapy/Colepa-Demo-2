@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 88.- Los Jueces y Tribunales no darán curso a los escritos que se presentaren sin
+cumplir este requisito. Quedan exceptuadas las actuaciones ante la Justicia de Paz y las del
+recurso de Habeas Corpus, y de Amparo, y otros casos establecidos por leyes especiales.

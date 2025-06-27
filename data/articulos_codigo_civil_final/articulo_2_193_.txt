@@ -1,0 +1,18 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.193.- Las servidumbres no perjudicarán los derechos reales ya inscriptos. Los
+acreedores hipotecarios podrán pedir en este caso, que la finca se venda como si el
+gravamen no hubiera existido.
+Si en igual rango concurrieren sobre el mismo fundo, una servidumbre predial con
+otra semejante, o con un derecho de uso, y por su naturaleza no fuere posible ejercer
+aquellas conjuntamente, o sólo pudieren serlo de un modo incompleto, los interesados
+podrán pedir al juez una reglamentación equitativa que consulte el ejercicio de los diversos
+derechos.
+Texto consolidado de la Ley Nº 1183/1985

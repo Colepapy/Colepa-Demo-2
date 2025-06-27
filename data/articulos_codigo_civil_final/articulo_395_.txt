@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: III
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 395.- Si las partes decidieren, después de firmada por ellas la escritura, pero
+antes de lo que hubiere hecho el escribano, corregirla o hacerlo agregados, éstos sólo
+valdrán si fueren extendidos a continuación por aquél, leídos en presencia de los testigos,
+si los hubiere, suscriptos por todos los comparecientes y autorizados por el escribano.

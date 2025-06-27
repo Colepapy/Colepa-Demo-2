@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 403.- Cuando se oponga excepciones se dará traslado de ellas al ejecutante por tres
+días. En caso contrario, o cuando se hubieren opuesto y no fueran admisibles, o plantearen
+sólo una cuestión de puro derecho, el Juez dictará la sentencia de remate dentro de cuarenta y
+ocho horas.

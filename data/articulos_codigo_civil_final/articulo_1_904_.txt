@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: I
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.904.- Los inmuebles del dominio privado del Estado y de propiedad pública o
+privada de las Municipalidades no pueden adquirirse por prescripción.

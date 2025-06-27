@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: N/A
+TITULO: PRELIMINAR
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 20.- Los derechos de propiedad industrial están sometidos a la ley del lugar de
+su creación, a no ser que la materia esté legislada en la República.
+Los derechos intelectuales son regidos por la ley del lugar de registro de la obra.

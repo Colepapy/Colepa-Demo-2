@@ -1,0 +1,14 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 1
+SECCIÓN: N/A
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 170º Requisitos de la Declaración en Detalle y Datos que debe Contener
+---
+TEXTO DEL ARTÍCULO:
+Artículo 111.- Declaración aduanera. Concepto.
+1. Declaración aduanera es el acto por el cual el declarante describe las mercaderías y
+proporciona  la información necesaria para su inclusión en  el régimen aduanero
+solicitado.
+2. Declarante es quien por sí o por representante legalmente autorizado, presenta una
+declaración aduanera.

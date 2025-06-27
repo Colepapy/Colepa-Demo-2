@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: I
+TITULO: VIII
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 243.- En esta oficina se anotarán:
+a) Los juicios que se promuevan ante la Corte Suprema de Justicia, los Tribunales y Juzgados;
+b) Las sentencias interlocutorias y definitivas;
+c) Los exhortos o cartas rogatorias de los Jueces y Tribunales, y los recibos del extranjero; y,
+d) Los juicios que pasan al archivo de los Tribunales.

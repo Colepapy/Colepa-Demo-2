@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: N/A
+SECCIÓN: VIII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.376.- Del pago por intervención debe darse recibo en la misma letra de
+cambio, con la indicación de aquél por cuenta de quien ha sido hecho. En defecto de ella,
+el pago se considera hecho por el librador.
+Texto consolidado de la Ley Nº 1183/1985
+Tanto la letra como el instrumento del protesto, si éste hubiere tenido lugar, deben
+ser entregados al que hizo el pago por intervención.

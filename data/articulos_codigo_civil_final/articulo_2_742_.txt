@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.742.- La remisión de la deuda que hiciere el testador a su deudor, no
+comprende las deudas contraídas con posterioridad a la fecha del testamento.

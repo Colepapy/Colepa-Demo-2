@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo  315.- En cada uno de  los  Registros de  Inmuebles,  Hipotecas, Embargos e
+Inhibiciones se llevarán dos Libros Índices por orden alfabético, según la letra que corresponda
+a la inicial del apellido del dueño de los bienes. Uno de ellos se conservará en la oficina de
+origen y el otro se remitirá al Archivo.

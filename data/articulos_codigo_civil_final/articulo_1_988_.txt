@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: III
+CAPITULO: II
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.988.- El poseedor, cuando ha sembrado, edificado o plantado de buena fe en
+terreno ajeno tiene derecho de retención mientras no sea indemnizado. Si procedió de
+mala fe tendrá ese derecho en caso de que el propietario quisiere conservar las mejoras
+introducidas.

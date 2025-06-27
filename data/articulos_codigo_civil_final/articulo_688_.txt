@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: I
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 688.- Los contratos entre ausentes se perfeccionan desde que la aceptación,
+sea expedida, salvo que haya sido retractada oportunamente, o no llegase en el plazo
+convenido.

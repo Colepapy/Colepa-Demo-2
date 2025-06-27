@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: V
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.374.- La hipoteca comprende, además del capital adeudado, los intereses
+estipulados y adeudados por dos años, y los que corran durante la ejecución, hasta el
+Texto consolidado de la Ley Nº 1183/1985
+pago efectivo, se hayan o no convenido. En las obligaciones que no sean de cantidades de
+dinero, comprende los daños y perjuicios causados por la inejecución, si fueren estimados
+en el acto constitutivo. En caso contrario, no podrán exceder de los intereses legales por el
+tiempo expresado en este artículo. Comprende, asimismo, las costas judiciales.

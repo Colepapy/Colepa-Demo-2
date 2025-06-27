@@ -1,0 +1,15 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 3
+SECCIÓN: 4
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 233º Tratamiento y Procedimientos para Contenedores Anexo Decreto Nº 4.672/05 Artículo 234º Obligaciones del Operador de Contenedores Anexo Decreto Nº 4.672/05 Artículo 235º Aplicación Supletoria Sesquicentenario de la Epopeya Nacional 1864-1870 2. El plazo, las condiciones, modalidades y requisitos para su utilización serán establecidos en las normas reglamentarias. Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 233º Tratamientos y Procedimientos para Contenedores
+---
+TEXTO DEL ARTÍCULO:
+Artículo 176.- Contenedores. Concepto.
+1. Se considera contenedor todo recipiente que haya sido especialmente construido
+para facilitar el traslado de mercaderías en todo tipo de transporte; que tenga suficiente
+fortaleza para resistir su empleo reiterado; llenado y vaciado con facilidad y seguridad;
+que esté provisto de dispositivos que garanticen su inviolabilidad durante el transporte
+y almacenamiento, y que sean identificables mediante marcas y números grabados en
+forma indeleble y fácilmente visibles.

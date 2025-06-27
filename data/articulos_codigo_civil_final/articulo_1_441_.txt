@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XIX
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.441.- Cuando la renta vitalicia es constituida por la duración de la vida de dos
+o más personas, a favor del que da el precio de ella o de un tercero, la renta se debe por
+entero, hasta la muerte de todos aquéllos por la duración de la vida de quienes fue
+constituida.

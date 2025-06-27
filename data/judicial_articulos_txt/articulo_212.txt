@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 212.- La Corte Suprema de Justicia a petición de parte o de oficio, podrá decretar en
+cualquier estado del juicio, la suspensión en el cargo del denunciado, o levantarla, siempre que
+fuere ella procedente, según las circunstancias de la causa.

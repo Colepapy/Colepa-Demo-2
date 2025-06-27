@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: V
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.812.- Cuando la gestión ha sido conducida útilmente, el interesado debe
+cumplir las obligaciones asumidas por el gestor en su nombre y reembolsarle los gastos
+necesarios o útiles que haya efectuado, más los intereses, desde el día en que se hicieron.

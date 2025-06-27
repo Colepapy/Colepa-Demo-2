@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: VII
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 159.- La Corte Suprema de Justicia podrá apercibir al Escribano por irregularidades
+en el desempeño de su cargo, que no configuraren las causales de destitución o suspensión.

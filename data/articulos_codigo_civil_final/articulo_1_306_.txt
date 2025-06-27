@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XVI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.306.- El padre, el tutor y el curador no pueden obligar cambiariamente a sus
+representados, sin autorización del juez, bajo pena de nulidad.

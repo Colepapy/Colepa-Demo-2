@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: VIII
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 253.- El Archivo será organizado por orden de oficinas, colocando con separación los
+expedientes y los protocolos notariales que a cada una corresponda. El Jefe del Archivo
+formará  índices  especiales para cada  oficina e  índices generales de  escrituras y de
+expedientes, por separado.

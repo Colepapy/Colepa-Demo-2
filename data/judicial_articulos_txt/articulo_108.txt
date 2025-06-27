@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 108.- El Escribano Titular podrá pedir a la Corte Suprema de Justicia la cancelación
+de la adscripción de un notario de su registro.
+Derogado Por:

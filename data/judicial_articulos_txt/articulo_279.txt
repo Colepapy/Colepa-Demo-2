@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: II
+---
+ESTADO: Modificado por el artículo 1 de la Ley Nº Texto actual establecido por el artículo 1º de la 963/1982, posteriormente modificado por el Ley Nº 1.838/2001, posteriormente modificado
+---
+TEXTO DEL ARTÍCULO:
+Artículo 279.- Las Escrituras Públicas de actos jurídicos o contratos que deban inscribirse,
+expresarán, por lo menos, todas las circunstancias que, bajo pena de nulidad, debe contener la
+inscripción ya sean relativas a las personas otorgantes, a los bienes o a los derechos
+inscriptos.
+Si los referidos documentos no pudiesen ser inscriptos por omisión de las circunstancias
+referidas, el Escribano que las redactó subsanará dichos efectos, a su costa.
+Modificado por el artículo 1 de la Ley Nº        Texto actual establecido por el artículo 1º de la
+963/1982, posteriormente modificado por el    Ley Nº 1.838/2001, posteriormente modificado

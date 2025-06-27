@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 75.- El   Defensor  de  Pobres   y  Art. 75.- El Defensor tendrá a su cargo  el
+Ausentes   deberá    velar   porque    los cuidado y vigilancia de los incapaces mayores
+Procuradores promuevan  las gestiones que de edad, en cuanto  al  trato,  protección y
+les correspondan y cumplan activa y fielmente demás condiciones de una existencia digna
+los deberes de su cargo.                    con cargo de intervenir en los juicios en que se
+encuentren comprometidos la persona o los
+bienes de estos incapaces.

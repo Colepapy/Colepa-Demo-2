@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: V
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.406.- El coheredero del obligado, o el codeudor de éste que hubiere pagado
+su cuota en la hipoteca, no podrá exigir la cancelación hasta que la deuda se halle
+totalmente extinguida. El coacreedor o coheredero del acreedor, a quien se hubiere
+Texto consolidado de la Ley Nº 1183/1985
+satisfecho su cuota, tampoco podrá hacer cancelar el gravamen, mientras no se pagare
+íntegramente a los otros cointeresados.

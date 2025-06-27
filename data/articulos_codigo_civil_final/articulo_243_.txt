@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: cuyo vicio se purgó durante la comunidad, sea cual fuere el medio;
+CAPITULO: XI
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 243.- Cuando el marido ha reconocido su paternidad expresa o tácitamente, o
+dejó vencer el plazo sin desconocerla, la acción no podrá ser deducida, salvo que por error
+o fraudulentamente el marido haya sido inducido a reconocer el hijo como propio.
+En este caso la acción deberá ser promovida por el marido, sus descendientes o
+herederos, dentro de los sesenta días de conocido el fraude o el error.

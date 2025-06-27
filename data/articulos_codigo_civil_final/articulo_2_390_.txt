@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: V
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.390.- El vendedor del inmueble hipotecado podrá oponerse al abandono que
+quiera hacer el tercer poseedor, cuando el cumplimiento puro y simple del contrato de
+venta, pueda dar la suma suficiente para el pago de los créditos.

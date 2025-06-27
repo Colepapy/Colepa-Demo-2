@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: II
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.508.- Serán válidos los actos del heredero aparente, en los casos previstos
+en el artículo anterior. Lo serán también los de simple administración, y los pagos de las
+deudas y cargas efectivas de la masa, aunque no existiere declaratoria.

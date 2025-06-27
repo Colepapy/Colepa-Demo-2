@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.713.- El legado de cosa que se tenga en comunidad con otro, valdrá sólo
+como transmisión de los derechos del testador.
+Si la cosa legada estuviere comprendida en una masa patrimonial común a varios,
+valdrá como legado de cantidad por el valor de la parte que pertenecía al testador, a
+menos que éste resolviere otra cosa.

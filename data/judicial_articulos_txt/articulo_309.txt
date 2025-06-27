@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 309.- Los registros se llevarán con las mismas formalidades que los de los Escribanos
+Públicos y sólo hará fe aquellas en que se observen las formas establecidas en este Código.

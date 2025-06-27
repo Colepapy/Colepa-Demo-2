@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.039.- La sociedad actúa bajo una razón social constituida por el nombre de
+uno, al menos, de los socios colectivos, con la indicación de ser sociedad en comandita
+Texto consolidado de la Ley Nº 1183/1985
+simple, o con su abreviatura. Debe contener las palabras "y compañía", cuando en ella no
+figuren los nombres de todos los socios colectivos.
+El comanditario que consiente que su nombre sea incluido en la razón social,
+responde respecto de terceros ilimitada y solidariamente, con los socios colectivos, por las
+obligaciones sociales.

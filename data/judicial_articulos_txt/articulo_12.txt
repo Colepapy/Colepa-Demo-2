@@ -1,0 +1,19 @@
+CONTEXTO:
+LIBRO: I
+TITULO: II
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 12.- La competencia en lo criminal se establece por la naturaleza, el lugar y tiempo de
+comisión de los hechos punibles, el grado, el turno y la conexidad.
+En los procesos por delitos y faltas de conexos, el Juez al que corresponda entender en los
+primeros, conocerá también en las faltas.
+En los delitos comunes no habrá más fuero que el ordinario, y éste prevalecerá sobre los
+demás en los delitos conexos. En los delitos cometidos en alta mar a bordo de buques o
+aeronaves nacionales serán competentes los Jueces y Tribunales de la República. Igualmente
+lo serán en los casos en que el momento de la perpetración del delito el buque se hallare en
+aguas jurisdiccionales extranjeras, o la aeronave se encontrare en espacio aéreo extranjero, si
+los Gobiernos afectados no tomaren intervención.

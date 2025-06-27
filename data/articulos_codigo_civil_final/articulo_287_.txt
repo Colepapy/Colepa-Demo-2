@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: I
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 287.- No invalida el acto el error sobre cualidades de la cosa no comprendidas
+en el inciso d) del artículo precedente, aunque hubiese sido motivo determinante del acto,
+a no ser que mediare garantía expresa, o que el agente se hubiese decidido por dolo, o
+que tales estamentos revistiesen el carácter de una condición.

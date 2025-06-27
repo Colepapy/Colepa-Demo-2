@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: IV
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 617.- El plazo de favor otorgado por el acreedor no obsta a la compensación.
+Texto consolidado de la Ley Nº 1183/1985

@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: II
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.513.- Deben restituirse al heredero todos los bienes hereditarios y todas las
+cosas de que el causante tenía la posesión mediata o inmediata, aunque sólo tuviere en
+ellas un derecho de retención.
+No  siendo  posible  la  restitución, se  aplicarán  las  disposiciones  relativas  al
+enriquecimiento sin causa.

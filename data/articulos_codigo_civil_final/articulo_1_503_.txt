@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XXII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.503.- La parte que en la transacción hubiere transferido a la otra alguna cosa
+como suya propia, estará sujeta a la indemnización de pérdidas de intereses si el poseedor
+de ella fuere vencido en juicio; pero la evicción sucedida no hará revivir la obligación
+extinguida en virtud de dicho contrato.

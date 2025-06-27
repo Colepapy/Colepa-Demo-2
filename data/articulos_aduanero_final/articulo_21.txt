@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: II
+CAPITULO: 1
+SECCIÓN: 3
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 21.- Garantía que debe prestar el despachante.
+Para el ejercicio de la profesión, el Despachante de Aduanas deberá prestar las
+garantías establecidas en las normas reglamentarias.

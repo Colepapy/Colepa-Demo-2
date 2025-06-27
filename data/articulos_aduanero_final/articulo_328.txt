@@ -1,0 +1,12 @@
+CONTEXTO:
+TITULO: XII
+CAPITULO: 3
+SECCIÓN: 1
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 328.- Sanción. En los casos de falta aduanera por diferencia se sancionará
+con una multa igual al 50% (cincuenta por ciento) del monto del tributo aduanero en que
+se hubiere perjudicado el erario.
+Sesquicentenario de la Epopeya Nacional 1864-1870

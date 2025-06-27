@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: II
+CAPITULO: I
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 431.- La existencia de una obligación no priva al deudor de la facultad de
+disponer y administrar sus bienes, salvo el caso de que se hayan dictados medidas
+restrictivas, de acuerdo con las normas procesales.

@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: III de este Código.                                 i) Las sociedades anónimas;
+TITULO: N/A
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 106.- En caso de desintegración o acefalía de la dirección, o habiendo litigio
+respecto de ella, podrá nombrarse judicialmente, a solicitud de parte interesada, si hubiere
+urgencia, a uno o más asociados para llenar las vacancias, hasta que la asamblea decida
+lo que corresponda.
+Si faltaren asociados a quienes confiar la dirección, el juez podrá designar otras
+personas reputadas por su idoneidad y honorabilidad.

@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo  87.- Toda persona  física capaz puede gestionar personalmente en  juicio, bajo
+patrocinio de abogado, sus propios derechos y los de sus hijos menores, cuya representación
+tenga. Fuera de estos casos quien quiera comparecer ante los Juzgados y Tribunales de la
+República debe hacerse representar por procuradores o abogados matriculados.

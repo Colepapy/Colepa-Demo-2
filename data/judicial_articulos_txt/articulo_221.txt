@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 221.- Se exceptúan de lo dispuesto en el artículo anterior, los casos en que el
+denunciado aceptare  los cargos formulados  contra  él, o que  la denuncia se hubiese
+acompañado de piezas de convicción incontestables. Siendo así, no es necesaria la apertura
+de la causa a prueba.

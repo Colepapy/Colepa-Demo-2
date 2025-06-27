@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.660.- Cuando el seguro se refiere a la responsabilidad del transportador
+respecto del pasajero, cargador,  destinatario o  tercero, se entiende comprendida  la
+responsabilidad por los hechos de sus dependientes u otras personas por las que sea
+responsable.

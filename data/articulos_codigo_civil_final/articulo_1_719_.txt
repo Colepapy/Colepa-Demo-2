@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXVI
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.719.- Las personas demandadas en virtud del cheque no pueden oponer al
+portador las excepciones fundadas sobre sus relaciones personales con el librador, o con
+los portadores anteriores, a menos que ellas lo hayan adquirido dolosamente en perjuicio
+del deudor.
+Texto consolidado de la Ley Nº 1183/1985

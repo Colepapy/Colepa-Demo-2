@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: X
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 953.- Los gastos del corredor no serán reembolsables, a falta de pacto expreso;
+pero si lo hubiere, se le pagarán aun cuando el negocio no llegare a celebrarse.

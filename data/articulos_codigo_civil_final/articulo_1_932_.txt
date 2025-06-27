@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: y por error de hecho o de derecho estuviere persuadido de su legitimidad. El título
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  1.932.-  Respecto  de  terceros,  la  inscripción  en  el  Registro  Público
+correspondiente, de títulos de transmisión relativos a inmuebles deshabitados, importará la
+transferencia de su posesión por la tradición.

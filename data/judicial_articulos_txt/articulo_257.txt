@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: VIII
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 257.- Los expedientes paralizados remitidos  al Archivo General no podrán ser
+proseguidos sino mediante petición de parte legítima y por mandato judicial.

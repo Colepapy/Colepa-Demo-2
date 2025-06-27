@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 372.- La demanda se formulará por escrito, expresará el nombre y domicilio del
+demandante y demandado; relacionará concretamente los hechos y dará los fundamentos de
+derecho; formulará  las peticiones en términos claros y precisos; acompañará todos  los
+documentos que se refieren a la acción entablada, o señalará, en su defecto, el lugar, archivo u
+oficina en que se encuentren.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XVIII
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.423.- Si entre el banco y el cuentacorrentista existen varias relaciones o
+varias cuentas, aunque sean en monedas diferentes, los saldos activos y pasivos se
+compensarán recíprocamente, salvo pacto en contrario.

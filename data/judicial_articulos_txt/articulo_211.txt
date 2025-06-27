@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: IV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 211.- El juicio podrá ser iniciado de oficio, por denuncia del Ministerio Público o por el
+damnificado personalmente o mediante mandatario con poder  especial. Tratándose de
+incapaces, sus representantes legales estarán habilitados para ello. Será parte en el juicio el
+Agente Fiscal en lo Criminal.

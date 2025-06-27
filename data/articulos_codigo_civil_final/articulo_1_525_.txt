@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: múltiple, a petición y a costa del poseedor. Los títulos de créditos pueden ser
+CAPITULO: N/A
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.525.- El endoso transfiere todos los derechos inherentes al título.
+Si el  título es endosado en blanco, puede su poseedor llenarlo con su propio
+nombre o con el de otra persona, o bien endosarlo de nuevo o transmitirlo a un tercero sin
+llenar el endoso, o sin extender uno nuevo.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXVI
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.732.- El que paga un cheque sin oposición se presume válidamente liberado.
+El girado que paga de un cheque endosable está obligado a verificar la autenticidad
+del cheque, la firma del librador, y la del último endosante.

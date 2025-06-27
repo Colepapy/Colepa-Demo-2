@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 99.- La creación de los Registros    Art. 99.- La creación de los Registros
+Notariales se hará por Ley atendiendo a las   Notariales se hará por Ley atendiendo a las
+necesidades del país.            necesidades del país.
+Dichos Registros serán numerados por la    Dichos registros serán numerados por la Corte
+Corte Suprema de Justicia.         Suprema de Justicia.
+Los Notarios y Escribanos obtendrán el    Los Notarios y Escribanos obtendrán el
+usufructo de Registros del Poder Ejecutivo con  usufructo de registros, de la Corte Suprema de
+acuerdo de la Corte Suprema de Justicia.     Justicia.

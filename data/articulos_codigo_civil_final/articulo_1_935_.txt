@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: y por error de hecho o de derecho estuviere persuadido de su legitimidad. El título
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.935.- La posesión fundada en un título, comprende sólo la extensión del
+título, sin perjuicio de las agregaciones que por otras causas hubiese hecho el poseedor.

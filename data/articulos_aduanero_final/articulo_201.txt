@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: VI
+CAPITULO: 3
+SECCIÓN: 8
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 201.- Momento de vigencia de tributos aplicables a la importación.  Los
+elementos necesarios para el cálculo de los tributos que gravan la importación para
+consumo, serán los vigentes al momento del registro de esta última.

@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: II
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.515.- Compete al heredero una acción posesoria para ser mantenido o
+reintegrado en la posesión de la herencia, o de los bienes que dependen de ella.

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 965.- Los contratos serán formalizados por escrito. Lo serán por escritura
+pública en los casos previstos por este Código.
+Texto consolidado de la Ley Nº 1183/1985

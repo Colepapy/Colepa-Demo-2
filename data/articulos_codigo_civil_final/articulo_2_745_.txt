@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.745.-  El legado de un  crédito  del  testador comprende sólo  la deuda
+subsistente y los intereses vencidos a su muerte. El heredero no es responsable de la
+insolvencia del deudor. El legatario tiene todas las acciones que tendría el heredero.

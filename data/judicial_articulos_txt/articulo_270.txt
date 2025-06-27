@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 270.- Si un inmueble se encuentra en dos o más distritos, se inscribirá íntegramente
+en todas las secciones a que pertenece, con constancia de la pluralidad de la inscripción en
+cada una de ellas.

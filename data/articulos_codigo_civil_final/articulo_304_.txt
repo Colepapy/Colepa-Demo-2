@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: II
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 304.- La expresión por escrito puede tener lugar por instrumento público o
+instrumento privado, salvo  los casos en que  la forma de instrumento público fuere
+exclusivamente dispuesta.

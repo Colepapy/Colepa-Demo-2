@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: X
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.439.- Compete la acción confesoria:
+a) a los poseedores de inmuebles con derechos de poseer;
+b) a los titulares verdaderos o putativos de servidumbres activas; y
+c) a los acreedores hipotecarios de inmuebles dominantes.

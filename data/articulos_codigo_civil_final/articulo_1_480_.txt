@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XXI
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.480.- Tampoco el fiador podrá exigir al deudor el reembolso de los que
+hubiere pagado, si dejó de oponer las excepciones que sabía tenía el deudor contra el
+acreedor, o cuando no produjo las pruebas, o no interpuso los recursos que podría oponer
+a la acción del acreedor.

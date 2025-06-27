@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: I
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.894.- Si unas cosas se han adherido a las otras para formar un todo, sin
+poderse distinguir la accesoria de la principal, se tendrá por principal la de mayor valor. Si
+los valores fueren iguales, será principal la de mayor volumen. Si los valores y volúmenes
+fueren iguales, no habrá cosa principal ni cosa accesoria.

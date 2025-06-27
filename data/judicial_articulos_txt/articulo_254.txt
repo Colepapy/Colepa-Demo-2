@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: VIII
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 254.- Los índices de las escrituras expresarán los nombres y apellidos de los
+otorgantes, fecha de las escrituras, sus objetos, nombre y apellido de los Escribanos y oficina.
+Los índices de los expedientes determinarán los nombres y apellidos de las partes, jueces,
+secretaría y objeto del juicio.

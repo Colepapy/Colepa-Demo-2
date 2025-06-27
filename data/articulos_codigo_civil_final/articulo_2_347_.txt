@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: IV
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.347.- La ejecución prendaria implica la apertura de un concurso especial con
+los bienes prendados. La quiebra, la convocación de acreedores, o el trámite del juicio
+sucesorio del deudor, no ejercerán fuero de atracción sobre el juicio ejecutivo prendario.

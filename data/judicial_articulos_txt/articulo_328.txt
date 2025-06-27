@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 328.- El Registro será público para el que tenga interés justificado en averiguar el
+estado de los bienes inmuebles o derechos reales inscriptos.

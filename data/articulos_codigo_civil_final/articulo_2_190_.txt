@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: IX
+CAPITULO: I
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.190.- El propietario del predio sirviente no está obligado a realizar ningún acto
+para hacer posible el ejercicio de la servidumbre por el titular de ella, salvo que la ley o el

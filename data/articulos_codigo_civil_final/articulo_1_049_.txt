@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: II
+CAPITULO: XI
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.049.- La denominación social, de cualquier modo, que esté formada, debe
+contener la indicación de ser sociedad anónima.
+Texto consolidado de la Ley Nº 1183/1985

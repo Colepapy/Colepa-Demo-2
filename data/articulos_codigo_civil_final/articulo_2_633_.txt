@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.633.- Las disposiciones del testador escritas después de su firma deben ser
+fechadas y firmadas por él para que puedan valer como disposiciones testamentarias.

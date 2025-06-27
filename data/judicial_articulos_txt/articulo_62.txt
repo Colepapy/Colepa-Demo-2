@@ -1,0 +1,34 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IV
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 62.- Para ser Fiscal General del      Para ser Fiscal Adjunto, se deben llenar los
+Estado se debe llenar los requisitos          mismos requisitos establecidos en la
+establecidos por la Constitución Nacional; y     Constitución Nacional para el cargo de Fiscal
+para ser Agente Fiscal y Procurador Fiscal ser  General del Estado.
+de nacionalidad paraguaya, haber cumplido
+veintidós años y poseer título de abogado
+expedido por una Universidad Nacional o una
+extranjera, debidamente revalidado.
+Para ser Agente Fiscal o Procurador Fiscal, se
+debe tener nacionalidad paraguaya, haber
+cumplido treinta años, poseer título de
+abogado expedido por una universidad pública
+o privada, nacional, o extranjera debidamente
+revalidado, haber ejercido efectivamente la
+profesión, función de la magistratura judicial, la
+secretaría de un juzgado, o la cátedra
+universitaria en materia jurídica durante cinco
+años cuanto menos, conjunta, separada o
+alternativamente y haber aprobado el examen
+establecido por el Consejo de la Magistratura.
+Para ser relator o asistente fiscal, se debe
+tener nacionalidad paraguaya, y poseer título
+de abogado expedido por una universidad
+pública o privada, nacional, o extranjera
+debidamente revalidado.

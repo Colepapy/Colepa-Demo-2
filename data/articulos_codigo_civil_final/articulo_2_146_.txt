@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.146.- A  los  efectos de  la  construcción de  la propiedad  por  pisos o
+departamentos, toda persona o grupo de personas, deberá  instituir un reglamento de
+copropiedad y administración, formalizado por escritura pública, que será inscripta en el
+Registro de Inmuebles, así como toda modificación que del mismo se hiciere. Para su
+reforma, será necesario el voto de dos tercios de los propietarios que representen por lo
+menos la mitad del valor del edificio.

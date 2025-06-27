@@ -1,0 +1,10 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: V
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.809.- El gestor debe tener capacidad de contratar.

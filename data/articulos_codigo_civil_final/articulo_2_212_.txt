@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: N/A
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.212.- Todo propietario está obligado a dar paso por sus fundos a las líneas de
+conducción eléctrica, de conformidad con las leyes especiales relativas a esta materia.
+Cuando para establecer comunicaciones telefónicas particulares entre dos o más
+fincas, sea necesario colocar postes y tender alambres en una finca ajena, el dueño de
+Texto consolidado de la Ley Nº 1183/1985
+ésta tiene obligación de permitirlo, mediante la indemnización correspondiente del perjuicio
+que sufra por ello. Esta servidumbre trae consigo el derecho de tránsito de las personas y
+el de conducción de los materiales necesarios para la construcción y vigilancia de la línea.

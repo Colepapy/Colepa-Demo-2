@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: II
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.234.- El usufructo se adquiere:
+a) por contrato, en las mismas condiciones en que se adquiere el dominio de las
+cosas y de los derechos;
+b) por prescripción, en iguales casos que puede adquirirse el dominio de las cosas
+muebles o inmuebles por ese medio;
+c) por la ley; y
+d) por actos de última voluntad.
+El usufructo no puede constituirse por sentencia judicial.

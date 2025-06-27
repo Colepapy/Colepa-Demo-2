@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 114.- Estas disposiciones son aplicables a los Jueces de Paz del interior, autorizados
+por la ley a extender escrituras públicas.

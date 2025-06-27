@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: II
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.522.- Antes de la partición, los herederos podrán enajenar bienes hereditarios
+con autorización judicial, en la medida necesaria para el pago de las deudas y cargas de la
+sucesión.

@@ -1,0 +1,20 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 70.- El  Ministerio  de   la  Defensa  Art. 70.- El Ministerio de la Defensa Pública
+Pública será desempeñado ante los Juzgados será  desempeñado   por   Defensores   y
+y Tribunales por los Defensores de Pobres y Procuradores  de   Pobres,   Ausentes  e
+Ausentes, por los Abogados del Trabajo, por Incapaces Mayores de Edad, los Abogados
+los Defensores de Pobres en el Fuero Penal y del Trabajo, los Defensores de Pobres en el
+el Ministerio Pupilar.                        Fuero Penal y los Auxiliares de la Justicia de
+Menores, previstos en los incisos a) y b) del
+art. 235 de la Ley N° 903/81.
+DEL DEFENSOR DE POBRES Y AUSENTES Y EL MINISTERIO PUPILAR
+Texto Anterior de la Ley N° 879/1981          Texto actual establecido por el artículo 1 de la
+Ley Nº 963/1982

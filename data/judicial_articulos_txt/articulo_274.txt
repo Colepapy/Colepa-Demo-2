@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 274.- El Registro de Inmuebles entregará el documento al portador del recibo a que se
+refiere el artículo anterior, endosado por éste mismo portador, sin perjuicio de la anotación de
+la entrega en el Libro de Salida.

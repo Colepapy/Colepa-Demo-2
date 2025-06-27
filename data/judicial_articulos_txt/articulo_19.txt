@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: I
+TITULO: II
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 19.- Puede demandarse ante el Juez nacional el cumplimiento de los contratos que
+deban ejecutarse en la República, aunque el demandado no tuviere su domicilio o residencia
+en ella.
+Si el deudor tuviere su domicilio en la República y el contrato debiera cumplirse fuera de ella,
+podrá ser demandado ante el Juez de su domicilio.

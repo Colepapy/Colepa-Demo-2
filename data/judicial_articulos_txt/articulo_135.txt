@@ -1,0 +1,17 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 135.- Las escrituras públicas, que formalizaren los Notarios en sus protocolos, no
+requerirán testigos instrumentales del acto, sino en los siguientes casos:
+a) En los testamentos por acto público;
+b) Cuando los otorgantes no sepan o no puedan firmar;
+c) Cuando el Escribano creyere conveniente exigir testigos, caso en el cual lo hará constar en
+el respectivo instrumento;
+d) Cuando las partes lo pidieren, circunstancia que también se hará constar; y,
+e) Cuando cualquiera de los otorgantes fuere ciego.

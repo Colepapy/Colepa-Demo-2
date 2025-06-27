@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: II
+CAPITULO: I
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 459.- El juez reducirá equitativamente la pena cuando sea manifiestamente
+excesiva, o cuando la obligación principal hubiese sido en parte o irregularmente cumplida
+por el deudor.

@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: IV
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.321.- Cuando existen varias prendas sobre el crédito prendado, el acreedor
+que tiene la más antigua ejerce el derecho de cobrar su importe en primer término.

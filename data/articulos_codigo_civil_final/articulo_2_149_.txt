@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.149.- En caso de silencio y obscuridad de las disposiciones del reglamento de
+copropiedad, las relaciones jurídicas entre los propietarios se regirán por las normas de
+este Código.

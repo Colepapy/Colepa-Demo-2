@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: gratuito, o en caso de haber gravado algún bien, el importe de su disminución, a no
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 852.- El contrato de obra tiene por finalidad la ejecución de determinado trabajo
+que una de las partes se obliga a realizar, por sí o bajo su dirección, mediante un precio en
+dinero.
+El que realiza la obra podrá también suministrar materiales para su ejecución.

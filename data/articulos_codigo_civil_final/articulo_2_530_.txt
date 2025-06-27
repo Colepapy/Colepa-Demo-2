@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: II
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.530.- La partición entre coherederos mayores de edad, podrá efectuarse en la
+forma que convinieren por unanimidad, debiendo observarse lo dispuesto en este Código
+sobre la forma de lo contratos.

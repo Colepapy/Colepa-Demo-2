@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.795.- El albacea tiene derecho a intervenir en las cuestiones relativas a la
+validez del testamento, o a la ejecución de sus disposiciones; pero no puede hacerlo en los
+litigios que promuevan los acreedores de la sucesión, u otros terceros, si no comprometen
+dicha ejecución.

@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: de propiedad entre las partes y sus sucesores, siempre que haya sido inscripta en el
+CAPITULO: III
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.034.- Es libre la pesca en los ríos y lagos navegables. En los no navegables y
+en los arroyos, los propietarios ribereños tienen el derecho de pescar por su lado, hasta el
+medio del río o arroyo.
+En todos los casos, la pesca se sujetará a los reglamentos dictados por la autoridad
+competente.
+PARÁGRAFO II
+DEL HALLAZGO DE LA COSA PERDIDA

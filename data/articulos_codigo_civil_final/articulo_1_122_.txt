@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  1.122.-  El síndico que  tuviere  interés en determinada operación deberá
+abstenerse de participar en todo lo relativo a ella, so pena de perder el cargo y responder
+de los daños y perjuicios causados a la sociedad.

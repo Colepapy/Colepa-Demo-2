@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXIV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.578.- Cuando existiere agravación del riesgo y el asegurador optase por no
+rescindir el contrato, o la rescisión fuese improcedente, corresponderá el reajuste de la
+prima de acuerdo con el nuevo estado del riesgo desde la denuncia, según la tarifa
+aplicable en este momento.
+PARÁGRAFO IX
+DE LA CADUCIDAD

@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.628.- El testamento ológrafo debe ser totalmente escrito, fechado y firmado
+de puño y letra del testador en todas sus hojas. Si por mandato del otorgante, una parte
+del instrumento fuere de mano extraña, el acto será nulo.

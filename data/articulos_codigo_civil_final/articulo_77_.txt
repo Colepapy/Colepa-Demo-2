@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: I
+CAPITULO: VI
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  77.-  Admitida  la  denuncia,  el  juez nombrará un  curador  provisional  al
+denunciado, salvo que no  lo considere necesario, atento a las circunstancias, y se
+sustanciará el juicio en el que serán parte el denunciado, el denunciante, el Defensor de
+Incapaces y el curador, en su caso.

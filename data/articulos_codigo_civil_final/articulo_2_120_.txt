@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: singular, siempre que se hubiere inscripto una medida cautelar relativa a la deuda. Si
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.120.- Lo dispuesto en  los  artículos anteriores sobre paredes o muros
+medianeros, en cuanto a los derechos y obligaciones de los condóminos entre sí, tiene
+lugar, en lo que fuere aplicable, respecto de zanjas, cercas o de otras separaciones de los
+terrenos en las mismas circunstancias.

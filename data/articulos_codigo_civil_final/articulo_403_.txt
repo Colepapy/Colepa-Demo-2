@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: III
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  403.-  Si  el  documento  firmado  en  blanco  hubiere  sido  sustraído  o
+fraudulentamente obtenido del signatario, o de la persona a quien se haya confiado, y
+fuere llenado por un tercero en perjuicio del firmante, podrán admitirse todos los medios de
+prueba. Las convenciones hechas con terceros por el portador del instrumento no pueden
+oponerse al signatario, aunque los terceros hubiesen procedido de buena fe.

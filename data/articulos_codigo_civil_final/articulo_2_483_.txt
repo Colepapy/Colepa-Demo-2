@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: I
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.483.- Se pierde el beneficio de inventario por la ocultación fraudulenta que el
+heredero hiciere de algunos bienes de la sucesión al efectuar el inventario.
+También  se  lo  perderá  cuando  se  contravinieren  las normas que  rige  la
+administración o gestión de la herencia, con perjuicio grave para los acreedores de la
+sucesión.

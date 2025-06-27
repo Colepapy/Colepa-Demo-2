@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: o de las garantías del crédito. Cuando la repetición no es admitida, el que pagó se
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.823.- Si el que recibió una cosa cierta de buena fe la enajenó antes de
+conocer su obligación de devolverla, deberá restituir la compensación que obtuvo. Si ésta
+se debe todavía, el que pagó lo indebido se subroga en los derechos al enajenante. Si la
+enajenación se hizo gratuitamente, el tercero adquirente queda obligado en la medida de
+su enriquecimiento ante el que hizo el pago indebido.

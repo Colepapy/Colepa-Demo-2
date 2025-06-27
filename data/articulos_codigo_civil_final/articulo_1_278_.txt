@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XIV
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.278.- El comodatario es igualmente responsable si la cosa perece por un
+caso fortuito al que podía sustraerla sustituyéndola por la cosa propia, o si pudiendo salvar
+una de las dos cosas, ha preferido la propia.
+El comodatario que emplea  la cosa para uso diverso o por más tiempo del
+convenido, es responsable de la pérdida ocurrida por causa que no le sea imputable,
+cuando no pruebe que la cosa habría perecido igualmente si no la hubiere empleado para
+uso diverso, o la hubiese restituido a su debido tiempo.

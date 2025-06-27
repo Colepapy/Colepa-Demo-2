@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XXI
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.457.- La fianza puede ser convencional, o legal. Cuando sea impuesta por la
+ley, el fiador debe estar domiciliado en el lugar del cumplimiento de la obligación principal,
+y ser abonado, por tener bienes raíces conocidos, o por gozar en el lugar de un crédito
+indisputable de fortuna. Los jueces pueden admitir en vez de ellas prendas o hipotecas
+suficientes.

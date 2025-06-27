@@ -1,0 +1,10 @@
+CONTEXTO:
+TITULO: X
+CAPITULO: 1
+SECCIÓN: N/A
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 354º Garantía para Cobrar una o más Operaciones Aduaneras Anexo Decreto Nº 4.672/05 Artículo 357º Obligación de Liberar la Garantía
+---
+TEXTO DEL ARTÍCULO:
+Artículo 295.- Liberación proporcional de garantía. La garantía será liberada
+proporcionalmente al cumplimiento de las obligaciones que le dieran causa.

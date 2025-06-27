@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: VIII
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.868.- Después de la condena del acusado en el juicio criminal, no se podrá
+negar en el juicio civil la existencia del hecho principal que constituye el delito, ni impugnar
+la culpa del condenado.
+La sentencia dictada en juicio criminal no será oponible al obligado a responder por
+el hecho de otro, si aquél no tuvo ocasión de ejercer su defensa.

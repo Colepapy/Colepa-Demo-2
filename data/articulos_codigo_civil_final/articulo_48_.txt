@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: PRIMERO
+TITULO: I
+CAPITULO: III
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 48.- La persona perjudicada por un cambio de nombre puede impugnarlo
+judicialmente dentro de un año a partir del día en que se publicó la sentencia del juez que
+lo autorizó.

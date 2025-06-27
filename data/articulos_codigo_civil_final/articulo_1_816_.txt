@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: V
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.816.- Los gastos de entierro proporcionados a las condiciones del fallecido y
+acorde con los usos locales, podrán ser cobrados de las personas que hubiesen tenido
+obligación de prestar alimentos al difunto, si este no dejare bienes suficientes.

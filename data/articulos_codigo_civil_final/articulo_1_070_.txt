@@ -1,0 +1,20 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.070.- Las acciones pueden ser    Art.   1.070.-  Las  acciones  serán
+nominativas o  al portador, según  lo  nominativas y su transferencia estará
+establezca el acto constitutivo.           sujeta a las condiciones establecidas
+Las acciones  al portador no serán  para los títulos nominativos.
+entregadas a sus dueños mientras no
+estén enteramente pagadas.
+Texto consolidado de la Ley Nº 1183/1985
+El acto constitutivo puede subordinar
+a    condiciones    particulares     la
+enajenación    de     las    acciones
+nominativas.

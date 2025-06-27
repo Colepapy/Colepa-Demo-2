@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo  92.- En  la  solicitud de  inscripción,  el abogado o procurador manifestará bajo
+juramento que no lo afectan las incompatibilidades previstas por este Código para el ejercicio
+de la profesión.

@@ -1,0 +1,25 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: IV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.299.- La prenda garantiza el pago  Art. 2.299.- La prenda garantiza el pago
+preferente de  la deuda, sus intereses  preferente de  la deuda, sus intereses
+convencionales   y   moratorios,   las  convencionales, así como los moratorios
+cláusulas penales, y en su caso,  los  y punitorios, las cláusulas penales y, en
+daños  causados  por   la   falta  de  su caso, los daños causados por la falta
+cumplimiento de la obligación, así como  de cumplimiento de la obligación, como
+los gastos judiciales de la ejecución. Si  también las costas de la ejecución. Si la
+la prenda se constituyó por un tercero,  prenda es abierta, el monto de la deuda,
+no puede ser extendida la obligación por  los intereses, cláusulas penales, gastos,
+actos jurídicos posteriores del deudor.    costas  y  daños  serán  pagados  con
+preferencia sólo hasta el monto máximo
+de  afectación.  Si  existiere remanente,
+éste constituirá un crédito sin garantía.
+Si la prenda se constituyó por un tercero,
+no puede ser extendida la obligación por
+actos jurídicos posteriores del deudor.

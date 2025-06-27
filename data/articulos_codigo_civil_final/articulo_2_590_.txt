@@ -1,0 +1,19 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: V
+CAPITULO: III
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.590.- El cónyuge sobreviviente,   Artículo     2.590.-     El    cónyuge
+cuando concurriere con ascendientes, o  sobreviviente, cuando  concurriere con
+descendientes       extramatrimoniales,  ascendientes extramatrimoniales, tendrá
+tendrá derecho a una cuarta parte sobre  derecho a una  cuarta  parte sobre  el
+Texto consolidado de la Ley Nº 1183/1985
+el   haber    líquido    hereditario   de  haber líquido hereditario de gananciales.
+gananciales.  Este  beneficio no  existe  Este  beneficio  no  existe  cuando  el
+cuando   el  cónyuge  concurre  con  cónyuge  concurre  con  ascendientes
+descendientes     o      ascendientes  matrimoniales.
+matrimoniales.

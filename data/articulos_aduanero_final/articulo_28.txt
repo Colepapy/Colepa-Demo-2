@@ -1,0 +1,15 @@
+CONTEXTO:
+TITULO: II
+CAPITULO: 1
+SECCIÓN: 3
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 28.- Mandato para solicitar y percibir devoluciones de tributos.
+El mandato conferido al Despachante de Aduanas para solicitar y percibir devoluciones
+o acreditamiento de tributos, deberá ser otorgado expresamente por el declarante o
+consignatario.
+Para percibir sumas de dinero o su acreditamiento en nombre del mandante, el mismo
+deberá actuar con Poder Especial otorgado ante Escribano Público, con facultad
+expresa de percibir sumas de dinero o su acreditamiento.

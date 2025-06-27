@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: I
+TITULO: V
+CAPITULO: III
+SECCIÓN: IV
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 147.- Los Presidentes de los Tribunales de Apelación o los Miembros que éstos
+designen, inspeccionarán las oficinas notariales cada tres meses ordinariamente o antes si los
+juzgasen oportuno, a fin de examinar si los protocolos están bien llevados y conservados en la
+forma que este Código y los reglamentos determinan, pudiendo decretar medidas disciplinarias
+para los defectos o abusos que constatasen sin perjuicio de las que corresponden a la Corte
+Suprema de Justicia. Dicha facultad en el interior corresponde a los Jueces de Instrucción,
+donde no hubiere Tribunales de Apelación.

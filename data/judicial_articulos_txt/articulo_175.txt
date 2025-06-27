@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: I
+TITULO: Corregido por:
+CAPITULO: VII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 175.- Para la concesión de la matrícula por la Corte Suprema de Justicia, deben
+concurrir las siguientes condiciones: título profesional, mayoría de edad, honorabilidad y buena
+conducta. La Corte Suprema de Justicia podrá casar la matrícula en los mismos casos y por los
+mismos procedimientos establecidos en este Código para abogados y procuradores.

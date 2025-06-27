@@ -1,0 +1,16 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: N/A
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.218.- La conducción se hará en forma tal que no permita derrames, ni deje
+estancar el agua o acumular basuras y que ofrezca, de trecho en trecho, los puentes
+necesarios para la cómoda administración y cultivos de las heredades sirvientes.
+Deberá permitirse la entrada de trabajadores para la limpieza y reparación del
+acueducto, como también la de un inspector o cuidador, previo aviso al encargado del
+predio; pero sólo de tiempo en tiempo, o con la frecuencia que el juez determinare,
+atendidas las circunstancias.

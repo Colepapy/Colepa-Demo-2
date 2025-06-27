@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 389.- El Juez dictará sentencia dentro de los diez días de realizada la audiencia de
+prueba. La sentencia podrá ser apelada dentro de las cuarenta y ocho horas. Podrá también,
+interponerse conjuntamente con el de apelación el recurso de nulidad por violación de las
+normas substanciales del juicio.

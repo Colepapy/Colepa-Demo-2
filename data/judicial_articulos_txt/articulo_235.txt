@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: I
+TITULO: de abogado; y,
+CAPITULO: V
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 235.- Los Jefes del Ministerio de la Defensa Pública y del Ministerio Pupilar ejercerán
+la superintendencia directa sobre los funcionarios dependientes de ellos y velarán por el
+cumplimiento de sus deberes, examinando las quejas que se promuevan contra éstos por
+inacción o retardo en el ejercicio de sus funciones.
+Podrán apercibirlos y amonestarlos y solicitarán, cuando fuere necesario, sus suspensión
+temporaria u otras medidas disciplinarias a la Corte Suprema de Justicia.

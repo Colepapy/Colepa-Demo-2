@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.150.- El directorio suspendido puede promover juicio en el término de diez
+días de notificado, para probar la inexactitud de los fundamentos alegados por el fiduciario.
+Promovida  la acción, no podrá resolverse  la  liquidación hasta que no exista
+sentencia firme; entre tanto, el fiduciario debe limitarse a los actos de conservación y
+administración ordinaria de los bienes de la deudora.

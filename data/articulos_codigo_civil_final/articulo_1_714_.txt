@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XXVI
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.714.- El endoso transmite todos los derechos inherentes al cheque. Si el
+endoso es en blanco, el portador puede:
+a) llenar el blanco, sea con su propio nombre o el de otra persona;
+b) endosar nuevamente en blanco el cheque, o a otra persona; y
+c) remitir el cheque a otro, sin llenar el blanco, ni endosarlo.

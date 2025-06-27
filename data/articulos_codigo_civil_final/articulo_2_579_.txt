@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: V
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.579.- No su puede representar sino a los que habrían tenido derechos
+hereditarios  si hubieren sobrevivido  al causante o no hubieren sido excluidos de  la
+sucesión.

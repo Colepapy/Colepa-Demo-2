@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XIX
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.433.- Puede constituir una renta vitalicia suministrando el dinero necesario, el
+que tenga capacidad para darlo en préstamo, y es capaz de obligarse a pagarla, quien
+pueda contraer un préstamo.
+Es capaz para constituir una renta mediante venta de cosas muebles o inmuebles,
+el que lo sea para venderlas y puede comprometerse a pagarla, el que sea capaz para
+comprar.

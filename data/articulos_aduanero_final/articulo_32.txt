@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: II
+CAPITULO: 1
+SECCIÓN: 4
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 32.- Garantía que debe prestar el agente de transporte.
+Para el ejercicio de la profesión, el agente de transporte deberá prestar las garantías
+establecidas en las normas reglamentarias.

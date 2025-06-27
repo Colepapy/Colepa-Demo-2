@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 271.- Los títulos sujetos a inscripción debe constar en escritura pública, instrumento
+público, sentencia ejecutoriada o documento auténtico.

@@ -1,0 +1,23 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: V
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.582.- En todos los casos en que la   Artículo 2.582.- En todos los casos en
+representación es admitida, la partición  que  la representación es  admitida,  la
+se hace por estirpes, sean del mismo o  partición se hace por estirpes, sean del
+de diferente grado los herederos. Si una mismo  o  de   diferente  grado   los
+estirpe  produce   varias   ramas,   la  herederos. Si una estirpe produce varias
+subdivisión se hace también por estirpes  ramas, la subdivisión se hace también
+en cada rama, y los miembros de  la  por  estirpes  en  cada  rama,  y  los
+misma rama se dividen entre ellos por  miembros de la misma rama se dividen
+cabeza.                                   entre ellos por cabeza.
+El derecho de  representación en  la
+familia  extramatrimonial  se  limita  al
+Texto consolidado de la Ley Nº 1183/1985
+cuarto grado en la línea descendente y
+en la colateral.

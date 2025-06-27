@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: II
+TITULO: N/A
+CAPITULO: II
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 402.- Si el deudor no paga en el acto quedará desde ese momento citado de remate
+para que oponga excepciones, si las tuviere, dentro de tercero día.

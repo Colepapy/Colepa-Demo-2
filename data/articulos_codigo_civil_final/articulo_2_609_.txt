@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: I
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.609.- La ley del domicilio del testador, al tiempo de otorgar testamento, rige
+su capacidad para testar.
+La validez del contenido del testamento, se juzga según la ley en vigor en el
+domicilio del testador al tiempo de su muerte.

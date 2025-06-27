@@ -1,0 +1,11 @@
+CONTEXTO:
+TITULO: VIII
+CAPITULO: 1
+SECCIÓN: 1
+---
+ESTADO: Reglamentado por: Anexo Decreto Nº 4.672/05 Artículo 329º Tributos o Derechos Antidumping y Compensatorios Anexo Decreto Nº 4.672/05 Artículo 330º Notificación a la Autoridad Aduanera del Inicio de la Investigación
+---
+TEXTO DEL ARTÍCULO:
+Artículo 250.- Nacimiento de  la obligación  tributaria. La obligación  tributaria
+aduanera de importación y exportación nace con la numeración de la declaración
+aduanera para ingreso o egreso de las mercaderías a consumo.

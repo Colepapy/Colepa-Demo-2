@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: I
+CAPITULO: II
+SECCIÓN: V
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 318.- En los actos jurídicos, las partes podrán subordinar a un acontecimiento
+futuro e incierto, la existencia o la resolución de sus efectos.

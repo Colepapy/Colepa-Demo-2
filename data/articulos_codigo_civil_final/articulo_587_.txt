@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: más antiguo.
+CAPITULO: IV
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 587.- Si deben entregarse cosas  inciertas, cuya elección corresponda  al
+acreedor, tiene que hacerse una intimación a fin de que la efectué. Si no la hace, el juez
+autorizará al deudor para que elija y luego se intime el recibo, como si se tratara de
+cuerpos ciertos.

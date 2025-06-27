@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: SEGUNDO
+TITULO: II
+CAPITULO: I
+SECCIÓN: II
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 450.- Los daños comprenden el valor de la pérdida sufrida y el de la utilidad
+dejada de percibir por el acreedor como consecuencia de la mora o del incumplimiento de
+la obligación. Su monto será fijado en dinero, a menos que la ley dispusiere otra forma.

@@ -1,0 +1,15 @@
+CONTEXTO:
+LIBRO: I
+TITULO: IX
+CAPITULO: I
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Artículo 298.- En todos los casos de anotación preventiva el interesado podrá exigir que el
+Jefe de la oficina le dé copia de dicha anotación autorizada con su firma, en la cual conste si
+hay o no pendientes de registros algunos otros títulos relativos al mismo bien, y cuáles sean
+éstos en su caso.
+Sesquicentenario de la Epopeya Nacional 1864-1870
+Texto consolidado de la Ley Nº 879/1981

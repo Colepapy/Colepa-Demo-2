@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: N/A
+CAPITULO: XII
+SECCIÓN: VI
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.222.- Serán donaciones remuneratorias, aquéllas que se  realizaren en
+recompensa de servicios prestados al donante por el donatario, apreciables en dinero y por
+los cuales hubiese podido exigir el pago.
+Si en el instrumento de la donación no constare con claridad lo que se tiene en mira
+remunerar, aquella se tendrá como gratuita.

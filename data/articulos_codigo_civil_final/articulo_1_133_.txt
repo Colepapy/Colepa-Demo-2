@@ -1,0 +1,12 @@
+CONTEXTO:
+LIBRO: TERCERO
+TITULO: y derechos que comporta;          título y derechos que comporta;
+CAPITULO: N/A
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.133.- Los debentures con garantía común cobrarán sus créditos al mismo
+tiempo que los acreedores quirografarios, sin perjuicio de lo establecido en las demás
+disposiciones de este Código.

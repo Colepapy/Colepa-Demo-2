@@ -1,0 +1,13 @@
+CONTEXTO:
+LIBRO: QUINTO
+TITULO: VI
+CAPITULO: II
+SECCIÓN: III
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art.  2.647.-  El cumplimiento de  las exigencias  establecidas en  los  artículos
+precedentes debe constar en el cuerpo mismo del testamento, bajo pena de nulidad. La
+lectura y suscripción del testamento se ejecutarán ante o por el escribano en presencia de
+los testigos del acto, que deben ver al testador en todo momento, lo que se hará constar.

@@ -1,0 +1,11 @@
+CONTEXTO:
+LIBRO: TERCERO - TITULO II
+TITULO: de procuración.
+CAPITULO: XXII
+SECCIÓN: N/A
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 1.496.- Para transigir, las partes deben tener capacidad para disponer del
+derecho que es objeto de controversia. En caso contrario la transacción será nula.

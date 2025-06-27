@@ -1,0 +1,14 @@
+CONTEXTO:
+LIBRO: CUARTO
+TITULO: disponga otra cosa. Tal acto valdrá como simple obligación para el deudor y sus
+CAPITULO: V
+SECCIÓN: I
+---
+ESTADO: Vigente
+---
+TEXTO DEL ARTÍCULO:
+Art. 2.367.- La parte indivisa de un inmueble puede gravarse, pero la hipoteca
+quedará subordinada en cuanto a sus efectos, al resultado de la división o licitación entre
+los condóminos.
+Cuando el copropietario constituyente viniere a ser propietario de la totalidad, el
+gravamen quedará limitado al derecho que le correspondía sobre la cosa.
