@@ -125,3 +125,20 @@ document.addEventListener('DOMContentLoaded', function() {
         textoElemento.innerHTML = nuevoTexto.replace(/\n/g, '<br>');
     }
 });
+function consultar() {
+  const pregunta = document.getElementById("pregunta").value;
+
+  fetch("https://colepa-demo-2-production.up.railway.app/consultar", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ pregunta })
+  })
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById("respuesta").innerText = data.respuesta || "No se obtuvo respuesta.";
+  })
+  .catch(error => {
+    console.error(error);
+    document.getElementById("respuesta").innerText = "Error al conectar con Colepa.";
+  });
+}
