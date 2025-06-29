@@ -1,4 +1,4 @@
-// Archivo: script.js (Versión con Corrección Final de CORS)
+// Archivo: script.js (Versión Definitiva con Manejo de Fuente Nula)
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -67,11 +67,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ pregunta: pregunta })
             });
-
+            
             const datos = await respuestaApi.json();
             
             if (respuestaApi.ok) {
-                const textoRespuesta = `${datos.respuesta}\n\n---\nFuente: ${datos.fuente.ley}, Art. ${datos.fuente.articulo_numero}`;
+                let textoRespuesta;
+                
+                // --- ¡AQUÍ ESTÁ LA CORRECCIÓN CLAVE! ---
+                // Verificamos si la respuesta incluye una 'fuente' antes de intentar mostrarla.
+                if (datos.fuente && datos.fuente.ley && datos.fuente.articulo_numero) {
+                    // Si hay fuente, la formateamos
+                    textoRespuesta = `${datos.respuesta}\n\n---\nFuente: ${datos.fuente.ley}, Art. ${datos.fuente.articulo_numero}`;
+                } else {
+                    // Si no hay fuente, es una respuesta conversacional y mostramos solo el texto.
+                    textoRespuesta = datos.respuesta;
+                }
                 actualizarMensaje(typingIndicator, textoRespuesta, 'bot');
             } else {
                 actualizarMensaje(typingIndicator, `Error: ${datos.detail}`, 'bot-error');
@@ -86,9 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- 5. FUNCIONES PARA MANEJAR EL CHAT ---
     function mostrarMensaje(texto, tipo) {
         const messageWrapper = document.createElement('div');
-        
-        // --- ¡AQUÍ ESTÁ LA CORRECCIÓN! ---
-        // Separamos el 'tipo' por espacios y añadimos las clases individualmente.
         const classes = tipo.split(' ');
         messageWrapper.classList.add('message', ...classes);
         
@@ -112,7 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function actualizarMensaje(elementoMensaje, nuevoTexto, nuevaClase) {
         elementoMensaje.classList.remove('typing');
-        // Limpiamos clases viejas de error antes de añadir una nueva
         elementoMensaje.classList.remove('bot-error'); 
         if(nuevaClase) {
             const classes = nuevaClase.split(' ');
