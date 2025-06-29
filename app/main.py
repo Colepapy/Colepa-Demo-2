@@ -1,9 +1,9 @@
-# Archivo: app/main.py (Tu versión, con el arreglo de CORS añadido)
+# Archivo: app/main.py (Versión con Personalidad Profesional y Conversacional)
 
 import os
 import re
 from fastapi import FastAPI, HTTPException
-# --- CAMBIO #1: Importar la herramienta de CORS ---
+# Importar la herramienta de CORS
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from openai import OpenAI
@@ -21,8 +21,7 @@ app = FastAPI(
     version="3.0.0" # ¡Versión final!
 )
 
-# --- CAMBIO #2: Añadir el bloque de configuración de CORS ---
-# Lista de orígenes permitidos (de dónde pueden venir las peticiones)
+# --- Configuración de CORS ---
 origins = [
     "https://www.colepa.com",
     "http://localhost",
@@ -31,12 +30,11 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,  # Permite los orígenes de la lista
+    allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"],    # Permite todos los métodos (GET, POST, etc.)
-    allow_headers=["*"],    # Permite todas las cabeceras
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
-# --- FIN DEL CAMBIO ---
 
 # --- Modelos de Datos ---
 class ConsultaRequest(BaseModel):
@@ -104,9 +102,26 @@ def procesar_consulta(request: ConsultaRequest):
         texto_contexto = contexto_payload.get("pageContent", "")
         prompt_final = construir_prompt(contexto_legal=texto_contexto, pregunta_usuario=request.pregunta)
         
+        # --- ¡AQUÍ ESTÁ LA NUEVA PERSONALIDAD DE COLEPA! ---
+        instruccion_de_sistema = """
+Eres COLEPA, un asistente legal virtual especializado exclusivamente en la legislación de la República del Paraguay.
+
+Tu misión es asistir a profesionales del derecho y ciudadanos, proporcionando respuestas precisas, claras y directas.
+
+Tu personalidad y reglas de comportamiento son las siguientes:
+1.  **Tono:** Eres profesional, calmado y servicial. Tu lenguaje es siempre respetuoso, amigable y empático, pero manteniendo la seriedad que el ámbito legal requiere.
+2.  **Base de Conocimiento:** Tu única fuente de verdad es el "Contexto legal proporcionado" en cada consulta. NUNCA debes usar conocimiento externo que puedas tener de tu entrenamiento previo. Toda tu respuesta debe derivar estricta y únicamente del texto que se te proporciona.
+3.  **Límites:** Si la pregunta del usuario es sobre leyes de otros países (que no sean tratados internacionales en los que Paraguay es parte) o sobre temas no legales (como opiniones, deportes, etc.), debes responder amablemente que tu especialización es exclusivamente sobre las leyes de Paraguay y que no puedes asistir con esa consulta.
+4.  **Incertidumbre:** Si el contexto proporcionado no contiene la información suficiente para responder a la pregunta del usuario de manera completa y precisa, debes indicarlo claramente. Di algo como: "Basado en el artículo proporcionado, no tengo la información suficiente para responder a tu pregunta con total certeza." No inventes ni supongas información.
+5.  **Conversación:** Puedes mantener una conversación natural. Si un usuario te saluda ("Hola", "Buenas tardes"), responde amablemente y luego vuelve a ofrecer tu ayuda con consultas legales. Por ejemplo: "¡Hola! Soy COLEPA, tu asistente legal. ¿En qué puedo ayudarte hoy?".
+"""
+        
         chat_completion = openai_client.chat.completions.create(
             model="gpt-4-turbo",
-            messages=[{"role": "user", "content": prompt_final}]
+            messages=[
+                {"role": "system", "content": instruccion_de_sistema}, # <-- Usamos la nueva instrucción detallada
+                {"role": "user", "content": prompt_final}
+            ]
         )
         respuesta = chat_completion.choices[0].message.content
 
