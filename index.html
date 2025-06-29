@@ -15,7 +15,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             height: 100vh;
             overflow: hidden;
         }
@@ -24,44 +24,48 @@
             display: flex;
             height: 100vh;
             background: white;
-            box-shadow: 0 0 50px rgba(0,0,0,0.1);
+            box-shadow: 0 0 50px rgba(0,0,0,0.3);
             margin: 0;
         }
 
         /* Sidebar Styles */
         .sidebar {
             width: 280px;
-            background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
+            background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
             color: white;
             display: flex;
             flex-direction: column;
-            border-right: 1px solid #34495e;
+            border-right: 2px solid #2563eb;
         }
 
         .logo-container {
             padding: 2rem 1.5rem;
-            border-bottom: 1px solid #405264;
+            border-bottom: 1px solid #333;
             text-align: center;
         }
 
         .logo {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: bold;
-            color: #3498db;
+            background: linear-gradient(45deg, #2563eb, #dc2626);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 0.5rem;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
         }
 
         .tagline {
-            font-size: 0.9rem;
-            color: #bdc3c7;
-            font-weight: 300;
+            font-size: 0.95rem;
+            color: #e5e7eb;
+            font-weight: 400;
+            line-height: 1.4;
         }
 
         .new-chat-btn {
             margin: 1.5rem;
             padding: 0.75rem 1rem;
-            background: linear-gradient(135deg, #3498db, #2980b9);
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: white;
             border: none;
             border-radius: 8px;
@@ -75,7 +79,7 @@
 
         .new-chat-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
         }
 
         .chat-history {
@@ -89,11 +93,11 @@
         }
 
         .chat-history::-webkit-scrollbar-track {
-            background: #34495e;
+            background: #1a1a1a;
         }
 
         .chat-history::-webkit-scrollbar-thumb {
-            background: #3498db;
+            background: #2563eb;
             border-radius: 2px;
         }
 
@@ -106,6 +110,10 @@
             transition: background 0.2s ease;
             font-size: 0.85rem;
             line-height: 1.4;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .history-item:hover {
@@ -113,17 +121,48 @@
         }
 
         .history-item.active {
-            background: rgba(52, 152, 219, 0.3);
-            border-left: 3px solid #3498db;
+            background: rgba(37, 99, 235, 0.3);
+            border-left: 3px solid #2563eb;
+        }
+
+        .history-text {
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .delete-chat-btn {
+            opacity: 0;
+            background: #dc2626;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            transition: opacity 0.2s ease;
+        }
+
+        .history-item:hover .delete-chat-btn {
+            opacity: 1;
+        }
+
+        .delete-chat-btn:hover {
+            background: #b91c1c;
         }
 
         .sidebar-footer {
             padding: 1rem 1.5rem;
-            border-top: 1px solid #405264;
+            border-top: 1px solid #333;
         }
 
         .footer-link {
-            color: #bdc3c7;
+            color: #9ca3af;
             text-decoration: none;
             font-size: 0.85rem;
             display: flex;
@@ -132,7 +171,7 @@
         }
 
         .footer-link:hover {
-            color: #3498db;
+            color: #2563eb;
         }
 
         /* Main Content Styles */
@@ -140,44 +179,23 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            background: #f8f9fa;
+            background: #374151;
         }
 
         .chat-header {
             padding: 1rem 2rem;
-            background: white;
-            border-bottom: 1px solid #e9ecef;
+            background: linear-gradient(135deg, #111827, #1f1f2e);
+            border-bottom: 2px solid #2563eb;
+            border-left: 4px solid #dc2626;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
         .chat-title {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 600;
-            color: #2c3e50;
-        }
-
-        .status-indicator {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #27ae60;
-            font-size: 0.9rem;
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background: #27ae60;
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
+            color: white;
         }
 
         .chat-container {
@@ -192,6 +210,7 @@
             padding: 2rem;
             overflow-y: auto;
             scroll-behavior: smooth;
+            background: #374151;
         }
 
         .chat-messages::-webkit-scrollbar {
@@ -199,21 +218,21 @@
         }
 
         .chat-messages::-webkit-scrollbar-track {
-            background: #f1f1f1;
+            background: #4b5563;
         }
 
         .chat-messages::-webkit-scrollbar-thumb {
-            background: #c1c1c1;
+            background: #6b7280;
             border-radius: 3px;
         }
 
         .message {
             margin-bottom: 2rem;
-            animation: fadeIn 0.5s ease-in;
+            animation: fadeIn 0.3s ease-in;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
@@ -243,31 +262,32 @@
         }
 
         .bot-avatar {
-            background: linear-gradient(135deg, #3498db, #2980b9);
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: white;
         }
 
         .user-avatar {
-            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            background: linear-gradient(135deg, #000000, #1a1a1a);
             color: white;
         }
 
         .sender-name {
             font-weight: 600;
-            color: #2c3e50;
+            color: white;
         }
 
         .message-text {
             background: white;
             padding: 1.25rem;
             border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
             line-height: 1.6;
             position: relative;
+            color: #1f2937;
         }
 
         .message.user .message-text {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
             color: white;
         }
 
@@ -286,24 +306,24 @@
         .message.user .message-text::before {
             left: auto;
             right: 20px;
-            border-bottom-color: #667eea;
+            border-bottom-color: #1d4ed8;
         }
 
         .fuente {
             margin-top: 1rem;
             padding: 0.75rem;
-            background: rgba(52, 152, 219, 0.1);
-            border-left: 3px solid #3498db;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(220, 38, 38, 0.1));
+            border-left: 3px solid #dc2626;
             border-radius: 4px;
             font-size: 0.85rem;
-            color: #2c3e50;
+            color: #1f2937;
         }
 
         .loading-indicator {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            color: #7f8c8d;
+            color: #d1d5db;
             font-style: italic;
         }
 
@@ -315,24 +335,15 @@
         .loading-dot {
             width: 4px;
             height: 4px;
-            background: #3498db;
+            background: #2563eb;
             border-radius: 50%;
-            animation: bounce 1.4s infinite ease-in-out both;
-        }
-
-        .loading-dot:nth-child(1) { animation-delay: -0.32s; }
-        .loading-dot:nth-child(2) { animation-delay: -0.16s; }
-
-        @keyframes bounce {
-            0%, 80%, 100% { transform: scale(0); }
-            40% { transform: scale(1); }
         }
 
         /* Input Styles */
         .chat-input-container {
             padding: 1.5rem 2rem;
-            background: white;
-            border-top: 1px solid #e9ecef;
+            background: #111827;
+            border-top: 2px solid #2563eb;
         }
 
         .input-wrapper {
@@ -348,25 +359,31 @@
             min-height: 44px;
             max-height: 120px;
             padding: 0.75rem 1rem;
-            border: 2px solid #e9ecef;
+            border: 2px solid #374151;
             border-radius: 12px;
             font-size: 1rem;
             font-family: inherit;
             resize: none;
             transition: border-color 0.3s ease;
             line-height: 1.5;
+            background: #1f2937;
+            color: white;
         }
 
         .chat-input:focus {
             outline: none;
-            border-color: #3498db;
-            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+
+        .chat-input::placeholder {
+            color: #9ca3af;
         }
 
         .send-button {
             width: 44px;
             height: 44px;
-            background: linear-gradient(135deg, #3498db, #2980b9);
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: white;
             border: none;
             border-radius: 12px;
@@ -380,20 +397,25 @@
 
         .send-button:hover:not(:disabled) {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
         }
 
         .send-button:disabled {
-            background: #bdc3c7;
+            background: #6b7280;
             cursor: not-allowed;
         }
 
         .disclaimer {
             text-align: center;
             font-size: 0.8rem;
-            color: #7f8c8d;
+            color: #9ca3af;
             margin-top: 1rem;
             line-height: 1.4;
+        }
+
+        .disclaimer i {
+            color: #dc2626;
+            margin-right: 0.25rem;
         }
 
         /* Responsive Design */
@@ -422,42 +444,6 @@
                 padding: 1rem;
             }
         }
-
-        /* Dark mode support */
-        @media (prefers-color-scheme: dark) {
-            .main-content {
-                background: #1a1a1a;
-            }
-
-            .chat-header {
-                background: #2d2d2d;
-                border-bottom-color: #404040;
-            }
-
-            .chat-title {
-                color: #e9ecef;
-            }
-
-            .message-text {
-                background: #2d2d2d;
-                color: #e9ecef;
-            }
-
-            .chat-input-container {
-                background: #2d2d2d;
-                border-top-color: #404040;
-            }
-
-            .chat-input {
-                background: #1a1a1a;
-                color: #e9ecef;
-                border-color: #404040;
-            }
-
-            .disclaimer {
-                color: #adb5bd;
-            }
-        }
     </style>
 </head>
 <body>
@@ -466,9 +452,9 @@
         <aside class="sidebar">
             <div class="logo-container">
                 <h1 class="logo">COLEPA</h1>
-                <p class="tagline">Asistente Legal Inteligente</p>
+                <p class="tagline">Consulta de Leyes del Paraguay</p>
             </div>
-            <button class="new-chat-btn">
+            <button class="new-chat-btn" onclick="startNewChat()">
                 <i class="fas fa-plus"></i> Nueva Consulta
             </button>
             <div class="chat-history" id="chat-history">
@@ -485,10 +471,6 @@
         <main class="main-content">
             <div class="chat-header">
                 <div class="chat-title">Consulta Legal</div>
-                <div class="status-indicator">
-                    <div class="status-dot"></div>
-                    <span>En línea</span>
-                </div>
             </div>
 
             <div class="chat-container">
@@ -519,9 +501,9 @@
                 </div>
 
                 <div class="chat-input-container">
-                    <form id="chat-form">
+                    <form id="chat-form" onsubmit="handleSubmit(event)">
                         <div class="input-wrapper">
-                            <textarea id="chat-input" class="chat-input" placeholder="Escribe tu consulta legal aquí..." rows="1"></textarea>
+                            <textarea id="chat-input" class="chat-input" placeholder="Escribe tu consulta legal aquí..." rows="1" oninput="handleInput()"></textarea>
                             <button type="submit" id="send-button" class="send-button" disabled>
                                 <i class="fas fa-paper-plane"></i>
                             </button>
@@ -536,6 +518,292 @@
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        let chatHistory = JSON.parse(localStorage.getItem('chatHistory')) || [];
+        let currentChatId = null;
+        let messageCounter = 0;
+
+        // Initialize the app
+        document.addEventListener('DOMContentLoaded', function() {
+            loadChatHistory();
+            autoResizeTextarea();
+        });
+
+        // Handle input changes
+        function handleInput() {
+            const input = document.getElementById('chat-input');
+            const sendButton = document.getElementById('send-button');
+            
+            // Enable/disable send button
+            sendButton.disabled = input.value.trim() === '';
+            
+            // Auto-resize textarea
+            input.style.height = 'auto';
+            input.style.height = Math.min(input.scrollHeight, 120) + 'px';
+        }
+
+        // Auto-resize textarea functionality
+        function autoResizeTextarea() {
+            const textarea = document.getElementById('chat-input');
+            textarea.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    handleSubmit(e);
+                }
+            });
+        }
+
+        // Handle form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            const input = document.getElementById('chat-input');
+            const message = input.value.trim();
+            
+            if (message === '') return;
+
+            // Create new chat if none exists
+            if (!currentChatId) {
+                startNewChat();
+            }
+
+            // Add user message
+            addMessage('user', message);
+            
+            // Clear input
+            input.value = '';
+            input.style.height = 'auto';
+            document.getElementById('send-button').disabled = true;
+
+            // Simulate bot response
+            setTimeout(() => {
+                addBotResponse(message);
+            }, 1000);
+        }
+
+        // Add message to chat
+        function addMessage(sender, text) {
+            const messagesContainer = document.getElementById('chat-messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}`;
+            
+            const avatar = sender === 'user' ? 
+                '<i class="fas fa-user"></i>' : 
+                '<i class="fas fa-balance-scale"></i>';
+            
+            const senderName = sender === 'user' ? 'Usuario' : 'COLEPA';
+            const avatarClass = sender === 'user' ? 'user-avatar' : 'bot-avatar';
+
+            messageDiv.innerHTML = `
+                <div class="message-content">
+                    <div class="message-header">
+                        <div class="avatar ${avatarClass}">
+                            ${avatar}
+                        </div>
+                        <div class="sender-name">${senderName}</div>
+                    </div>
+                    <div class="message-text">
+                        <p>${text}</p>
+                    </div>
+                </div>
+            `;
+
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+            // Save to current chat
+            if (currentChatId) {
+                const chat = chatHistory.find(c => c.id === currentChatId);
+                if (chat) {
+                    chat.messages.push({ sender, text, timestamp: new Date().toISOString() });
+                    chat.lastMessage = text.substring(0, 50) + (text.length > 50 ? '...' : '');
+                    chat.updatedAt = new Date().toISOString();
+                    saveChatHistory();
+                    updateChatHistoryDisplay();
+                }
+            }
+        }
+
+        // Simulate bot response
+        function addBotResponse(userMessage) {
+            const responses = [
+                "Según la legislación paraguaya, puedo ayudarte con esa consulta. Te sugiero revisar los artículos correspondientes del código aplicable.",
+                "Basándome en las leyes paraguayas, esta situación se rige por disposiciones específicas que requieren análisis detallado.",
+                "Para esta consulta legal, es importante considerar varios aspectos de la normativa paraguaya vigente.",
+                "De acuerdo con el marco legal paraguayo, existen precedentes y regulaciones específicas para este caso."
+            ];
+            
+            const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+            addMessage('bot', randomResponse);
+        }
+
+        // Start new chat
+        function startNewChat() {
+            const chatId = 'chat_' + Date.now();
+            const newChat = {
+                id: chatId,
+                title: 'Nueva Consulta',
+                messages: [],
+                createdAt: new Date().toISOString(),
+                updatedAt: new Date().toISOString(),
+                lastMessage: ''
+            };
+
+            chatHistory.unshift(newChat);
+            currentChatId = chatId;
+            
+            // Clear current messages except welcome message
+            const messagesContainer = document.getElementById('chat-messages');
+            const welcomeMessage = messagesContainer.querySelector('.message.system');
+            messagesContainer.innerHTML = '';
+            if (welcomeMessage) {
+                messagesContainer.appendChild(welcomeMessage);
+            }
+
+            saveChatHistory();
+            updateChatHistoryDisplay();
+        }
+
+        // Load chat history
+        function loadChatHistory() {
+            updateChatHistoryDisplay();
+        }
+
+        // Update chat history display
+        function updateChatHistoryDisplay() {
+            const historyContainer = document.getElementById('chat-history');
+            historyContainer.innerHTML = '';
+
+            chatHistory.forEach(chat => {
+                const historyItem = document.createElement('div');
+                historyItem.className = 'history-item';
+                if (chat.id === currentChatId) {
+                    historyItem.classList.add('active');
+                }
+
+                historyItem.innerHTML = `
+                    <div class="history-text" onclick="loadChat('${chat.id}')">${chat.lastMessage || 'Nueva Consulta'}</div>
+                    <button class="delete-chat-btn" onclick="deleteChat('${chat.id}')" title="Eliminar chat">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                `;
+
+                historyContainer.appendChild(historyItem);
+            });
+        }
+
+        // Load specific chat
+        function loadChat(chatId) {
+            const chat = chatHistory.find(c => c.id === chatId);
+            if (!chat) return;
+
+            currentChatId = chatId;
+            const messagesContainer = document.getElementById('chat-messages');
+            messagesContainer.innerHTML = '';
+
+            // Add welcome message
+            const welcomeMessage = document.createElement('div');
+            welcomeMessage.className = 'message system';
+            welcomeMessage.innerHTML = `
+                <div class="message-content">
+                    <div class="message-header">
+                        <div class="avatar bot-avatar">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div class="sender-name">COLEPA</div>
+                    </div>
+                    <div class="message-text">
+                        <p>¡Bienvenido a COLEPA - Asistente Legal Inteligente de Paraguay!</p>
+                        <p>Soy tu asistente especializado en legislación paraguaya. Puedo ayudarte con consultas sobre:</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                            <li>Código Civil</li>
+                            <li>Código Penal</li>
+                            <li>Código Laboral</li>
+                            <li>Código Procesal Civil y Penal</li>
+                            <li>Y mucho más...</li>
+                        </ul>
+                        <p>¿En qué puedo ayudarte hoy?</p>
+                    </div>
+                </div>
+            `;
+            messagesContainer.appendChild(welcomeMessage);
+
+            // Load chat messages
+            chat.messages.forEach(msg => {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${msg.sender}`;
+                
+                const avatar = msg.sender === 'user' ? 
+                    '<i class="fas fa-user"></i>' : 
+                    '<i class="fas fa-balance-scale"></i>';
+                
+                const senderName = msg.sender === 'user' ? 'Usuario' : 'COLEPA';
+                const avatarClass = msg.sender === 'user' ? 'user-avatar' : 'bot-avatar';
+
+                messageDiv.innerHTML = `
+                    <div class="message-content">
+                        <div class="message-header">
+                            <div class="avatar ${avatarClass}">
+                                ${avatar}
+                            </div>
+                            <div class="sender-name">${senderName}</div>
+                        </div>
+                        <div class="message-text">
+                            <p>${msg.text}</p>
+                        </div>
+                    </div>
+                `;
+
+                messagesContainer.appendChild(messageDiv);
+            });
+
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            updateChatHistoryDisplay();
+        }
+
+        // Delete chat
+        function deleteChat(chatId) {
+            if (confirm('¿Estás seguro de que quieres eliminar este chat?')) {
+                chatHistory = chatHistory.filter(chat => chat.id !== chatId);
+                
+                if (currentChatId === chatId) {
+                    currentChatId = null;
+                    // Reset to welcome message only
+                    const messagesContainer = document.getElementById('chat-messages');
+                    messagesContainer.innerHTML = `
+                        <div class="message system">
+                            <div class="message-content">
+                                <div class="message-header">
+                                    <div class="avatar bot-avatar">
+                                        <i class="fas fa-balance-scale"></i>
+                                    </div>
+                                    <div class="sender-name">COLEPA</div>
+                                </div>
+                                <div class="message-text">
+                                    <p>¡Bienvenido a COLEPA - Asistente Legal Inteligente de Paraguay!</p>
+                                    <p>Soy tu asistente especializado en legislación paraguaya. Puedo ayudarte con consultas sobre:</p>
+                                    <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                                        <li>Código Civil</li>
+                                        <li>Código Penal</li>
+                                        <li>Código Laboral</li>
+                                        <li>Código Procesal Civil y Penal</li>
+                                        <li>Y mucho más...</li>
+                                    </ul>
+                                    <p>¿En qué puedo ayudarte hoy?</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                saveChatHistory();
+                updateChatHistoryDisplay();
+            }
+        }
+
+        // Save chat history to localStorage
+        function saveChatHistory() {
+            localStorage.setItem('chatHistory', JSON.stringify(chatHistory));
+        }
+    </script>
 </body>
 </html>
