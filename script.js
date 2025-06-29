@@ -1,21 +1,21 @@
-// Archivo: script.js (Tu versión, actualizada con Memoria de Chat e Historial)
+// Archivo: script.js (Versión Final con Memoria Persistente y Conexión a FastAPI)
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    // --- 1. IDENTIFICACIÓN DE ELEMENTOS DEL HTML (Sin cambios) ---
-    const chatForm = document.getElementById('chat-form');
-    const chatInput = document.getElementById('chat-input');
-    const sendButton = document.getElementById('send-button');
-    const chatMessages = document.getElementById('chat-messages');
-    const newChatButton = document.querySelector('.new-chat-btn');
-    const chatHistoryContainer = document.querySelector('.chat-history');
+    // --- 1. IDENTIFICACIÓN DE ELEMENTOS DEL HTML (Usando tus IDs) ---
+    const chatForm = document.getElementById('chat-form'); // Tu ID era 'chatForm'
+    const chatInput = document.getElementById('chat-input'); // Tu ID era 'userInput'
+    const sendButton = document.getElementById('send-button'); // Tu ID era 'sendBtn'
+    const chatMessages = document.getElementById('chat-messages'); // Tu ID era 'chatMessages'
+    const newChatButton = document.querySelector('.new-chat-btn'); // Tu selector
+    const chatHistoryContainer = document.querySelector('.chat-history'); // Tu selector
 
-    // --- 2. URL PÚBLICA DE TU API EN RAILWAY (Sin cambios) ---
+    // --- 2. URL DE LA API EN RAILWAY ---
     const apiUrl = 'https://colepa-demo-2-production.up.railway.app/consulta';
 
-    // --- 3. NUEVAS VARIABLES PARA LA MEMORIA DEL CHAT ---
+    // --- 3. ESTADO DEL CHAT (La Memoria) ---
     let currentChatId = null;
-    let allChats = {}; // Un objeto para guardar todas las conversaciones
+    let allChats = {};
 
     // --- LÓGICA DE INICIO ---
     function initializeApp() {
@@ -23,17 +23,18 @@ document.addEventListener('DOMContentLoaded', function() {
         renderChatHistorySidebar();
         const chatIds = Object.keys(allChats);
         if (chatIds.length > 0) {
-            currentChatId = chatIds.sort().pop(); // Carga el último chat
+            currentChatId = chatIds.sort().pop();
+            renderCurrentChat();
         } else {
-            startNewChat(); // Si no hay chats, empieza uno nuevo
+            startNewChat();
         }
-        renderCurrentChat();
     }
-    
     initializeApp();
 
-    // --- 4. MANEJADORES DE EVENTOS (Sin cambios en la lógica principal) ---
-    chatInput.addEventListener('input', () => sendButton.disabled = chatInput.value.trim() === '');
+    // --- 4. MANEJADORES DE EVENTOS ---
+    chatInput.addEventListener('input', () => {
+        sendButton.disabled = chatInput.value.trim() === '';
+    });
     
     chatInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter' && !event.shiftKey) {
@@ -49,32 +50,28 @@ document.addEventListener('DOMContentLoaded', function() {
         const pregunta = chatInput.value.trim();
         if (!pregunta) return;
 
-        // Añade la pregunta al historial actual
         addMessageToCurrentChat('user', pregunta);
-        renderCurrentChat(); // Muestra la pregunta del usuario inmediatamente
-
+        renderCurrentChat();
+        
         chatInput.value = '';
         sendButton.disabled = true;
 
-        // Añade y muestra el mensaje "pensando..."
         const typingMessage = { role: 'bot', content: 'COLEPA está pensando...' };
         allChats[currentChatId].messages.push(typingMessage);
         renderCurrentChat();
 
         try {
-            // Prepara el historial para la API (sin el mensaje "pensando")
             const historyForApi = allChats[currentChatId].messages.slice(0, -1)
-                                        .map(msg => ({ role: msg.role, content: msg.content }));
+                                        .map(msg => ({role: msg.role, content: msg.content }));
 
             const apiResponse = await fetch(apiUrl, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ historial: historyForApi }) // Envía el historial
+                body: JSON.stringify({ historial: historyForApi })
             });
 
             const data = await apiResponse.json();
             
-            // Actualiza el mensaje "pensando..." con la respuesta real de la API
             if (apiResponse.ok) {
                 typingMessage.content = data.respuesta;
                 typingMessage.fuente = data.fuente;
@@ -86,32 +83,26 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Error de conexión:', error);
             typingMessage.content = 'Error de Conexión: No se pudo contactar al servidor de Colepa.';
         } finally {
-            // Renderiza todo por última vez para mostrar la respuesta final
             renderCurrentChat();
-            renderChatHistorySidebar(); // Actualiza el título si era la primera pregunta
+            renderChatHistorySidebar();
             saveChatsToLocalStorage();
             sendButton.disabled = false;
         }
     });
 
-    // --- 5. FUNCIONES PARA MANEJAR EL ESTADO Y LA PERSISTENCIA ---
-
+    // --- 5. FUNCIONES PARA MANEJAR DATOS Y PANTALLA ---
     function loadChatsFromLocalStorage() {
-        const chatsGuardados = localStorage.getItem('colepa_chats_v1');
+        const chatsGuardados = localStorage.getItem('colepa_chats_v2'); // Nueva versión para evitar conflictos
         allChats = chatsGuardados ? JSON.parse(chatsGuardados) : {};
     }
 
     function saveChatsToLocalStorage() {
-        localStorage.setItem('colepa_chats_v1', JSON.stringify(allChats));
+        localStorage.setItem('colepa_chats_v2', JSON.stringify(allChats));
     }
 
     function startNewChat() {
         currentChatId = `chat_${Date.now()}`;
-        allChats[currentChatId] = {
-            id: currentChatId,
-            title: "Nueva Consulta",
-            messages: []
-        };
+        allChats[currentChatId] = { id: currentChatId, title: "Nueva Consulta", messages: [] };
         renderCurrentChat();
         renderChatHistorySidebar();
         saveChatsToLocalStorage();
@@ -123,8 +114,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         allChats[currentChatId].messages.push({ role, content, fuente: null });
     }
-
-    // --- 6. FUNCIONES DE RENDERIZADO (MOSTRAR EN PANTALLA) ---
 
     function renderCurrentChat() {
         chatMessages.innerHTML = '';
