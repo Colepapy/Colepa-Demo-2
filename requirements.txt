@@ -1,6 +1,0 @@
-fastapi
-uvicorn[standard]
-openai
-qdrant-client
-python-dotenv
-PyMuPDF
