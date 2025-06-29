@@ -1,4 +1,4 @@
-// Archivo: script.js (Versión Final con Memoria de Chat y localStorage)
+// Archivo: script.js (Versión Final con Historial de Chat y Memoria)
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -13,19 +13,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- 2. URL PÚBLICA DE TU API EN RAILWAY ---
     const apiUrl = 'https://colepa-demo-2-production.up.railway.app/consulta';
 
-    // --- 3. VARIABLES PARA MANEJAR EL ESTADO DEL CHAT ---
+    // --- 3. ESTADO DEL CHAT (La Memoria) ---
     let currentChatId = null;
-    let allChats = {};
+    let allChats = {}; // Un objeto para guardar todas las conversaciones
 
-    // --- LÓGICA DE INICIO DE LA APLICACIÓN ---
+    // --- LÓGICA DE INICIO ---
+    // Carga los chats guardados del navegador al iniciar
     loadChatsFromLocalStorage();
+    // Muestra los chats en la barra lateral
     renderChatHistorySidebar();
-    startNewChat(); // Inicia un chat nuevo al cargar la página
+    // Decide si continuar un chat o empezar uno nuevo
+    if (Object.keys(allChats).length > 0) {
+        // Carga el chat más reciente
+        currentChatId = Object.keys(allChats).sort().pop();
+        renderCurrentChat();
+    } else {
+        // Si no hay chats, empieza uno nuevo
+        startNewChat();
+    }
 
     // --- 4. MANEJADORES DE EVENTOS ---
-    chatInput.addEventListener('input', () => {
-        sendButton.disabled = chatInput.value.trim() === '';
-    });
+    chatInput.addEventListener('input', () => sendButton.disabled = chatInput.value.trim() === '');
     
     chatInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter' && !event.shiftKey) {
@@ -35,58 +43,60 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     newChatButton.addEventListener('click', startNewChat);
-
+    
     chatForm.addEventListener('submit', async function(event) {
         event.preventDefault();
         const pregunta = chatInput.value.trim();
         if (!pregunta) return;
 
-        // Añade el mensaje del usuario al historial actual
+        // Añade la pregunta del usuario al historial y actualiza la pantalla
         addMessageToCurrentChat('user', pregunta);
-        renderCurrentChat(); // Actualiza la pantalla con la pregunta del usuario
-        saveChatsToLocalStorage(); // Guarda el cambio
-        renderChatHistorySidebar(); // Actualiza el título en la barra lateral
-
+        renderCurrentChat();
+        
+        // Limpia el input y deshabilita el botón
         chatInput.value = '';
         sendButton.disabled = true;
 
-        // Muestra el indicador de "pensando..."
-        const typingIndicator = { role: 'bot', content: 'COLEPA está pensando...' };
-        allChats[currentChatId].messages.push(typingIndicator);
+        // Muestra el indicador "pensando..."
+        const typingMessage = { role: 'bot', content: 'COLEPA está pensando...' };
+        allChats[currentChatId].messages.push(typingMessage);
         renderCurrentChat();
 
         try {
             // Prepara el historial para enviar a la API (sin el mensaje "pensando")
-            const historialParaApi = allChats[currentChatId].messages.slice(0, -1)
-                                         .map(({fuente, ...msg}) => msg); // Quita la fuente de los mensajes anteriores
+            const historyForApi = allChats[currentChatId].messages.slice(0, -1)
+                                        .map(msg => ({ role: msg.role, content: msg.content }));
 
-            const respuestaApi = await fetch(apiUrl, {
+            const apiResponse = await fetch(apiUrl, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ historial: historialParaApi }) // Envía el historial completo
+                body: JSON.stringify({ historial: historyForApi })
             });
 
-            const datos = await respuestaApi.json();
+            const data = await apiResponse.json();
             
-            if (respuestaApi.ok) {
-                typingIndicator.content = datos.respuesta;
-                if (datos.fuente) {
-                    typingIndicator.fuente = datos.fuente;
-                }
+            // Actualiza el mensaje "pensando..." con la respuesta real
+            if (apiResponse.ok) {
+                typingMessage.content = data.respuesta;
+                typingMessage.fuente = data.fuente; // Añade la fuente si existe
             } else {
-                typingIndicator.content = `Error: ${datos.detail}`;
+                typingMessage.content = `Error: ${data.detail}`;
             }
 
         } catch (error) {
             console.error('Error de conexión:', error);
-            typingIndicator.content = 'Error de Conexión: No se pudo contactar al servidor de Colepa.';
+            typingMessage.content = 'Error de Conexión: No se pudo contactar al servidor de Colepa.';
         } finally {
-            renderCurrentChat(); // Vuelve a renderizar el chat con la respuesta final
+            // Vuelve a renderizar todo para mostrar la respuesta final y actualizar la barra lateral
+            renderCurrentChat();
+            renderChatHistorySidebar();
             saveChatsToLocalStorage();
+            sendButton.disabled = false;
         }
     });
 
-    // --- 5. FUNCIONES DE MANEJO DE DATOS ---
+    // --- 5. FUNCIONES PARA MANEJAR DATOS Y PANTALLA ---
+
     function loadChatsFromLocalStorage() {
         const chatsGuardados = localStorage.getItem('colepa_chats');
         if (chatsGuardados) {
@@ -111,15 +121,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function addMessageToCurrentChat(role, content) {
-        const message = { role, content };
-        allChats[currentChatId].messages.push(message);
-        
-        if (allChats[currentChatId].messages.length === 1 && role === 'user') {
+        // Si el chat está vacío, actualiza el título con la primera pregunta
+        if (allChats[currentChatId].messages.length === 0 && role === 'user') {
             allChats[currentChatId].title = content.substring(0, 35) + (content.length > 35 ? '...' : '');
         }
+        allChats[currentChatId].messages.push({ role, content });
     }
 
-    // --- 6. FUNCIONES DE RENDERIZADO (MOSTRAR EN PANTALLA) ---
     function renderCurrentChat() {
         chatMessages.innerHTML = '';
         const currentMessages = allChats[currentChatId]?.messages || [];
@@ -128,24 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
             chatMessages.innerHTML = `<div class="message system"><div class="message-content"><div class="message-header"><div class="bot-avatar"><i class="fas fa-balance-scale"></i></div><div class="bot-name">COLEPA</div></div><div class="message-text"><p>¡Bienvenido a COLEPA!</p><p>¿En qué puedo ayudarte hoy?</p></div></div></div>`;
         } else {
             currentMessages.forEach(msg => {
-                const messageElement = document.createElement('div');
-                const classes = msg.role === 'bot' && msg.content === 'COLEPA está pensando...' ? ['bot', 'typing'] : [msg.role];
-                messageElement.classList.add('message', ...classes);
-
-                let contentHTML = msg.content.replace(/\n/g, '<br>');
-                if (msg.fuente) {
-                    contentHTML += `<div class="fuente">---<br>Fuente: ${msg.fuente.ley}, Art. ${msg.fuente.articulo_numero}</div>`;
-                }
-
-                messageElement.innerHTML = `
-                    <div class="message-content">
-                        <div class="message-header">
-                            <div class="${msg.role}-avatar"><i class="fas ${msg.role === 'user' ? 'fa-user' : 'fa-balance-scale'}"></i></div>
-                            <div class="sender-name">${msg.role === 'user' ? 'Tú' : 'COLEPA'}</div>
-                        </div>
-                        <div class="message-text">${contentHTML}</div>
-                    </div>`;
-                chatMessages.appendChild(messageElement);
+                chatMessages.appendChild(createMessageElement(msg));
             });
         }
         chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -154,11 +145,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function renderChatHistorySidebar() {
         chatHistoryContainer.innerHTML = '';
         Object.values(allChats).sort((a,b) => b.id.localeCompare(a.id)).forEach(chat => {
-            const chatLink = document.createElement('a');
-            chatLink.href = '#';
+            const chatLink = document.createElement('div'); // Usamos div para más estilo
             chatLink.classList.add('chat-history-item');
-            if (chat.id === currentChatId) chatLink.classList.add('active');
-            chatLink.textContent = chat.title;
+            if (chat.id === currentChatId) {
+                chatLink.classList.add('active');
+            }
+            chatLink.innerHTML = `<i class="far fa-comment-dots"></i> ${chat.title}`;
             chatLink.dataset.chatId = chat.id;
 
             chatLink.addEventListener('click', (e) => {
@@ -169,5 +161,32 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             chatHistoryContainer.appendChild(chatLink);
         });
+    }
+
+    function createMessageElement(msg) {
+        const messageWrapper = document.createElement('div');
+        let typeClass = msg.role;
+        if (msg.content === 'COLEPA está pensando...') typeClass += ' typing';
+
+        messageWrapper.className = `message ${typeClass}`;
+        
+        const senderName = msg.role === 'user' ? 'Tú' : 'COLEPA';
+        const avatarIcon = msg.role === 'user' ? 'fa-user' : 'fa-balance-scale';
+        
+        let contentHTML = msg.content.replace(/\n/g, '<br>');
+        
+        if (msg.fuente) {
+            contentHTML += `<div class="fuente">---<br>Fuente: ${msg.fuente.ley}, Art. ${msg.fuente.articulo_numero}</div>`;
+        }
+
+        messageWrapper.innerHTML = `
+            <div class="message-content">
+                <div class="message-header">
+                    <div class="bot-avatar"><i class="fas ${avatarIcon}"></i></div>
+                    <div class="sender-name">${senderName}</div>
+                </div>
+                <div class="message-text">${contentHTML}</div>
+            </div>`;
+        return messageWrapper;
     }
 });
