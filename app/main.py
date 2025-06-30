@@ -365,7 +365,7 @@ def generar_respuesta_legal(historial: List[MensajeChat], contexto: Optional[Dic
             pass
         else:
             # Sin contexto: agregar historial normal
-            for msg in for msg in historial[-2:]:]:
+            for msg in for msg in historial[-2:]:
                 role = "assistant" if msg.role == "assistant" else "user"
                 mensajes.append({"role": role, "content": msg.content})
         
