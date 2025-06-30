@@ -607,6 +607,21 @@ async def procesar_consulta_legal(
                     logger.info(f"🎯 Buscando artículo específico: {numero_articulo} en {collection_name}")
                     contexto = buscar_articulo_por_numero(numero_articulo, collection_name)
                     if contexto and contexto.get("pageContent"):
+                        logger.info(f"✅ Artículo {numero_articulo} encontrado: {contexto.get('nombre_ley')} - {contexto.get('pageContent', '')[:100]}...")
+                    else:
+                        logger.warning(f"❌ Artículo {numero_articulo} no encontrado en {collection_name}")
+                        contexto = None
+                
+                # Si no hay contexto específico O no se buscó por número, búsqueda semántica
+                if not contexto or not contexto.get("pageContent"):
+                    logger.info(f"🔎 Realizando búsqueda semántica en {collection_name}")
+                    if OPENAI_AVAILABLE:
+                        # Crear embedding de la pregunta
+                        embedding_response = openai_client.embeddings.create(
+                            model="text-embedding-ada-002",
+                            input=pregunta_actual
+                        )
+                        query_vector = embedding_response.data[0].embedding
                         logger.info(f"🔢 Vector generado para búsqueda semántica (dimensión: {len(query_vector)})")
                         
                         # Buscar en Qdrant usando el vector
@@ -714,19 +729,4 @@ if __name__ == "__main__":
         port=int(os.getenv("PORT", 8000)),
         reload=False,  # Deshabilitado en producción
         log_level="info"
-    )"✅ Artículo {numero_articulo} encontrado: {contexto.get('nombre_ley')} - {contexto.get('pageContent', '')[:100]}...")
-                    else:
-                        logger.warning(f"❌ Artículo {numero_articulo} no encontrado en {collection_name}")
-                        contexto = None
-                
-                # Si no hay contexto específico O no se buscó por número, búsqueda semántica
-                if not contexto or not contexto.get("pageContent"):
-                    logger.info(f"🔎 Realizando búsqueda semántica en {collection_name}")
-                    if OPENAI_AVAILABLE:
-                        # Crear embedding de la pregunta
-                        embedding_response = openai_client.embeddings.create(
-                            model="text-embedding-ada-002",
-                            input=pregunta_actual
-                        )
-                        query_vector = embedding_response.data[0].embedding
-                        logger.info(f
+    )
