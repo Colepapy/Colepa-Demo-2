@@ -1,13 +1,15 @@
 /**
- * COLEPA - JavaScript Completo
+ * COLEPA - JavaScript Final Corregido
  * Sistema Legal de Paraguay con integración Qdrant
  */
 
-// === CONFIGURACIÓN ===
+// === CONFIGURACIÓN CORREGIDA ===
 const CONFIG = {
     API_BASE_URL: window.location.hostname === 'localhost' 
         ? 'http://localhost:8000' 
         : 'https://colepa-demo-2-production.up.railway.app',
+    ENDPOINT_CONSULTA: '/api/consulta', // ✅ ENDPOINT CORRECTO
+    ENDPOINT_HEALTH: '/api/health',     // ✅ ENDPOINT CORRECTO
     MAX_MESSAGE_LENGTH: 2000,
     TYPING_SPEED: 30
 };
@@ -57,6 +59,7 @@ function inicializar() {
 
     console.log('🚀 COLEPA inicializado correctamente');
     console.log('📡 API URL:', CONFIG.API_BASE_URL);
+    console.log('🔗 Endpoint consulta:', CONFIG.ENDPOINT_CONSULTA);
 }
 
 function configurarEventos() {
@@ -73,8 +76,9 @@ function configurarEventos() {
 // === VERIFICACIÓN DE CONEXIÓN ===
 async function verificarConexionAPI() {
     try {
-        console.log('Verificando conexión con API:', CONFIG.API_BASE_URL);
-        const response = await fetch(CONFIG.API_BASE_URL + '/health', {
+        console.log('🔗 Verificando conexión con API:', CONFIG.API_BASE_URL + CONFIG.ENDPOINT_HEALTH);
+        
+        const response = await fetch(CONFIG.API_BASE_URL + CONFIG.ENDPOINT_HEALTH, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -82,7 +86,10 @@ async function verificarConexionAPI() {
         });
         
         if (response.ok) {
-            console.log('✅ Conexión con API exitosa');
+            const data = await response.json();
+            console.log('✅ Conexión con API exitosa:', data);
+            console.log('🤖 OpenAI:', data.servicios?.openai || 'no disponible');
+            console.log('🔍 Qdrant:', data.servicios?.qdrant || 'no disponible');
         } else {
             console.warn('⚠️ API responde pero con error:', response.status);
         }
@@ -181,49 +188,48 @@ async function procesarRespuesta(mensajeUsuario) {
     mostrarIndicadorEscritura();
     
     try {
-        console.log('Enviando consulta a:', CONFIG.API_BASE_URL + '/consulta');
-        console.log('Datos enviados:', {
+        const url = CONFIG.API_BASE_URL + CONFIG.ENDPOINT_CONSULTA;
+        console.log('📤 Enviando consulta a:', url);
+        
+        const requestData = {
             historial: app.conversacionActual.map(msg => ({
                 role: msg.role === 'user' ? 'user' : 'assistant',
                 content: msg.content,
                 timestamp: msg.timestamp
             }))
-        });
+        };
+        
+        console.log('📋 Datos enviados:', requestData);
 
-        const response = await fetch(CONFIG.API_BASE_URL + '/consulta', {
+        const response = await fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            body: JSON.stringify({
-                historial: app.conversacionActual.map(msg => ({
-                    role: msg.role === 'user' ? 'user' : 'assistant',
-                    content: msg.content,
-                    timestamp: msg.timestamp
-                }))
-            })
+            body: JSON.stringify(requestData)
         });
         
-        console.log('Respuesta del servidor:', response.status, response.statusText);
+        console.log('📥 Respuesta del servidor:', response.status, response.statusText);
         
         if (!response.ok) {
             let errorMessage = `Error ${response.status}: ${response.statusText}`;
             
             try {
                 const errorData = await response.json();
-                if (errorData.detail) {
-                    errorMessage += `\nDetalle: ${errorData.detail}`;
+                if (errorData.detalle) {
+                    errorMessage += `\nDetalle: ${errorData.detalle}`;
                 }
+                console.error('❌ Error del servidor:', errorData);
             } catch (e) {
-                // Si no se puede parsear el JSON del error, usar el mensaje básico
+                console.error('❌ No se pudo parsear error JSON');
             }
             
             throw new Error(errorMessage);
         }
         
         const data = await response.json();
-        console.log('Datos recibidos:', data);
+        console.log('✅ Datos recibidos:', data);
         
         // Ocultar indicador de escritura
         ocultarIndicadorEscritura();
@@ -232,23 +238,25 @@ async function procesarRespuesta(mensajeUsuario) {
         await mostrarRespuestaConEscritura(data);
         
     } catch (error) {
-        console.error('Error completo:', error);
+        console.error('❌ Error completo:', error);
         ocultarIndicadorEscritura();
         
-        let mensajeError = 'Lo siento, ha ocurrido un error al procesar tu consulta.';
+        let mensajeError = '🚨 **Error al procesar consulta**\n\n';
         
-        // Mensajes de error más específicos
+        // Mensajes de error específicos
         if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
-            mensajeError = 'Error de conexión. Verifica tu conexión a internet y vuelve a intentar.';
+            mensajeError += 'No se pudo conectar con el servidor COLEPA. Verifica tu conexión a internet.';
         } else if (error.message.includes('404')) {
-            mensajeError = 'Servicio no encontrado. El servidor puede estar en mantenimiento.';
+            mensajeError += 'El servicio de consultas no está disponible en este momento.';
         } else if (error.message.includes('500')) {
-            mensajeError = 'Error interno del servidor. Por favor, intenta más tarde.';
+            mensajeError += 'Error interno del servidor. El sistema está procesando tu consulta o experimentando dificultades técnicas.';
         } else if (error.message.includes('timeout')) {
-            mensajeError = 'La consulta está tardando demasiado. Intenta con una pregunta más específica.';
+            mensajeError += 'La consulta está tardando demasiado. Intenta con una pregunta más específica.';
+        } else {
+            mensajeError += `Error: ${error.message}`;
         }
         
-        mensajeError += '\n\nPor favor, intenta nuevamente o reformula tu pregunta.';
+        mensajeError += '\n\n💡 **Sugerencias:**\n- Intenta reformular tu pregunta\n- Verifica tu conexión a internet\n- Contacta con soporte si el problema persiste';
         
         agregarMensaje('assistant', mensajeError);
         
@@ -259,11 +267,12 @@ async function procesarRespuesta(mensajeUsuario) {
 }
 
 async function mostrarRespuestaConEscritura(data) {
-    const contenido = data.respuesta || data.response || 'Lo siento, no pude generar una respuesta.';
+    const contenido = data.respuesta || 'Lo siento, no pude generar una respuesta.';
     const metadata = {
-        fuente: data.fuente || data.source,
-        recomendaciones: data.recomendaciones || data.recommendations,
-        clasificacion: data.clasificacion || data.classification
+        fuente: data.fuente,
+        recomendaciones: data.recomendaciones,
+        clasificacion: data.clasificacion,
+        tiempo_procesamiento: data.tiempo_procesamiento
     };
     
     // Agregar mensaje vacío
@@ -327,9 +336,9 @@ function crearElementoMensaje(mensaje) {
         contenidoHTML += crearFuenteLegal(mensaje.metadata.fuente);
     }
     
-    // Agregar clasificación si existe
-    if (mensaje.metadata && mensaje.metadata.clasificacion) {
-        contenidoHTML += crearClasificacion(mensaje.metadata.clasificacion);
+    // Agregar recomendaciones si existen
+    if (mensaje.metadata && mensaje.metadata.recomendaciones) {
+        contenidoHTML += crearRecomendaciones(mensaje.metadata.recomendaciones);
     }
     
     const wrapper = document.createElement('div');
@@ -380,15 +389,20 @@ function crearFuenteLegal(fuente) {
     `;
 }
 
-function crearClasificacion(clasificacion) {
-    if (!clasificacion) return '';
+function crearRecomendaciones(recomendaciones) {
+    if (!recomendaciones || !Array.isArray(recomendaciones)) return '';
+    
+    const items = recomendaciones.map(rec => `<li>${rec}</li>`).join('');
     
     return `
         <div class="classification-info">
             <div class="classification-header">
-                <i class="fas fa-tag"></i>
-                <span>Área Legal: ${clasificacion}</span>
+                <i class="fas fa-lightbulb"></i>
+                <span>Recomendaciones</span>
             </div>
+            <ul style="margin-top: 8px; padding-left: 20px;">
+                ${items}
+            </ul>
         </div>
     `;
 }
@@ -496,7 +510,7 @@ window.cargarConversacion = function(id) {
 };
 
 window.eliminarConversacion = function(id) {
-    event.stopPropagation(); // Evitar que se active cargarConversacion
+    event.stopPropagation();
     
     if (confirm('¿Eliminar esta conversación?')) {
         app.conversaciones = app.conversaciones.filter(c => c.id !== id);
@@ -566,18 +580,6 @@ function ocultarIndicadorEscritura() {
     }
 }
 
-function mostrarLoading() {
-    if (elementos.loadingOverlay) {
-        elementos.loadingOverlay.classList.add('active');
-    }
-}
-
-function ocultarLoading() {
-    if (elementos.loadingOverlay) {
-        elementos.loadingOverlay.classList.remove('active');
-    }
-}
-
 // === UTILIDADES ===
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -590,19 +592,6 @@ function scrollToBottom() {
         }, 10);
     }
 }
-
-// === MANEJO DE ERRORES GLOBALES ===
-window.addEventListener('unhandledrejection', function(event) {
-    console.error('❌ Error no manejado:', event.reason);
-    
-    if (event.reason && event.reason.message && 
-        (event.reason.message.includes('fetch') || 
-         event.reason.message.includes('network') ||
-         event.reason.message.includes('Failed to fetch'))) {
-        
-        mostrarMensajeConexion(false);
-    }
-});
 
 // Inicializar nueva consulta al cargar
 document.addEventListener('DOMContentLoaded', function() {
