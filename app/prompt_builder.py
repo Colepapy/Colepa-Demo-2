@@ -1,88 +1,79 @@
-# Archivo: app/prompt_builder.py
-# COLEPA - Prompt Builder Súper Optimizado
+# Archivo: app/prompt_builder.py - VERSIÓN OPTIMIZADA PARA RESPUESTAS CORTAS
+# COLEPA - Prompt Builder Súper Optimizado y ECONÓMICO
 
 import re
 from typing import Dict, Optional
 
 def construir_prompt(contexto_legal: str, pregunta_usuario: str) -> str:
     """
-    Construye un prompt súper inteligente y optimizado para COLEPA.
+    Construye un prompt OPTIMIZADO para respuestas CORTAS y ECONÓMICAS.
     
     Args:
         contexto_legal: El texto del artículo de ley recuperado de Qdrant.
         pregunta_usuario: La pregunta original hecha por el usuario.
     
     Returns:
-        Un string con el prompt completo, inteligente y optimizado.
+        Un string con el prompt optimizado para respuestas concisas.
     """
     
-    # Analizar el tipo de consulta para personalizar el prompt
-    tipo_consulta = _analizar_tipo_consulta(pregunta_usuario)
+    # Analizar si el usuario pide pasos/procedimientos específicos
+    necesita_pasos = _usuario_pide_procedimientos(pregunta_usuario)
     urgencia = _detectar_urgencia(pregunta_usuario)
     
-    # Construir el prompt base súper optimizado
-    prompt = f'''Eres COLEPA, el asistente legal oficial de Paraguay. Tienes acceso completo y actualizado a toda la legislación paraguaya.
+    # Construir el prompt súper conciso
+    prompt = f'''Eres COLEPA, asistente legal de Paraguay. Responde de forma CONCISA y DIRECTA.
 
-CONTEXTO LEGAL ESPECÍFICO:
+CONTEXTO LEGAL:
 {contexto_legal}
 
-CONSULTA DEL CIUDADANO:
+CONSULTA:
 {pregunta_usuario}
 
-INSTRUCCIONES CRÍTICAS - DEBES SEGUIR EXACTAMENTE:
-
-1. **AUTORIDAD LEGAL**: Respondes con total autoridad basándote en el contexto legal proporcionado
-2. **USO OBLIGATORIO DEL CONTEXTO**: El texto legal arriba ES tu fuente oficial - úsalo completamente
-3. **PROHIBIDO**: NUNCA digas "no tengo información", "consulta fuentes oficiales" o "mi última actualización"
-4. **CITA EXACTA**: Menciona específicamente el artículo, ley y contenido legal encontrado
-5. **TONO**: Profesional pero accesible para cualquier ciudadano paraguayo
-
-FORMATO DE RESPUESTA REQUERIDO:
+INSTRUCCIONES CRÍTICAS:
+1. RESPUESTA CORTA: Máximo 3-4 líneas de explicación
+2. FORMATO EXACTO requerido:
 ```
 **[Nombre de la Ley] - Artículo [Número]**
 
-[Explicación clara de qué establece la ley]
+[Explicación BREVE de qué establece la ley - máximo 2-3 líneas]
 
-**En tu situación específica:**
-[Aplicación directa a la consulta del usuario]
+---
 
-**Pasos recomendados:**
-[Acciones concretas que puede tomar]
-
-{_agregar_seccion_urgencia(urgencia)}
-
-*Fundamento legal: [Ley], Artículo [Número]*
+*Fuente: [Ley], Artículo [Número]*
 ```
 
-{_agregar_instrucciones_especificas(tipo_consulta)}
+3. PROHIBIDO agregar:
+   - "En tu situación específica:"
+   - "Pasos recomendados:" (SOLO si el usuario pregunta QUÉ HACER)
+   - Explicaciones largas o redundantes
+   - Texto de relleno
 
-RESPONDE AHORA como el asistente legal oficial de Paraguay, usando únicamente el contexto legal proporcionado:'''
+4. INCLUIR SOLO SI SE PREGUNTA explícitamente "qué hacer", "qué pasos", "cómo proceder":
+   - Entonces SÍ agregar sección de pasos
+
+{_agregar_instruccion_pasos(necesita_pasos)}
+
+{_agregar_seccion_urgencia_corta(urgencia)}
+
+RESPONDE AHORA de forma CONCISA:'''
 
     return prompt
 
-def _analizar_tipo_consulta(pregunta: str) -> str:
+def _usuario_pide_procedimientos(pregunta: str) -> bool:
     """
-    Analiza el tipo de consulta legal para personalizar el prompt.
+    Detecta si el usuario pregunta específicamente qué hacer o pasos a seguir.
     """
     pregunta_lower = pregunta.lower()
+    indicadores_pasos = [
+        "qué hacer", "que hacer", "qué hago", "que hago",
+        "cómo proceder", "como proceder", "qué pasos", "que pasos",
+        "cómo tramitar", "como tramitar", "qué debo hacer", "que debo hacer",
+        "cuáles son los pasos", "cuales son los pasos",
+        "cómo denunciar", "como denunciar", "dónde acudir", "donde acudir",
+        "qué requisitos", "que requisitos", "cómo hacer", "como hacer"
+    ]
     
-    # Patrones específicos para diferentes tipos de consultas
-    if any(palabra in pregunta_lower for palabra in ["pega", "golpea", "maltrato", "violencia", "abuso"]):
-        return "violencia_domestica"
-    elif any(palabra in pregunta_lower for palabra in ["choque", "chocaron", "atropello", "accidente"]):
-        return "accidente_transito"
-    elif any(palabra in pregunta_lower for palabra in ["acoso", "persigue", "molesta", "hostiga"]):
-        return "acoso"
-    elif any(palabra in pregunta_lower for palabra in ["trabajo", "despido", "salario", "jefe"]):
-        return "laboral"
-    elif any(palabra in pregunta_lower for palabra in ["divorcio", "matrimonio", "esposo", "esposa"]):
-        return "familia"
-    elif any(palabra in pregunta_lower for palabra in ["menor", "niño", "hijo", "adolescente"]):
-        return "menores"
-    elif any(palabra in pregunta_lower for palabra in ["artículo", "art", "código"]):
-        return "consulta_especifica"
-    else:
-        return "general"
+    return any(indicador in pregunta_lower for indicador in indicadores_pasos)
 
 def _detectar_urgencia(pregunta: str) -> bool:
     """
@@ -90,160 +81,66 @@ def _detectar_urgencia(pregunta: str) -> bool:
     """
     pregunta_lower = pregunta.lower()
     palabras_urgentes = [
-        "urgente", "ahora", "inmediato", "hoy", "emergencia", 
-        "peligro", "amenaza", "me pega", "me golpea", "violencia",
-        "me está", "está pasando", "sucediendo", "policía"
+        "urgente", "emergencia", "peligro", "amenaza", 
+        "me pega", "me golpea", "violencia", "maltrato",
+        "me está", "está pasando", "ahora"
     ]
     
     return any(palabra in pregunta_lower for palabra in palabras_urgentes)
 
-def _agregar_seccion_urgencia(es_urgente: bool) -> str:
+def _agregar_instruccion_pasos(necesita_pasos: bool) -> str:
     """
-    Agrega sección de urgencia si es necesario.
+    Agrega instrucción para incluir pasos solo si se solicita.
     """
-    if es_urgente:
+    if necesita_pasos:
         return '''
-**🚨 ATENCIÓN INMEDIATA:**
-- En emergencias, llame al 911
-- Para violencia doméstica: línea 137 (24 horas)
-- Puede acudir a cualquier comisaría para hacer denuncia inmediata
+5. EL USUARIO PREGUNTA QUÉ HACER - Agregar sección:
+**Pasos recomendados:**
+- [2-3 pasos específicos máximo]
 '''
     return ""
 
-def _agregar_instrucciones_especificas(tipo_consulta: str) -> str:
+def _agregar_seccion_urgencia_corta(es_urgente: bool) -> str:
     """
-    Agrega instrucciones específicas según el tipo de consulta.
+    Agrega sección de urgencia MUY corta si es necesario.
     """
-    instrucciones_especificas = {
-        "violencia_domestica": """
-INSTRUCCIÓN ESPECIAL - VIOLENCIA DOMÉSTICA:
-- Prioriza información sobre protección inmediata y denuncia
-- Menciona específicamente los derechos de la víctima
-- Incluye información sobre medidas de protección disponibles
-- Enfatiza que la violencia doméstica es un delito grave
-""",
-        
-        "accidente_transito": """
-INSTRUCCIÓN ESPECIAL - ACCIDENTES DE TRÁNSITO:
-- Explica tanto la responsabilidad penal como civil
-- Menciona los derechos de las víctimas
-- Incluye información sobre seguros obligatorios si aplica
-- Explica el procedimiento para reclamación de daños
-""",
-        
-        "acoso": """
-INSTRUCCIÓN ESPECIAL - ACOSO:
-- Define claramente qué constituye acoso según la ley
-- Explica las sanciones penales aplicables
-- Menciona cómo documentar y denunciar el acoso
-- Incluye información sobre medidas de protección
-""",
-        
-        "laboral": """
-INSTRUCCIÓN ESPECIAL - DERECHO LABORAL:
-- Explica tanto los derechos del trabajador como las obligaciones del empleador
-- Menciona procedimientos ante el Ministerio de Trabajo si aplica
-- Incluye información sobre indemnizaciones o compensaciones
-- Explica plazos legales importantes
-""",
-        
-        "familia": """
-INSTRUCCIÓN ESPECIAL - DERECHO DE FAMILIA:
-- Explica procedimientos judiciales necesarios
-- Menciona derechos y obligaciones de ambas partes
-- Incluye información sobre bienes, hijos y alimentos si aplica
-- Explica plazos y requisitos legales
-""",
-        
-        "menores": """
-INSTRUCCIÓN ESPECIAL - DERECHOS DE MENORES:
-- Prioriza el interés superior del menor
-- Explica procedimientos de protección integral
-- Menciona instituciones especializadas (SNNA, Consejerías)
-- Incluye información sobre derechos fundamentales del menor
-""",
-        
-        "consulta_especifica": """
-INSTRUCCIÓN ESPECIAL - CONSULTA DE ARTÍCULO ESPECÍFICO:
-- Cita textualmente el artículo encontrado
-- Explica el significado en términos comprensibles
-- Proporciona ejemplos prácticos de aplicación
-- Menciona artículos relacionados si es relevante
-""",
-        
-        "general": """
-INSTRUCCIÓN ESPECIAL - CONSULTA GENERAL:
-- Proporciona una explicación completa y didáctica
-- Usa ejemplos prácticos para clarificar conceptos
-- Menciona pasos concretos que el ciudadano puede seguir
-- Incluye referencias a instituciones relevantes
-"""
-    }
-    
-    return instrucciones_especificas.get(tipo_consulta, instrucciones_especificas["general"])
+    if es_urgente:
+        return '''
+6. CASO URGENTE - Agregar al final:
+**🚨 Urgente:** Línea 137 - Denuncia inmediata en comisarías
+'''
+    return ""
 
 def construir_prompt_sin_contexto(pregunta_usuario: str) -> str:
     """
-    Construye un prompt cuando no hay contexto legal específico disponible.
-    
-    Args:
-        pregunta_usuario: La pregunta original hecha por el usuario.
-    
-    Returns:
-        Un prompt optimizado para casos sin contexto específico.
+    Construye un prompt CORTO cuando no hay contexto legal específico.
     """
     
-    tipo_consulta = _analizar_tipo_consulta(pregunta_usuario)
-    urgencia = _detectar_urgencia(pregunta_usuario)
-    
-    prompt = f'''Eres COLEPA, el asistente legal oficial de Paraguay.
+    prompt = f'''Eres COLEPA, asistente legal paraguayo.
 
-SITUACIÓN: No se encontró un artículo específico para esta consulta en la base de datos legal.
-
-CONSULTA DEL CIUDADANO:
+CONSULTA SIN CONTEXTO ESPECÍFICO:
 {pregunta_usuario}
 
-INSTRUCCIONES:
-1. Reconoce que no encontraste información específica para esa consulta
-2. Proporciona orientación general sobre el tema si puedes
-3. Sugiere reformular la consulta con términos más específicos
-4. Recomienda instituciones o profesionales relevantes
-
-{_agregar_seccion_urgencia(urgencia)}
-
-FORMATO DE RESPUESTA:
+RESPUESTA REQUERIDA (CORTA):
 ```
-**Consulta Legal - {tipo_consulta.replace('_', ' ').title()}**
+**Consulta Legal**
 
-No encontré esa disposición específica en mi consulta de la base legal.
+No encontré esa disposición específica en mi base legal.
 
-**Orientación general:**
-[Información general sobre el tema si es posible]
+**Sugerencias:**
+- Reformule con términos más específicos
+- Mencione el código o artículo específico
 
-**Para obtener respuesta específica:**
-- Reformule su consulta con términos más específicos
-- Mencione el código o ley específica si la conoce
-- Use números de artículo si busca disposiciones particulares
-
-**Instituciones relevantes:**
-[Lista de instituciones donde puede obtener ayuda]
-
-*Para asesoramiento personalizado, consulte siempre con un abogado especializado.*
+*Para asesoramiento personalizado, consulte un abogado especializado.*
 ```
 
-RESPONDE AHORA:'''
+RESPONDE de forma CONCISA:'''
 
     return prompt
 
 def validar_contexto_legal(contexto_legal: str) -> bool:
     """
     Valida que el contexto legal proporcionado sea válido y útil.
-    
-    Args:
-        contexto_legal: El texto del contexto legal a validar.
-    
-    Returns:
-        True si el contexto es válido, False en caso contrario.
     """
     if not contexto_legal or len(contexto_legal.strip()) < 20:
         return False
@@ -260,12 +157,6 @@ def validar_contexto_legal(contexto_legal: str) -> bool:
 def extraer_metadatos_contexto(contexto_legal: str) -> Dict[str, Optional[str]]:
     """
     Extrae metadatos útiles del contexto legal para mejorar la respuesta.
-    
-    Args:
-        contexto_legal: El texto del contexto legal.
-    
-    Returns:
-        Diccionario con metadatos extraídos.
     """
     metadatos = {
         "numero_articulo": None,
@@ -287,12 +178,30 @@ def extraer_metadatos_contexto(contexto_legal: str) -> Dict[str, Optional[str]]:
     elif "código laboral" in contexto_lower:
         metadatos["tipo_norma"] = "laboral"
     
-    # Determinar tema principal
-    if any(palabra in contexto_lower for palabra in ["matrimonio", "divorcio", "familia"]):
-        metadatos["tema_principal"] = "familia"
-    elif any(palabra in contexto_lower for palabra in ["delito", "pena", "prisión"]):
-        metadatos["tema_principal"] = "penal"
-    elif any(palabra in contexto_lower for palabra in ["trabajo", "empleado", "salario"]):
-        metadatos["tema_principal"] = "laboral"
-    
     return metadatos
+
+# Ejemplos de uso optimizado
+if __name__ == "__main__":
+    # Casos de prueba para respuestas cortas
+    casos_prueba = [
+        ("¿Qué dice el artículo 95?", "SIN procedimientos"),
+        ("¿Qué dice el artículo 95 y qué debo hacer?", "CON procedimientos"),
+        ("Mi esposo me pega", "URGENCIA"),
+        ("¿Cuáles son los requisitos para casarse?", "CON procedimientos")
+    ]
+    
+    print("🧪 TESTING PROMPT OPTIMIZADO PARA AHORRO")
+    print("=" * 50)
+    
+    contexto_ejemplo = "Artículo 95 del Código Civil establece que..."
+    
+    for pregunta, tipo in casos_prueba:
+        print(f"\n📝 Caso: {pregunta}")
+        print(f"🏷️ Tipo: {tipo}")
+        
+        prompt = construir_prompt(contexto_ejemplo, pregunta)
+        necesita_pasos = _usuario_pide_procedimientos(pregunta)
+        
+        print(f"🔍 Detecta procedimientos: {'SÍ' if necesita_pasos else 'NO'}")
+        print(f"📏 Longitud del prompt: {len(prompt)} chars")
+        print("---")
