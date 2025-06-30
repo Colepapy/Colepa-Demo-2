@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COLEPA - Consulta de Leyes del Paraguay</title>
     
-    <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="manifest" href="site.webmanifest">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
     
     <!-- Fuentes -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     
     <!-- Estilos -->
@@ -18,33 +17,31 @@
 </head>
 <body>
     <div class="app-container">
-        <!-- Sidebar Minimalista -->
+        <!-- Sidebar -->
         <div class="sidebar">
             <!-- Header del Sidebar -->
             <div class="sidebar-header">
-                <div class="logo-section">
-                    <div class="logo-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <div class="logo-text">
-                        <h1>COLEPA</h1>
-                        <p>Consulta de Leyes del Paraguay</p>
-                        <span class="demo-badge">VERSIÓN DEMO</span>
-                    </div>
-                </div>
-                
                 <button class="new-chat-btn" onclick="nuevaConsulta()">
                     <i class="fas fa-plus"></i>
-                    Nueva consulta
+                    Nuevo chat
                 </button>
             </div>
-
+            
             <!-- Historial de Chats -->
             <div class="chat-history" id="chatHistory">
                 <!-- Se llena dinámicamente -->
             </div>
+            
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <div class="logo-text">
+                    <h1>COLEPA</h1>
+                    <p>Consulta de leyes del Paraguay</p>
+                    <span class="demo-badge">Versión Demo</span>
+                </div>
+            </div>
         </div>
-
+        
         <!-- Área Principal -->
         <div class="main-area">
             <!-- Contenedor de Mensajes -->
@@ -55,12 +52,12 @@
                         <div class="welcome-icon">
                             <i class="fas fa-balance-scale"></i>
                         </div>
-                        <h2>Bienvenido a COLEPA</h2>
-                        <p>¿En qué puedo ayudarte con las leyes paraguayas?</p>
+                        <h2>¿En qué estás trabajando?</h2>
+                        <p>Puedo ayudarte con consultas sobre la legislación paraguaya</p>
                     </div>
                 </div>
             </div>
-
+            
             <!-- Área de Input -->
             <div class="input-area">
                 <div class="input-container">
@@ -68,8 +65,9 @@
                         <div class="input-wrapper">
                             <textarea 
                                 id="messageInput" 
-                                placeholder="Envía un mensaje a COLEPA"
+                                placeholder="Pregunta lo que quieras"
                                 rows="1"
+                                maxlength="2000"
                                 onkeydown="manejarTeclas(event)"
                                 oninput="manejarInput()"
                             ></textarea>
@@ -82,12 +80,12 @@
                 
                 <!-- Disclaimer Legal -->
                 <div class="legal-disclaimer">
-                    COLEPA puede cometer errores. No sustituye el asesoramiento de un abogado profesional.
+                    COLEPA puede generar información incorrecta. No sustituye el asesoramiento de un abogado profesional.
                 </div>
             </div>
         </div>
     </div>
-
+    
     <!-- Loading Overlay -->
     <div class="loading-overlay" id="loadingOverlay">
         <div class="loading-content">
@@ -95,7 +93,7 @@
             <p>Consultando legislación paraguaya...</p>
         </div>
     </div>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
