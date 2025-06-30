@@ -1,687 +1,611 @@
-// COLEPA - Script JavaScript Mejorado (Versión Final)
-// Manejo robusto de conversaciones y experiencia tipo ChatGPT
+/**
+ * COLEPA - Sistema Legal Oficial de Paraguay
+ * Frontend JavaScript - Versión Compacta
+ */
 
-document.addEventListener('DOMContentLoaded', function() {
-    // === ELEMENTOS DEL DOM ===
-    const chatForm = document.getElementById('chat-form');
-    const chatInput = document.getElementById('chat-input');
-    const sendButton = document.getElementById('send-button');
-    const chatMessages = document.getElementById('chat-messages');
-    const newChatButton = document.querySelector('.new-chat-btn');
-    const chatHistory = document.getElementById('chat-history');
+// === CONFIGURACIÓN GLOBAL ===
+const CONFIG = {
+    // URL de la API (tu Railway)
+    API_BASE_URL: window.location.hostname === 'localhost' 
+        ? 'http://localhost:8000' 
+        : 'https://colepa-demo-2-production.up.railway.app',
+    
+    // Límites
+    MAX_MESSAGE_LENGTH: 2000,
+    MAX_HISTORY_ITEMS: 20,
+    
+    // Endpoints
+    ENDPOINTS: {
+        CONSULTA: '/api/consulta',
+        HEALTH: '/api/health'
+    }
+};
 
-    // === CONFIGURACIÓN ===
-    const config = {
-        apiUrl: 'https://colepa-demo-2-production.up.railway.app/consulta',
-        maxHistoryItems: 20,
-        maxMessageLength: 2000,
-        autoSaveInterval: 5000, // 5 segundos
-        typingSpeed: 50 // velocidad de escritura simulada
-    };
-
-    // === ESTADO DE LA APLICACIÓN ===
-    let appState = {
-        conversationHistory: [],
-        chatSessions: [],
-        currentSessionId: null,
-        isTyping: false,
-        isLoading: false
-    };
-
-    // === INICIALIZACIÓN ===
-    function initializeApp() {
-        loadChatSessions();
-        startNewChat();
-        setupEventListeners();
-        setupAutoSave();
-        setupInputEnhancements();
+// === ESTADO DE LA APLICACIÓN ===
+class AppState {
+    constructor() {
+        this.conversacionActual = [];
+        this.historialSesiones = this.cargarHistorial();
+        this.sesionActualId = null;
+        this.estaCargando = false;
+        this.sistemaOnline = true;
     }
 
-    // === GESTIÓN DE SESIONES ===
-    function loadChatSessions() {
-        // En un entorno real, esto vendría de una base de datos
-        // Por ahora, simulamos con datos en memoria
-        appState.chatSessions = [];
+    cargarHistorial() {
+        try {
+            const historial = localStorage.getItem('colepa_historial');
+            return historial ? JSON.parse(historial) : [];
+        } catch (error) {
+            console.error('Error cargando historial:', error);
+            return [];
+        }
     }
 
-    function saveChatSession() {
-        if (appState.conversationHistory.length === 0) return;
+    guardarHistorial() {
+        try {
+            localStorage.setItem('colepa_historial', JSON.stringify(this.historialSesiones));
+        } catch (error) {
+            console.error('Error guardando historial:', error);
+        }
+    }
+
+    crearNuevaSesion() {
+        this.sesionActualId = 'sesion_' + Date.now();
+        this.conversacionActual = [];
         
-        const session = {
-            id: appState.currentSessionId,
-            title: generateSessionTitle(),
-            timestamp: new Date().toISOString(),
-            messages: [...appState.conversationHistory]
+        const nuevaSesion = {
+            id: this.sesionActualId,
+            titulo: 'Nueva Consulta',
+            mensajes: [],
+            fechaCreacion: new Date().toISOString()
         };
-
-        // Actualizar o agregar sesión
-        const existingIndex = appState.chatSessions.findIndex(s => s.id === session.id);
-        if (existingIndex >= 0) {
-            appState.chatSessions[existingIndex] = session;
-        } else {
-            appState.chatSessions.unshift(session);
-        }
-
-        // Limitar historial
-        if (appState.chatSessions.length > config.maxHistoryItems) {
-            appState.chatSessions = appState.chatSessions.slice(0, config.maxHistoryItems);
-        }
-
-        renderChatHistory();
-    }
-
-    function generateSessionTitle() {
-        if (appState.conversationHistory.length === 0) return 'Nueva Consulta';
         
-        const firstUserMessage = appState.conversationHistory.find(msg => msg.role === 'user');
-        if (!firstUserMessage) return 'Nueva Consulta';
+        this.historialSesiones.unshift(nuevaSesion);
+        this.guardarHistorial();
+        return this.sesionActualId;
+    }
+
+    agregarMensaje(role, content) {
+        const mensaje = {
+            role,
+            content,
+            timestamp: new Date().toISOString()
+        };
         
-        const title = firstUserMessage.content.substring(0, 50);
-        return title.length === 50 ? title + '...' : title;
+        this.conversacionActual.push(mensaje);
+        this.actualizarSesionActual();
+        return mensaje;
     }
 
-    function startNewChat() {
-        appState.conversationHistory = [];
-        appState.currentSessionId = generateSessionId();
-        appState.isTyping = false;
-        appState.isLoading = false;
+    actualizarSesionActual() {
+        if (!this.sesionActualId) return;
         
-        renderChat();
-        renderChatHistory();
-        focusInput();
-    }
-
-    function loadChatSession(sessionId) {
-        const session = appState.chatSessions.find(s => s.id === sessionId);
-        if (!session) return;
-
-        appState.conversationHistory = [...session.messages];
-        appState.currentSessionId = sessionId;
-        renderChat();
-        renderChatHistory();
-    }
-
-    function generateSessionId() {
-        return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-    }
-
-    // === RENDERIZADO ===
-    function renderChat() {
-        if (appState.conversationHistory.length === 0) {
-            renderWelcomeMessage();
-            return;
-        }
-
-        chatMessages.innerHTML = '';
-        appState.conversationHistory.forEach((msg, index) => {
-            renderMessage(msg, index);
-        });
-
-        scrollToBottom();
-    }
-
-    function renderWelcomeMessage() {
-        const welcomeHTML = `
-            <div class="message system">
-                <div class="message-content">
-                    <div class="message-header">
-                        <div class="avatar bot-avatar">
-                            <i class="fas fa-balance-scale"></i>
-                        </div>
-                        <div class="sender-name">COLEPA</div>
-                    </div>
-                    <div class="message-text">
-                        <p>¡Bienvenido a COLEPA - Asistente Legal Inteligente de Paraguay!</p>
-                        <p>Soy tu asistente especializado en legislación paraguaya. Puedo ayudarte con consultas sobre:</p>
-                        <ul style="margin: 1rem 0; padding-left: 1.5rem;">
-                            <li>Código Civil</li>
-                            <li>Código Penal</li>
-                            <li>Código Laboral</li>
-                            <li>Código Procesal Civil y Penal</li>
-                            <li>Código Aduanero</li>
-                            <li>Código Electoral</li>
-                            <li>Y mucho más...</li>
-                        </ul>
-                        <p>¿En qué puedo ayudarte hoy?</p>
-                    </div>
-                </div>
-            </div>
-        `;
-        chatMessages.innerHTML = welcomeHTML;
-    }
-
-    function renderMessage(msg, index) {
-        const messageWrapper = document.createElement('div');
-        messageWrapper.className = `message ${msg.role}`;
-        messageWrapper.setAttribute('data-message-id', index);
-        
-        const isUser = msg.role === 'user';
-        const senderName = isUser ? 'Tú' : 'COLEPA';
-        const avatarIcon = isUser ? 'fa-user' : 'fa-balance-scale';
-        const avatarClass = isUser ? 'user-avatar' : 'bot-avatar';
-        
-        let contentHTML = formatMessageContent(msg.content || "");
-        
-        if (msg.fuente && msg.fuente.ley && msg.fuente.articulo_numero) {
-            contentHTML += `
-                <div class="fuente">
-                    <i class="fas fa-book-open"></i>
-                    <strong>Fuente Legal:</strong> ${msg.fuente.ley}, Artículo ${msg.fuente.articulo_numero}
-                </div>
-            `;
-        }
-
-        messageWrapper.innerHTML = `
-            <div class="message-content">
-                <div class="message-header">
-                    <div class="avatar ${avatarClass}">
-                        <i class="fas ${avatarIcon}"></i>
-                    </div>
-                    <div class="sender-name">${senderName}</div>
-                    <div class="message-time">${formatTime(msg.timestamp || new Date())}</div>
-                </div>
-                <div class="message-text">${contentHTML}</div>
-            </div>
-        `;
-        
-        chatMessages.appendChild(messageWrapper);
-    }
-
-    function formatMessageContent(content) {
-        return content
-            .replace(/\n/g, '<br>')
-            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-            .replace(/\*(.*?)\*/g, '<em>$1</em>')
-            .replace(/`(.*?)`/g, '<code>$1</code>');
-    }
-
-    function formatTime(date) {
-        const now = new Date();
-        const msgDate = new Date(date);
-        const diffMinutes = Math.floor((now - msgDate) / (1000 * 60));
-        
-        if (diffMinutes < 1) return 'Ahora';
-        if (diffMinutes < 60) return `${diffMinutes}m`;
-        if (diffMinutes < 1440) return `${Math.floor(diffMinutes / 60)}h`;
-        return msgDate.toLocaleDateString();
-    }
-
-    function renderChatHistory() {
-        chatHistory.innerHTML = '';
-        
-        appState.chatSessions.forEach(session => {
-            const historyItem = document.createElement('div');
-            historyItem.className = 'history-item';
-            if (session.id === appState.currentSessionId) {
-                historyItem.classList.add('active');
+        const sesion = this.historialSesiones.find(s => s.id === this.sesionActualId);
+        if (sesion) {
+            sesion.mensajes = [...this.conversacionActual];
+            
+            // Actualizar título
+            const primerMensaje = this.conversacionActual.find(m => m.role === 'user');
+            if (primerMensaje && sesion.titulo === 'Nueva Consulta') {
+                sesion.titulo = primerMensaje.content.substring(0, 50) + '...';
             }
             
-            historyItem.innerHTML = `
-                <div class="history-title">${session.title}</div>
-                <div class="history-time">${formatTime(session.timestamp)}</div>
-            `;
-            
-            historyItem.addEventListener('click', () => loadChatSession(session.id));
-            chatHistory.appendChild(historyItem);
-        });
+            this.guardarHistorial();
+        }
     }
+}
 
-    function showLoadingIndicator() {
-        const loadingMessage = document.createElement('div');
-        loadingMessage.className = 'message bot loading';
-        loadingMessage.id = 'loading-message';
+// === INSTANCIA GLOBAL ===
+const app = new AppState();
+
+// === ELEMENTOS DEL DOM ===
+let elementos = {};
+
+// === INICIALIZACIÓN ===
+document.addEventListener('DOMContentLoaded', function() {
+    inicializarElementos();
+    inicializarEventListeners();
+    iniciarNuevaConsulta();
+    verificarEstadoSistema();
+});
+
+function inicializarElementos() {
+    elementos = {
+        chatMessages: document.getElementById('chatMessages'),
+        chatHistory: document.getElementById('chatHistory'),
+        chatForm: document.getElementById('chatForm'),
+        chatInput: document.getElementById('chatInput'),
+        sendButton: document.getElementById('sendButton'),
+        charCounter: document.getElementById('charCounter'),
+        newChatBtn: document.getElementById('newChatBtn'),
+        sidebar: document.getElementById('sidebar'),
+        sidebarToggle: document.getElementById('sidebarToggle'),
+        loadingOverlay: document.getElementById('loadingOverlay'),
+        toastContainer: document.getElementById('toastContainer'),
+        modalOverlay: document.getElementById('modalOverlay'),
+        systemStatus: document.getElementById('systemStatus'),
+        currentChatTitle: document.getElementById('currentChatTitle')
+    };
+}
+
+function inicializarEventListeners() {
+    elementos.chatForm.addEventListener('submit', manejarEnvioMensaje);
+    elementos.chatInput.addEventListener('input', manejarInputChange);
+    elementos.chatInput.addEventListener('keydown', manejarTeclasInput);
+    elementos.newChatBtn.addEventListener('click', iniciarNuevaConsulta);
+    
+    if (elementos.sidebarToggle) {
+        elementos.sidebarToggle.addEventListener('click', toggleSidebar);
+    }
+    
+    // Auto-redimensionar textarea
+    elementos.chatInput.addEventListener('input', autoRedimensionarTextarea);
+}
+
+// === GESTIÓN DE MENSAJES ===
+async function manejarEnvioMensaje(event) {
+    event.preventDefault();
+    
+    if (app.estaCargando) return;
+    
+    const mensaje = elementos.chatInput.value.trim();
+    if (!mensaje) return;
+    
+    if (mensaje.length > CONFIG.MAX_MESSAGE_LENGTH) {
+        mostrarToast('El mensaje es demasiado largo', 'error');
+        return;
+    }
+    
+    // Si no hay sesión, crear una nueva
+    if (!app.sesionActualId) {
+        app.crearNuevaSesion();
+    }
+    
+    // Agregar mensaje del usuario
+    app.agregarMensaje('user', mensaje);
+    renderizarMensajes();
+    
+    // Limpiar input
+    elementos.chatInput.value = '';
+    actualizarContadorCaracteres();
+    autoRedimensionarTextarea();
+    actualizarEstadoBotonEnvio();
+    
+    // Procesar consulta
+    await procesarConsulta();
+}
+
+async function procesarConsulta() {
+    app.estaCargando = true;
+    actualizarEstadoBotonEnvio();
+    mostrarIndicadorCarga();
+    
+    try {
+        const response = await enviarConsultaAPI();
         
-        loadingMessage.innerHTML = `
+        if (response && response.respuesta) {
+            // Agregar respuesta del bot
+            app.agregarMensaje('assistant', response.respuesta);
+            renderizarMensajes();
+            renderizarHistorial();
+        } else {
+            throw new Error('Respuesta vacía del servidor');
+        }
+        
+    } catch (error) {
+        console.error('Error procesando consulta:', error);
+        
+        let mensajeError = 'Lo siento, ha ocurrido un error procesando su consulta.';
+        if (!navigator.onLine) {
+            mensajeError = 'Sin conexión a internet. Verifique su conexión.';
+        }
+        
+        app.agregarMensaje('assistant', mensajeError);
+        renderizarMensajes();
+        mostrarToast('Error procesando consulta', 'error');
+        
+    } finally {
+        ocultarIndicadorCarga();
+        app.estaCargando = false;
+        actualizarEstadoBotonEnvio();
+        elementos.chatInput.focus();
+    }
+}
+
+async function enviarConsultaAPI() {
+    const url = CONFIG.API_BASE_URL + CONFIG.ENDPOINTS.CONSULTA;
+    
+    const payload = {
+        historial: app.conversacionActual.map(msg => ({
+            role: msg.role === 'assistant' ? 'assistant' : msg.role,
+            content: msg.content,
+            timestamp: msg.timestamp
+        }))
+    };
+    
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+    });
+    
+    if (!response.ok) {
+        throw new Error(`Error del servidor: ${response.status}`);
+    }
+    
+    return await response.json();
+}
+
+// === RENDERIZADO ===
+function renderizarMensajes() {
+    if (app.conversacionActual.length === 0) {
+        mostrarMensajeBienvenida();
+        return;
+    }
+    
+    elementos.chatMessages.innerHTML = '';
+    
+    app.conversacionActual.forEach((mensaje, index) => {
+        const elementoMensaje = crearElementoMensaje(mensaje);
+        elementos.chatMessages.appendChild(elementoMensaje);
+    });
+    
+    scrollToBottom();
+}
+
+function crearElementoMensaje(mensaje) {
+    const wrapper = document.createElement('div');
+    wrapper.className = `message-wrapper ${mensaje.role}`;
+    
+    const esUsuario = mensaje.role === 'user';
+    const nombreSender = esUsuario ? 'Usted' : 'COLEPA';
+    const iconoAvatar = esUsuario ? 'fa-user' : 'fa-balance-scale';
+    const claseAvatar = esUsuario ? 'user-avatar' : 'bot-avatar';
+    
+    const contenidoHTML = formatearContenido(mensaje.content);
+    const badgeOficial = !esUsuario ? '<span class="message-badge official">OFICIAL</span>' : '';
+    
+    wrapper.innerHTML = `
+        <div class="message ${mensaje.role}">
+            <div class="message-avatar">
+                <div class="avatar ${claseAvatar}">
+                    <i class="fas ${iconoAvatar}"></i>
+                </div>
+            </div>
             <div class="message-content">
                 <div class="message-header">
+                    <span class="sender-name">${nombreSender}</span>
+                    ${badgeOficial}
+                    <span class="message-time">${formatearTiempo(mensaje.timestamp)}</span>
+                </div>
+                <div class="message-text">
+                    ${contenidoHTML}
+                </div>
+            </div>
+        </div>
+    `;
+    
+    return wrapper;
+}
+
+function formatearContenido(contenido) {
+    return contenido
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/\n/g, '<br>');
+}
+
+function mostrarMensajeBienvenida() {
+    elementos.chatMessages.innerHTML = `
+        <div class="message-wrapper welcome-message">
+            <div class="message system">
+                <div class="message-avatar">
                     <div class="avatar bot-avatar">
                         <i class="fas fa-balance-scale"></i>
                     </div>
-                    <div class="sender-name">COLEPA</div>
                 </div>
-                <div class="message-text">
-                    <div class="loading-indicator">
-                        <span>Analizando tu consulta</span>
-                        <div class="loading-dots">
-                            <div class="loading-dot"></div>
-                            <div class="loading-dot"></div>
-                            <div class="loading-dot"></div>
+                <div class="message-content">
+                    <div class="message-header">
+                        <span class="sender-name">COLEPA</span>
+                        <span class="message-badge official">OFICIAL</span>
+                    </div>
+                    <div class="message-text">
+                        <h3>¡Bienvenido al Sistema COLEPA!</h3>
+                        <p>Soy su asistente legal oficial especializado en la legislación paraguaya. Estoy aquí para ayudarle con consultas sobre:</p>
+                        
+                        <div class="legal-codes-grid">
+                            <div class="code-item">
+                                <i class="fas fa-gavel"></i>
+                                <span>Código Civil</span>
+                            </div>
+                            <div class="code-item">
+                                <i class="fas fa-handcuffs"></i>
+                                <span>Código Penal</span>
+                            </div>
+                            <div class="code-item">
+                                <i class="fas fa-briefcase"></i>
+                                <span>Código Laboral</span>
+                            </div>
+                            <div class="code-item">
+                                <i class="fas fa-child"></i>
+                                <span>Código de la Niñez</span>
+                            </div>
+                            <div class="code-item">
+                                <i class="fas fa-vote-yea"></i>
+                                <span>Código Electoral</span>
+                            </div>
+                            <div class="code-item">
+                                <i class="fas fa-truck"></i>
+                                <span>Código Aduanero</span>
+                            </div>
                         </div>
+
+                        <div class="welcome-examples">
+                            <h4>Ejemplos de consultas:</h4>
+                            <div class="example-queries">
+                                <button class="example-btn" onclick="enviarEjemplo('¿Qué dice el artículo 22 del Código Civil?')">
+                                    "¿Qué dice el artículo 22 del Código Civil?"
+                                </button>
+                                <button class="example-btn" onclick="enviarEjemplo('Mi empleador no me paga las horas extras, ¿qué puedo hacer?')">
+                                    "Mi empleador no me paga las horas extras, ¿qué puedo hacer?"
+                                </button>
+                                <button class="example-btn" onclick="enviarEjemplo('¿Cuáles son las consecuencias legales del robo en Paraguay?')">
+                                    "¿Cuáles son las consecuencias legales del robo en Paraguay?"
+                                </button>
+                            </div>
+                        </div>
+
+                        <p class="help-text">
+                            <i class="fas fa-lightbulb"></i>
+                            <strong>Tip:</strong> Sea específico en su consulta para obtener información más precisa.
+                        </p>
                     </div>
                 </div>
             </div>
+        </div>
+    `;
+}
+
+function renderizarHistorial() {
+    if (!elementos.chatHistory) return;
+    
+    elementos.chatHistory.innerHTML = '';
+    
+    if (app.historialSesiones.length === 0) {
+        elementos.chatHistory.innerHTML = '<div style="padding: 1rem; text-align: center; opacity: 0.7;">No hay consultas anteriores</div>';
+        return;
+    }
+    
+    app.historialSesiones.slice(0, 10).forEach(sesion => {
+        const item = document.createElement('div');
+        item.className = 'history-item';
+        if (sesion.id === app.sesionActualId) {
+            item.classList.add('active');
+        }
+        
+        item.innerHTML = `
+            <div onclick="cargarSesion('${sesion.id}')">${sesion.titulo}</div>
         `;
         
-        chatMessages.appendChild(loadingMessage);
-        scrollToBottom();
-    }
-
-    function hideLoadingIndicator() {
-        const loadingMessage = document.getElementById('loading-message');
-        if (loadingMessage) {
-            loadingMessage.remove();
-        }
-    }
-
-    // === MANEJO DE EVENTOS ===
-    function setupEventListeners() {
-        // Envío de formulario
-        chatForm.addEventListener('submit', handleFormSubmit);
-        
-        // Botón nueva consulta
-        newChatButton.addEventListener('click', startNewChat);
-        
-        // Eventos del input
-        chatInput.addEventListener('input', handleInputChange);
-        chatInput.addEventListener('keydown', handleKeyDown);
-        
-        // Eventos globales
-        window.addEventListener('beforeunload', () => {
-            saveChatSession();
-        });
-    }
-
-    function setupInputEnhancements() {
-        // Auto-resize del textarea
-        chatInput.addEventListener('input', function() {
-            this.style.height = 'auto';
-            this.style.height = Math.min(this.scrollHeight, 120) + 'px';
-        });
-    }
-
-    function setupAutoSave() {
-        setInterval(() => {
-            if (appState.conversationHistory.length > 0) {
-                saveChatSession();
-            }
-        }, config.autoSaveInterval);
-    }
-
-    function handleFormSubmit(event) {
-        event.preventDefault();
-        if (appState.isLoading) return;
-        
-        const pregunta = chatInput.value.trim();
-        if (!pregunta) return;
-        
-        if (pregunta.length > config.maxMessageLength) {
-            showError('La consulta es demasiado larga. Por favor, hazla más concisa.');
-            return;
-        }
-
-        sendMessage(pregunta);
-    }
-
-    function handleInputChange() {
-        const hasContent = chatInput.value.trim().length > 0;
-        sendButton.disabled = !hasContent || appState.isLoading;
-        
-        // Mostrar contador de caracteres si se acerca al límite
-        const charCount = chatInput.value.length;
-        if (charCount > config.maxMessageLength * 0.8) {
-            showCharacterCount(charCount);
-        } else {
-            hideCharacterCount();
-        }
-    }
-
-    function handleKeyDown(event) {
-        if (event.key === 'Enter' && !event.shiftKey) {
-            event.preventDefault();
-            chatForm.dispatchEvent(new Event('submit'));
-        }
-    }
-
-    // === FUNCIONALIDAD PRINCIPAL ===
-    async function sendMessage(pregunta) {
-        if (appState.isLoading) return;
-        
-        appState.isLoading = true;
-        
-        // Agregar mensaje del usuario
-        const userMessage = {
-            role: 'user',
-            content: pregunta,
-            timestamp: new Date()
-        };
-        
-        appState.conversationHistory.push(userMessage);
-        renderChat();
-        
-        // Limpiar input
-        chatInput.value = '';
-        chatInput.style.height = 'auto';
-        sendButton.disabled = true;
-        
-        // Mostrar indicador de carga
-        showLoadingIndicator();
-        
-        try {
-            const response = await fetch(config.apiUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    historial: appState.conversationHistory
-                })
-            });
-
-            hideLoadingIndicator();
-            
-            if (!response.ok) {
-                throw new Error(`Error ${response.status}: ${response.statusText}`);
-            }
-
-            const data = await response.json();
-            
-            // Agregar respuesta del bot
-            const botMessage = {
-                role: 'bot',
-                content: data.respuesta || 'Lo siento, no pude generar una respuesta.',
-                fuente: data.fuente,
-                timestamp: new Date()
-            };
-            
-            appState.conversationHistory.push(botMessage);
-            
-            // Simular escritura progresiva (efecto ChatGPT)
-            await simulateTyping(botMessage);
-            
-        } catch (error) {
-            hideLoadingIndicator();
-            console.error('Error de conexión:', error);
-            
-            const errorMessage = {
-                role: 'bot',
-                content: 'Lo siento, ha ocurrido un error de conexión. Por favor, intenta nuevamente.',
-                timestamp: new Date()
-            };
-            
-            appState.conversationHistory.push(errorMessage);
-            renderChat();
-            showError('Error de conexión con el servidor');
-            
-        } finally {
-            appState.isLoading = false;
-            sendButton.disabled = false;
-            focusInput();
-            saveChatSession();
-        }
-    }
-
-    async function simulateTyping(message) {
-        // Agregar mensaje vacío que se irá llenando
-        const emptyMessage = {
-            ...message,
-            content: ''
-        };
-        
-        appState.conversationHistory[appState.conversationHistory.length - 1] = emptyMessage;
-        renderChat();
-
-        const fullContent = message.content;
-        let currentContent = '';
-        
-        for (let i = 0; i < fullContent.length; i++) {
-            currentContent += fullContent[i];
-            
-            // Actualizar el mensaje
-            appState.conversationHistory[appState.conversationHistory.length - 1] = {
-                ...message,
-                content: currentContent
-            };
-            
-            renderChat();
-            
-            // Pausa para simular escritura
-            if (fullContent[i] === ' ' || fullContent[i] === '\n') {
-                await sleep(config.typingSpeed * 2);
-            } else {
-                await sleep(config.typingSpeed);
-            }
-        }
-    }
-
-    // === UTILIDADES ===
-    function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
-
-    function scrollToBottom() {
-        requestAnimationFrame(() => {
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        });
-    }
-
-    function focusInput() {
-        setTimeout(() => {
-            chatInput.focus();
-        }, 100);
-    }
-
-    function showError(message) {
-        // Crear notificación de error
-        const errorDiv = document.createElement('div');
-        errorDiv.className = 'error-notification';
-        errorDiv.innerHTML = `
-            <i class="fas fa-exclamation-triangle"></i>
-            <span>${message}</span>
-        `;
-        
-        document.body.appendChild(errorDiv);
-        
-        // Remover después de 5 segundos
-        setTimeout(() => {
-            if (errorDiv.parentNode) {
-                errorDiv.parentNode.removeChild(errorDiv);
-            }
-        }, 5000);
-    }
-
-    function showCharacterCount(count) {
-        let countDisplay = document.getElementById('char-count');
-        if (!countDisplay) {
-            countDisplay = document.createElement('div');
-            countDisplay.id = 'char-count';
-            countDisplay.className = 'character-count';
-            chatInput.parentNode.appendChild(countDisplay);
-        }
-        
-        const remaining = config.maxMessageLength - count;
-        countDisplay.textContent = `${remaining} caracteres restantes`;
-        countDisplay.className = `character-count ${remaining < 100 ? 'warning' : ''}`;
-    }
-
-    function hideCharacterCount() {
-        const countDisplay = document.getElementById('char-count');
-        if (countDisplay) {
-            countDisplay.remove();
-        }
-    }
-
-    // === FUNCIONES DE EXPORTACIÓN/IMPORTACIÓN ===
-    function exportChat() {
-        if (appState.conversationHistory.length === 0) {
-            showError('No hay conversación para exportar');
-            return;
-        }
-
-        const exportData = {
-            title: generateSessionTitle(),
-            timestamp: new Date().toISOString(),
-            messages: appState.conversationHistory
-        };
-
-        const dataStr = JSON.stringify(exportData, null, 2);
-        const dataBlob = new Blob([dataStr], { type: 'application/json' });
-        
-        const link = document.createElement('a');
-        link.href = URL.createObjectURL(dataBlob);
-        link.download = `colepa_chat_${new Date().toISOString().split('T')[0]}.json`;
-        link.click();
-    }
-
-    // === ATAJOS DE TECLADO ===
-    document.addEventListener('keydown', function(event) {
-        // Ctrl/Cmd + Enter para enviar
-        if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') {
-            if (!appState.isLoading && chatInput.value.trim()) {
-                chatForm.dispatchEvent(new Event('submit'));
-            }
-        }
-        
-        // Ctrl/Cmd + N para nueva consulta
-        if ((event.ctrlKey || event.metaKey) && event.key === 'n') {
-            event.preventDefault();
-            startNewChat();
-        }
-        
-        // Escape para cancelar si está cargando
-        if (event.key === 'Escape' && appState.isLoading) {
-            // En una implementación real, aquí cancelarías la petición
-            showError('Operación cancelada');
-        }
+        elementos.chatHistory.appendChild(item);
     });
+}
 
-    // === RESPONSIVE DESIGN ===
-    function handleResize() {
-        const sidebar = document.querySelector('.sidebar');
-        const isMobile = window.innerWidth <= 768;
+// === GESTIÓN DE EVENTOS ===
+function manejarInputChange() {
+    actualizarContadorCaracteres();
+    actualizarEstadoBotonEnvio();
+}
+
+function actualizarContadorCaracteres() {
+    const longitud = elementos.chatInput.value.length;
+    elementos.charCounter.textContent = `${longitud}/${CONFIG.MAX_MESSAGE_LENGTH}`;
+    
+    elementos.charCounter.className = 'char-counter';
+    if (longitud > CONFIG.MAX_MESSAGE_LENGTH * 0.9) {
+        elementos.charCounter.classList.add('warning');
+    }
+}
+
+function actualizarEstadoBotonEnvio() {
+    const tieneContenido = elementos.chatInput.value.trim().length > 0;
+    const noExcedeLimite = elementos.chatInput.value.length <= CONFIG.MAX_MESSAGE_LENGTH;
+    const puedeEnviar = tieneContenido && noExcedeLimite && !app.estaCargando;
+    
+    elementos.sendButton.disabled = !puedeEnviar;
+}
+
+function manejarTeclasInput(event) {
+    if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault();
+        elementos.chatForm.dispatchEvent(new Event('submit'));
+    }
+}
+
+function autoRedimensionarTextarea() {
+    elementos.chatInput.style.height = 'auto';
+    const nuevaAltura = Math.min(elementos.chatInput.scrollHeight, 120);
+    elementos.chatInput.style.height = nuevaAltura + 'px';
+}
+
+// === FUNCIONES DE UTILIDAD ===
+function scrollToBottom() {
+    requestAnimationFrame(() => {
+        elementos.chatMessages.scrollTop = elementos.chatMessages.scrollHeight;
+    });
+}
+
+function formatearTiempo(timestamp) {
+    const fecha = new Date(timestamp);
+    const ahora = new Date();
+    const diff = ahora - fecha;
+    
+    const minutos = Math.floor(diff / (1000 * 60));
+    const horas = Math.floor(diff / (1000 * 60 * 60));
+    
+    if (minutos < 1) return 'Ahora';
+    if (minutos < 60) return `${minutos}m`;
+    if (horas < 24) return `${horas}h`;
+    
+    return fecha.toLocaleDateString('es-PY', { 
+        day: 'numeric', 
+        month: 'short' 
+    });
+}
+
+// === INDICADORES VISUALES ===
+function mostrarIndicadorCarga() {
+    if (elementos.loadingOverlay) {
+        elementos.loadingOverlay.classList.add('active');
+    }
+}
+
+function ocultarIndicadorCarga() {
+    if (elementos.loadingOverlay) {
+        elementos.loadingOverlay.classList.remove('active');
+    }
+}
+
+// === ESTADO DEL SISTEMA ===
+async function verificarEstadoSistema() {
+    try {
+        const response = await fetch(CONFIG.API_BASE_URL + CONFIG.ENDPOINTS.HEALTH);
+        app.sistemaOnline = response.ok;
+    } catch (error) {
+        app.sistemaOnline = false;
+    }
+    
+    actualizarEstadoSistema();
+}
+
+function actualizarEstadoSistema() {
+    if (!elementos.systemStatus) return;
+    
+    const indicador = elementos.systemStatus.querySelector('.status-indicator');
+    const texto = elementos.systemStatus.querySelector('.status-text');
+    
+    if (app.sistemaOnline) {
+        indicador.style.color = '#10b981';
+        texto.textContent = 'Sistema Operativo';
+    } else {
+        indicador.style.color = '#ef4444';
+        texto.textContent = 'Sistema Fuera de Línea';
+    }
+}
+
+// === NOTIFICACIONES ===
+function mostrarToast(mensaje, tipo = 'info') {
+    const toast = document.createElement('div');
+    toast.className = `toast ${tipo}`;
+    
+    toast.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fas fa-info-circle"></i>
+            <span>${mensaje}</span>
+        </div>
+    `;
+    
+    elementos.toastContainer.appendChild(toast);
+    
+    setTimeout(() => {
+        if (toast.parentNode) {
+            toast.remove();
+        }
+    }, 5000);
+}
+
+// === FUNCIONES PÚBLICAS ===
+window.iniciarNuevaConsulta = function() {
+    app.crearNuevaSesion();
+    renderizarMensajes();
+    renderizarHistorial();
+    elementos.chatInput.focus();
+    
+    if (elementos.currentChatTitle) {
+        elementos.currentChatTitle.textContent = 'Nueva Consulta Legal';
+    }
+};
+
+window.cargarSesion = function(sesionId) {
+    const sesion = app.historialSesiones.find(s => s.id === sesionId);
+    if (sesion) {
+        app.sesionActualId = sesionId;
+        app.conversacionActual = [...sesion.mensajes];
+        renderizarMensajes();
+        renderizarHistorial();
         
-        if (isMobile && sidebar) {
-            sidebar.classList.add('mobile');
-        } else if (sidebar) {
-            sidebar.classList.remove('mobile', 'open');
+        if (elementos.currentChatTitle) {
+            elementos.currentChatTitle.textContent = sesion.titulo;
         }
     }
+};
 
-    window.addEventListener('resize', handleResize);
-    handleResize(); // Ejecutar al cargar
+window.enviarEjemplo = function(texto) {
+    elementos.chatInput.value = texto;
+    manejarInputChange();
+    autoRedimensionarTextarea();
+    elementos.chatInput.focus();
+};
 
-    // === INICIALIZACIÓN FINAL ===
-    initializeApp();
-
-    // === EXPOSICIÓN DE FUNCIONES PARA DEBUGGING ===
-    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-        window.COLEPA_DEBUG = {
-            appState,
-            exportChat,
-            startNewChat,
-            config
-        };
+window.toggleSidebar = function() {
+    if (elementos.sidebar) {
+        elementos.sidebar.classList.toggle('open');
     }
-});
+};
 
-// === ESTILOS ADICIONALES PARA FUNCIONALIDADES NUEVAS ===
-const additionalStyles = `
-    .error-notification {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: linear-gradient(135deg, #e74c3c, #c0392b);
-        color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
-        z-index: 10000;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        animation: slideIn 0.3s ease;
-        max-width: 300px;
+window.limpiarChat = function() {
+    if (confirm('¿Está seguro de que desea limpiar la conversación actual?')) {
+        iniciarNuevaConsulta();
+        mostrarToast('Conversación limpiada', 'success');
     }
+};
 
-    .character-count {
-        position: absolute;
-        bottom: -25px;
-        right: 0;
-        font-size: 0.75rem;
-        color: #7f8c8d;
-        transition: color 0.3s ease;
+window.exportarConsulta = function() {
+    if (app.conversacionActual.length === 0) {
+        mostrarToast('No hay conversación para exportar', 'warning');
+        return;
     }
+    
+    elementos.modalOverlay.classList.add('active');
+};
 
-    .character-count.warning {
-        color: #e74c3c;
-        font-weight: 600;
-    }
+window.cerrarModal = function() {
+    elementos.modalOverlay.classList.remove('active');
+};
 
-    .message-time {
-        font-size: 0.75rem;
-        color: #95a5a6;
-        margin-left: auto;
-    }
+window.exportar = function(formato) {
+    if (app.conversacionActual.length === 0) return;
+    
+    const sesion = app.historialSesiones.find(s => s.id === app.sesionActualId);
+    const titulo = sesion ? sesion.titulo : 'Consulta Legal';
+    const fecha = new Date().toLocaleDateString('es-PY');
+    
+    let contenido = `COLEPA - Consulta Legal\n`;
+    contenido += `Título: ${titulo}\n`;
+    contenido += `Fecha: ${fecha}\n`;
+    contenido += `${'='.repeat(50)}\n\n`;
+    
+    app.conversacionActual.forEach((mensaje) => {
+        const rol = mensaje.role === 'user' ? 'USUARIO' : 'COLEPA';
+        contenido += `[${rol}]\n${mensaje.content}\n\n`;
+    });
+    
+    const blob = new Blob([contenido], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `colepa_${titulo.replace(/[^a-zA-Z0-9]/g, '_')}.txt`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+    cerrarModal();
+    mostrarToast('Consulta exportada exitosamente', 'success');
+};
 
-    .history-title {
-        font-weight: 500;
-        margin-bottom: 0.25rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .history-time {
-        font-size: 0.75rem;
-        color: #95a5a6;
-    }
-
-    @keyframes slideIn {
-        from {
-            transform: translateX(100%);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-
-    .loading {
-        opacity: 0.8;
-    }
-
-    .sidebar.mobile {
-        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-    }
-
-    /* Mejoras para el indicador de carga */
-    .loading-indicator {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        padding: 0.5rem 0;
-    }
-
-    .loading-dots {
-        display: flex;
-        gap: 4px;
-    }
-
-    .loading-dot {
-        width: 6px;
-        height: 6px;
-        background: #3498db;
-        border-radius: 50%;
-        animation: bounce 1.4s infinite ease-in-out both;
-    }
-
-    .loading-dot:nth-child(1) { animation-delay: -0.32s; }
-    .loading-dot:nth-child(2) { animation-delay: -0.16s; }
-    .loading-dot:nth-child(3) { animation-delay: 0s; }
-
-    @keyframes bounce {
-        0%, 80%, 100% { 
-            transform: scale(0);
-            opacity: 0.5;
-        }
-        40% { 
-            transform: scale(1);
-            opacity: 1;
-        }
-    }
-`;
-
-// Inyectar estilos adicionales
-const styleSheet = document.createElement('style');
-styleSheet.textContent = additionalStyles;
-document.head.appendChild(styleSheet);
+// Inicializar cuando se carga la página
+iniciarNuevaConsulta();
