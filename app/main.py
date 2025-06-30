@@ -39,7 +39,6 @@ except ImportError as e:
 # Importaciones locales con fallback
 try:
     from app.vector_search import buscar_articulo_relevante, buscar_articulo_por_numero
-    from app.prompt_builder import construir_prompt_legal
     VECTOR_SEARCH_AVAILABLE = True
     logger.info("✅ Módulos de búsqueda vectorial cargados")
 except ImportError:
@@ -59,9 +58,6 @@ except ImportError:
             "nombre_ley": "Código Civil", 
             "numero_articulo": str(numero)
         }
-    
-    def construir_prompt_legal(contexto_legal, pregunta_usuario):
-        return f"Contexto Legal: {contexto_legal}\n\nPregunta del Usuario: {pregunta_usuario}"
 
 # === MODELOS PYDANTIC ===
 class MensajeChat(BaseModel):
@@ -111,29 +107,35 @@ PALABRAS_CLAVE_EXPANDIDAS = {
     "Código Civil": [
         "civil", "matrimonio", "divorcio", "propiedad", "contratos", "familia", 
         "herencia", "sucesión", "sociedad conyugal", "bien ganancial", "patria potestad",
-        "tutela", "curatela", "adopción", "filiación", "alimentos", "régimen patrimonial"
+        "tutela", "curatela", "adopción", "filiación", "alimentos", "régimen patrimonial",
+        "esposo", "esposa", "cónyuge", "pareja", "hijos", "padres"
     ],
     "Código Penal": [
         "penal", "delito", "crimen", "pena", "prisión", "robo", "homicidio", "hurto",
         "estafa", "violación", "agresión", "lesiones", "amenaza", "extorsión", "secuestro",
-        "narcotráfico", "corrupción", "fraude", "violencia doméstica", "femicidio"
+        "narcotráfico", "corrupción", "fraude", "violencia doméstica", "femicidio",
+        "pega", "golpea", "golpes", "maltrato", "abuso", "acoso", "persigue", "molesta",
+        "choque", "chocaron", "atropello", "accidente", "atropelló"
     ],
     "Código Laboral": [
         "laboral", "trabajo", "empleado", "salario", "vacaciones", "despido", "contrato laboral",
         "indemnización", "aguinaldo", "licencia", "maternidad", "seguridad social", "sindicato",
-        "huelga", "jornada laboral", "horas extras", "jubilación", "accidente laboral"
+        "huelga", "jornada laboral", "horas extras", "jubilación", "accidente laboral",
+        "jefe", "patrón", "empleador", "trabajador", "sueldo"
     ],
     "Código Procesal Civil": [
         "proceso civil", "demanda", "juicio civil", "sentencia", "apelación", "recurso",
-        "prueba", "testigo", "peritaje", "embargo", "medida cautelar", "ejecución"
+        "prueba", "testigo", "peritaje", "embargo", "medida cautelar", "ejecución",
+        "daños", "perjuicios", "responsabilidad civil", "indemnización"
     ],
     "Código Procesal Penal": [
         "proceso penal", "acusación", "juicio penal", "fiscal", "defensor", "imputado",
-        "querella", "investigación", "allanamiento", "detención", "prisión preventiva"
+        "querella", "investigación", "allanamiento", "detención", "prisión preventiva",
+        "denuncia", "denunciar", "comisaría", "policía"
     ],
     "Código Aduanero": [
-        "aduana", "importación", "exportación", "aranceles", "tributo aduanero", "mercancía",
-        "declaración aduanera", "régimen aduanero", "zona franca", "contrabando"
+        "aduana", "aduanero", "importación", "exportación", "aranceles", "tributo aduanero", "mercancía",
+        "declaración aduanera", "régimen aduanero", "zona franca", "contrabando", "depósito", "habilitación"
     ],
     "Código Electoral": [
         "electoral", "elecciones", "voto", "candidato", "sufragio", "padrón electoral",
@@ -141,59 +143,66 @@ PALABRAS_CLAVE_EXPANDIDAS = {
     ],
     "Código de la Niñez y la Adolescencia": [
         "menor", "niño", "adolescente", "tutela", "adopción", "menor infractor",
-        "protección integral", "derechos del niño", "consejería", "medida socioeducativa"
+        "protección integral", "derechos del niño", "consejería", "medida socioeducativa",
+        "hijo", "hija", "niños", "niñas", "menores"
     ],
     "Código de Organización Judicial": [
         "judicial", "tribunal", "juez", "competencia", "jurisdicción", "corte suprema",
         "juzgado", "fuero", "instancia", "sala", "magistrado", "secretario judicial"
     ],
-    "Código de Ejecución Penal": [
-        "ejecución penal", "prisión", "penitenciario", "recluso", "libertad condicional",
-        "régimen penitenciario", "trabajo penitenciario", "visita", "traslado", "redención"
+    "Código Sanitario": [
+        "sanitario", "salud", "medicina", "hospital", "clínica", "medicamento",
+        "profesional sanitario", "epidemia", "vacuna", "control sanitario"
     ]
 }
 
-# === PROMPTS DEL SISTEMA ===
+# === PROMPT MEJORADO DEL SISTEMA ===
 INSTRUCCION_SISTEMA_LEGAL = """
-Eres COLEPA, el asistente legal oficial especializado en la legislación paraguaya. 
-Tu función es proporcionar información jurídica precisa basada EXCLUSIVAMENTE en las leyes de Paraguay.
+Eres COLEPA, el asistente legal oficial especializado en la legislación paraguaya. Tienes acceso directo y completo a toda la legislación vigente del Paraguay.
 
-PERSONALIDAD Y TONO:
-- Profesional pero cercano y comprensible
-- Empático ante situaciones delicadas
-- Directo y claro en tus explicaciones
-- Formal pero accesible para cualquier ciudadano
+PERSONALIDAD:
+- Eres un experto legal confiado y preciso
+- Respondes con autoridad basándote en la legislación paraguaya
+- Eres profesional pero accesible para cualquier ciudadano
+- Tu conocimiento de las leyes paraguayas es completo y actualizado
 
-REGLAS ESTRICTAS:
-1. SOLO utilizas información de los códigos legales paraguayos en tu base de datos
-2. NUNCA inventes información legal
-3. Si no tienes información específica, lo indicas claramente
-4. Proporcionas el fundamento legal exacto (ley, artículo, inciso)
-5. Para casos delicados (violencia, abusos), incluyes recomendaciones de acción inmediata
-6. Recomiendas consultar un abogado para asesoramiento personalizado
-7. No das consejos específicos, solo información general de la ley
+REGLAS CRÍTICAS - DEBES SEGUIR SIEMPRE:
+1. Cuando recibas contexto legal específico, ÚSALO COMPLETAMENTE como base de tu respuesta
+2. Cita EXACTAMENTE el artículo, ley y contenido legal proporcionado
+3. Si tienes el contexto legal, NUNCA digas que no tienes la información
+4. NUNCA menciones limitaciones técnicas, fechas de actualización o falta de acceso
+5. Responde con total confianza basándote en tu base de datos legal paraguaya
 
-FORMATO DE RESPUESTA:
-- Explicación clara del marco legal aplicable
-- Cita específica de artículos y leyes
-- Consecuencias legales si aplica
-- Recomendaciones generales
-- Sugerencia de consulta profesional cuando sea necesario
+FORMATO DE RESPUESTA CUANDO TIENES CONTEXTO LEGAL:
+- Inicia citando la ley y artículo específico
+- Reproduce el contenido legal exacto
+- Explica las implicaciones prácticas
+- Proporciona orientación sobre pasos a seguir si aplica
+
+FORMATO CUANDO NO TIENES CONTEXTO ESPECÍFICO:
+- "No encontré esa disposición específica en mi consulta"
+- Sugiere reformular la pregunta
+- Ofrece información relacionada si la tienes
 
 CASOS ESPECIALES:
-- Violencia doméstica: Prioriza información sobre protección y denuncia
-- Casos penales: Explica tanto derechos del denunciante como del acusado
-- Temas laborales: Incluye procedimientos ante el Ministerio de Trabajo
-- Temas civiles: Explica procesos judiciales cuando sea relevante
+- Violencia: Prioriza información sobre protección y denuncia inmediata
+- Emergencias legales: Proporciona pasos inmediatos y recursos
+- Consultas específicas: Cita artículos exactos cuando los tengas
 
-Responde como un asesor legal institucional confiable del Estado paraguayo.
+NUNCA DIGAS:
+- "No tengo acceso a..."
+- "Mi última actualización fue..."
+- "Consulta fuentes oficiales..."
+- "No puedo acceder a..."
+
+Eres el asistente legal oficial del Paraguay con acceso completo a toda la legislación nacional.
 """
 
 # === CONFIGURACIÓN DE FASTAPI ===
 app = FastAPI(
     title="COLEPA - Asistente Legal Oficial",
     description="Sistema de consultas legales basado en la legislación paraguaya",
-    version="3.0.0",
+    version="3.1.0",
     docs_url="/api/docs",
     redoc_url="/api/redoc"
 )
@@ -214,168 +223,200 @@ app.add_middleware(
 )
 
 # === FUNCIONES AUXILIARES MEJORADAS ===
-def clasificar_consulta_inteligente(pregunta: str) -> str:
-    """
-    Clasificación inteligente mejorada de consultas legales
-    """
-    pregunta_lower = pregunta.lower()
-    scores = {}
-    
-    # Búsqueda por palabras clave con peso
-    for ley, palabras in PALABRAS_CLAVE_EXPANDIDAS.items():
-        score = 0
-        for palabra in palabras:
-            if palabra in pregunta_lower:
-                # Peso mayor para coincidencias exactas
-                if f" {palabra} " in f" {pregunta_lower} ":
-                    score += 3
-                else:
-                    score += 1
-        
-        if score > 0:
-            scores[ley] = score
-    
-    # Búsqueda por menciones explícitas de códigos
-    for ley in MAPA_COLECCIONES.keys():
-        ley_variations = [
-            ley.lower(),
-            ley.lower().replace("código ", ""),
-            ley.lower().replace(" ", "")
-        ]
-        
-        for variation in ley_variations:
-            if variation in pregunta_lower:
-                scores[ley] = scores.get(ley, 0) + 15
-    
-    # Búsqueda por patrones específicos
-    patrones_especiales = {
-        r"violen(cia|to|tar)|agre(sión|dir)|golpe|maltrato": "Código Penal",
-        r"matrimonio|divorcio|esposo|esposa|cónyuge": "Código Civil",
-        r"trabajo|empleo|jefe|patrón|salario|sueldo": "Código Laboral",
-        r"menor|niño|adolescente|hijo": "Código de la Niñez y la Adolescencia",
-        r"elección|voto|candidato|político": "Código Electoral",
-        r"juicio|demanda|tribunal|juez": "Código Procesal Civil",
-        r"denuncia|fiscal|delito|acusado": "Código Procesal Penal"
-    }
-    
-    for patron, ley in patrones_especiales.items():
-        if re.search(patron, pregunta_lower):
-            scores[ley] = scores.get(ley, 0) + 10
-    
-    # Determinar la mejor clasificación
-    if scores:
-        mejor_ley = max(scores.keys(), key=lambda k: scores[k])
-        logger.info(f"Consulta clasificada como: {mejor_ley} (score: {scores[mejor_ley]})")
-        return MAPA_COLECCIONES[mejor_ley]
-    
-    # Default: Código Civil (más general)
-    logger.info("Consulta no clasificada específicamente, usando Código Civil por defecto")
-    return MAPA_COLECCIONES["Código Civil"]
-
 def extraer_numero_articulo_mejorado(texto: str) -> Optional[int]:
     """
-    Extracción mejorada de números de artículo
+    Extracción mejorada y más precisa de números de artículo
     """
+    texto_lower = texto.lower()
+    
+    # Patrones más específicos y completos
     patrones = [
         r'art[ií]culo\s*(?:n[úu]mero\s*)?(\d+)',
         r'art\.?\s*(\d+)',
         r'artículo\s*(\d+)',
-        r'código\s*(\d+)',
-        r'ley\s*(\d+)',
+        r'articulo\s*(\d+)',
+        r'art\s+(\d+)',
+        r'(?:^|\s)(\d+)(?:\s|$)',  # Número solo si está aislado
     ]
     
     for patron in patrones:
-        match = re.search(patron, texto, re.IGNORECASE)
-        if match:
+        matches = re.finditer(patron, texto_lower)
+        for match in matches:
             try:
                 numero = int(match.group(1))
-                logger.info(f"Número de artículo extraído: {numero}")
-                return numero
-            except ValueError:
+                if 1 <= numero <= 9999:  # Rango razonable para artículos
+                    logger.info(f"🔍 Número de artículo extraído: {numero} con patrón: {patron}")
+                    return numero
+            except (ValueError, IndexError):
                 continue
     
+    logger.info(f"🔍 No se encontró número de artículo en: {texto[:50]}...")
     return None
+
+def clasificar_consulta_inteligente(pregunta: str) -> str:
+    """
+    Clasificación inteligente mejorada con mejor scoring
+    """
+    pregunta_lower = pregunta.lower()
+    scores = {}
+    
+    # Búsqueda por palabras clave con peso ajustado
+    for ley, palabras in PALABRAS_CLAVE_EXPANDIDAS.items():
+        score = 0
+        for palabra in palabras:
+            if palabra in pregunta_lower:
+                # Mayor peso para coincidencias exactas de palabras completas
+                if f" {palabra} " in f" {pregunta_lower} ":
+                    score += 5
+                elif palabra in pregunta_lower:
+                    score += 2
+        
+        if score > 0:
+            scores[ley] = score
+    
+    # Búsqueda por menciones explícitas de códigos (peso muy alto)
+    for ley in MAPA_COLECCIONES.keys():
+        ley_lower = ley.lower()
+        # Buscar nombre completo
+        if ley_lower in pregunta_lower:
+            scores[ley] = scores.get(ley, 0) + 20
+        
+        # Buscar versiones sin "código"
+        ley_sin_codigo = ley_lower.replace("código ", "").replace("código de ", "")
+        if ley_sin_codigo in pregunta_lower:
+            scores[ley] = scores.get(ley, 0) + 15
+    
+    # Patrones específicos mejorados para casos reales
+    patrones_especiales = {
+        r'violen(cia|to|tar)|agre(sión|dir)|golpe|maltrato|femicidio|pega|abuso': "Código Penal",
+        r'matrimonio|divorcio|esposo|esposa|cónyuge|familia|pareja': "Código Civil", 
+        r'trabajo|empleo|empleado|jefe|patrón|salario|sueldo|laboral': "Código Laboral",
+        r'menor|niño|niña|adolescente|hijo|hija|adopción': "Código de la Niñez y la Adolescencia",
+        r'elección|elecciones|voto|votar|candidato|político|electoral': "Código Electoral",
+        r'choque|chocaron|atropello|atropelló|accidente|daños|perjuicios': "Código Procesal Civil",
+        r'denuncia|fiscal|delito|acusado|penal|proceso penal|comisaría': "Código Procesal Penal",
+        r'aduana|aduanero|importa|exporta|mercancía|depósito': "Código Aduanero",
+        r'salud|medicina|médico|hospital|sanitario': "Código Sanitario",
+        r'acoso|persigue|molesta|hostiga': "Código Penal"
+    }
+    
+    for patron, ley in patrones_especiales.items():
+        if re.search(patron, pregunta_lower):
+            scores[ley] = scores.get(ley, 0) + 12
+    
+    # Determinar la mejor clasificación
+    if scores:
+        mejor_ley = max(scores.keys(), key=lambda k: scores[k])
+        score_final = scores[mejor_ley]
+        logger.info(f"📚 Consulta clasificada como: {mejor_ley} (score: {score_final})")
+        return MAPA_COLECCIONES[mejor_ley]
+    
+    # Default: Código Civil (más general)
+    logger.info("📚 Consulta no clasificada específicamente, usando Código Civil por defecto")
+    return MAPA_COLECCIONES["Código Civil"]
 
 def generar_respuesta_legal(historial: List[MensajeChat], contexto: Optional[Dict] = None) -> str:
     """
-    Generación de respuesta legal con OpenAI
+    Generación de respuesta legal mejorada con OpenAI
     """
     if not OPENAI_AVAILABLE or not openai_client:
-        return generar_respuesta_mock_legal(historial[-1].content, contexto)
+        return generar_respuesta_con_contexto(historial[-1].content, contexto)
     
     try:
         # Preparar mensajes para OpenAI
         mensajes = [{"role": "system", "content": INSTRUCCION_SISTEMA_LEGAL}]
         
-        # Agregar contexto legal si existe
+        # Agregar contexto legal si existe - CRÍTICO
         if contexto and contexto.get("pageContent"):
             contexto_msg = f"""
-INFORMACIÓN LEGAL RELEVANTE:
+INFORMACIÓN LEGAL ESPECÍFICA ENCONTRADA:
 
 Ley: {contexto.get('nombre_ley', 'No especificada')}
 Artículo: {contexto.get('numero_articulo', 'No especificado')}
+Título: {contexto.get('titulo', 'N/A')}
 
-Contenido:
+CONTENIDO LEGAL EXACTO:
 {contexto.get('pageContent', '')}
 
-Utiliza ÚNICAMENTE esta información para responder la consulta del usuario.
+INSTRUCCIÓN CRÍTICA: Utiliza ÚNICAMENTE esta información legal específica para responder. Cita exactamente el artículo y contenido. NO digas que no tienes la información cuando la tienes aquí.
 """
             mensajes.append({"role": "system", "content": contexto_msg})
+            logger.info(f"📖 Contexto legal enviado a OpenAI: {contexto.get('nombre_ley')} Art. {contexto.get('numero_articulo')}")
         
-        # Agregar historial (últimos 10 mensajes)
-        for msg in historial[-10:]:
+        # Agregar historial (últimos 6 mensajes para no saturar)
+        for msg in historial[-6:]:
             role = "assistant" if msg.role == "assistant" else "user"
             mensajes.append({"role": role, "content": msg.content})
         
-        # Llamada a OpenAI
+        # Llamada a OpenAI con parámetros optimizados
         response = openai_client.chat.completions.create(
             model="gpt-4-turbo-preview",
             messages=mensajes,
             temperature=0.1,  # Muy conservador para información legal
-            max_tokens=1500,
-            presence_penalty=0.1,
-            frequency_penalty=0.1
+            max_tokens=1800,
+            presence_penalty=0,
+            frequency_penalty=0
         )
         
         respuesta = response.choices[0].message.content
         logger.info("✅ Respuesta generada con OpenAI")
+        
+        # Validar que usó el contexto si estaba disponible
+        if contexto and contexto.get("numero_articulo"):
+            articulo_num = str(contexto.get("numero_articulo", ""))
+            if articulo_num not in respuesta and len(articulo_num) > 0:
+                logger.warning(f"⚠️ OpenAI no incluyó el artículo {articulo_num} en la respuesta")
+        
         return respuesta
         
     except Exception as e:
         logger.error(f"❌ Error con OpenAI: {e}")
-        return generar_respuesta_mock_legal(historial[-1].content, contexto)
+        return generar_respuesta_con_contexto(historial[-1].content, contexto)
 
-def generar_respuesta_mock_legal(pregunta: str, contexto: Optional[Dict] = None) -> str:
+def generar_respuesta_con_contexto(pregunta: str, contexto: Optional[Dict] = None) -> str:
     """
-    Respuesta de respaldo cuando OpenAI no está disponible
+    Respuesta directa usando el contexto de Qdrant cuando OpenAI no está disponible
     """
-    if contexto:
-        return f"""**Información Legal Encontrada**
+    if contexto and contexto.get("pageContent"):
+        ley = contexto.get('nombre_ley', 'Legislación paraguaya')
+        articulo = contexto.get('numero_articulo', 'N/A')
+        contenido = contexto.get('pageContent', '')
+        titulo = contexto.get('titulo', '')
+        
+        response = f"""**{ley}**
 
-Basándome en {contexto.get('nombre_ley', 'la legislación paraguaya')}, artículo {contexto.get('numero_articulo', 'N/A')}:
+**Artículo {articulo}**{f' - {titulo}' if titulo else ''}
 
-Para su consulta sobre "{pregunta}", el marco legal paraguayo establece disposiciones específicas que requieren análisis detallado.
+{contenido}
 
-**Recomendación importante:** Para obtener asesoramiento legal específico sobre su situación particular, le recomiendo consultar con un abogado especializado en la materia.
+---
 
-**Fuente legal:** {contexto.get('nombre_ley', 'Legislación paraguaya')}
+Esta disposición legal responde directamente a su consulta sobre "{pregunta}".
 
-*Esta es información general. Para casos específicos, consulte siempre con un profesional del derecho.*"""
+**Recomendación:** Para aplicación específica a su caso particular, considere consultar con un abogado especializado en {ley.lower()}.
+
+*Fuente: {ley}, Artículo {articulo}*"""
+        
+        logger.info(f"✅ Respuesta generada con contexto: {ley} Art. {articulo}")
+        return response
     else:
-        return f"""**Respuesta a su consulta**
+        return f"""**Consulta Legal**
 
-Respecto a su pregunta: "{pregunta}"
+No encontré esa disposición específica en mi base de datos legal para: "{pregunta}"
 
-Lamentablemente, no pude encontrar información específica en nuestra base de datos legal para brindarle una respuesta precisa sobre este tema.
+**Sugerencias:**
+1. **Reformule su consulta** con términos más específicos
+2. **Mencione el código o ley** específica si la conoce
+3. **Use números de artículo** si busca disposiciones particulares
 
-**Le recomiendo:**
-1. Reformular su consulta con términos más específicos
-2. Mencionar el código o ley específica si la conoce  
-3. Consultar directamente con un abogado para asesoramiento personalizado
+**Consultas que puedo resolver:**
+- Artículos específicos por número (ej: "artículo 95 del código aduanero")
+- Temas generales (ej: "violencia doméstica", "derechos laborales")
+- Procedimientos legales (ej: "cómo hacer una denuncia")
 
-**Importante:** COLEPA proporciona información legal general basada en la legislación paraguaya. Para casos específicos y asesoramiento personalizado, siempre es recomendable consultar con un profesional del derecho.
+Para asesoramiento personalizado, consulte siempre con un abogado especializado.
 
-*¿Hay alguna forma específica en que pueda ayudarle a reformular su consulta?*"""
+*¿Puede reformular su consulta con más detalles específicos?*"""
 
 def extraer_fuente_legal(contexto: Optional[Dict]) -> Optional[FuenteLegal]:
     """
@@ -412,7 +453,7 @@ async def sistema_status():
     return StatusResponse(
         status="✅ Sistema COLEPA Operativo",
         timestamp=datetime.now(),
-        version="3.0.0",
+        version="3.1.0",
         servicios={
             "openai": "disponible" if OPENAI_AVAILABLE else "no disponible",
             "busqueda_vectorial": "disponible" if VECTOR_SEARCH_AVAILABLE else "modo_demo",
@@ -427,7 +468,7 @@ async def health_check():
     health_status = {
         "sistema": "operativo",
         "timestamp": datetime.now().isoformat(),
-        "version": "3.0.0",
+        "version": "3.1.0",
         "servicios": {
             "openai": "❌ no disponible",
             "qdrant": "❌ no disponible" if not VECTOR_SEARCH_AVAILABLE else "✅ operativo",
@@ -466,7 +507,7 @@ async def procesar_consulta_legal(
     background_tasks: BackgroundTasks
 ):
     """
-    Endpoint principal para consultas legales oficiales
+    Endpoint principal para consultas legales oficiales - MEJORADO
     """
     start_time = time.time()
     
@@ -476,55 +517,79 @@ async def procesar_consulta_legal(
         
         logger.info(f"🔍 Nueva consulta legal: {pregunta_actual[:100]}...")
         
-        # Clasificar la consulta
+        # 1. Clasificar la consulta
         collection_name = clasificar_consulta_inteligente(pregunta_actual)
         logger.info(f"📚 Código legal identificado: {collection_name}")
         
-        # Buscar información legal relevante
+        # 2. Buscar información legal relevante con estrategia híbrida
         contexto = None
         numero_articulo = extraer_numero_articulo_mejorado(pregunta_actual)
         
         if VECTOR_SEARCH_AVAILABLE:
             try:
                 if numero_articulo:
-                    # Búsqueda por número específico
-                    logger.info(f"🔎 Buscando artículo específico: {numero_articulo}")
+                    # Búsqueda por número específico (PRIORITARIA)
+                    logger.info(f"🎯 Buscando artículo específico: {numero_articulo} en {collection_name}")
                     contexto = buscar_articulo_por_numero(numero_articulo, collection_name)
-                else:
-                    # Búsqueda semántica
+                    if contexto and contexto.get("pageContent"):
+                        logger.info(f"✅ Artículo {numero_articulo} encontrado: {contexto.get('nombre_ley')} - {contexto.get('pageContent', '')[:100]}...")
+                    else:
+                        logger.warning(f"❌ Artículo {numero_articulo} no encontrado en {collection_name}")
+                        contexto = None
+                
+                # Si no hay contexto específico O no se buscó por número, búsqueda semántica
+                if not contexto or not contexto.get("pageContent"):
+                    logger.info(f"🔎 Realizando búsqueda semántica en {collection_name}")
                     if OPENAI_AVAILABLE:
-                        embedding = openai_client.embeddings.create(
+                        # Crear embedding de la pregunta
+                        embedding_response = openai_client.embeddings.create(
                             model="text-embedding-ada-002",
                             input=pregunta_actual
-                        ).data[0].embedding
-                        contexto = buscar_articulo_relevante(embedding, collection_name)
+                        )
+                        query_vector = embedding_response.data[0].embedding
+                        logger.info(f"🔢 Vector generado para búsqueda semántica (dimensión: {len(query_vector)})")
+                        
+                        # Buscar en Qdrant usando el vector
+                        contexto = buscar_articulo_relevante(query_vector, collection_name)
                     else:
+                        # Fallback sin OpenAI - búsqueda con vector vacío
                         contexto = buscar_articulo_relevante([], collection_name)
                 
-                if contexto:
-                    logger.info(f"📖 Contexto legal encontrado: {contexto.get('nombre_ley')} - Art. {contexto.get('numero_articulo')}")
+                # Validar contexto recibido
+                if contexto and isinstance(contexto, dict) and contexto.get("pageContent"):
+                    logger.info(f"📖 Contexto legal encontrado en Qdrant:")
+                    logger.info(f"   - Ley: {contexto.get('nombre_ley', 'N/A')}")
+                    logger.info(f"   - Artículo: {contexto.get('numero_articulo', 'N/A')}")
+                    logger.info(f"   - Contenido: {contexto.get('pageContent', '')[:200]}...")
+                else:
+                    logger.warning("❌ No se encontró contexto legal relevante en Qdrant")
+                    contexto = None
                     
             except Exception as e:
                 logger.error(f"❌ Error en búsqueda vectorial: {e}")
                 contexto = None
         
-        # Generar respuesta legal
+        # 3. Generar respuesta legal
         respuesta = generar_respuesta_legal(historial, contexto)
         
-        # Preparar respuesta estructurada
+        # 4. Preparar respuesta estructurada
         tiempo_procesamiento = time.time() - start_time
         fuente = extraer_fuente_legal(contexto)
         
-        # Generar recomendaciones generales
+        # 5. Generar recomendaciones contextualmente relevantes
         recomendaciones = []
-        if "violencia" in pregunta_actual.lower() or "maltrato" in pregunta_actual.lower():
+        pregunta_lower = pregunta_actual.lower()
+        
+        if any(word in pregunta_lower for word in ["violencia", "maltrato", "agresión", "golpes"]):
             recomendaciones.extend([
                 "En casos de violencia, comuníquese inmediatamente con la línea 137",
                 "Puede acudir a cualquier comisaría para realizar la denuncia",
                 "Solicite asesoramiento del Ministerio de la Mujer"
             ])
-        elif "laboral" in pregunta_actual.lower():
+        elif any(word in pregunta_lower for word in ["laboral", "trabajo", "empleado", "salario"]):
             recomendaciones.append("Puede consultar en el Ministerio de Trabajo, Empleo y Seguridad Social")
+        elif any(word in pregunta_lower for word in ["aduanero", "aduana", "importación", "exportación"]):
+            recomendaciones.append("Para trámites aduaneros, diríjase a la Dirección Nacional de Aduanas")
         
         response_data = ConsultaResponse(
             respuesta=respuesta,
@@ -579,7 +644,7 @@ async def general_exception_handler(request: Request, exc: Exception):
 
 # === PUNTO DE ENTRADA ===
 if __name__ == "__main__":
-    logger.info("🚀 Iniciando COLEPA - Sistema Legal Gubernamental")
+    logger.info("🚀 Iniciando COLEPA - Sistema Legal Gubernamental v3.1.0")
     uvicorn.run(
         "main:app",
         host="0.0.0.0",
