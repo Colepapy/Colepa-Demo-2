@@ -96,15 +96,15 @@ class StatusResponse(BaseModel):
 # === CONFIGURACIÓN DEL SISTEMA ===
 MAPA_COLECCIONES = {
     "Código Aduanero": "colepa_aduanero_final",
-    "Código Civil": "colepa_codigo_civil_final",
+    "Código Civil": "colepa_codigo_civil_final", 
     "Código de la Niñez y la Adolescencia": "colepa_ninez_final",
     "Código de Organización Judicial": "colepa_organizacion_judicial_final",
-    "Código Procesal Civil": "colepa_procesal_civil_final",
+    "Código Procesal Civil": "colepa_procesal_civil_final", 
     "Código Procesal Penal": "colepa_procesal_penal_final",
     "Código Laboral": "colepa_laboral_final",
     "Código Electoral": "colepa_electoral_final",
     "Código Penal": "colepa_penal_final",
-    "Código de Ejecución Penal": "colepa_ejecucion_penal_final",
+    "Código Sanitario": "colepa_sanitario_final",
 }
 
 PALABRAS_CLAVE_EXPANDIDAS = {
