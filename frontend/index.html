@@ -3,26 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COLEPA - Sistema Legal Profesional | DEMO</title>
+    <title>COLEPA - Consulta de Leyes del Paraguay</title>
     
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
     
-    <!-- Meta tags SEO -->
-    <meta name="description" content="COLEPA - Sistema profesional de consultas legales sobre la legislación paraguaya. Versión DEMO para pruebas y desarrollo.">
-    <meta name="keywords" content="leyes paraguay, consulta legal, legislación paraguaya, sistema legal, demo">
-    <meta name="author" content="COLEPA Development Team">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="theme-color" content="#0038a8">
-    
-    <!-- Fuentes Premium -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     
     <!-- Estilos -->
@@ -30,248 +18,84 @@
 </head>
 <body>
     <div class="app-container">
-        <!-- Sidebar Futurista -->
-        <aside class="sidebar" id="sidebar">
-            <!-- Logo Section Premium -->
-            <div class="logo-container">
-                <div class="logo-wrapper">
+        <!-- Sidebar Minimalista -->
+        <div class="sidebar">
+            <!-- Header del Sidebar -->
+            <div class="sidebar-header">
+                <div class="logo-section">
                     <div class="logo-icon">
                         <i class="fas fa-balance-scale"></i>
                     </div>
                     <div class="logo-text">
-                        <h1 class="logo">COLEPA</h1>
-                        <p class="tagline">Consulta de Leyes del Paraguay</p>
-                        <p class="subtitle">VERSIÓN DEMO</p>
+                        <h1>COLEPA</h1>
+                        <p>Consulta de Leyes del Paraguay</p>
+                        <span class="demo-badge">VERSIÓN DEMO</span>
                     </div>
                 </div>
-            </div>
-
-            <!-- Botón Nueva Consulta -->
-            <button class="new-chat-btn" onclick="iniciarNuevaConsulta()" id="newChatBtn">
-                <i class="fas fa-plus"></i>
-                <span>Nueva Consulta</span>
-            </button>
-
-            <!-- Historial de Conversaciones -->
-            <div class="chat-history-section">
-                <div class="history-header">
-                    <h3><i class="fas fa-history"></i> Historial</h3>
-                </div>
-                <div class="chat-history" id="chatHistory">
-                    <!-- Se llena dinámicamente -->
-                </div>
-            </div>
-
-            <!-- Footer del Sidebar -->
-            <div class="sidebar-footer">
-                <div class="system-status" id="systemStatus">
-                    <div class="status-indicator"></div>
-                    <span class="status-text">Sistema Operativo</span>
-                </div>
-                <div class="legal-disclaimer">
-                    <i class="fas fa-shield-alt"></i>
-                    <strong>Aviso Importante:</strong> Esta es una versión DEMO. COLEPA no sustituye el asesoramiento profesional de un abogado especializado.
-                </div>
-            </div>
-        </aside>
-
-        <!-- Área Principal -->
-        <main class="main-content">
-            <!-- Header Minimalista -->
-            <header class="chat-header">
-                <div class="header-content">
-                    <button class="sidebar-toggle" onclick="toggleSidebar()" id="sidebarToggle">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                    <div class="header-info">
-                        <h2 class="current-chat-title" id="currentChatTitle">Sistema Legal Paraguayo</h2>
-                        <div class="header-subtitle">
-                            Asistente Legal Inteligente
-                            <span class="demo-badge">DEMO</span>
-                        </div>
-                    </div>
-                    <div class="header-actions">
-                        <button class="action-btn" onclick="exportarConsulta()" title="Exportar consulta">
-                            <i class="fas fa-download"></i>
-                        </button>
-                        <button class="action-btn" onclick="limpiarChat()" title="Nueva consulta">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                        <button class="action-btn" onclick="toggleSidebar()" title="Toggle sidebar">
-                            <i class="fas fa-sidebar"></i>
-                        </button>
-                    </div>
-                </div>
-            </header>
-
-            <!-- Contenedor de Chat -->
-            <div class="chat-container">
-                <div class="chat-messages" id="chatMessages">
-                    <!-- Mensaje de Bienvenida Futurista -->
-                    <div class="welcome-message">
-                        <div class="welcome-content">
-                            <h1 class="welcome-title">Bienvenido a COLEPA</h1>
-                            <p class="welcome-subtitle">
-                                Sistema Legal Inteligente especializado en la legislación paraguaya.<br>
-                                Obtenga información jurídica precisa y confiable al instante.
-                            </p>
-
-                            <!-- Grid de Características -->
-                            <div class="feature-grid">
-                                <div class="feature-card" onclick="enviarEjemplo('¿Qué dice el artículo 22 del Código Civil?')">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-gavel"></i>
-                                    </div>
-                                    <h3 class="feature-title">Código Civil</h3>
-                                    <p class="feature-description">Consultas sobre matrimonio, divorcio, propiedad, contratos y familia</p>
-                                </div>
-
-                                <div class="feature-card" onclick="enviarEjemplo('¿Cuáles son las consecuencias del robo en Paraguay?')">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-handcuffs"></i>
-                                    </div>
-                                    <h3 class="feature-title">Código Penal</h3>
-                                    <p class="feature-description">Información sobre delitos, penas y consecuencias legales</p>
-                                </div>
-
-                                <div class="feature-card" onclick="enviarEjemplo('Mi empleador no me paga horas extras, ¿qué puedo hacer?')">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-briefcase"></i>
-                                    </div>
-                                    <h3 class="feature-title">Código Laboral</h3>
-                                    <p class="feature-description">Derechos laborales, salarios, vacaciones y relaciones de trabajo</p>
-                                </div>
-
-                                <div class="feature-card" onclick="enviarEjemplo('¿Qué derechos tiene un menor de edad?')">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-child"></i>
-                                    </div>
-                                    <h3 class="feature-title">Código de la Niñez</h3>
-                                    <p class="feature-description">Protección integral de derechos de niños y adolescentes</p>
-                                </div>
-
-                                <div class="feature-card" onclick="enviarEjemplo('¿Cómo funciona el proceso electoral en Paraguay?')">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-vote-yea"></i>
-                                    </div>
-                                    <h3 class="feature-title">Código Electoral</h3>
-                                    <p class="feature-description">Procesos electorales, derechos políticos y participación ciudadana</p>
-                                </div>
-
-                                <div class="feature-card" onclick="enviarEjemplo('¿Qué documentos necesito para importar mercancías?')">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-truck"></i>
-                                    </div>
-                                    <h3 class="feature-title">Código Aduanero</h3>
-                                    <p class="feature-description">Importación, exportación y procedimientos aduaneros</p>
-                                </div>
-                            </div>
-
-                            <!-- Ejemplos de Consultas -->
-                            <div class="example-queries">
-                                <h4 style="text-align: center; margin-bottom: 1rem; color: var(--gray-300);">
-                                    <i class="fas fa-lightbulb" style="color: var(--accent-gold); margin-right: 0.5rem;"></i>
-                                    Ejemplos de consultas
-                                </h4>
-                                
-                                <button class="example-btn" onclick="enviarEjemplo('¿Qué dice el artículo 22 del Código Civil?')">
-                                    <i class="fas fa-quote-left" style="opacity: 0.5; margin-right: 0.5rem;"></i>
-                                    ¿Qué dice el artículo 22 del Código Civil?
-                                </button>
-                                
-                                <button class="example-btn" onclick="enviarEjemplo('Mi esposo me maltrata, ¿qué puedo hacer legalmente?')">
-                                    <i class="fas fa-quote-left" style="opacity: 0.5; margin-right: 0.5rem;"></i>
-                                    Mi esposo me maltrata, ¿qué puedo hacer legalmente?
-                                </button>
-                                
-                                <button class="example-btn" onclick="enviarEjemplo('¿Cómo puedo demandar por despido injustificado?')">
-                                    <i class="fas fa-quote-left" style="opacity: 0.5; margin-right: 0.5rem;"></i>
-                                    ¿Cómo puedo demandar por despido injustificado?
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Área de Input Futurista -->
-                <div class="chat-input-area">
-                    <div class="input-container">
-                        <form id="chatForm" onsubmit="enviarMensaje(event)">
-                            <div class="input-field">
-                                <textarea 
-                                    id="chatInput" 
-                                    class="chat-input" 
-                                    placeholder="Escriba su consulta legal aquí... (Presione Enter para enviar, Shift+Enter para nueva línea)" 
-                                    rows="1"
-                                    maxlength="2000"
-                                    oninput="manejarInput()"
-                                    onkeydown="manejarTeclas(event)"
-                                ></textarea>
-                                <div class="input-actions">
-                                    <div class="char-counter" id="charCounter">0/2000</div>
-                                    <button type="submit" class="send-button" id="sendButton" disabled>
-                                        <i class="fas fa-paper-plane"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Aviso Legal Prominente -->
-                    <div class="legal-notice">
-                        <div class="notice-content">
-                            <i class="fas fa-shield-alt"></i>
-                            <div class="notice-text">
-                                <p><strong>AVISO LEGAL IMPORTANTE:</strong> COLEPA es un sistema de consulta que proporciona información legal general basada en la legislación paraguaya vigente.</p>
-                                <p><strong>Este sistema NO sustituye el asesoramiento profesional de un abogado.</strong> Para casos específicos y asesoramiento personalizado, consulte siempre con un profesional del derecho especializado.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-
-    <!-- Overlay de Carga Futurista -->
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="loading-content">
-            <div class="loading-spinner"></div>
-            <div class="loading-text">Consultando legislación paraguaya</div>
-            <div class="loading-subtext">Analizando su consulta...</div>
-        </div>
-    </div>
-
-    <!-- Contenedor de Notificaciones -->
-    <div class="toast-container" id="toastContainer">
-        <!-- Las notificaciones aparecen aquí dinámicamente -->
-    </div>
-
-    <!-- Modal de Exportación -->
-    <div class="modal-overlay" id="modalOverlay">
-        <div class="modal" id="exportModal">
-            <div class="modal-header">
-                <h3>Exportar Consulta Legal</h3>
-                <button class="modal-close" onclick="cerrarModal()">
-                    <i class="fas fa-times"></i>
+                
+                <button class="new-chat-btn" onclick="nuevaConsulta()">
+                    <i class="fas fa-plus"></i>
+                    Nueva consulta
                 </button>
             </div>
-            <div class="modal-body">
-                <p>Seleccione el formato para exportar su consulta legal:</p>
-                <div class="export-options">
-                    <button class="export-btn" onclick="exportar('txt')">
-                        <i class="fas fa-file-alt"></i>
-                        <span>Texto Plano</span>
-                    </button>
-                    <button class="export-btn" onclick="exportar('json')">
-                        <i class="fas fa-file-code"></i>
-                        <span>Formato JSON</span>
-                    </button>
+
+            <!-- Historial de Chats -->
+            <div class="chat-history" id="chatHistory">
+                <!-- Se llena dinámicamente -->
+            </div>
+        </div>
+
+        <!-- Área Principal -->
+        <div class="main-area">
+            <!-- Contenedor de Mensajes -->
+            <div class="messages-container" id="messagesContainer">
+                <!-- Mensaje de Bienvenida -->
+                <div class="welcome-message" id="welcomeMessage">
+                    <div class="welcome-content">
+                        <div class="welcome-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h2>Bienvenido a COLEPA</h2>
+                        <p>¿En qué puedo ayudarte con las leyes paraguayas?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Área de Input -->
+            <div class="input-area">
+                <div class="input-container">
+                    <form id="messageForm" onsubmit="enviarMensaje(event)">
+                        <div class="input-wrapper">
+                            <textarea 
+                                id="messageInput" 
+                                placeholder="Envía un mensaje a COLEPA"
+                                rows="1"
+                                onkeydown="manejarTeclas(event)"
+                                oninput="manejarInput()"
+                            ></textarea>
+                            <button type="submit" id="sendBtn" disabled>
+                                <i class="fas fa-arrow-up"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Disclaimer Legal -->
+                <div class="legal-disclaimer">
+                    COLEPA puede cometer errores. No sustituye el asesoramiento de un abogado profesional.
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Scripts -->
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Consultando legislación paraguaya...</p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
