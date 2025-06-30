@@ -63,6 +63,23 @@ except ImportError:
     def construir_prompt(contexto_legal, pregunta_usuario):
         return f"Contexto Legal: {contexto_legal}\n\nPregunta del Usuario: {pregunta_usuario}"
 
+# ========== NUEVO: CLASIFICADOR INTELIGENTE ==========
+try:
+    from app.clasificador_inteligente import clasificar_y_procesar
+    CLASIFICADOR_AVAILABLE = True
+    logger.info("✅ Clasificador inteligente cargado")
+except ImportError:
+    logger.warning("⚠️ Clasificador no encontrado, modo básico")
+    CLASIFICADOR_AVAILABLE = False
+    
+    def clasificar_y_procesar(texto):
+        return {
+            'tipo_consulta': 'consulta_legal',
+            'respuesta_directa': None,
+            'requiere_busqueda': True,
+            'es_conversacional': False
+        }
+
 # === MODELOS PYDANTIC ===
 class MensajeChat(BaseModel):
     role: str = Field(..., pattern="^(user|assistant|system)$")
@@ -508,13 +525,14 @@ async def listar_codigos_legales():
         "cobertura": "Legislación nacional vigente"
     }
 
+# ========== ENDPOINT PRINCIPAL MODIFICADO ==========
 @app.post("/api/consulta", response_model=ConsultaResponse)
 async def procesar_consulta_legal(
     request: ConsultaRequest, 
     background_tasks: BackgroundTasks
 ):
     """
-    Endpoint principal para consultas legales oficiales - MEJORADO
+    Endpoint principal para consultas legales oficiales - CON CLASIFICACIÓN INTELIGENTE
     """
     start_time = time.time()
     
@@ -524,6 +542,56 @@ async def procesar_consulta_legal(
         
         logger.info(f"🔍 Nueva consulta legal: {pregunta_actual[:100]}...")
         
+        # ========== NUEVA FUNCIONALIDAD: CLASIFICACIÓN INTELIGENTE ==========
+        if CLASIFICADOR_AVAILABLE:
+            logger.info("🧠 Iniciando clasificación inteligente...")
+            clasificacion = clasificar_y_procesar(pregunta_actual)
+            
+            logger.info(f"📊 Resultado clasificación:")
+            logger.info(f"   - Tipo: {clasificacion['tipo_consulta']}")
+            logger.info(f"   - Es conversacional: {clasificacion['es_conversacional']}")
+            logger.info(f"   - Requiere búsqueda: {clasificacion['requiere_busqueda']}")
+            
+            # Si es una consulta conversacional (saludo, despedida, etc.)
+            if clasificacion['es_conversacional'] and clasificacion['respuesta_directa']:
+                logger.info("💬 Generando respuesta conversacional directa...")
+                
+                tiempo_procesamiento = time.time() - start_time
+                
+                return ConsultaResponse(
+                    respuesta=clasificacion['respuesta_directa'],
+                    fuente=None,
+                    recomendaciones=None,
+                    tiempo_procesamiento=round(tiempo_procesamiento, 2),
+                    es_respuesta_oficial=True
+                )
+            
+            # Si no requiere búsqueda (tema no legal)
+            if not clasificacion['requiere_busqueda']:
+                logger.info("🚫 Consulta no legal, redirigiendo...")
+                
+                tiempo_procesamiento = time.time() - start_time
+                
+                return ConsultaResponse(
+                    respuesta=clasificacion['respuesta_directa'] or 
+                             "Disculpa, pero me especializo únicamente en consultas sobre "
+                             "las leyes y normativas de Paraguay. ¿Hay alguna pregunta legal "
+                             "en la que pueda asistirte?",
+                    fuente=None,
+                    recomendaciones=None,
+                    tiempo_procesamiento=round(tiempo_procesamiento, 2),
+                    es_respuesta_oficial=True
+                )
+            
+            # Si llegamos aquí, es una consulta legal que requiere búsqueda
+            logger.info("🔍 Consulta legal confirmada, procediendo con búsqueda...")
+            
+        else:
+            # Fallback si no hay clasificador
+            logger.info("⚠️ Clasificador no disponible, procesando como consulta legal")
+            clasificacion = {'tipo_consulta': 'consulta_legal'}
+        
+        # ========== CONTINÚA CON TU LÓGICA ORIGINAL ==========
         # 1. Clasificar la consulta
         collection_name = clasificar_consulta_inteligente(pregunta_actual)
         logger.info(f"📚 Código legal identificado: {collection_name}")
@@ -539,21 +607,6 @@ async def procesar_consulta_legal(
                     logger.info(f"🎯 Buscando artículo específico: {numero_articulo} en {collection_name}")
                     contexto = buscar_articulo_por_numero(numero_articulo, collection_name)
                     if contexto and contexto.get("pageContent"):
-                        logger.info(f"✅ Artículo {numero_articulo} encontrado: {contexto.get('nombre_ley')} - {contexto.get('pageContent', '')[:100]}...")
-                    else:
-                        logger.warning(f"❌ Artículo {numero_articulo} no encontrado en {collection_name}")
-                        contexto = None
-                
-                # Si no hay contexto específico O no se buscó por número, búsqueda semántica
-                if not contexto or not contexto.get("pageContent"):
-                    logger.info(f"🔎 Realizando búsqueda semántica en {collection_name}")
-                    if OPENAI_AVAILABLE:
-                        # Crear embedding de la pregunta
-                        embedding_response = openai_client.embeddings.create(
-                            model="text-embedding-ada-002",
-                            input=pregunta_actual
-                        )
-                        query_vector = embedding_response.data[0].embedding
                         logger.info(f"🔢 Vector generado para búsqueda semántica (dimensión: {len(query_vector)})")
                         
                         # Buscar en Qdrant usando el vector
@@ -607,6 +660,9 @@ async def procesar_consulta_legal(
         )
         
         logger.info(f"✅ Consulta procesada exitosamente en {tiempo_procesamiento:.2f}s")
+        if CLASIFICADOR_AVAILABLE and 'clasificacion' in locals():
+            logger.info(f"🏷️ Tipo clasificado: {clasificacion.get('tipo_consulta', 'N/A')}")
+        
         return response_data
         
     except Exception as e:
@@ -658,4 +714,19 @@ if __name__ == "__main__":
         port=int(os.getenv("PORT", 8000)),
         reload=False,  # Deshabilitado en producción
         log_level="info"
-    )
+    )"✅ Artículo {numero_articulo} encontrado: {contexto.get('nombre_ley')} - {contexto.get('pageContent', '')[:100]}...")
+                    else:
+                        logger.warning(f"❌ Artículo {numero_articulo} no encontrado en {collection_name}")
+                        contexto = None
+                
+                # Si no hay contexto específico O no se buscó por número, búsqueda semántica
+                if not contexto or not contexto.get("pageContent"):
+                    logger.info(f"🔎 Realizando búsqueda semántica en {collection_name}")
+                    if OPENAI_AVAILABLE:
+                        # Crear embedding de la pregunta
+                        embedding_response = openai_client.embeddings.create(
+                            model="text-embedding-ada-002",
+                            input=pregunta_actual
+                        )
+                        query_vector = embedding_response.data[0].embedding
+                        logger.info(f
