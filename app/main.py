@@ -359,13 +359,13 @@ def generar_respuesta_legal(historial: List[MensajeChat], contexto: Optional[Dic
             # Sin contexto específico, usar prompt del sistema mejorado
             logger.info("📝 Generando respuesta sin contexto específico")
         
-        # Agregar solo los últimos 2-3 mensajes del historial (no saturar cuando hay contexto)
+        # Agregar solo los últimos 2 mensajes del historial (no saturar cuando hay contexto)
         if contexto and contexto.get("pageContent"):
             # Con contexto: solo la pregunta actual ya está en el prompt construido
             pass
         else:
             # Sin contexto: agregar historial normal
-            for msg in for msg in historial[-2:]:
+            for msg in historial[-2:]:
                 role = "assistant" if msg.role == "assistant" else "user"
                 mensajes.append({"role": role, "content": msg.content})
         
@@ -539,13 +539,15 @@ async def procesar_consulta_legal(
     try:
         historial = request.historial
         pregunta_actual = historial[-1].content
+        
         # ========== PREVENCIÓN ERROR 422 - LÍMITE DE TOKENS ==========
-MAX_HISTORIAL = 6  # Solo últimos 6 mensajes (3 pares pregunta-respuesta)
-if len(historial) > MAX_HISTORIAL:
-    historial_limitado = historial[-MAX_HISTORIAL:]
-    logger.info(f"⚠️ Historial limitado a {len(historial_limitado)} mensajes para evitar error 422")
-else:
-    historial_limitado = historial
+        MAX_HISTORIAL = 6  # Solo últimos 6 mensajes (3 pares pregunta-respuesta)
+        if len(historial) > MAX_HISTORIAL:
+            historial_limitado = historial[-MAX_HISTORIAL:]
+            logger.info(f"⚠️ Historial limitado a {len(historial_limitado)} mensajes para evitar error 422")
+        else:
+            historial_limitado = historial
+        
         logger.info(f"🔍 Nueva consulta legal: {pregunta_actual[:100]}...")
         
         # ========== NUEVA FUNCIONALIDAD: CLASIFICACIÓN INTELIGENTE ==========
@@ -607,103 +609,81 @@ else:
         numero_articulo = extraer_numero_articulo_mejorado(pregunta_actual)
         
         if VECTOR_SEARCH_AVAILABLE:
-    try:
-        if numero_articulo:
-            # BÚSQUEDA PRIORITARIA: Por número exacto
-            logger.info(f"🎯 Buscando artículo específico: {numero_articulo} en {collection_name}")
-            contexto = buscar_articulo_por_numero(numero_articulo, collection_name)
-            
-            if contexto and contexto.get("pageContent"):
-                logger.info(f"✅ Artículo {numero_articulo} encontrado por búsqueda exacta")
-            else:
-                logger.warning(f"❌ Artículo {numero_articulo} no encontrado por búsqueda exacta")
-                
-                # FALLBACK 1: Búsqueda semántica con número en el texto
-                if OPENAI_AVAILABLE:
-                    logger.info(f"🔄 Intentando búsqueda semántica para artículo {numero_articulo}")
+            try:
+                if numero_articulo:
+                    # BÚSQUEDA PRIORITARIA: Por número exacto
+                    logger.info(f"🎯 Buscando artículo específico: {numero_articulo} en {collection_name}")
+                    contexto = buscar_articulo_por_numero(numero_articulo, collection_name)
                     
-                    # Crear consulta más específica para embeddings
-                    consulta_semantica = f"artículo {numero_articulo} código penal civil procesal laboral"
-                    
-                    embedding_response = openai_client.embeddings.create(
-                        model="text-embedding-ada-002",
-                        input=consulta_semantica
-                    )
-                    query_vector = embedding_response.data[0].embedding
-                    
-                    # Buscar con umbral más bajo para ser menos restrictivo
-                    contexto_semantico = buscar_articulo_relevante(query_vector, collection_name)
-                    
-                    # Verificar si el resultado semántico contiene el número correcto
-                    if (contexto_semantico and 
-                        contexto_semantico.get("pageContent") and 
-                        str(numero_articulo) in contexto_semantico.get("pageContent", "")):
-                        
-                        contexto = contexto_semantico
-                        logger.info(f"✅ Artículo {numero_articulo} encontrado por búsqueda semántica")
+                    if contexto and contexto.get("pageContent"):
+                        logger.info(f"✅ Artículo {numero_articulo} encontrado por búsqueda exacta")
                     else:
-                        logger.warning(f"❌ Búsqueda semántica no encontró artículo {numero_articulo}")
-                        contexto = None
-        
-        # Si no se buscó por número o no se encontró, búsqueda semántica general
-        if not contexto or not contexto.get("pageContent"):
-            logger.info(f"🔎 Realizando búsqueda semántica general en {collection_name}")
-            
-            if OPENAI_AVAILABLE:
-                # Usar la pregunta original para búsqueda semántica
-                embedding_response = openai_client.embeddings.create(
-                    model="text-embedding-ada-002",
-                    input=pregunta_actual
-                )
-                query_vector = embedding_response.data[0].embedding
-                contexto = buscar_articulo_relevante(query_vector, collection_name)
+                        logger.warning(f"❌ Artículo {numero_articulo} no encontrado por búsqueda exacta")
+                        
+                        # FALLBACK 1: Búsqueda semántica con número en el texto
+                        if OPENAI_AVAILABLE:
+                            logger.info(f"🔄 Intentando búsqueda semántica para artículo {numero_articulo}")
+                            
+                            # Crear consulta más específica para embeddings
+                            consulta_semantica = f"artículo {numero_articulo} código penal civil procesal laboral"
+                            
+                            embedding_response = openai_client.embeddings.create(
+                                model="text-embedding-ada-002",
+                                input=consulta_semantica
+                            )
+                            query_vector = embedding_response.data[0].embedding
+                            
+                            # Buscar con umbral más bajo para ser menos restrictivo
+                            contexto_semantico = buscar_articulo_relevante(query_vector, collection_name)
+                            
+                            # Verificar si el resultado semántico contiene el número correcto
+                            if (contexto_semantico and 
+                                contexto_semantico.get("pageContent") and 
+                                str(numero_articulo) in contexto_semantico.get("pageContent", "")):
+                                
+                                contexto = contexto_semantico
+                                logger.info(f"✅ Artículo {numero_articulo} encontrado por búsqueda semántica")
+                            else:
+                                logger.warning(f"❌ Búsqueda semántica no encontró artículo {numero_articulo}")
+                                contexto = None
                 
-                if contexto and contexto.get("pageContent"):
-                    logger.info("✅ Contexto encontrado por búsqueda semántica general")
-                else:
-                    logger.warning("❌ No se encontró contexto por búsqueda semántica")
-            else:
-                # Fallback sin OpenAI
-                contexto = buscar_articulo_relevante([], collection_name)
-                
-    except Exception as e:
-        logger.error(f"❌ Error en búsqueda vectorial: {e}")
-        contexto = None
-                
-                # Si no hay contexto específico O no se buscó por número, búsqueda semántica
+                # Si no se buscó por número o no se encontró, búsqueda semántica general
                 if not contexto or not contexto.get("pageContent"):
-                    logger.info(f"🔎 Realizando búsqueda semántica en {collection_name}")
+                    logger.info(f"🔎 Realizando búsqueda semántica general en {collection_name}")
+                    
                     if OPENAI_AVAILABLE:
-                        # Crear embedding de la pregunta
+                        # Usar la pregunta original para búsqueda semántica
                         embedding_response = openai_client.embeddings.create(
                             model="text-embedding-ada-002",
                             input=pregunta_actual
                         )
                         query_vector = embedding_response.data[0].embedding
-                        logger.info(f"🔢 Vector generado para búsqueda semántica (dimensión: {len(query_vector)})")
-                        
-                        # Buscar en Qdrant usando el vector
                         contexto = buscar_articulo_relevante(query_vector, collection_name)
+                        
+                        if contexto and contexto.get("pageContent"):
+                            logger.info("✅ Contexto encontrado por búsqueda semántica general")
+                        else:
+                            logger.warning("❌ No se encontró contexto por búsqueda semántica")
                     else:
-                        # Fallback sin OpenAI - búsqueda con vector vacío
+                        # Fallback sin OpenAI
                         contexto = buscar_articulo_relevante([], collection_name)
-                
-                # Validar contexto recibido
-                if contexto and isinstance(contexto, dict) and contexto.get("pageContent"):
-                    logger.info(f"📖 Contexto legal encontrado en Qdrant:")
-                    logger.info(f"   - Ley: {contexto.get('nombre_ley', 'N/A')}")
-                    logger.info(f"   - Artículo: {contexto.get('numero_articulo', 'N/A')}")
-                    logger.info(f"   - Contenido: {contexto.get('pageContent', '')[:200]}...")
-                else:
-                    logger.warning("❌ No se encontró contexto legal relevante en Qdrant")
-                    contexto = None
-                    
+                        
             except Exception as e:
                 logger.error(f"❌ Error en búsqueda vectorial: {e}")
                 contexto = None
+
+        # Validar contexto final
+        if contexto and isinstance(contexto, dict) and contexto.get("pageContent"):
+            logger.info(f"📖 Contexto legal final:")
+            logger.info(f"   - Ley: {contexto.get('nombre_ley', 'N/A')}")
+            logger.info(f"   - Artículo: {contexto.get('numero_articulo', 'N/A')}")
+            logger.info(f"   - Contenido: {contexto.get('pageContent', '')[:200]}...")
+        else:
+            logger.warning("❌ No se encontró contexto legal relevante para la consulta")
+            contexto = None
         
         # 3. Generar respuesta legal
-       respuesta = generar_respuesta_legal(historial_limitado, contexto)
+        respuesta = generar_respuesta_legal(historial_limitado, contexto)
         
         # 4. Preparar respuesta estructurada
         tiempo_procesamiento = time.time() - start_time
