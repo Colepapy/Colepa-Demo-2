@@ -1,6 +1,6 @@
 /**
- * COLEPA - JavaScript Minimalista
- * Sistema Legal de Paraguay - Versión ChatGPT
+ * COLEPA - JavaScript Completo
+ * Sistema Legal de Paraguay con integración Qdrant
  */
 
 // === CONFIGURACIÓN ===
@@ -51,6 +51,12 @@ function inicializar() {
     if (elementos.messageInput) {
         elementos.messageInput.focus();
     }
+
+    // Verificar conexión con API al inicializar
+    verificarConexionAPI();
+
+    console.log('🚀 COLEPA inicializado correctamente');
+    console.log('📡 API URL:', CONFIG.API_BASE_URL);
 }
 
 function configurarEventos() {
@@ -64,6 +70,60 @@ function configurarEventos() {
     }
 }
 
+// === VERIFICACIÓN DE CONEXIÓN ===
+async function verificarConexionAPI() {
+    try {
+        console.log('Verificando conexión con API:', CONFIG.API_BASE_URL);
+        const response = await fetch(CONFIG.API_BASE_URL + '/health', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            console.log('✅ Conexión con API exitosa');
+        } else {
+            console.warn('⚠️ API responde pero con error:', response.status);
+        }
+    } catch (error) {
+        console.error('❌ Error conectando con API:', error);
+        mostrarMensajeConexion(false);
+    }
+}
+
+function mostrarMensajeConexion(exito) {
+    if (!exito) {
+        const mensajeConexion = document.createElement('div');
+        mensajeConexion.className = 'connection-warning';
+        mensajeConexion.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--primary-red);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            box-shadow: var(--shadow-md);
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        `;
+        mensajeConexion.innerHTML = `
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>Problema de conexión con el servidor. Intentando reconectar...</span>
+        `;
+        document.body.appendChild(mensajeConexion);
+        
+        setTimeout(() => {
+            mensajeConexion.remove();
+        }, 5000);
+    }
+}
+
 // === FUNCIONES DE MENSAJES ===
 function enviarMensaje(event) {
     event.preventDefault();
@@ -72,6 +132,12 @@ function enviarMensaje(event) {
     
     const mensaje = elementos.messageInput.value.trim();
     if (!mensaje) return;
+    
+    // Validar longitud del mensaje
+    if (mensaje.length > CONFIG.MAX_MESSAGE_LENGTH) {
+        alert(`El mensaje es demasiado largo. Máximo ${CONFIG.MAX_MESSAGE_LENGTH} caracteres.`);
+        return;
+    }
     
     // Crear nueva sesión si no existe
     if (!app.sesionId) {
@@ -115,10 +181,20 @@ async function procesarRespuesta(mensajeUsuario) {
     mostrarIndicadorEscritura();
     
     try {
-        const response = await fetch(CONFIG.API_BASE_URL + '/api/consulta', {
+        console.log('Enviando consulta a:', CONFIG.API_BASE_URL + '/consulta');
+        console.log('Datos enviados:', {
+            historial: app.conversacionActual.map(msg => ({
+                role: msg.role === 'user' ? 'user' : 'assistant',
+                content: msg.content,
+                timestamp: msg.timestamp
+            }))
+        });
+
+        const response = await fetch(CONFIG.API_BASE_URL + '/consulta', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
             },
             body: JSON.stringify({
                 historial: app.conversacionActual.map(msg => ({
@@ -129,11 +205,25 @@ async function procesarRespuesta(mensajeUsuario) {
             })
         });
         
+        console.log('Respuesta del servidor:', response.status, response.statusText);
+        
         if (!response.ok) {
-            throw new Error(`Error ${response.status}: ${response.statusText}`);
+            let errorMessage = `Error ${response.status}: ${response.statusText}`;
+            
+            try {
+                const errorData = await response.json();
+                if (errorData.detail) {
+                    errorMessage += `\nDetalle: ${errorData.detail}`;
+                }
+            } catch (e) {
+                // Si no se puede parsear el JSON del error, usar el mensaje básico
+            }
+            
+            throw new Error(errorMessage);
         }
         
         const data = await response.json();
+        console.log('Datos recibidos:', data);
         
         // Ocultar indicador de escritura
         ocultarIndicadorEscritura();
@@ -142,12 +232,23 @@ async function procesarRespuesta(mensajeUsuario) {
         await mostrarRespuestaConEscritura(data);
         
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error completo:', error);
         ocultarIndicadorEscritura();
         
-        const mensajeError = `Lo siento, ha ocurrido un error: ${error.message}
-
-Por favor, intenta nuevamente o reformula tu pregunta.`;
+        let mensajeError = 'Lo siento, ha ocurrido un error al procesar tu consulta.';
+        
+        // Mensajes de error más específicos
+        if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
+            mensajeError = 'Error de conexión. Verifica tu conexión a internet y vuelve a intentar.';
+        } else if (error.message.includes('404')) {
+            mensajeError = 'Servicio no encontrado. El servidor puede estar en mantenimiento.';
+        } else if (error.message.includes('500')) {
+            mensajeError = 'Error interno del servidor. Por favor, intenta más tarde.';
+        } else if (error.message.includes('timeout')) {
+            mensajeError = 'La consulta está tardando demasiado. Intenta con una pregunta más específica.';
+        }
+        
+        mensajeError += '\n\nPor favor, intenta nuevamente o reformula tu pregunta.';
         
         agregarMensaje('assistant', mensajeError);
         
@@ -158,10 +259,11 @@ Por favor, intenta nuevamente o reformula tu pregunta.`;
 }
 
 async function mostrarRespuestaConEscritura(data) {
-    const contenido = data.respuesta || 'Lo siento, no pude generar una respuesta.';
+    const contenido = data.respuesta || data.response || 'Lo siento, no pude generar una respuesta.';
     const metadata = {
-        fuente: data.fuente,
-        recomendaciones: data.recomendaciones
+        fuente: data.fuente || data.source,
+        recomendaciones: data.recomendaciones || data.recommendations,
+        clasificacion: data.clasificacion || data.classification
     };
     
     // Agregar mensaje vacío
@@ -225,22 +327,31 @@ function crearElementoMensaje(mensaje) {
         contenidoHTML += crearFuenteLegal(mensaje.metadata.fuente);
     }
     
+    // Agregar clasificación si existe
+    if (mensaje.metadata && mensaje.metadata.clasificacion) {
+        contenidoHTML += crearClasificacion(mensaje.metadata.clasificacion);
+    }
+    
+    const wrapper = document.createElement('div');
+    wrapper.className = 'message-content-wrapper';
+    
     if (mensaje.role === 'user') {
-        div.innerHTML = `
-            <div class="message-content">${contenidoHTML}</div>
+        wrapper.innerHTML = `
+            <div class="message-text">${contenidoHTML}</div>
             <div class="message-avatar">
                 <i class="fas fa-user"></i>
             </div>
         `;
     } else {
-        div.innerHTML = `
+        wrapper.innerHTML = `
             <div class="message-avatar">
                 <i class="fas fa-balance-scale"></i>
             </div>
-            <div class="message-content">${contenidoHTML}</div>
+            <div class="message-text">${contenidoHTML}</div>
         `;
     }
     
+    div.appendChild(wrapper);
     return div;
 }
 
@@ -263,6 +374,20 @@ function crearFuenteLegal(fuente) {
             <div class="source-details">
                 <strong>${fuente.ley}</strong>
                 ${fuente.articulo_numero ? `, Artículo ${fuente.articulo_numero}` : ''}
+                ${fuente.titulo ? `<br><em>${fuente.titulo}</em>` : ''}
+            </div>
+        </div>
+    `;
+}
+
+function crearClasificacion(clasificacion) {
+    if (!clasificacion) return '';
+    
+    return `
+        <div class="classification-info">
+            <div class="classification-header">
+                <i class="fas fa-tag"></i>
+                <span>Área Legal: ${clasificacion}</span>
             </div>
         </div>
     `;
@@ -295,7 +420,7 @@ function renderizarHistorial() {
     elementos.chatHistory.innerHTML = '';
     
     if (app.conversaciones.length === 0) {
-        elementos.chatHistory.innerHTML = '<div style="padding: 1rem; text-align: center; color: var(--text-secondary); font-size: 0.875rem;">No hay conversaciones</div>';
+        elementos.chatHistory.innerHTML = '<div class="empty-history">No hay conversaciones</div>';
         return;
     }
     
@@ -371,6 +496,8 @@ window.cargarConversacion = function(id) {
 };
 
 window.eliminarConversacion = function(id) {
+    event.stopPropagation(); // Evitar que se active cargarConversacion
+    
     if (confirm('¿Eliminar esta conversación?')) {
         app.conversaciones = app.conversaciones.filter(c => c.id !== id);
         
@@ -413,19 +540,21 @@ function mostrarIndicadorEscritura() {
     const indicador = document.createElement('div');
     indicador.className = 'typing-indicator';
     indicador.id = 'typingIndicator';
-    indicador.innerHTML = `
+    
+    const wrapper = document.createElement('div');
+    wrapper.className = 'message-content-wrapper';
+    wrapper.innerHTML = `
         <div class="message-avatar">
             <i class="fas fa-balance-scale"></i>
         </div>
-        <div class="typing-content">
-            <div class="typing-dots">
-                <div class="typing-dot"></div>
-                <div class="typing-dot"></div>
-                <div class="typing-dot"></div>
-            </div>
+        <div class="typing-dots">
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
         </div>
     `;
     
+    indicador.appendChild(wrapper);
     elementos.messagesContainer.appendChild(indicador);
     scrollToBottom();
 }
@@ -461,6 +590,19 @@ function scrollToBottom() {
         }, 10);
     }
 }
+
+// === MANEJO DE ERRORES GLOBALES ===
+window.addEventListener('unhandledrejection', function(event) {
+    console.error('❌ Error no manejado:', event.reason);
+    
+    if (event.reason && event.reason.message && 
+        (event.reason.message.includes('fetch') || 
+         event.reason.message.includes('network') ||
+         event.reason.message.includes('Failed to fetch'))) {
+        
+        mostrarMensajeConexion(false);
+    }
+});
 
 // Inicializar nueva consulta al cargar
 document.addEventListener('DOMContentLoaded', function() {
