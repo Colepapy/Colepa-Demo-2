@@ -3,807 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COLEPA - Asistente Legal Inteligente</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .app-container {
-            display: flex;
-            height: 100vh;
-            background: white;
-            box-shadow: 0 0 50px rgba(0,0,0,0.3);
-            margin: 0;
-        }
-
-        /* Sidebar Styles */
-        .sidebar {
-            width: 280px;
-            background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            border-right: 2px solid #2563eb;
-        }
-
-        .logo-container {
-            padding: 2rem 1.5rem;
-            border-bottom: 1px solid #333;
-            text-align: center;
-        }
-
-        .logo {
-            font-size: 2.2rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, #2563eb, #dc2626);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
-        }
-
-        .tagline {
-            font-size: 0.95rem;
-            color: #e5e7eb;
-            font-weight: 400;
-            line-height: 1.4;
-        }
-
-        .new-chat-btn {
-            margin: 1.5rem;
-            padding: 0.75rem 1rem;
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .new-chat-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
-        }
-
-        .chat-history {
-            flex: 1;
-            padding: 1rem;
-            overflow-y: auto;
-        }
-
-        .chat-history::-webkit-scrollbar {
-            width: 4px;
-        }
-
-        .chat-history::-webkit-scrollbar-track {
-            background: #1a1a1a;
-        }
-
-        .chat-history::-webkit-scrollbar-thumb {
-            background: #2563eb;
-            border-radius: 2px;
-        }
-
-        .history-item {
-            padding: 0.75rem;
-            margin-bottom: 0.5rem;
-            background: rgba(255,255,255,0.1);
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background 0.2s ease;
-            font-size: 0.85rem;
-            line-height: 1.4;
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .history-item:hover {
-            background: rgba(255,255,255,0.15);
-        }
-
-        .history-item.active {
-            background: rgba(37, 99, 235, 0.3);
-            border-left: 3px solid #2563eb;
-        }
-
-        .history-text {
-            flex: 1;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        .delete-chat-btn {
-            opacity: 0;
-            background: #dc2626;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            width: 24px;
-            height: 24px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.7rem;
-            transition: opacity 0.2s ease;
-        }
-
-        .history-item:hover .delete-chat-btn {
-            opacity: 1;
-        }
-
-        .delete-chat-btn:hover {
-            background: #b91c1c;
-        }
-
-        .sidebar-footer {
-            padding: 1rem 1.5rem;
-            border-top: 1px solid #333;
-        }
-
-        .footer-link {
-            color: #9ca3af;
-            text-decoration: none;
-            font-size: 0.85rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .footer-link:hover {
-            color: #2563eb;
-        }
-
-        /* Main Content Styles */
-        .main-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            background: #374151;
-        }
-
-        .chat-header {
-            padding: 1rem 2rem;
-            background: linear-gradient(135deg, #111827, #1f1f2e);
-            border-bottom: 2px solid #2563eb;
-            border-left: 4px solid #dc2626;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .chat-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: white;
-        }
-
-        .chat-container {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            max-height: calc(100vh - 80px);
-        }
-
-        .chat-messages {
-            flex: 1;
-            padding: 2rem;
-            overflow-y: auto;
-            scroll-behavior: smooth;
-            background: #374151;
-        }
-
-        .chat-messages::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .chat-messages::-webkit-scrollbar-track {
-            background: #4b5563;
-        }
-
-        .chat-messages::-webkit-scrollbar-thumb {
-            background: #6b7280;
-            border-radius: 3px;
-        }
-
-        .message {
-            margin-bottom: 2rem;
-            animation: fadeIn 0.3s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .message-content {
-            max-width: 800px;
-        }
-
-        .message.user .message-content {
-            margin-left: auto;
-        }
-
-        .message-header {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-        }
-
-        .bot-avatar {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
-            color: white;
-        }
-
-        .user-avatar {
-            background: linear-gradient(135deg, #000000, #1a1a1a);
-            color: white;
-        }
-
-        .sender-name {
-            font-weight: 600;
-            color: white;
-        }
-
-        .message-text {
-            background: white;
-            padding: 1.25rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-            line-height: 1.6;
-            position: relative;
-            color: #1f2937;
-        }
-
-        .message.user .message-text {
-            background: linear-gradient(135deg, #1d4ed8, #2563eb);
-            color: white;
-        }
-
-        .message-text::before {
-            content: '';
-            position: absolute;
-            top: -8px;
-            left: 20px;
-            width: 0;
-            height: 0;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-            border-bottom: 8px solid white;
-        }
-
-        .message.user .message-text::before {
-            left: auto;
-            right: 20px;
-            border-bottom-color: #1d4ed8;
-        }
-
-        .fuente {
-            margin-top: 1rem;
-            padding: 0.75rem;
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(220, 38, 38, 0.1));
-            border-left: 3px solid #dc2626;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            color: #1f2937;
-        }
-
-        .loading-indicator {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #d1d5db;
-            font-style: italic;
-        }
-
-        .loading-dots {
-            display: flex;
-            gap: 2px;
-        }
-
-        .loading-dot {
-            width: 4px;
-            height: 4px;
-            background: #2563eb;
-            border-radius: 50%;
-        }
-
-        /* Input Styles */
-        .chat-input-container {
-            padding: 1.5rem 2rem;
-            background: #111827;
-            border-top: 2px solid #2563eb;
-        }
-
-        .input-wrapper {
-            display: flex;
-            align-items: flex-end;
-            gap: 1rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .chat-input {
-            flex: 1;
-            min-height: 44px;
-            max-height: 120px;
-            padding: 0.75rem 1rem;
-            border: 2px solid #374151;
-            border-radius: 12px;
-            font-size: 1rem;
-            font-family: inherit;
-            resize: none;
-            transition: border-color 0.3s ease;
-            line-height: 1.5;
-            background: #1f2937;
-            color: white;
-        }
-
-        .chat-input:focus {
-            outline: none;
-            border-color: #2563eb;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
-        }
-
-        .chat-input::placeholder {
-            color: #9ca3af;
-        }
-
-        .send-button {
-            width: 44px;
-            height: 44px;
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
-        }
-
-        .send-button:hover:not(:disabled) {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
-        }
-
-        .send-button:disabled {
-            background: #6b7280;
-            cursor: not-allowed;
-        }
-
-        .disclaimer {
-            text-align: center;
-            font-size: 0.8rem;
-            color: #9ca3af;
-            margin-top: 1rem;
-            line-height: 1.4;
-        }
-
-        .disclaimer i {
-            color: #dc2626;
-            margin-right: 0.25rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .sidebar {
-                width: 250px;
-                position: fixed;
-                left: -250px;
-                transition: left 0.3s ease;
-                z-index: 1000;
-            }
-
-            .sidebar.open {
-                left: 0;
-            }
-
-            .main-content {
-                margin-left: 0;
-            }
-
-            .chat-messages {
-                padding: 1rem;
-            }
-
-            .chat-input-container {
-                padding: 1rem;
-            }
-        }
-    </style>
+    <title>COLEPA - Consultor Legal Oficial de Paraguay</title>
+    
+    <!-- Favicons y Manifest -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d52b1e">
+    
+    <!-- Meta tags -->
+    <meta name="description" content="COLEPA - Sistema oficial de consultas legales sobre la legislación paraguaya. Información jurídica confiable basada en los códigos legales vigentes del Paraguay.">
+    <meta name="keywords" content="leyes paraguay, código civil, código penal, consulta legal, legislación paraguaya, asistente legal">
+    <meta name="author" content="República del Paraguay">
+    <meta name="robots" content="index, follow">
+    <meta name="msapplication-TileColor" content="#d52b1e">
+    <meta name="theme-color" content="#0052b4">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="COLEPA - Consultor Legal Oficial de Paraguay">
+    <meta property="og:description" content="Sistema oficial de consultas legales sobre la legislación paraguaya">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.colepa.com">
+    <meta property="og:image" content="/android-chrome-512x512.png">
+    
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="app-container">
         <!-- Sidebar -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="logo-container">
-                <h1 class="logo">COLEPA</h1>
-                <p class="tagline">Consulta de Leyes del Paraguay</p>
+                <div class="logo-wrapper">
+                    <div class="logo-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1 class="logo">COLEPA</h1>
+                        <p class="tagline">Consultor Legal Oficial</p>
+                        <p class="subtitle">República del Paraguay</p>
+                    </div>
+                </div>
             </div>
-            <button class="new-chat-btn" onclick="startNewChat()">
-                <i class="fas fa-plus"></i> Nueva Consulta
+
+            <button class="new-chat-btn" onclick="iniciarNuevaConsulta()" id="newChatBtn">
+                <i class="fas fa-plus"></i>
+                <span>Nueva Consulta</span>
             </button>
-            <div class="chat-history" id="chat-history">
-                <!-- Chat history will be populated by JavaScript -->
+
+            <div class="chat-history-section">
+                <div class="history-header">
+                    <h3><i class="fas fa-history"></i> Historial</h3>
+                </div>
+                <div class="chat-history" id="chatHistory">
+                    <!-- Historial se carga dinámicamente -->
+                </div>
             </div>
+
             <div class="sidebar-footer">
-                <a href="#" class="footer-link">
-                    <i class="fas fa-shield-alt"></i> Versión Demo
-                </a>
+                <div class="system-status" id="systemStatus">
+                    <i class="fas fa-circle status-indicator"></i>
+                    <span class="status-text">Sistema Operativo</span>
+                </div>
+                <div class="legal-disclaimer">
+                    <p><i class="fas fa-info-circle"></i> Información oficial basada en la legislación vigente de Paraguay</p>
+                </div>
             </div>
         </aside>
 
         <!-- Main Content -->
         <main class="main-content">
-            <div class="chat-header">
-                <div class="chat-title">Consulta Legal</div>
-            </div>
+            <!-- Header -->
+            <header class="chat-header">
+                <div class="header-content">
+                    <button class="sidebar-toggle" onclick="toggleSidebar()" id="sidebarToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="header-info">
+                        <h2 class="current-chat-title" id="currentChatTitle">Consulta Legal</h2>
+                        <p class="header-subtitle">Asistente Legal Oficial de Paraguay</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="action-btn" onclick="exportarConsulta()" title="Exportar consulta">
+                            <i class="fas fa-download"></i>
+                        </button>
+                        <button class="action-btn" onclick="limpiarChat()" title="Limpiar chat">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
 
+            <!-- Chat Container -->
             <div class="chat-container">
-                <div class="chat-messages" id="chat-messages">
-                    <!-- Welcome message -->
-                    <div class="message system">
-                        <div class="message-content">
-                            <div class="message-header">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Mensaje de bienvenida -->
+                    <div class="message-wrapper welcome-message">
+                        <div class="message system">
+                            <div class="message-avatar">
                                 <div class="avatar bot-avatar">
                                     <i class="fas fa-balance-scale"></i>
                                 </div>
-                                <div class="sender-name">COLEPA</div>
                             </div>
-                            <div class="message-text">
-                                <p>¡Bienvenido a COLEPA - Asistente Legal Inteligente de Paraguay!</p>
-                                <p>Soy tu asistente especializado en legislación paraguaya. Puedo ayudarte con consultas sobre:</p>
-                                <ul style="margin: 1rem 0; padding-left: 1.5rem;">
-                                    <li>Código Civil</li>
-                                    <li>Código Penal</li>
-                                    <li>Código Laboral</li>
-                                    <li>Código Procesal Civil y Penal</li>
-                                    <li>Y mucho más...</li>
-                                </ul>
-                                <p>¿En qué puedo ayudarte hoy?</p>
+                            <div class="message-content">
+                                <div class="message-header">
+                                    <span class="sender-name">COLEPA</span>
+                                    <span class="message-badge official">OFICIAL</span>
+                                </div>
+                                <div class="message-text">
+                                    <h3>¡Bienvenido al Sistema COLEPA!</h3>
+                                    <p>Soy su asistente legal oficial especializado en la legislación paraguaya. Estoy aquí para ayudarle con consultas sobre:</p>
+                                    
+                                    <div class="legal-codes-grid">
+                                        <div class="code-item">
+                                            <i class="fas fa-gavel"></i>
+                                            <span>Código Civil</span>
+                                        </div>
+                                        <div class="code-item">
+                                            <i class="fas fa-handcuffs"></i>
+                                            <span>Código Penal</span>
+                                        </div>
+                                        <div class="code-item">
+                                            <i class="fas fa-briefcase"></i>
+                                            <span>Código Laboral</span>
+                                        </div>
+                                        <div class="code-item">
+                                            <i class="fas fa-child"></i>
+                                            <span>Código de la Niñez</span>
+                                        </div>
+                                        <div class="code-item">
+                                            <i class="fas fa-vote-yea"></i>
+                                            <span>Código Electoral</span>
+                                        </div>
+                                        <div class="code-item">
+                                            <i class="fas fa-truck"></i>
+                                            <span>Código Aduanero</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="welcome-examples">
+                                        <h4>Ejemplos de consultas:</h4>
+                                        <div class="example-queries">
+                                            <button class="example-btn" onclick="enviarEjemplo('¿Qué dice el artículo 22 del Código Civil?')">
+                                                "¿Qué dice el artículo 22 del Código Civil?"
+                                            </button>
+                                            <button class="example-btn" onclick="enviarEjemplo('Mi empleador no me paga las horas extras, ¿qué puedo hacer?')">
+                                                "Mi empleador no me paga las horas extras, ¿qué puedo hacer?"
+                                            </button>
+                                            <button class="example-btn" onclick="enviarEjemplo('¿Cuáles son las consecuencias legales del robo en Paraguay?')">
+                                                "¿Cuáles son las consecuencias legales del robo en Paraguay?"
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <p class="help-text">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <strong>Tip:</strong> Sea específico en su consulta para obtener información más precisa.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="chat-input-container">
-                    <form id="chat-form" onsubmit="handleSubmit(event)">
-                        <div class="input-wrapper">
-                            <textarea id="chat-input" class="chat-input" placeholder="Escribe tu consulta legal aquí..." rows="1" oninput="handleInput()"></textarea>
-                            <button type="submit" id="send-button" class="send-button" disabled>
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
+                <!-- Input Area -->
+                <div class="chat-input-area">
+                    <div class="input-container">
+                        <form id="chatForm" onsubmit="enviarMensaje(event)">
+                            <div class="input-wrapper">
+                                <div class="input-field">
+                                    <textarea 
+                                        id="chatInput" 
+                                        class="chat-input" 
+                                        placeholder="Escriba su consulta legal aquí..." 
+                                        rows="1"
+                                        maxlength="2000"
+                                        oninput="manejarInput()"
+                                        onkeydown="manejarTeclas(event)"
+                                    ></textarea>
+                                    <div class="input-actions">
+                                        <div class="char-counter" id="charCounter">0/2000</div>
+                                        <button type="submit" class="send-button" id="sendButton" disabled>
+                                            <i class="fas fa-paper-plane"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="legal-notice">
+                        <div class="notice-content">
+                            <i class="fas fa-shield-alt"></i>
+                            <div class="notice-text">
+                                <p><strong>Aviso Legal:</strong> COLEPA proporciona información legal general basada en la legislación paraguaya vigente. Esta información no constituye asesoramiento legal específico.</p>
+                                <p>Para casos particulares, consulte siempre con un abogado especializado.</p>
+                            </div>
                         </div>
-                    </form>
-                    <p class="disclaimer">
-                        <i class="fas fa-info-circle"></i>
-                        COLEPA proporciona información legal general basada en la legislación paraguaya. No sustituye el asesoramiento profesional de un abogado.
-                    </p>
+                    </div>
                 </div>
             </div>
         </main>
     </div>
 
-    <script>
-        let chatHistory = JSON.parse(localStorage.getItem('chatHistory')) || [];
-        let currentChatId = null;
-        let messageCounter = 0;
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Consultando la legislación paraguaya...</p>
+        </div>
+    </div>
 
-        // Initialize the app
-        document.addEventListener('DOMContentLoaded', function() {
-            loadChatHistory();
-            autoResizeTextarea();
-        });
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer">
+        <!-- Notificaciones aparecen aquí -->
+    </div>
 
-        // Handle input changes
-        function handleInput() {
-            const input = document.getElementById('chat-input');
-            const sendButton = document.getElementById('send-button');
-            
-            // Enable/disable send button
-            sendButton.disabled = input.value.trim() === '';
-            
-            // Auto-resize textarea
-            input.style.height = 'auto';
-            input.style.height = Math.min(input.scrollHeight, 120) + 'px';
-        }
-
-        // Auto-resize textarea functionality
-        function autoResizeTextarea() {
-            const textarea = document.getElementById('chat-input');
-            textarea.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' && !e.shiftKey) {
-                    e.preventDefault();
-                    handleSubmit(e);
-                }
-            });
-        }
-
-        // Handle form submission
-        function handleSubmit(event) {
-            event.preventDefault();
-            const input = document.getElementById('chat-input');
-            const message = input.value.trim();
-            
-            if (message === '') return;
-
-            // Create new chat if none exists
-            if (!currentChatId) {
-                startNewChat();
-            }
-
-            // Add user message
-            addMessage('user', message);
-            
-            // Clear input
-            input.value = '';
-            input.style.height = 'auto';
-            document.getElementById('send-button').disabled = true;
-
-            // Simulate bot response
-            setTimeout(() => {
-                addBotResponse(message);
-            }, 1000);
-        }
-
-        // Add message to chat
-        function addMessage(sender, text) {
-            const messagesContainer = document.getElementById('chat-messages');
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `message ${sender}`;
-            
-            const avatar = sender === 'user' ? 
-                '<i class="fas fa-user"></i>' : 
-                '<i class="fas fa-balance-scale"></i>';
-            
-            const senderName = sender === 'user' ? 'Usuario' : 'COLEPA';
-            const avatarClass = sender === 'user' ? 'user-avatar' : 'bot-avatar';
-
-            messageDiv.innerHTML = `
-                <div class="message-content">
-                    <div class="message-header">
-                        <div class="avatar ${avatarClass}">
-                            ${avatar}
-                        </div>
-                        <div class="sender-name">${senderName}</div>
-                    </div>
-                    <div class="message-text">
-                        <p>${text}</p>
-                    </div>
-                </div>
-            `;
-
-            messagesContainer.appendChild(messageDiv);
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
-
-            // Save to current chat
-            if (currentChatId) {
-                const chat = chatHistory.find(c => c.id === currentChatId);
-                if (chat) {
-                    chat.messages.push({ sender, text, timestamp: new Date().toISOString() });
-                    chat.lastMessage = text.substring(0, 50) + (text.length > 50 ? '...' : '');
-                    chat.updatedAt = new Date().toISOString();
-                    saveChatHistory();
-                    updateChatHistoryDisplay();
-                }
-            }
-        }
-
-        // Simulate bot response
-        function addBotResponse(userMessage) {
-            const responses = [
-                "Según la legislación paraguaya, puedo ayudarte con esa consulta. Te sugiero revisar los artículos correspondientes del código aplicable.",
-                "Basándome en las leyes paraguayas, esta situación se rige por disposiciones específicas que requieren análisis detallado.",
-                "Para esta consulta legal, es importante considerar varios aspectos de la normativa paraguaya vigente.",
-                "De acuerdo con el marco legal paraguayo, existen precedentes y regulaciones específicas para este caso."
-            ];
-            
-            const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-            addMessage('bot', randomResponse);
-        }
-
-        // Start new chat
-        function startNewChat() {
-            const chatId = 'chat_' + Date.now();
-            const newChat = {
-                id: chatId,
-                title: 'Nueva Consulta',
-                messages: [],
-                createdAt: new Date().toISOString(),
-                updatedAt: new Date().toISOString(),
-                lastMessage: ''
-            };
-
-            chatHistory.unshift(newChat);
-            currentChatId = chatId;
-            
-            // Clear current messages except welcome message
-            const messagesContainer = document.getElementById('chat-messages');
-            const welcomeMessage = messagesContainer.querySelector('.message.system');
-            messagesContainer.innerHTML = '';
-            if (welcomeMessage) {
-                messagesContainer.appendChild(welcomeMessage);
-            }
-
-            saveChatHistory();
-            updateChatHistoryDisplay();
-        }
-
-        // Load chat history
-        function loadChatHistory() {
-            updateChatHistoryDisplay();
-        }
-
-        // Update chat history display
-        function updateChatHistoryDisplay() {
-            const historyContainer = document.getElementById('chat-history');
-            historyContainer.innerHTML = '';
-
-            chatHistory.forEach(chat => {
-                const historyItem = document.createElement('div');
-                historyItem.className = 'history-item';
-                if (chat.id === currentChatId) {
-                    historyItem.classList.add('active');
-                }
-
-                historyItem.innerHTML = `
-                    <div class="history-text" onclick="loadChat('${chat.id}')">${chat.lastMessage || 'Nueva Consulta'}</div>
-                    <button class="delete-chat-btn" onclick="deleteChat('${chat.id}')" title="Eliminar chat">
-                        <i class="fas fa-trash"></i>
+    <!-- Modals -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="exportModal">
+            <div class="modal-header">
+                <h3>Exportar Consulta</h3>
+                <button class="modal-close" onclick="cerrarModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Seleccione el formato para exportar su consulta:</p>
+                <div class="export-options">
+                    <button class="export-btn" onclick="exportar('pdf')">
+                        <i class="fas fa-file-pdf"></i> PDF
                     </button>
-                `;
-
-                historyContainer.appendChild(historyItem);
-            });
-        }
-
-        // Load specific chat
-        function loadChat(chatId) {
-            const chat = chatHistory.find(c => c.id === chatId);
-            if (!chat) return;
-
-            currentChatId = chatId;
-            const messagesContainer = document.getElementById('chat-messages');
-            messagesContainer.innerHTML = '';
-
-            // Add welcome message
-            const welcomeMessage = document.createElement('div');
-            welcomeMessage.className = 'message system';
-            welcomeMessage.innerHTML = `
-                <div class="message-content">
-                    <div class="message-header">
-                        <div class="avatar bot-avatar">
-                            <i class="fas fa-balance-scale"></i>
-                        </div>
-                        <div class="sender-name">COLEPA</div>
-                    </div>
-                    <div class="message-text">
-                        <p>¡Bienvenido a COLEPA - Asistente Legal Inteligente de Paraguay!</p>
-                        <p>Soy tu asistente especializado en legislación paraguaya. Puedo ayudarte con consultas sobre:</p>
-                        <ul style="margin: 1rem 0; padding-left: 1.5rem;">
-                            <li>Código Civil</li>
-                            <li>Código Penal</li>
-                            <li>Código Laboral</li>
-                            <li>Código Procesal Civil y Penal</li>
-                            <li>Y mucho más...</li>
-                        </ul>
-                        <p>¿En qué puedo ayudarte hoy?</p>
-                    </div>
+                    <button class="export-btn" onclick="exportar('txt')">
+                        <i class="fas fa-file-alt"></i> Texto
+                    </button>
                 </div>
-            `;
-            messagesContainer.appendChild(welcomeMessage);
+            </div>
+        </div>
+    </div>
 
-            // Load chat messages
-            chat.messages.forEach(msg => {
-                const messageDiv = document.createElement('div');
-                messageDiv.className = `message ${msg.sender}`;
-                
-                const avatar = msg.sender === 'user' ? 
-                    '<i class="fas fa-user"></i>' : 
-                    '<i class="fas fa-balance-scale"></i>';
-                
-                const senderName = msg.sender === 'user' ? 'Usuario' : 'COLEPA';
-                const avatarClass = msg.sender === 'user' ? 'user-avatar' : 'bot-avatar';
-
-                messageDiv.innerHTML = `
-                    <div class="message-content">
-                        <div class="message-header">
-                            <div class="avatar ${avatarClass}">
-                                ${avatar}
-                            </div>
-                            <div class="sender-name">${senderName}</div>
-                        </div>
-                        <div class="message-text">
-                            <p>${msg.text}</p>
-                        </div>
-                    </div>
-                `;
-
-                messagesContainer.appendChild(messageDiv);
-            });
-
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
-            updateChatHistoryDisplay();
-        }
-
-        // Delete chat
-        function deleteChat(chatId) {
-            if (confirm('¿Estás seguro de que quieres eliminar este chat?')) {
-                chatHistory = chatHistory.filter(chat => chat.id !== chatId);
-                
-                if (currentChatId === chatId) {
-                    currentChatId = null;
-                    // Reset to welcome message only
-                    const messagesContainer = document.getElementById('chat-messages');
-                    messagesContainer.innerHTML = `
-                        <div class="message system">
-                            <div class="message-content">
-                                <div class="message-header">
-                                    <div class="avatar bot-avatar">
-                                        <i class="fas fa-balance-scale"></i>
-                                    </div>
-                                    <div class="sender-name">COLEPA</div>
-                                </div>
-                                <div class="message-text">
-                                    <p>¡Bienvenido a COLEPA - Asistente Legal Inteligente de Paraguay!</p>
-                                    <p>Soy tu asistente especializado en legislación paraguaya. Puedo ayudarte con consultas sobre:</p>
-                                    <ul style="margin: 1rem 0; padding-left: 1.5rem;">
-                                        <li>Código Civil</li>
-                                        <li>Código Penal</li>
-                                        <li>Código Laboral</li>
-                                        <li>Código Procesal Civil y Penal</li>
-                                        <li>Y mucho más...</li>
-                                    </ul>
-                                    <p>¿En qué puedo ayudarte hoy?</p>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                }
-                
-                saveChatHistory();
-                updateChatHistoryDisplay();
-            }
-        }
-
-        // Save chat history to localStorage
-        function saveChatHistory() {
-            localStorage.setItem('chatHistory', JSON.stringify(chatHistory));
-        }
-    </script>
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
