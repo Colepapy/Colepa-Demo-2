@@ -39,6 +39,7 @@ except ImportError as e:
 # Importaciones locales con fallback
 try:
     from app.vector_search import buscar_articulo_relevante, buscar_articulo_por_numero
+    from app.prompt_builder import construir_prompt
     VECTOR_SEARCH_AVAILABLE = True
     logger.info("✅ Módulos de búsqueda vectorial cargados")
 except ImportError:
@@ -58,6 +59,9 @@ except ImportError:
             "nombre_ley": "Código Civil", 
             "numero_articulo": str(numero)
         }
+    
+    def construir_prompt(contexto_legal, pregunta_usuario):
+        return f"Contexto Legal: {contexto_legal}\n\nPregunta del Usuario: {pregunta_usuario}"
 
 # === MODELOS PYDANTIC ===
 class MensajeChat(BaseModel):
@@ -328,25 +332,25 @@ def generar_respuesta_legal(historial: List[MensajeChat], contexto: Optional[Dic
         
         # Agregar contexto legal si existe - CRÍTICO
         if contexto and contexto.get("pageContent"):
-            contexto_msg = f"""
-INFORMACIÓN LEGAL ESPECÍFICA ENCONTRADA:
-
-Ley: {contexto.get('nombre_ley', 'No especificada')}
-Artículo: {contexto.get('numero_articulo', 'No especificado')}
-Título: {contexto.get('titulo', 'N/A')}
-
-CONTENIDO LEGAL EXACTO:
-{contexto.get('pageContent', '')}
-
-INSTRUCCIÓN CRÍTICA: Utiliza ÚNICAMENTE esta información legal específica para responder. Cita exactamente el artículo y contenido. NO digas que no tienes la información cuando la tienes aquí.
-"""
-            mensajes.append({"role": "system", "content": contexto_msg})
-            logger.info(f"📖 Contexto legal enviado a OpenAI: {contexto.get('nombre_ley')} Art. {contexto.get('numero_articulo')}")
+            # Usar tu prompt_builder.py original
+            contexto_legal_texto = contexto.get('pageContent', '')
+            prompt_construido = construir_prompt(contexto_legal_texto, historial[-1].content)
+            
+            mensajes.append({"role": "user", "content": prompt_construido})
+            logger.info(f"📖 Usando prompt_builder.py para contexto: {contexto.get('nombre_ley')} Art. {contexto.get('numero_articulo')}")
+        else:
+            # Sin contexto específico, usar prompt del sistema mejorado
+            logger.info("📝 Generando respuesta sin contexto específico")
         
-        # Agregar historial (últimos 6 mensajes para no saturar)
-        for msg in historial[-6:]:
-            role = "assistant" if msg.role == "assistant" else "user"
-            mensajes.append({"role": role, "content": msg.content})
+        # Agregar solo los últimos 2-3 mensajes del historial (no saturar cuando hay contexto)
+        if contexto and contexto.get("pageContent"):
+            # Con contexto: solo la pregunta actual ya está en el prompt construido
+            pass
+        else:
+            # Sin contexto: agregar historial normal
+            for msg in historial[-4:]:
+                role = "assistant" if msg.role == "assistant" else "user"
+                mensajes.append({"role": role, "content": msg.content})
         
         # Llamada a OpenAI con parámetros optimizados
         response = openai_client.chat.completions.create(
@@ -378,22 +382,25 @@ def generar_respuesta_con_contexto(pregunta: str, contexto: Optional[Dict] = Non
     Respuesta directa usando el contexto de Qdrant cuando OpenAI no está disponible
     """
     if contexto and contexto.get("pageContent"):
+        # Usar el prompt_builder para consistencia
+        contexto_legal_texto = contexto.get('pageContent', '')
+        prompt_construido = construir_prompt(contexto_legal_texto, pregunta)
+        
+        # Respuesta básica usando el contexto
         ley = contexto.get('nombre_ley', 'Legislación paraguaya')
         articulo = contexto.get('numero_articulo', 'N/A')
         contenido = contexto.get('pageContent', '')
-        titulo = contexto.get('titulo', '')
         
-        response = f"""**{ley}**
-
-**Artículo {articulo}**{f' - {titulo}' if titulo else ''}
+        response = f"""**{ley} - Artículo {articulo}**
 
 {contenido}
 
 ---
 
-Esta disposición legal responde directamente a su consulta sobre "{pregunta}".
+**Aplicación a su consulta:**
+Esta disposición legal responde a su pregunta sobre "{pregunta}".
 
-**Recomendación:** Para aplicación específica a su caso particular, considere consultar con un abogado especializado en {ley.lower()}.
+**Nota importante:** Para asesoramiento específico sobre su situación particular, consulte con un abogado especializado.
 
 *Fuente: {ley}, Artículo {articulo}*"""
         
@@ -406,7 +413,7 @@ No encontré esa disposición específica en mi base de datos legal para: "{preg
 
 **Sugerencias:**
 1. **Reformule su consulta** con términos más específicos
-2. **Mencione el código o ley** específica si la conoce
+2. **Mencione el código o ley** específica si la conoce  
 3. **Use números de artículo** si busca disposiciones particulares
 
 **Consultas que puedo resolver:**
