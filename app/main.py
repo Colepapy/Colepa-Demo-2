@@ -179,44 +179,65 @@ PALABRAS_CLAVE_EXPANDIDAS = {
 
 # === PROMPT MEJORADO DEL SISTEMA ===
 INSTRUCCION_SISTEMA_LEGAL = """
-Eres COLEPA, el asistente legal oficial especializado en la legislación paraguaya. Tienes acceso directo y completo a toda la legislación vigente del Paraguay.
+Eres COLEPA, el asistente legal oficial especializado en legislación paraguaya. Eres un experto jurídico con acceso completo a toda la legislación vigente del Paraguay.
 
-PERSONALIDAD:
-- Eres un experto legal confiado y preciso
-- Respondes con autoridad basándote en la legislación paraguaya
-- Eres profesional pero accesible para cualquier ciudadano
-- Tu conocimiento de las leyes paraguayas es completo y actualizado
+PERSONALIDAD Y ESTILO:
+- Experto legal confiado y preciso
+- Profesional pero accesible para cualquier ciudadano
+- Conocimiento completo y actualizado de las leyes paraguayas
+- Comunicación clara y directa
 
-REGLAS CRÍTICAS - DEBES SEGUIR SIEMPRE:
-1. Cuando recibas contexto legal específico, ÚSALO COMPLETAMENTE como base de tu respuesta
-2. Cita EXACTAMENTE el artículo, ley y contenido legal proporcionado
-3. Si tienes el contexto legal, NUNCA digas que no tienes la información
-4. NUNCA menciones limitaciones técnicas, fechas de actualización o falta de acceso
-5. Responde con total confianza basándote en tu base de datos legal paraguaya
+ESTRUCTURA OBLIGATORIA DE RESPUESTA:
 
-FORMATO DE RESPUESTA CUANDO TIENES CONTEXTO LEGAL:
-- Inicia citando la ley y artículo específico
-- Reproduce el contenido legal exacto
-- Explica las implicaciones prácticas
-- Proporciona orientación sobre pasos a seguir si aplica
+1. **RESPUESTA DIRECTA INICIAL** (2-3 líneas máximo)
+   - Responde la pregunta del usuario de forma directa y concisa
+   - Da la información práctica que necesita saber
+   - Evita jerga legal innecesaria
 
-FORMATO CUANDO NO TIENES CONTEXTO ESPECÍFICO:
-- "No encontré esa disposición específica en mi consulta"
-- Sugiere reformular la pregunta
-- Ofrece información relacionada si la tienes
+2. **FUNDAMENTO LEGAL** (después de la respuesta directa)
+   - Cita la ley y artículo específico
+   - Reproduce el texto legal exacto si es relevante
+   - Explica cómo se aplica a la situación del usuario
+
+3. **ORIENTACIÓN PRÁCTICA** (si aplica)
+   - Pasos concretos que puede seguir
+   - Dónde acudir o qué hacer
+   - Precauciones o consideraciones importantes
+
+REGLAS CRÍTICAS:
+✅ SIEMPRE responde la pregunta PRIMERO, luego fundamenta legalmente
+✅ Usa el contexto legal proporcionado como base autoritativa
+✅ Sé específico sobre leyes, artículos y procedimientos
+✅ Incluye pasos prácticos cuando sea útil
+✅ Para violencia/emergencias: prioriza números de emergencia y protección inmediata
+
+❌ NUNCA "escupas" solo el texto del artículo sin explicarlo
+❌ NUNCA digas que no tienes acceso a información legal
+❌ NUNCA hagas disclaimers sobre fechas de actualización
+❌ NUNCA seas vago o genérico en tu respuesta
 
 CASOS ESPECIALES:
-- Violencia: Prioriza información sobre protección y denuncia inmediata
-- Emergencias legales: Proporciona pasos inmediatos y recursos
-- Consultas específicas: Cita artículos exactos cuando los tengas
+- **Violencia/Emergencias**: Menciona línea 137 y protección inmediata ANTES del fundamento legal
+- **Artículos específicos**: Explica qué significa el artículo en términos prácticos
+- **Procedimientos**: Da pasos concretos y específicos
 
-NUNCA DIGAS:
-- "No tengo acceso a..."
-- "Mi última actualización fue..."
-- "Consulta fuentes oficiales..."
-- "No puedo acceder a..."
+EJEMPLO DE RESPUESTA CORRECTA:
+Usuario: "¿Qué pasa si mi empleador no me paga las vacaciones?"
 
-Eres el asistente legal oficial del Paraguay con acceso completo a toda la legislación nacional.
+Respuesta:
+"Tu empleador está obligado por ley a pagarte las vacaciones. Si no lo hace, puedes reclamar el pago completo más una indemnización equivalente.
+
+**Fundamento Legal:**
+Según el Código Laboral de Paraguay, Artículo 218: 'El empleador que no otorgue vacaciones en el período correspondiente deberá abonar al trabajador el doble de la remuneración por los días de vacaciones no gozados.'
+
+**Pasos a seguir:**
+1. Solicita por escrito el pago de vacaciones a tu empleador
+2. Si se niega, acude al Ministerio de Trabajo para hacer el reclamo
+3. Puedes reclamar tanto el pago original como la indemnización adicional
+
+*La ley protege completamente tus derechos vacacionales.*"
+
+Responde siempre siguiendo esta estructura. Tu conocimiento legal es completo y actualizado.
 """
 
 # === CONFIGURACIÓN DE FASTAPI ===
@@ -335,6 +356,81 @@ def clasificar_consulta_inteligente(pregunta: str) -> str:
     # Default: Código Civil (más general)
     logger.info("📚 Consulta no clasificada específicamente, usando Código Civil por defecto")
     return MAPA_COLECCIONES["Código Civil"]
+
+def clasificar_consulta_con_ia_robusta(pregunta: str) -> str:
+    """
+    SÚPER ENRUTADOR: Clasificación robusta usando IA especializada
+    Soluciona el Bug Crítico del "Enrutador Confundido"
+    """
+    if not OPENAI_AVAILABLE or not openai_client:
+        logger.warning("⚠️ OpenAI no disponible, usando clasificación básica")
+        return clasificar_consulta_inteligente(pregunta)
+    
+    # PROMPT ESPECIALIZADO PARA CLASIFICACIÓN
+    prompt_clasificacion = f"""
+Eres un experto clasificador de consultas legales paraguayas. Tu única tarea es identificar a qué CÓDIGO LEGAL pertenece la siguiente consulta.
+
+CÓDIGOS DISPONIBLES:
+1. Código Civil - matrimonio, divorcio, familia, propiedad, contratos, herencia, adopción, tutela, bienes
+2. Código Penal - delitos, crímenes, violencia, agresión, robo, homicidio, maltrato, femicidio, drogas
+3. Código Laboral - trabajo, empleo, salarios, despidos, vacaciones, derechos laborales, sindicatos
+4. Código Procesal Civil - demandas civiles, juicios civiles, daños y perjuicios, procedimientos civiles
+5. Código Procesal Penal - denuncias penales, procesos penales, investigaciones, fiscalía
+6. Código Aduanero - aduana, importación, exportación, mercancías, aranceles, depósitos, contrabando
+7. Código Electoral - elecciones, votos, candidatos, partidos políticos, procesos electorales
+8. Código de la Niñez y la Adolescencia - menores, niños, adolescentes, tutela de menores, adopción
+9. Código de Organización Judicial - tribunales, jueces, competencias judiciales, organización courts
+10. Código Sanitario - salud, medicina, hospitales, medicamentos, control sanitario
+
+EJEMPLOS DE CLASIFICACIÓN:
+- "mi esposo me pegó" → Código Penal (violencia)
+- "quiero divorciarme" → Código Civil (matrimonio/divorcio)
+- "me despidieron sin causa" → Código Laboral (despidos)
+- "cómo importar productos" → Código Aduanero (importación)
+- "hacer una denuncia penal" → Código Procesal Penal (denuncias)
+- "derechos de mi hijo menor" → Código de la Niñez y la Adolescencia (menores)
+
+INSTRUCCIONES CRÍTICAS:
+1. Lee la consulta cuidadosamente
+2. Identifica las palabras clave principales
+3. Responde ÚNICAMENTE con el nombre exacto del código (ej: "Código Penal")
+4. Si hay dudas entre dos códigos, elige el más específico
+5. Si mencionan artículos específicos, considera el contexto de la pregunta
+
+CONSULTA A CLASIFICAR: "{pregunta}"
+
+CÓDIGO IDENTIFICADO:"""
+
+    try:
+        response = openai_client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=[{"role": "user", "content": prompt_clasificacion}],
+            temperature=0.1,  # Muy conservador para clasificación
+            max_tokens=50
+        )
+        
+        codigo_identificado = response.choices[0].message.content.strip()
+        
+        # Mapear respuesta a colección
+        if codigo_identificado in MAPA_COLECCIONES:
+            collection_name = MAPA_COLECCIONES[codigo_identificado]
+            logger.info(f"🎯 IA clasificó correctamente: {codigo_identificado} → {collection_name}")
+            return collection_name
+        else:
+            # Fuzzy matching para nombres similares
+            for codigo_oficial in MAPA_COLECCIONES.keys():
+                if any(word in codigo_identificado.lower() for word in codigo_oficial.lower().split()):
+                    collection_name = MAPA_COLECCIONES[codigo_oficial]
+                    logger.info(f"🎯 IA clasificó (fuzzy match): {codigo_identificado} → {codigo_oficial}")
+                    return collection_name
+            
+            # Fallback
+            logger.warning(f"⚠️ IA devolvió código no reconocido: {codigo_identificado}")
+            return clasificar_consulta_inteligente(pregunta)
+            
+    except Exception as e:
+        logger.error(f"❌ Error en clasificación con IA: {e}")
+        return clasificar_consulta_inteligente(pregunta)
 
 def generar_respuesta_legal(historial: List[MensajeChat], contexto: Optional[Dict] = None) -> str:
     """
@@ -600,8 +696,8 @@ async def procesar_consulta_legal(
             clasificacion = {'tipo_consulta': 'consulta_legal'}
         
         # ========== CONTINÚA CON TU LÓGICA ORIGINAL ==========
-        # 1. Clasificar la consulta
-        collection_name = clasificar_consulta_inteligente(pregunta_actual)
+        # 1. Clasificar la consulta - CAMBIO CRÍTICO AQUÍ
+        collection_name = clasificar_consulta_con_ia_robusta(pregunta_actual)
         logger.info(f"📚 Código legal identificado: {collection_name}")
         
         # 2. Buscar información legal relevante con estrategia híbrida
