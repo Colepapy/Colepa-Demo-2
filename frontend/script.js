@@ -11,8 +11,7 @@ const CONFIG = {
     ENDPOINT_CONSULTA: '/api/consulta',
     ENDPOINT_HEALTH: '/api/health',
     MAX_MESSAGE_LENGTH: 2000,
-    TYPING_SPEED: 30,
-    LONGITUD_RESPUESTA_RAPIDA: 200  // Nueva configuración para efecto híbrido
+    TYPING_SPEED: 30
 };
 
 // === ESTADO GLOBAL ===
@@ -51,7 +50,7 @@ function inicializar() {
     }
 
     verificarConexionAPI();
-    console.log('🚀 COLEPA inicializado correctamente - Versión Sincronizada');
+    console.log('🚀 COLEPA inicializado correctamente');
 }
 
 function configurarEventos() {
@@ -190,7 +189,7 @@ async function procesarRespuesta(mensajeUsuario) {
         ocultarIndicadorEscritura();
         
         // NUEVA LÓGICA: Efecto de escritura híbrido
-        await mostrarRespuestaConEfectoHibrido(data);
+        await mostrarRespuestaConEscritura(data);
         
     } catch (error) {
         console.error('❌ Error completo:', error);
@@ -218,8 +217,7 @@ async function procesarRespuesta(mensajeUsuario) {
     }
 }
 
-// === NUEVA FUNCIÓN: EFECTO DE ESCRITURA HÍBRIDO ===
-async function mostrarRespuestaConEfectoHibrido(data) {
+async function mostrarRespuestaConEscritura(data) {
     const contenido = data.respuesta || 'Lo siento, no pude generar una respuesta.';
     const metadata = {
         fuente: data.fuente,
@@ -228,50 +226,28 @@ async function mostrarRespuestaConEfectoHibrido(data) {
         tiempo_procesamiento: data.tiempo_procesamiento
     };
     
-    // Detectar si es emergencia - PRIORIDAD MÁXIMA
-    const esEmergencia = detectarEmergencia(contenido);
-    
     // Agregar mensaje vacío
     const mensaje = agregarMensaje('assistant', '', metadata);
     const indexMensaje = app.conversacionActual.length - 1;
     
-    // LÓGICA HÍBRIDA: Según longitud y tipo de contenido
-    if (esEmergencia || contenido.length > CONFIG.LONGITUD_RESPUESTA_RAPIDA) {
-        // INMEDIATO: Para emergencias y respuestas largas
-        app.conversacionActual[indexMensaje].content = contenido;
+    // Efecto de escritura palabra por palabra
+    const palabras = contenido.split(' ');
+    let contenidoActual = '';
+    
+    for (let i = 0; i < palabras.length; i++) {
+        if (i > 0) contenidoActual += ' ';
+        contenidoActual += palabras[i];
+        
+        // Actualizar mensaje
+        app.conversacionActual[indexMensaje].content = contenidoActual;
         renderizarMensajes();
         scrollToBottom();
         
-        // Efecto visual suave
-        const ultimoMensaje = elementos.messagesContainer.lastElementChild;
-        if (ultimoMensaje) {
-            ultimoMensaje.style.opacity = '0';
-            ultimoMensaje.style.transform = 'translateY(10px)';
-            ultimoMensaje.style.transition = 'all 0.4s ease';
-            
-            setTimeout(() => {
-                ultimoMensaje.style.opacity = '1';
-                ultimoMensaje.style.transform = 'translateY(0)';
-            }, 50);
-        }
-    } else {
-        // EFECTO DE ESCRITURA: Para respuestas cortas y conversacionales
-        const palabras = contenido.split(' ');
-        let contenidoActual = '';
-        
-        for (let i = 0; i < palabras.length; i++) {
-            if (i > 0) contenidoActual += ' ';
-            contenidoActual += palabras[i];
-            
-            app.conversacionActual[indexMensaje].content = contenidoActual;
-            renderizarMensajes();
-            scrollToBottom();
-            
-            await sleep(CONFIG.TYPING_SPEED + Math.random() * 20);
-        }
+        // Pausa para efecto de escritura
+        await sleep(CONFIG.TYPING_SPEED + Math.random() * 20);
     }
     
-    // Finalizar
+    // Contenido final
     app.conversacionActual[indexMensaje].content = contenido;
     actualizarSesionActual();
     renderizarHistorial();
@@ -315,7 +291,7 @@ function crearElementoMensaje(mensaje) {
     div.className = `message ${mensaje.role}`;
     
     // NUEVA LÓGICA: Formateo estructurado
-    let contenidoHTML = formatearRespuestaEstructurada(mensaje.content);
+    let contenidoHTML = formatearContenido(mensaje.content);
     
     if (mensaje.metadata && mensaje.metadata.fuente) {
         contenidoHTML += crearFuenteLegal(mensaje.metadata.fuente);
@@ -348,60 +324,11 @@ function crearElementoMensaje(mensaje) {
     return div;
 }
 
-// === NUEVA FUNCIÓN: FORMATEO ESTRUCTURADO ===
-function formatearRespuestaEstructurada(contenido) {
-    let html = contenido;
-    
-    // 1. DETECCIÓN Y ESTILO DE EMERGENCIAS (PRIORIDAD MÁXIMA)
-    if (detectarEmergencia(contenido)) {
-        // Destacar línea 137 y información de emergencia
-        html = html.replace(/(línea 137|137)/gi, '<span class="emergencia-destacada">🚨 $1</span>');
-        
-        // Si contiene palabras de emergencia, agregar alerta al inicio
-        if (html.toLowerCase().includes('violencia') || html.toLowerCase().includes('maltrato')) {
-            html = `<div class="alerta-emergencia">
-                🚨 <strong>EMERGENCIA:</strong> Si estás en peligro inmediato, llama al 911 o la línea 137
-            </div><br>` + html;
-        }
-    }
-    
-    // 2. SECCIONES ESTRUCTURADAS CON ICONOS
-    // Fundamento Legal - Expandible
-    html = html.replace(
-        /\*\*FUNDAMENTO LEGAL\*\*/gi,
-        '<details class="seccion-fundamento" open><summary>⚖️ <strong>Fundamento Legal</strong></summary><div class="contenido-expandible">'
-    );
-    
-    // Pasos a seguir - Siempre visible
-    html = html.replace(
-        /\*\*(Pasos a seguir|Orientación práctica|Procedimiento):\*\*/gi,
-        '</div></details><div class="pasos-practicos">📋 <strong>$1:</strong>'
-    );
-    
-    // Recomendaciones
-    html = html.replace(
-        /\*\*(Recomendaciones|Importante|Nota):\*\*/gi,
-        '<div class="recomendaciones">💡 <strong>$1:</strong>'
-    );
-    
-    // 3. FORMATEO BÁSICO MEJORADO
-    html = html
+function formatearContenido(contenido) {
+    return contenido
         .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
         .replace(/\*(.*?)\*/g, '<em>$1</em>')
         .replace(/\n/g, '<br>');
-    
-    // 4. CERRAR DIVS ABIERTOS
-    if (html.includes('class="contenido-expandible"') && !html.includes('</div></details>')) {
-        html += '</div></details>';
-    }
-    if (html.includes('class="pasos-practicos"') && !html.endsWith('</div>')) {
-        html += '</div>';
-    }
-    if (html.includes('class="recomendaciones"') && !html.endsWith('</div>')) {
-        html += '</div>';
-    }
-    
-    return html;
 }
 
 function crearFuenteLegal(fuente) {
