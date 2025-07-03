@@ -14,6 +14,290 @@
     
     <!-- Estilos -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Estilos adicionales para respuestas estructuradas -->
+    <style>
+        /* === ESTILOS PARA RESPUESTAS ESTRUCTURADAS === */
+        
+        /* Alerta de emergencia - PRIORIDAD MÁXIMA */
+        .alerta-emergencia {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 2px solid #ef4444;
+            border-radius: 12px;
+            padding: 16px;
+            margin: 12px 0;
+            font-weight: 600;
+            color: #991b1b;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+            animation: pulse-emergency 2s infinite;
+        }
+        
+        @keyframes pulse-emergency {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        .emergencia-destacada {
+            background: #ef4444;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 0 2px;
+            display: inline-block;
+            animation: highlight-emergency 0.5s ease;
+        }
+        
+        @keyframes highlight-emergency {
+            0% { background: #fbbf24; }
+            100% { background: #ef4444; }
+        }
+        
+        /* Secciones estructuradas */
+        .seccion-fundamento {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 1px solid #3b82f6;
+            border-radius: 12px;
+            margin: 12px 0;
+            padding: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .seccion-fundamento summary {
+            background: rgba(59, 130, 246, 0.1);
+            padding: 12px 16px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #1e40af;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            transition: background 0.2s ease;
+            list-style: none;
+        }
+        
+        .seccion-fundamento summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        .seccion-fundamento summary::before {
+            content: "▶";
+            margin-right: 8px;
+            transition: transform 0.2s ease;
+        }
+        
+        .seccion-fundamento[open] summary::before {
+            transform: rotate(90deg);
+        }
+        
+        .seccion-fundamento summary:hover {
+            background: rgba(59, 130, 246, 0.15);
+        }
+        
+        .contenido-expandible {
+            padding: 16px;
+            color: #1e40af;
+            line-height: 1.6;
+            animation: slideDown 0.3s ease;
+        }
+        
+        @keyframes slideDown {
+            0% { opacity: 0; transform: translateY(-10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Pasos prácticos */
+        .pasos-practicos {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 1px solid #0ea5e9;
+            border-radius: 12px;
+            padding: 16px;
+            margin: 12px 0;
+            color: #0c4a6e;
+        }
+        
+        .pasos-practicos strong {
+            color: #0369a1;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        /* Recomendaciones */
+        .recomendaciones {
+            background: linear-gradient(135deg, #fefce8 0%, #fef3c7 100%);
+            border: 1px solid #f59e0b;
+            border-radius: 12px;
+            padding: 16px;
+            margin: 12px 0;
+            color: #92400e;
+        }
+        
+        .recomendaciones strong {
+            color: #d97706;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        /* Fuente legal existente - Mejorada */
+        .legal-source {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            padding: 14px;
+            margin: 10px 0;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .legal-source:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+        }
+        
+        .source-header {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 6px;
+        }
+        
+        .source-details {
+            color: #64748b;
+            line-height: 1.5;
+        }
+        
+        /* Clasificación/Recomendaciones existente - Mejorada */
+        .classification-info {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 1px solid #22c55e;
+            border-radius: 10px;
+            padding: 14px;
+            margin: 10px 0;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .classification-info:hover {
+            border-color: #16a34a;
+            box-shadow: 0 2px 8px rgba(34, 197, 94, 0.1);
+        }
+        
+        .classification-header {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+            color: #166534;
+            margin-bottom: 6px;
+        }
+        
+        /* Mejorar listas en respuestas estructuradas */
+        .pasos-practicos ul,
+        .recomendaciones ul,
+        .contenido-expandible ul {
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+        
+        .pasos-practicos li,
+        .recomendaciones li,
+        .contenido-expandible li {
+            margin: 4px 0;
+            line-height: 1.5;
+        }
+        
+        /* Respuesta con efecto de aparición */
+        .message.assistant .message-text {
+            animation: fadeInUp 0.4s ease;
+        }
+        
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Mejorar el contenedor de mensajes para respuestas estructuradas */
+        .message-text {
+            line-height: 1.6;
+        }
+        
+        .message-text strong {
+            color: inherit;
+            font-weight: 600;
+        }
+        
+        .message-text em {
+            font-style: italic;
+            color: #64748b;
+        }
+        
+        /* Responsive para secciones estructuradas */
+        @media (max-width: 768px) {
+            .seccion-fundamento,
+            .pasos-practicos,
+            .recomendaciones,
+            .alerta-emergencia {
+                margin: 8px 0;
+                padding: 12px;
+            }
+            
+            .seccion-fundamento summary {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+            
+            .contenido-expandible {
+                padding: 12px;
+                font-size: 14px;
+            }
+        }
+        
+        /* Mejora visual para elementos expandibles */
+        .seccion-fundamento {
+            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+        }
+        
+        .pasos-practicos {
+            box-shadow: 0 2px 8px rgba(14, 165, 233, 0.1);
+        }
+        
+        .recomendaciones {
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.1);
+        }
+        
+        /* Transiciones suaves para todos los elementos estructurados */
+        .seccion-fundamento,
+        .pasos-practicos,
+        .recomendaciones,
+        .alerta-emergencia,
+        .legal-source,
+        .classification-info {
+            transition: all 0.3s ease;
+        }
+        
+        /* Hover effects para mejor interactividad */
+        .pasos-practicos:hover {
+            border-color: #0284c7;
+            transform: translateY(-1px);
+        }
+        
+        .recomendaciones:hover {
+            border-color: #d97706;
+            transform: translateY(-1px);
+        }
+        
+        .alerta-emergencia:hover {
+            border-color: #dc2626;
+            transform: translateY(-1px);
+        }
+    </style>
 </head>
 <body>
     <div class="app-container">
