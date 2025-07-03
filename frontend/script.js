@@ -1,17 +1,18 @@
 /**
- * COLEPA - JavaScript Final Corregido
- * Sistema Legal de Paraguay con integración Qdrant
+ * COLEPA - JavaScript Sincronizado con Backend Mejorado
+ * Sistema Legal de Paraguay con respuestas estructuradas
  */
 
-// === CONFIGURACIÓN CORREGIDA ===
+// === CONFIGURACIÓN ===
 const CONFIG = {
     API_BASE_URL: window.location.hostname === 'localhost' 
         ? 'http://localhost:8000' 
         : 'https://colepa-demo-2-production.up.railway.app',
-    ENDPOINT_CONSULTA: '/api/consulta', // ✅ ENDPOINT CORRECTO
-    ENDPOINT_HEALTH: '/api/health',     // ✅ ENDPOINT CORRECTO
+    ENDPOINT_CONSULTA: '/api/consulta',
+    ENDPOINT_HEALTH: '/api/health',
     MAX_MESSAGE_LENGTH: 2000,
-    TYPING_SPEED: 30
+    TYPING_SPEED: 30,
+    LONGITUD_RESPUESTA_RAPIDA: 200  // Nueva configuración para efecto híbrido
 };
 
 // === ESTADO GLOBAL ===
@@ -31,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function inicializar() {
-    // Obtener elementos
     elementos = {
         messagesContainer: document.getElementById('messagesContainer'),
         welcomeMessage: document.getElementById('welcomeMessage'),
@@ -42,28 +42,19 @@ function inicializar() {
         loadingOverlay: document.getElementById('loadingOverlay')
     };
 
-    // Cargar historial
     cargarHistorial();
     renderizarHistorial();
-    
-    // Configurar eventos
     configurarEventos();
     
-    // Focus en input
     if (elementos.messageInput) {
         elementos.messageInput.focus();
     }
 
-    // Verificar conexión con API al inicializar
     verificarConexionAPI();
-
-    console.log('🚀 COLEPA inicializado correctamente');
-    console.log('📡 API URL:', CONFIG.API_BASE_URL);
-    console.log('🔗 Endpoint consulta:', CONFIG.ENDPOINT_CONSULTA);
+    console.log('🚀 COLEPA inicializado correctamente - Versión Sincronizada');
 }
 
 function configurarEventos() {
-    // Auto-resize del textarea
     if (elementos.messageInput) {
         elementos.messageInput.addEventListener('input', function() {
             this.style.height = 'auto';
@@ -76,22 +67,14 @@ function configurarEventos() {
 // === VERIFICACIÓN DE CONEXIÓN ===
 async function verificarConexionAPI() {
     try {
-        console.log('🔗 Verificando conexión con API:', CONFIG.API_BASE_URL + CONFIG.ENDPOINT_HEALTH);
-        
         const response = await fetch(CONFIG.API_BASE_URL + CONFIG.ENDPOINT_HEALTH, {
             method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
+            headers: { 'Content-Type': 'application/json' }
         });
         
         if (response.ok) {
             const data = await response.json();
             console.log('✅ Conexión con API exitosa:', data);
-            console.log('🤖 OpenAI:', data.servicios?.openai || 'no disponible');
-            console.log('🔍 Qdrant:', data.servicios?.qdrant || 'no disponible');
-        } else {
-            console.warn('⚠️ API responde pero con error:', response.status);
         }
     } catch (error) {
         console.error('❌ Error conectando con API:', error);
@@ -104,30 +87,17 @@ function mostrarMensajeConexion(exito) {
         const mensajeConexion = document.createElement('div');
         mensajeConexion.className = 'connection-warning';
         mensajeConexion.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: var(--primary-red);
-            color: white;
-            padding: 12px 16px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            box-shadow: var(--shadow-md);
-            z-index: 1000;
-            animation: slideIn 0.3s ease;
+            position: fixed; top: 20px; right: 20px; background: var(--primary-red);
+            color: white; padding: 12px 16px; border-radius: 8px; display: flex;
+            align-items: center; gap: 8px; font-size: 14px; box-shadow: var(--shadow-md);
+            z-index: 1000; animation: slideIn 0.3s ease;
         `;
         mensajeConexion.innerHTML = `
             <i class="fas fa-exclamation-triangle"></i>
             <span>Problema de conexión con el servidor. Intentando reconectar...</span>
         `;
         document.body.appendChild(mensajeConexion);
-        
-        setTimeout(() => {
-            mensajeConexion.remove();
-        }, 5000);
+        setTimeout(() => mensajeConexion.remove(), 5000);
     }
 }
 
@@ -140,26 +110,21 @@ function enviarMensaje(event) {
     const mensaje = elementos.messageInput.value.trim();
     if (!mensaje) return;
     
-    // Validar longitud del mensaje
     if (mensaje.length > CONFIG.MAX_MESSAGE_LENGTH) {
         alert(`El mensaje es demasiado largo. Máximo ${CONFIG.MAX_MESSAGE_LENGTH} caracteres.`);
         return;
     }
     
-    // Crear nueva sesión si no existe
     if (!app.sesionId) {
         nuevaConsulta();
     }
     
-    // Agregar mensaje del usuario
     agregarMensaje('user', mensaje);
     
-    // Limpiar input
     elementos.messageInput.value = '';
     elementos.messageInput.style.height = 'auto';
     actualizarBotonEnvio();
     
-    // Procesar respuesta
     procesarRespuesta(mensaje);
 }
 
@@ -184,12 +149,10 @@ async function procesarRespuesta(mensajeUsuario) {
     app.isLoading = true;
     actualizarBotonEnvio();
     
-    // Mostrar indicador de escritura
     mostrarIndicadorEscritura();
     
     try {
         const url = CONFIG.API_BASE_URL + CONFIG.ENDPOINT_CONSULTA;
-        console.log('📤 Enviando consulta a:', url);
         
         const requestData = {
             historial: app.conversacionActual.map(msg => ({
@@ -198,8 +161,6 @@ async function procesarRespuesta(mensajeUsuario) {
                 timestamp: msg.timestamp
             }))
         };
-        
-        console.log('📋 Datos enviados:', requestData);
 
         const response = await fetch(url, {
             method: 'POST',
@@ -210,32 +171,26 @@ async function procesarRespuesta(mensajeUsuario) {
             body: JSON.stringify(requestData)
         });
         
-        console.log('📥 Respuesta del servidor:', response.status, response.statusText);
-        
         if (!response.ok) {
             let errorMessage = `Error ${response.status}: ${response.statusText}`;
-            
             try {
                 const errorData = await response.json();
                 if (errorData.detalle) {
                     errorMessage += `\nDetalle: ${errorData.detalle}`;
                 }
-                console.error('❌ Error del servidor:', errorData);
             } catch (e) {
                 console.error('❌ No se pudo parsear error JSON');
             }
-            
             throw new Error(errorMessage);
         }
         
         const data = await response.json();
         console.log('✅ Datos recibidos:', data);
         
-        // Ocultar indicador de escritura
         ocultarIndicadorEscritura();
         
-        // Agregar respuesta con efecto de escritura
-        await mostrarRespuestaConEscritura(data);
+        // NUEVA LÓGICA: Efecto de escritura híbrido
+        await mostrarRespuestaConEfectoHibrido(data);
         
     } catch (error) {
         console.error('❌ Error completo:', error);
@@ -243,15 +198,12 @@ async function procesarRespuesta(mensajeUsuario) {
         
         let mensajeError = '🚨 **Error al procesar consulta**\n\n';
         
-        // Mensajes de error específicos
         if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
             mensajeError += 'No se pudo conectar con el servidor COLEPA. Verifica tu conexión a internet.';
         } else if (error.message.includes('404')) {
             mensajeError += 'El servicio de consultas no está disponible en este momento.';
         } else if (error.message.includes('500')) {
             mensajeError += 'Error interno del servidor. El sistema está procesando tu consulta o experimentando dificultades técnicas.';
-        } else if (error.message.includes('timeout')) {
-            mensajeError += 'La consulta está tardando demasiado. Intenta con una pregunta más específica.';
         } else {
             mensajeError += `Error: ${error.message}`;
         }
@@ -266,7 +218,8 @@ async function procesarRespuesta(mensajeUsuario) {
     }
 }
 
-async function mostrarRespuestaConEscritura(data) {
+// === NUEVA FUNCIÓN: EFECTO DE ESCRITURA HÍBRIDO ===
+async function mostrarRespuestaConEfectoHibrido(data) {
     const contenido = data.respuesta || 'Lo siento, no pude generar una respuesta.';
     const metadata = {
         fuente: data.fuente,
@@ -275,38 +228,71 @@ async function mostrarRespuestaConEscritura(data) {
         tiempo_procesamiento: data.tiempo_procesamiento
     };
     
+    // Detectar si es emergencia - PRIORIDAD MÁXIMA
+    const esEmergencia = detectarEmergencia(contenido);
+    
     // Agregar mensaje vacío
     const mensaje = agregarMensaje('assistant', '', metadata);
     const indexMensaje = app.conversacionActual.length - 1;
     
-    // Efecto de escritura palabra por palabra
-    const palabras = contenido.split(' ');
-    let contenidoActual = '';
-    
-    for (let i = 0; i < palabras.length; i++) {
-        if (i > 0) contenidoActual += ' ';
-        contenidoActual += palabras[i];
-        
-        // Actualizar mensaje
-        app.conversacionActual[indexMensaje].content = contenidoActual;
+    // LÓGICA HÍBRIDA: Según longitud y tipo de contenido
+    if (esEmergencia || contenido.length > CONFIG.LONGITUD_RESPUESTA_RAPIDA) {
+        // INMEDIATO: Para emergencias y respuestas largas
+        app.conversacionActual[indexMensaje].content = contenido;
         renderizarMensajes();
         scrollToBottom();
         
-        // Pausa para efecto de escritura
-        await sleep(CONFIG.TYPING_SPEED + Math.random() * 20);
+        // Efecto visual suave
+        const ultimoMensaje = elementos.messagesContainer.lastElementChild;
+        if (ultimoMensaje) {
+            ultimoMensaje.style.opacity = '0';
+            ultimoMensaje.style.transform = 'translateY(10px)';
+            ultimoMensaje.style.transition = 'all 0.4s ease';
+            
+            setTimeout(() => {
+                ultimoMensaje.style.opacity = '1';
+                ultimoMensaje.style.transform = 'translateY(0)';
+            }, 50);
+        }
+    } else {
+        // EFECTO DE ESCRITURA: Para respuestas cortas y conversacionales
+        const palabras = contenido.split(' ');
+        let contenidoActual = '';
+        
+        for (let i = 0; i < palabras.length; i++) {
+            if (i > 0) contenidoActual += ' ';
+            contenidoActual += palabras[i];
+            
+            app.conversacionActual[indexMensaje].content = contenidoActual;
+            renderizarMensajes();
+            scrollToBottom();
+            
+            await sleep(CONFIG.TYPING_SPEED + Math.random() * 20);
+        }
     }
     
-    // Contenido final
+    // Finalizar
     app.conversacionActual[indexMensaje].content = contenido;
     actualizarSesionActual();
     renderizarHistorial();
 }
 
-// === FUNCIONES DE RENDERIZADO ===
+// === NUEVA FUNCIÓN: DETECCIÓN DE EMERGENCIAS ===
+function detectarEmergencia(contenido) {
+    const palabrasEmergencia = [
+        'línea 137', '137', 'violencia', 'maltrato', 'agresión', 
+        'golpes', 'pega', 'abuso', 'emergencia', 'inmediatamente',
+        'urgente', 'peligro', 'amenaza'
+    ];
+    
+    const contenidoLower = contenido.toLowerCase();
+    return palabrasEmergencia.some(palabra => contenidoLower.includes(palabra));
+}
+
+// === FUNCIONES DE RENDERIZADO MEJORADAS ===
 function renderizarMensajes() {
     if (!elementos.messagesContainer) return;
     
-    // Mostrar/ocultar mensaje de bienvenida
     if (app.conversacionActual.length === 0) {
         elementos.welcomeMessage.style.display = 'flex';
         return;
@@ -314,29 +300,27 @@ function renderizarMensajes() {
         elementos.welcomeMessage.style.display = 'none';
     }
     
-    // Limpiar mensajes anteriores (excepto bienvenida)
     const mensajesExistentes = elementos.messagesContainer.querySelectorAll('.message, .typing-indicator');
     mensajesExistentes.forEach(el => el.remove());
     
-    // Renderizar mensajes
     app.conversacionActual.forEach(mensaje => {
         const elementoMensaje = crearElementoMensaje(mensaje);
         elementos.messagesContainer.appendChild(elementoMensaje);
     });
 }
 
+// === FUNCIÓN MEJORADA: CREAR ELEMENTO MENSAJE ===
 function crearElementoMensaje(mensaje) {
     const div = document.createElement('div');
     div.className = `message ${mensaje.role}`;
     
-    let contenidoHTML = formatearContenido(mensaje.content);
+    // NUEVA LÓGICA: Formateo estructurado
+    let contenidoHTML = formatearRespuestaEstructurada(mensaje.content);
     
-    // Agregar fuente legal si existe
     if (mensaje.metadata && mensaje.metadata.fuente) {
         contenidoHTML += crearFuenteLegal(mensaje.metadata.fuente);
     }
     
-    // Agregar recomendaciones si existen
     if (mensaje.metadata && mensaje.metadata.recomendaciones) {
         contenidoHTML += crearRecomendaciones(mensaje.metadata.recomendaciones);
     }
@@ -364,11 +348,60 @@ function crearElementoMensaje(mensaje) {
     return div;
 }
 
-function formatearContenido(contenido) {
-    return contenido
+// === NUEVA FUNCIÓN: FORMATEO ESTRUCTURADO ===
+function formatearRespuestaEstructurada(contenido) {
+    let html = contenido;
+    
+    // 1. DETECCIÓN Y ESTILO DE EMERGENCIAS (PRIORIDAD MÁXIMA)
+    if (detectarEmergencia(contenido)) {
+        // Destacar línea 137 y información de emergencia
+        html = html.replace(/(línea 137|137)/gi, '<span class="emergencia-destacada">🚨 $1</span>');
+        
+        // Si contiene palabras de emergencia, agregar alerta al inicio
+        if (html.toLowerCase().includes('violencia') || html.toLowerCase().includes('maltrato')) {
+            html = `<div class="alerta-emergencia">
+                🚨 <strong>EMERGENCIA:</strong> Si estás en peligro inmediato, llama al 911 o la línea 137
+            </div><br>` + html;
+        }
+    }
+    
+    // 2. SECCIONES ESTRUCTURADAS CON ICONOS
+    // Fundamento Legal - Expandible
+    html = html.replace(
+        /\*\*FUNDAMENTO LEGAL\*\*/gi,
+        '<details class="seccion-fundamento" open><summary>⚖️ <strong>Fundamento Legal</strong></summary><div class="contenido-expandible">'
+    );
+    
+    // Pasos a seguir - Siempre visible
+    html = html.replace(
+        /\*\*(Pasos a seguir|Orientación práctica|Procedimiento):\*\*/gi,
+        '</div></details><div class="pasos-practicos">📋 <strong>$1:</strong>'
+    );
+    
+    // Recomendaciones
+    html = html.replace(
+        /\*\*(Recomendaciones|Importante|Nota):\*\*/gi,
+        '<div class="recomendaciones">💡 <strong>$1:</strong>'
+    );
+    
+    // 3. FORMATEO BÁSICO MEJORADO
+    html = html
         .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
         .replace(/\*(.*?)\*/g, '<em>$1</em>')
         .replace(/\n/g, '<br>');
+    
+    // 4. CERRAR DIVS ABIERTOS
+    if (html.includes('class="contenido-expandible"') && !html.includes('</div></details>')) {
+        html += '</div></details>';
+    }
+    if (html.includes('class="pasos-practicos"') && !html.endsWith('</div>')) {
+        html += '</div>';
+    }
+    if (html.includes('class="recomendaciones"') && !html.endsWith('</div>')) {
+        html += '</div>';
+    }
+    
+    return html;
 }
 
 function crearFuenteLegal(fuente) {
@@ -407,7 +440,7 @@ function crearRecomendaciones(recomendaciones) {
     `;
 }
 
-// === GESTIÓN DE HISTORIAL ===
+// === GESTIÓN DE HISTORIAL (SIN CAMBIOS) ===
 function cargarHistorial() {
     try {
         const historialGuardado = localStorage.getItem('colepa_conversaciones');
@@ -471,7 +504,6 @@ function actualizarSesionActual() {
         app.conversaciones.unshift(conversacion);
     }
     
-    // Actualizar título basado en primer mensaje
     if (conversacion.titulo === 'Nueva consulta') {
         const primerMensaje = app.conversacionActual.find(m => m.role === 'user');
         if (primerMensaje) {
@@ -593,7 +625,7 @@ function scrollToBottom() {
     }
 }
 
-// Inicializar nueva consulta al cargar
+// === INICIALIZACIÓN AUTOMÁTICA ===
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         if (app.conversaciones.length === 0) {
