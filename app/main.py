@@ -112,7 +112,7 @@ class StatusResponse(BaseModel):
 
 # === CONFIGURACIÓN DEL SISTEMA ===
 MAPA_COLECCIONES = {
-    "Código Aduanero": "colepa_aduanero_final",
+    "Código Aduanero": "colepa_aduanero_enriquecido_test",
     "Código Civil": "colepa_codigo_civil_final", 
     "Código de la Niñez y la Adolescencia": "colepa_ninez_final",
     "Código de Organización Judicial": "colepa_organizacion_judicial_final",
