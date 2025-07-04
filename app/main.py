@@ -110,18 +110,18 @@ class StatusResponse(BaseModel):
     servicios: Dict[str, str]
     colecciones_disponibles: int
 
-# === CONFIGURACIÓN DEL SISTEMA ===
+# === CONFIGURACIÓN DEL SISTEMA - EXPANDIDO PARA 10 CÓDIGOS ===
 MAPA_COLECCIONES = {
-    "Código Aduanero": "colepa_aduanero_enriquecido_test",
-    "Código Civil": "colepa_codigo_civil_final", 
-    "Código de la Niñez y la Adolescencia": "colepa_ninez_final",
-    "Código de Organización Judicial": "colepa_organizacion_judicial_final",
-    "Código Procesal Civil": "colepa_procesal_civil_final", 
-    "Código Procesal Penal": "colepa_procesal_penal_final",
-    "Código Laboral": "colepa_laboral_final",
-    "Código Electoral": "colepa_electoral_final",
-    "Código Penal": "colepa_penal_final",
-    "Código Sanitario": "colepa_sanitario_final",
+    "Código Aduanero": "colepa_aduanero_maestro",  # ✅ YA ACTIVO
+    "Código Civil": "colepa_codigo_civil_maestro", 
+    "Código de la Niñez y la Adolescencia": "colepa_ninez_maestro",
+    "Código de Organización Judicial": "colepa_organizacion_judicial_maestro",
+    "Código Procesal Civil": "colepa_procesal_civil_maestro", 
+    "Código Procesal Penal": "colepa_procesal_penal_maestro",
+    "Código Laboral": "colepa_laboral_maestro",
+    "Código Electoral": "colepa_electoral_maestro",
+    "Código Penal": "colepa_penal_maestro",
+    "Código Sanitario": "colepa_sanitario_maestro",
 }
 
 PALABRAS_CLAVE_EXPANDIDAS = {
@@ -177,74 +177,54 @@ PALABRAS_CLAVE_EXPANDIDAS = {
     ]
 }
 
-# === PROMPT MEJORADO DEL SISTEMA ===
+# === PROMPT MEJORADO PARA TEXTO EXACTO ===
 INSTRUCCION_SISTEMA_LEGAL = """
-Eres COLEPA, el asistente legal oficial especializado en legislación paraguaya. Eres un experto jurídico con acceso completo a toda la legislación vigente del Paraguay.
+Eres COLEPA, el asistente legal oficial especializado en legislación paraguaya. Tu función es proporcionar el texto exacto de las leyes sin añadir interpretaciones o recomendaciones adicionales.
 
-PERSONALIDAD Y ESTILO:
-- Experto legal confiado y preciso
-- Profesional pero accesible para cualquier ciudadano
-- Conocimiento completo y actualizado de las leyes paraguayas
-- Comunicación clara y directa
+REGLAS CRÍTICAS PARA RESPUESTAS:
 
-ESTRUCTURA OBLIGATORIA DE RESPUESTA:
+1. **RESPUESTA DIRECTA INICIAL** (1-2 líneas)
+   - Responde la pregunta de forma directa y concisa
+   - Ve directo al grano sin preámbulos
 
-1. **RESPUESTA DIRECTA INICIAL** (2-3 líneas máximo)
-   - Responde la pregunta del usuario de forma directa y concisa
-   - Da la información práctica que necesita saber
-   - Evita jerga legal innecesaria
+2. **FUNDAMENTO LEGAL EXACTO** (obligatorio)
+   - Proporciona el texto legal EXACTO como aparece en la ley
+   - NO interpretes, NO parafrasees, USA EL TEXTO LITERAL
+   - Cita claramente la ley y artículo
 
-2. **FUNDAMENTO LEGAL** (después de la respuesta directa)
-   - Cita la ley y artículo específico
-   - Reproduce el texto legal exacto si es relevante
-   - Explica cómo se aplica a la situación del usuario
+3. **SIN ORIENTACIÓN ADICIONAL** (crítico)
+   - NO agregues pasos prácticos
+   - NO agregues recomendaciones  
+   - NO agregues "consulte con un abogado"
+   - NO agregues orientación sobre dónde acudir
 
-3. **ORIENTACIÓN PRÁCTICA** (si aplica)
-   - Pasos concretos que puede seguir
-   - Dónde acudir o qué hacer
-   - Precauciones o consideraciones importantes
+ESTRUCTURA DE RESPUESTA:
+- Respuesta directa (1-2 líneas)
+- Fundamento legal con texto exacto
+- FIN (no agregar nada más)
 
-REGLAS CRÍTICAS:
-✅ SIEMPRE responde la pregunta PRIMERO, luego fundamenta legalmente
-✅ Usa el contexto legal proporcionado como base autoritativa
-✅ Sé específico sobre leyes, artículos y procedimientos
-✅ Incluye pasos prácticos cuando sea útil
-✅ Para violencia/emergencias: prioriza números de emergencia y protección inmediata
-
-❌ NUNCA "escupas" solo el texto del artículo sin explicarlo
-❌ NUNCA digas que no tienes acceso a información legal
-❌ NUNCA hagas disclaimers sobre fechas de actualización
-❌ NUNCA seas vago o genérico en tu respuesta
-
-CASOS ESPECIALES:
-- **Violencia/Emergencias**: Menciona línea 137 y protección inmediata ANTES del fundamento legal
-- **Artículos específicos**: Explica qué significa el artículo en términos prácticos
-- **Procedimientos**: Da pasos concretos y específicos
-
-EJEMPLO DE RESPUESTA CORRECTA:
-Usuario: "¿Qué pasa si mi empleador no me paga las vacaciones?"
+EJEMPLO CORRECTO:
+Usuario: "¿Qué dice el artículo 15 del código aduanero?"
 
 Respuesta:
-"Tu empleador está obligado por ley a pagarte las vacaciones. Si no lo hace, puedes reclamar el pago completo más una indemnización equivalente.
+"El artículo 15 establece los casos de exención de tributos aduaneros.
 
 **Fundamento Legal:**
-Según el Código Laboral de Paraguay, Artículo 218: 'El empleador que no otorgue vacaciones en el período correspondiente deberá abonar al trabajador el doble de la remuneración por los días de vacaciones no gozados.'
+Código Aduanero, Artículo 15: [TEXTO EXACTO DEL ARTÍCULO COMO APARECE EN LA LEY]"
 
-**Pasos a seguir:**
-1. Solicita por escrito el pago de vacaciones a tu empleador
-2. Si se niega, acude al Ministerio de Trabajo para hacer el reclamo
-3. Puedes reclamar tanto el pago original como la indemnización adicional
+EJEMPLO INCORRECTO (NO hacer esto):
+"El artículo 15 establece... [interpretación]
+**Pasos a seguir:** [NO agregar esto]
+**Recomendaciones:** [NO agregar esto]"
 
-*La ley protege completamente tus derechos vacacionales.*"
-
-Responde siempre siguiendo esta estructura. Tu conocimiento legal es completo y actualizado.
+Usa ÚNICAMENTE el texto proporcionado en el contexto legal. Si no tienes el texto exacto, di que no tienes acceso a esa disposición específica.
 """
 
 # === CONFIGURACIÓN DE FASTAPI ===
 app = FastAPI(
     title="COLEPA - Asistente Legal Oficial",
     description="Sistema de consultas legales basado en la legislación paraguaya",
-    version="3.1.0",
+    version="3.2.0",
     docs_url="/api/docs",
     redoc_url="/api/redoc"
 )
@@ -360,7 +340,6 @@ def clasificar_consulta_inteligente(pregunta: str) -> str:
 def clasificar_consulta_con_ia_robusta(pregunta: str) -> str:
     """
     SÚPER ENRUTADOR: Clasificación robusta usando IA especializada
-    Soluciona el Bug Crítico del "Enrutador Confundido"
     """
     if not OPENAI_AVAILABLE or not openai_client:
         logger.warning("⚠️ OpenAI no disponible, usando clasificación básica")
@@ -382,21 +361,6 @@ CÓDIGOS DISPONIBLES:
 9. Código de Organización Judicial - tribunales, jueces, competencias judiciales, organización courts
 10. Código Sanitario - salud, medicina, hospitales, medicamentos, control sanitario
 
-EJEMPLOS DE CLASIFICACIÓN:
-- "mi esposo me pegó" → Código Penal (violencia)
-- "quiero divorciarme" → Código Civil (matrimonio/divorcio)
-- "me despidieron sin causa" → Código Laboral (despidos)
-- "cómo importar productos" → Código Aduanero (importación)
-- "hacer una denuncia penal" → Código Procesal Penal (denuncias)
-- "derechos de mi hijo menor" → Código de la Niñez y la Adolescencia (menores)
-
-INSTRUCCIONES CRÍTICAS:
-1. Lee la consulta cuidadosamente
-2. Identifica las palabras clave principales
-3. Responde ÚNICAMENTE con el nombre exacto del código (ej: "Código Penal")
-4. Si hay dudas entre dos códigos, elige el más específico
-5. Si mencionan artículos específicos, considera el contexto de la pregunta
-
 CONSULTA A CLASIFICAR: "{pregunta}"
 
 CÓDIGO IDENTIFICADO:"""
@@ -405,7 +369,7 @@ CÓDIGO IDENTIFICADO:"""
         response = openai_client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": prompt_clasificacion}],
-            temperature=0.1,  # Muy conservador para clasificación
+            temperature=0.1,
             max_tokens=50
         )
         
@@ -434,7 +398,7 @@ CÓDIGO IDENTIFICADO:"""
 
 def generar_respuesta_legal(historial: List[MensajeChat], contexto: Optional[Dict] = None) -> str:
     """
-    Generación de respuesta legal mejorada con OpenAI
+    Generación de respuesta legal mejorada - TEXTO EXACTO ÚNICAMENTE
     """
     if not OPENAI_AVAILABLE or not openai_client:
         return generar_respuesta_con_contexto(historial[-1].content, contexto)
@@ -443,46 +407,31 @@ def generar_respuesta_legal(historial: List[MensajeChat], contexto: Optional[Dic
         # Preparar mensajes para OpenAI
         mensajes = [{"role": "system", "content": INSTRUCCION_SISTEMA_LEGAL}]
         
-        # Agregar contexto legal si existe - CRÍTICO
+        # Agregar contexto legal si existe - USANDO PROMPT_BUILDER
         if contexto and contexto.get("pageContent"):
-            # Usar tu prompt_builder.py original
             contexto_legal_texto = contexto.get('pageContent', '')
             prompt_construido = construir_prompt(contexto_legal_texto, historial[-1].content)
             
             mensajes.append({"role": "user", "content": prompt_construido})
             logger.info(f"📖 Usando prompt_builder.py para contexto: {contexto.get('nombre_ley')} Art. {contexto.get('numero_articulo')}")
         else:
-            # Sin contexto específico, usar prompt del sistema mejorado
-            logger.info("📝 Generando respuesta sin contexto específico")
-        
-        # Agregar solo los últimos 2 mensajes del historial (no saturar cuando hay contexto)
-        if contexto and contexto.get("pageContent"):
-            # Con contexto: solo la pregunta actual ya está en el prompt construido
-            pass
-        else:
-            # Sin contexto: agregar historial normal
+            # Sin contexto específico
             for msg in historial[-2:]:
                 role = "assistant" if msg.role == "assistant" else "user"
                 mensajes.append({"role": role, "content": msg.content})
         
-        # Llamada a OpenAI con parámetros optimizados
+        # Llamada a OpenAI con parámetros optimizados para TEXTO EXACTO
         response = openai_client.chat.completions.create(
             model="gpt-4-turbo-preview",
             messages=mensajes,
-            temperature=0.1,  # Muy conservador para información legal
-            max_tokens=1800,
+            temperature=0.0,  # COMPLETAMENTE CONSERVADOR - SIN CREATIVIDAD
+            max_tokens=1000,  # REDUCIDO - Solo texto exacto
             presence_penalty=0,
             frequency_penalty=0
         )
         
         respuesta = response.choices[0].message.content
-        logger.info("✅ Respuesta generada con OpenAI")
-        
-        # Validar que usó el contexto si estaba disponible
-        if contexto and contexto.get("numero_articulo"):
-            articulo_num = str(contexto.get("numero_articulo", ""))
-            if articulo_num not in respuesta and len(articulo_num) > 0:
-                logger.warning(f"⚠️ OpenAI no incluyó el artículo {articulo_num} en la respuesta")
+        logger.info("✅ Respuesta generada con OpenAI - Modo texto exacto")
         
         return respuesta
         
@@ -492,49 +441,26 @@ def generar_respuesta_legal(historial: List[MensajeChat], contexto: Optional[Dic
 
 def generar_respuesta_con_contexto(pregunta: str, contexto: Optional[Dict] = None) -> str:
     """
-    Respuesta directa usando el contexto de Qdrant cuando OpenAI no está disponible
+    Respuesta directa usando ÚNICAMENTE el contexto de Qdrant - SIN ORIENTACIÓN ADICIONAL
     """
     if contexto and contexto.get("pageContent"):
-        # Usar el prompt_builder para consistencia
-        contexto_legal_texto = contexto.get('pageContent', '')
-        prompt_construido = construir_prompt(contexto_legal_texto, pregunta)
-        
-        # Respuesta básica usando el contexto
         ley = contexto.get('nombre_ley', 'Legislación paraguaya')
         articulo = contexto.get('numero_articulo', 'N/A')
         contenido = contexto.get('pageContent', '')
         
+        # RESPUESTA SIMPLE - SOLO TEXTO EXACTO
         response = f"""**{ley} - Artículo {articulo}**
 
 {contenido}
 
----
-
-**Aplicación a su consulta:**
-Esta disposición legal responde a su pregunta sobre "{pregunta}".
-
-**Nota importante:** Para asesoramiento específico sobre su situación particular, consulte con un abogado especializado.
-
 *Fuente: {ley}, Artículo {articulo}*"""
         
-        logger.info(f"✅ Respuesta generada con contexto: {ley} Art. {articulo}")
+        logger.info(f"✅ Respuesta generada con contexto exacto: {ley} Art. {articulo}")
         return response
     else:
         return f"""**Consulta Legal**
 
 No encontré esa disposición específica en mi base de datos legal para: "{pregunta}"
-
-**Sugerencias:**
-1. **Reformule su consulta** con términos más específicos
-2. **Mencione el código o ley** específica si la conoce  
-3. **Use números de artículo** si busca disposiciones particulares
-
-**Consultas que puedo resolver:**
-- Artículos específicos por número (ej: "artículo 95 del código aduanero")
-- Temas generales (ej: "violencia doméstica", "derechos laborales")
-- Procedimientos legales (ej: "cómo hacer una denuncia")
-
-Para asesoramiento personalizado, consulte siempre con un abogado especializado.
 
 *¿Puede reformular su consulta con más detalles específicos?*"""
 
@@ -573,7 +499,7 @@ async def sistema_status():
     return StatusResponse(
         status="✅ Sistema COLEPA Operativo",
         timestamp=datetime.now(),
-        version="3.1.0",
+        version="3.2.0",
         servicios={
             "openai": "disponible" if OPENAI_AVAILABLE else "no disponible",
             "busqueda_vectorial": "disponible" if VECTOR_SEARCH_AVAILABLE else "modo_demo",
@@ -588,7 +514,7 @@ async def health_check():
     health_status = {
         "sistema": "operativo",
         "timestamp": datetime.now().isoformat(),
-        "version": "3.1.0",
+        "version": "3.2.0",
         "servicios": {
             "openai": "❌ no disponible",
             "qdrant": "❌ no disponible" if not VECTOR_SEARCH_AVAILABLE else "✅ operativo",
@@ -598,7 +524,6 @@ async def health_check():
     
     if OPENAI_AVAILABLE and openai_client:
         try:
-            # Test mínimo de OpenAI
             openai_client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[{"role": "user", "content": "test"}],
@@ -621,14 +546,14 @@ async def listar_codigos_legales():
         "cobertura": "Legislación nacional vigente"
     }
 
-# ========== ENDPOINT PRINCIPAL MODIFICADO ==========
+# ========== ENDPOINT PRINCIPAL MODIFICADO PARA TEXTO EXACTO ==========
 @app.post("/api/consulta", response_model=ConsultaResponse)
 async def procesar_consulta_legal(
     request: ConsultaRequest, 
     background_tasks: BackgroundTasks
 ):
     """
-    Endpoint principal para consultas legales oficiales - CON CLASIFICACIÓN INTELIGENTE
+    Endpoint principal para consultas legales oficiales - TEXTO EXACTO ÚNICAMENTE
     """
     start_time = time.time()
     
@@ -636,78 +561,61 @@ async def procesar_consulta_legal(
         historial = request.historial
         pregunta_actual = historial[-1].content
         
-        # ========== PREVENCIÓN ERROR 422 - LÍMITE DE TOKENS ==========
-        MAX_HISTORIAL = 6  # Solo últimos 6 mensajes (3 pares pregunta-respuesta)
+        # Límite de historial para evitar error 422
+        MAX_HISTORIAL = 6
         if len(historial) > MAX_HISTORIAL:
             historial_limitado = historial[-MAX_HISTORIAL:]
-            logger.info(f"⚠️ Historial limitado a {len(historial_limitado)} mensajes para evitar error 422")
+            logger.info(f"⚠️ Historial limitado a {len(historial_limitado)} mensajes")
         else:
             historial_limitado = historial
         
         logger.info(f"🔍 Nueva consulta legal: {pregunta_actual[:100]}...")
         
-        # ========== NUEVA FUNCIONALIDAD: CLASIFICACIÓN INTELIGENTE ==========
+        # Clasificación inteligente (si está disponible)
         if CLASIFICADOR_AVAILABLE:
             logger.info("🧠 Iniciando clasificación inteligente...")
             clasificacion = clasificar_y_procesar(pregunta_actual)
             
-            logger.info(f"📊 Resultado clasificación:")
-            logger.info(f"   - Tipo: {clasificacion['tipo_consulta']}")
-            logger.info(f"   - Es conversacional: {clasificacion['es_conversacional']}")
-            logger.info(f"   - Requiere búsqueda: {clasificacion['requiere_busqueda']}")
-            
-            # Si es una consulta conversacional (saludo, despedida, etc.)
+            # Manejo de consultas conversacionales
             if clasificacion['es_conversacional'] and clasificacion['respuesta_directa']:
                 logger.info("💬 Generando respuesta conversacional directa...")
-                
                 tiempo_procesamiento = time.time() - start_time
                 
                 return ConsultaResponse(
                     respuesta=clasificacion['respuesta_directa'],
                     fuente=None,
-                    recomendaciones=None,
+                    recomendaciones=None,  # SIN RECOMENDACIONES AUTOMÁTICAS
                     tiempo_procesamiento=round(tiempo_procesamiento, 2),
                     es_respuesta_oficial=True
                 )
             
-            # Si no requiere búsqueda (tema no legal)
+            # Manejo de consultas no legales
             if not clasificacion['requiere_busqueda']:
                 logger.info("🚫 Consulta no legal, redirigiendo...")
-                
                 tiempo_procesamiento = time.time() - start_time
                 
                 return ConsultaResponse(
                     respuesta=clasificacion['respuesta_directa'] or 
-                             "Disculpa, pero me especializo únicamente en consultas sobre "
-                             "las leyes y normativas de Paraguay. ¿Hay alguna pregunta legal "
-                             "en la que pueda asistirte?",
+                             "Me especializo únicamente en consultas sobre las leyes de Paraguay. "
+                             "¿Hay alguna pregunta legal en la que pueda asistirte?",
                     fuente=None,
-                    recomendaciones=None,
+                    recomendaciones=None,  # SIN RECOMENDACIONES AUTOMÁTICAS
                     tiempo_procesamiento=round(tiempo_procesamiento, 2),
                     es_respuesta_oficial=True
                 )
-            
-            # Si llegamos aquí, es una consulta legal que requiere búsqueda
-            logger.info("🔍 Consulta legal confirmada, procediendo con búsqueda...")
-            
-        else:
-            # Fallback si no hay clasificador
-            logger.info("⚠️ Clasificador no disponible, procesando como consulta legal")
-            clasificacion = {'tipo_consulta': 'consulta_legal'}
         
-        # ========== CONTINÚA CON TU LÓGICA ORIGINAL ==========
-        # 1. Clasificar la consulta - CAMBIO CRÍTICO AQUÍ
+        # Clasificar la consulta legal
         collection_name = clasificar_consulta_con_ia_robusta(pregunta_actual)
         logger.info(f"📚 Código legal identificado: {collection_name}")
         
-        # 2. Buscar información legal relevante con estrategia híbrida
+        # Buscar información legal relevante
         contexto = None
         numero_articulo = extraer_numero_articulo_mejorado(pregunta_actual)
         
         if VECTOR_SEARCH_AVAILABLE:
             try:
                 if numero_articulo:
-                    # BÚSQUEDA PRIORITARIA: Por número exacto
+                    # Búsqueda por número exacto
                     logger.info(f"🎯 Buscando artículo específico: {numero_articulo} en {collection_name}")
                     contexto = buscar_articulo_por_numero(numero_articulo, collection_name)
                     
@@ -716,11 +624,10 @@ async def procesar_consulta_legal(
                     else:
                         logger.warning(f"❌ Artículo {numero_articulo} no encontrado por búsqueda exacta")
                         
-                        # FALLBACK 1: Búsqueda semántica con número en el texto
+                        # FALLBACK: Búsqueda semántica con número en el texto
                         if OPENAI_AVAILABLE:
                             logger.info(f"🔄 Intentando búsqueda semántica para artículo {numero_articulo}")
                             
-                            # Crear consulta más específica para embeddings
                             consulta_semantica = f"artículo {numero_articulo} código penal civil procesal laboral"
                             
                             embedding_response = openai_client.embeddings.create(
@@ -729,10 +636,8 @@ async def procesar_consulta_legal(
                             )
                             query_vector = embedding_response.data[0].embedding
                             
-                            # Buscar con umbral más bajo para ser menos restrictivo
                             contexto_semantico = buscar_articulo_relevante(query_vector, collection_name)
                             
-                            # Verificar si el resultado semántico contiene el número correcto
                             if (contexto_semantico and 
                                 contexto_semantico.get("pageContent") and 
                                 str(numero_articulo) in contexto_semantico.get("pageContent", "")):
@@ -743,12 +648,11 @@ async def procesar_consulta_legal(
                                 logger.warning(f"❌ Búsqueda semántica no encontró artículo {numero_articulo}")
                                 contexto = None
                 
-                # Si no se buscó por número o no se encontró, búsqueda semántica general
+                # Búsqueda semántica general si no se buscó por número o no se encontró
                 if not contexto or not contexto.get("pageContent"):
                     logger.info(f"🔎 Realizando búsqueda semántica general en {collection_name}")
                     
                     if OPENAI_AVAILABLE:
-                        # Usar la pregunta original para búsqueda semántica
                         embedding_response = openai_client.embeddings.create(
                             model="text-embedding-ada-002",
                             input=pregunta_actual
@@ -778,32 +682,20 @@ async def procesar_consulta_legal(
             logger.warning("❌ No se encontró contexto legal relevante para la consulta")
             contexto = None
         
-        # 3. Generar respuesta legal
+        # Generar respuesta legal - SOLO TEXTO EXACTO
         respuesta = generar_respuesta_legal(historial_limitado, contexto)
         
-        # 4. Preparar respuesta estructurada
+        # Preparar respuesta estructurada - SIN RECOMENDACIONES AUTOMÁTICAS
         tiempo_procesamiento = time.time() - start_time
         fuente = extraer_fuente_legal(contexto)
         
-        # 5. Generar recomendaciones contextualmente relevantes
-        recomendaciones = []
-        pregunta_lower = pregunta_actual.lower()
-        
-        if any(word in pregunta_lower for word in ["violencia", "maltrato", "agresión", "golpes"]):
-            recomendaciones.extend([
-                "En casos de violencia, comuníquese inmediatamente con la línea 137",
-                "Puede acudir a cualquier comisaría para realizar la denuncia",
-                "Solicite asesoramiento del Ministerio de la Mujer"
-            ])
-        elif any(word in pregunta_lower for word in ["laboral", "trabajo", "empleado", "salario"]):
-            recomendaciones.append("Puede consultar en el Ministerio de Trabajo, Empleo y Seguridad Social")
-        elif any(word in pregunta_lower for word in ["aduanero", "aduana", "importación", "exportación"]):
-            recomendaciones.append("Para trámites aduaneros, diríjase a la Dirección Nacional de Aduanas")
+        # NO GENERAR RECOMENDACIONES AUTOMÁTICAS - ELIMINADO COMPLETAMENTE
+        recomendaciones = None  # SIEMPRE None - Sin orientación automática
         
         response_data = ConsultaResponse(
             respuesta=respuesta,
             fuente=fuente,
-            recomendaciones=recomendaciones if recomendaciones else None,
+            recomendaciones=recomendaciones,  # SIEMPRE None
             tiempo_procesamiento=round(tiempo_procesamiento, 2),
             es_respuesta_oficial=True
         )
@@ -856,11 +748,11 @@ async def general_exception_handler(request: Request, exc: Exception):
 
 # === PUNTO DE ENTRADA ===
 if __name__ == "__main__":
-    logger.info("🚀 Iniciando COLEPA - Sistema Legal Gubernamental v3.1.0")
+    logger.info("🚀 Iniciando COLEPA - Sistema Legal Gubernamental v3.2.0")
     uvicorn.run(
         "main:app",
         host="0.0.0.0",
         port=int(os.getenv("PORT", 8000)),
-        reload=False,  # Deshabilitado en producción
+        reload=False,
         log_level="info"
     )
