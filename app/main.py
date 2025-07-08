@@ -114,7 +114,7 @@ class StatusResponse(BaseModel):
 MAPA_COLECCIONES = {
     "Código Aduanero": "colepa_aduanero_maestro",
     "Código Civil": "colepa_civil_maestro", 
-    "Código de la Niñez y la Adolescencia": "colepa_ninez_final",
+    "Código de la Niñez y la Adolescencia": "colepa_ninezadolescencia_maestro",
     "Código de Organización Judicial": "colepa_organizacion_judicial_final",
     "Código Procesal Civil": "colepa_procesal_civil_final", 
     "Código Procesal Penal": "colepa_procesal_penal_final",
