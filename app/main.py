@@ -111,8 +111,7 @@ class StatusResponse(BaseModel):
     colecciones_disponibles: int
 
 # === CONFIGURACIÓN DEL SISTEMA ===
-MAPA_COLECCIONES = 
-{
+MAPA_COLECCIONES = {
    "aduanero": "colepa_aduanero_maestro",
     "civil": "colepa_civil_maestro", 
     "electoral": "colepa_electoral_maestro",
