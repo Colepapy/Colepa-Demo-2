@@ -111,17 +111,18 @@ class StatusResponse(BaseModel):
     colecciones_disponibles: int
 
 # === CONFIGURACIÓN DEL SISTEMA ===
-MAPA_COLECCIONES = {
-    "Código Aduanero": "colepa_aduanero_maestro",
-    "Código Civil": "colepa_civil_maestro", 
-    "Código de la Niñez y la Adolescencia": "colepa_ninezadolescencia_maestro",
-    "Código de Organización Judicial": "colepa_organizacion_judicial_maestro",
-    "Código Procesal Civil": "colepa_procesal_civil_final", 
-    "Código Procesal Penal": "colepa_procesal_penal_final",
-    "Código Laboral": "colepa_laboral_final",
-    "Código Electoral": "colepa_electoral_final",
-    "Código Penal": "colepa_penal_final",
-    "Código Sanitario": "colepa_sanitario_final",
+MAPA_COLECCIONES = 
+{
+   "aduanero": "colepa_aduanero_maestro",
+    "civil": "colepa_civil_maestro", 
+    "electoral": "colepa_electoral_maestro",
+    "laboral": "colepa_laboral_maestro",
+    "ninezadolescencia": "colepa_ninezadolescencia_maestro",
+    "organizacion_judicial": "colepa_organizacion_judicial_maestro",
+    "penal": "colepa_penal_maestro",
+    "procesal_civil": "colepa_procesal_civil_maestro",
+    "procesal_penal": "colepa_procesal_penal_maestro",
+    "sanitario": "colepa_sanitario_maestro"
 }
 
 PALABRAS_CLAVE_EXPANDIDAS = {
