@@ -80,14 +80,14 @@ except ImportError:
             'es_conversacional': False
         }
 
-# === MODELOS PYDANTIC ===
+# === MODELOS PYDANTIC OPTIMIZADOS ===
 class MensajeChat(BaseModel):
     role: str = Field(..., pattern="^(user|assistant|system)$")
-    content: str = Field(..., min_length=1, max_length=3000)
+    content: str = Field(..., min_length=1, max_length=1000)  # ← FIX: Reducido de 3000 a 1000
     timestamp: Optional[datetime] = None
 
 class ConsultaRequest(BaseModel):
-    historial: List[MensajeChat] = Field(..., min_items=1, max_items=20)
+    historial: List[MensajeChat] = Field(..., min_items=1, max_items=6)  # ← FIX: Reducido de 20 a 6
     metadatos: Optional[Dict[str, Any]] = None
 
 class FuenteLegal(BaseModel):
@@ -326,77 +326,44 @@ def clasificar_consulta_inteligente(pregunta: str) -> str:
 
 def clasificar_consulta_con_ia_robusta(pregunta: str) -> str:
     """
-    SÚPER ENRUTADOR: Clasificación robusta usando IA especializada
-    Soluciona el Bug Crítico del "Enrutador Confundido"
+    CLASIFICADOR OPTIMIZADO: Evita errores de tokens y timeouts
     """
     if not OPENAI_AVAILABLE or not openai_client:
         logger.warning("⚠️ OpenAI no disponible, usando clasificación básica")
         return clasificar_consulta_inteligente(pregunta)
     
-    # PROMPT ESPECIALIZADO PARA CLASIFICACIÓN
-    prompt_clasificacion = f"""
-Eres un experto clasificador de consultas legales paraguayas. Tu única tarea es identificar a qué CÓDIGO LEGAL pertenece la siguiente consulta.
+    # PROMPT ULTRA-CORTO para evitar error 500
+    prompt = f"""Clasifica esta consulta legal paraguaya en UNA categoría:
 
-CÓDIGOS DISPONIBLES:
-1. Código Civil - matrimonio, divorcio, familia, propiedad, contratos, herencia, adopción, tutela, bienes
-2. Código Penal - delitos, crímenes, violencia, agresión, robo, homicidio, maltrato, femicidio, drogas
-3. Código Laboral - trabajo, empleo, salarios, despidos, vacaciones, derechos laborales, sindicatos
-4. Código Procesal Civil - demandas civiles, juicios civiles, daños y perjuicios, procedimientos civiles
-5. Código Procesal Penal - denuncias penales, procesos penales, investigaciones, fiscalía
-6. Código Aduanero - aduana, importación, exportación, mercancías, aranceles, depósitos, contrabando
-7. Código Electoral - elecciones, votos, candidatos, partidos políticos, procesos electorales
-8. Código de la Niñez y la Adolescencia - menores, niños, adolescentes, tutela de menores, adopción
-9. Código de Organización Judicial - tribunales, jueces, competencias judiciales, organización courts
-10. Código Sanitario - salud, medicina, hospitales, medicamentos, control sanitario
+OPCIONES: Código Civil, Código Penal, Código Laboral, Código Procesal Civil, Código Procesal Penal, Código Aduanero, Código Electoral, Código de la Niñez y la Adolescencia, Código de Organización Judicial, Código Sanitario
 
-EJEMPLOS DE CLASIFICACIÓN:
-- "mi esposo me pegó" → Código Penal (violencia)
-- "quiero divorciarme" → Código Civil (matrimonio/divorcio)
-- "me despidieron sin causa" → Código Laboral (despidos)
-- "cómo importar productos" → Código Aduanero (importación)
-- "hacer una denuncia penal" → Código Procesal Penal (denuncias)
-- "derechos de mi hijo menor" → Código de la Niñez y la Adolescencia (menores)
+CONSULTA: "{pregunta}"
 
-INSTRUCCIONES CRÍTICAS:
-1. Lee la consulta cuidadosamente
-2. Identifica las palabras clave principales
-3. Responde ÚNICAMENTE con el nombre exacto del código (ej: "Código Penal")
-4. Si hay dudas entre dos códigos, elige el más específico
-5. Si mencionan artículos específicos, considera el contexto de la pregunta
-
-CONSULTA A CLASIFICAR: "{pregunta}"
-
-CÓDIGO IDENTIFICADO:"""
+RESPONDE SOLO EL NOMBRE DEL CÓDIGO:"""
 
     try:
         response = openai_client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[{"role": "user", "content": prompt_clasificacion}],
-            temperature=0.1,  # Muy conservador para clasificación
-            max_tokens=50
+            model="gpt-3.5-turbo",  # Modelo más estable
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.1,
+            max_tokens=20,  # Muy limitado
+            timeout=15  # Timeout corto
         )
         
         codigo_identificado = response.choices[0].message.content.strip()
         
-        # Mapear respuesta a colección
+        # Mapeo directo
         if codigo_identificado in MAPA_COLECCIONES:
             collection_name = MAPA_COLECCIONES[codigo_identificado]
-            logger.info(f"🎯 IA clasificó correctamente: {codigo_identificado} → {collection_name}")
+            logger.info(f"🎯 IA clasificó: {codigo_identificado} → {collection_name}")
             return collection_name
         else:
-            # Fuzzy matching para nombres similares
-            for codigo_oficial in MAPA_COLECCIONES.keys():
-                if any(word in codigo_identificado.lower() for word in codigo_oficial.lower().split()):
-                    collection_name = MAPA_COLECCIONES[codigo_oficial]
-                    logger.info(f"🎯 IA clasificó (fuzzy match): {codigo_identificado} → {codigo_oficial}")
-                    return collection_name
-            
-            # Fallback
-            logger.warning(f"⚠️ IA devolvió código no reconocido: {codigo_identificado}")
+            # Fallback rápido
+            logger.warning(f"⚠️ IA devolvió: {codigo_identificado}, usando fallback")
             return clasificar_consulta_inteligente(pregunta)
             
     except Exception as e:
-        logger.error(f"❌ Error en clasificación con IA: {e}")
+        logger.error(f"❌ Error en clasificación IA: {e}")
         return clasificar_consulta_inteligente(pregunta)
 
 def generar_respuesta_legal(historial: List[MensajeChat], contexto: Optional[Dict] = None) -> str:
@@ -588,7 +555,7 @@ async def listar_codigos_legales():
         "cobertura": "Legislación nacional vigente"
     }
 
-# ========== ENDPOINT PRINCIPAL MODIFICADO ==========
+# ========== ENDPOINT PRINCIPAL CON FIXES APLICADOS ==========
 @app.post("/api/consulta", response_model=ConsultaResponse)
 async def procesar_consulta_legal(
     request: ConsultaRequest, 
@@ -599,17 +566,16 @@ async def procesar_consulta_legal(
     """
     start_time = time.time()
     
-    try:
+    try:  # ← FIX CRÍTICO: Manejo robusto de excepciones
         historial = request.historial
-        pregunta_actual = historial[-1].content
         
-        # ========== PREVENCIÓN ERROR 422 - LÍMITE DE TOKENS ==========
-        MAX_HISTORIAL = 6  # Solo últimos 6 mensajes (3 pares pregunta-respuesta)
+        # ========== FIX CRÍTICO: LÍMITE DE HISTORIAL ==========
+        MAX_HISTORIAL = 2  # Solo últimos 2 mensajes para evitar error 422
         if len(historial) > MAX_HISTORIAL:
-            historial_limitado = historial[-MAX_HISTORIAL:]
-            logger.info(f"⚠️ Historial limitado a {len(historial_limitado)} mensajes para evitar error 422")
-        else:
-            historial_limitado = historial
+            historial = historial[-MAX_HISTORIAL:]
+            logger.info(f"⚠️ Historial limitado a {len(historial)} mensajes")
+        
+        pregunta_actual = historial[-1].content
         
         logger.info(f"🔍 Nueva consulta legal: {pregunta_actual[:100]}...")
         
@@ -746,7 +712,7 @@ async def procesar_consulta_legal(
             contexto = None
         
         # 3. Generar respuesta legal
-        respuesta = generar_respuesta_legal(historial_limitado, contexto)
+        respuesta = generar_respuesta_legal(historial, contexto)
         
         # 4. Preparar respuesta estructurada
         tiempo_procesamiento = time.time() - start_time
@@ -769,14 +735,18 @@ async def procesar_consulta_legal(
         
         return response_data
         
+    except HTTPException:
+        # Re-raise HTTPExceptions para mantener códigos específicos
+        raise
     except Exception as e:
-        logger.error(f"❌ Error procesando consulta: {e}")
+        # ← FIX CRÍTICO: Capturar TODOS los otros errores (especialmente OpenAI)
+        logger.error(f"❌ Error no controlado en consulta: {e}")
         raise HTTPException(
             status_code=500,
             detail={
                 "error": "Error interno del sistema",
                 "mensaje": "No fue posible procesar su consulta en este momento",
-                "recomendacion": "Intente nuevamente en unos momentos",
+                "recomendacion": "Intente nuevamente con una consulta más corta",
                 "codigo_error": str(e)[:100]
             }
         )
