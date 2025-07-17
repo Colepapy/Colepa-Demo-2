@@ -630,13 +630,21 @@ async def procesar_consulta_legal(
         
         # ========== CONTINÚA CON TU LÓGICA ORIGINAL ==========
         # 1. Clasificar la consulta - CAMBIO CRÍTICO AQUÍ
-        collection_name = clasificar_consulta_con_ia_robusta(pregunta_actual)
+       logger.info("🎯 PASO 1: Iniciando clasificación con IA")
+try:
+    collection_name = clasificar_consulta_con_ia_robusta(pregunta_actual)
+    logger.info(f"📚 Código legal identificado: {collection_name}")
+except Exception as e:
+    logger.error(f"❌ ERROR EN CLASIFICACIÓN IA: {e}")
+    collection_name = clasificar_consulta_inteligente(pregunta_actual)
+    logger.info(f"📚 Usando clasificación fallback: {collection_name}")
         logger.info(f"📚 Código legal identificado: {collection_name}")
         
         # 2. Buscar información legal relevante con estrategia híbrida
         contexto = None
         numero_articulo = extraer_numero_articulo_mejorado(pregunta_actual)
-        
+        logger.info(f"🔢 Número de artículo extraído: {numero_articulo}")
+        logger.info("🎯 PASO 3: Vector search disponible, iniciando búsqueda")
         if VECTOR_SEARCH_AVAILABLE:
             try:
                 if numero_articulo:
@@ -712,7 +720,13 @@ async def procesar_consulta_legal(
             contexto = None
         
         # 3. Generar respuesta legal
-        respuesta = generar_respuesta_legal(historial, contexto)
+        logger.info("🎯 PASO 4: Iniciando generación de respuesta legal")
+try:
+    respuesta = generar_respuesta_legal(historial, contexto)
+    logger.info("✅ Respuesta legal generada exitosamente")
+except Exception as e:
+    logger.error(f"❌ ERROR en generar_respuesta_legal: {e}")
+    respuesta = f"Error al generar respuesta: {str(e)[:100]}"
         
         # 4. Preparar respuesta estructurada
         tiempo_procesamiento = time.time() - start_time
