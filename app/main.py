@@ -322,139 +322,193 @@ def clasificar_consulta_inteligente(pregunta: str) -> str:
     
     # Default: Código Civil (más general)
     logger.info("📚 Consulta no clasificada específicamente, usando Código Civil por defecto")
-    return MAPA_COLECCIONES["Código Civil"]
+    return MAPA_COLECCIONES["civil"]
 
 def clasificar_consulta_con_ia_robusta(pregunta: str) -> str:
     """
     SÚPER ENRUTADOR: Clasificación robusta usando IA especializada
-    Soluciona el Bug Crítico del "Enrutador Confundido"
+    FIX: Prompt ultra-corto y timeout para evitar error 500
     """
     if not OPENAI_AVAILABLE or not openai_client:
         logger.warning("⚠️ OpenAI no disponible, usando clasificación básica")
         return clasificar_consulta_inteligente(pregunta)
     
-    # PROMPT ESPECIALIZADO PARA CLASIFICACIÓN
-    prompt_clasificacion = f"""
-Eres un experto clasificador de consultas legales paraguayas. Tu única tarea es identificar a qué CÓDIGO LEGAL pertenece la siguiente consulta.
-
-CÓDIGOS DISPONIBLES:
-1. Código Civil - matrimonio, divorcio, familia, propiedad, contratos, herencia, adopción, tutela, bienes
-2. Código Penal - delitos, crímenes, violencia, agresión, robo, homicidio, maltrato, femicidio, drogas
-3. Código Laboral - trabajo, empleo, salarios, despidos, vacaciones, derechos laborales, sindicatos
-4. Código Procesal Civil - demandas civiles, juicios civiles, daños y perjuicios, procedimientos civiles
-5. Código Procesal Penal - denuncias penales, procesos penales, investigaciones, fiscalía
-6. Código Aduanero - aduana, importación, exportación, mercancías, aranceles, depósitos, contrabando
-7. Código Electoral - elecciones, votos, candidatos, partidos políticos, procesos electorales
-8. Código de la Niñez y la Adolescencia - menores, niños, adolescentes, tutela de menores, adopción
-9. Código de Organización Judicial - tribunales, jueces, competencias judiciales, organización courts
-10. Código Sanitario - salud, medicina, hospitales, medicamentos, control sanitario
-
-EJEMPLOS DE CLASIFICACIÓN:
-- "mi esposo me pegó" → Código Penal (violencia)
-- "quiero divorciarme" → Código Civil (matrimonio/divorcio)
-- "me despidieron sin causa" → Código Laboral (despidos)
-- "cómo importar productos" → Código Aduanero (importación)
-- "hacer una denuncia penal" → Código Procesal Penal (denuncias)
-- "derechos de mi hijo menor" → Código de la Niñez y la Adolescencia (menores)
-
-INSTRUCCIONES CRÍTICAS:
-1. Lee la consulta cuidadosamente
-2. Identifica las palabras clave principales
-3. Responde ÚNICAMENTE con el nombre exacto del código (ej: "Código Penal")
-4. Si hay dudas entre dos códigos, elige el más específico
-5. Si mencionan artículos específicos, considera el contexto de la pregunta
-
-CONSULTA A CLASIFICAR: "{pregunta}"
-
-CÓDIGO IDENTIFICADO:"""
-
     try:
+        # LOG SEGURO PARA DIAGNÓSTICO
+        print(f"🧠 INICIO clasificar_consulta_con_ia_robusta")
+        print(f"📝 Pregunta recibida: {pregunta[:100]}...")
+        
+        # PROMPT ULTRA-CORTO PARA EVITAR TIMEOUT
+        prompt_ultra_corto = f"""
+        Consulta: {pregunta[:150]}
+        
+        Responde solo con uno de estos códigos exactos:
+        - Código Civil
+        - Código Penal  
+        - Código Laboral
+        - Código Procesal Civil
+        - Código Procesal Penal
+        - Código Aduanero
+        - Código Electoral
+        - Código de la Niñez y la Adolescencia
+        - Código de Organización Judicial
+        - Código Sanitario
+        
+        Código:"""
+        
+        print("🔗 Llamando a OpenAI con prompt ultra-corto...")
+        
+        # LLAMADA CON TIMEOUT Y PARÁMETROS MÍNIMOS
         response = openai_client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[{"role": "user", "content": prompt_clasificacion}],
-            temperature=0.1,  # Muy conservador para clasificación
-            max_tokens=50
+            model="gpt-3.5-turbo",  # Modelo más rápido
+            messages=[{"role": "user", "content": prompt_ultra_corto}],
+            temperature=0,  # Sin creatividad
+            max_tokens=20,  # Máximo ultra-bajo
+            timeout=15  # Timeout de 15 segundos
         )
         
         codigo_identificado = response.choices[0].message.content.strip()
+        print(f"✅ OpenAI respondió: {codigo_identificado}")
         
         # Mapear respuesta a colección
         if codigo_identificado in MAPA_COLECCIONES:
             collection_name = MAPA_COLECCIONES[codigo_identificado]
-            logger.info(f"🎯 IA clasificó correctamente: {codigo_identificado} → {collection_name}")
+            print(f"🎯 Mapeado exitosamente: {codigo_identificado} → {collection_name}")
             return collection_name
         else:
-            # Fuzzy matching para nombres similares
+            # Fuzzy matching mejorado
             for codigo_oficial in MAPA_COLECCIONES.keys():
                 if any(word in codigo_identificado.lower() for word in codigo_oficial.lower().split()):
                     collection_name = MAPA_COLECCIONES[codigo_oficial]
-                    logger.info(f"🎯 IA clasificó (fuzzy match): {codigo_identificado} → {codigo_oficial}")
+                    print(f"🎯 Mapeado fuzzy: {codigo_identificado} → {codigo_oficial}")
                     return collection_name
             
-            # Fallback
-            logger.warning(f"⚠️ IA devolvió código no reconocido: {codigo_identificado}")
+            # Fallback seguro
+            print(f"⚠️ Código no reconocido: {codigo_identificado}, usando fallback")
             return clasificar_consulta_inteligente(pregunta)
             
     except Exception as e:
-        logger.error(f"❌ Error en clasificación con IA: {e}")
+        print(f"🚨 ERROR en clasificar_consulta_con_ia_robusta: {type(e).__name__}: {str(e)}")
+        print("🔄 Usando clasificación básica como fallback")
         return clasificar_consulta_inteligente(pregunta)
+
+async def buscar_con_manejo_errores(numero_articulo, pregunta_actual, collection_name):
+    """
+    Función auxiliar para búsqueda con manejo robusto de errores Qdrant
+    """
+    contexto = None
+    
+    try:
+        print(f"🔎 INICIO búsqueda - Artículo: {numero_articulo}, Colección: {collection_name}")
+        
+        if numero_articulo:
+            # BÚSQUEDA POR NÚMERO EXACTO CON TIMEOUT
+            print(f"🎯 Buscando artículo específico: {numero_articulo}")
+            try:
+                contexto = buscar_articulo_por_numero(numero_articulo, collection_name)
+                print(f"✅ Búsqueda exacta completada: {type(contexto)}")
+                
+                if contexto and contexto.get("pageContent"):
+                    print(f"✅ Artículo {numero_articulo} encontrado por búsqueda exacta")
+                else:
+                    print(f"❌ Artículo {numero_articulo} no encontrado, intentando búsqueda semántica")
+                    contexto = None
+                    
+            except Exception as e:
+                print(f"🚨 ERROR en buscar_articulo_por_numero: {str(e)}")
+                contexto = None
+        
+        # BÚSQUEDA SEMÁNTICA CON MANEJO DE ERRORES
+        if not contexto or not contexto.get("pageContent"):
+            print("🔎 Iniciando búsqueda semántica...")
+            
+            if OPENAI_AVAILABLE:
+                try:
+                    # EMBEDDING CON TIMEOUT Y MANEJO DE ERRORES
+                    print("🔢 Generando embedding...")
+                    embedding_response = openai_client.embeddings.create(
+                        model="text-embedding-ada-002",
+                        input=pregunta_actual[:500],  # Limitar entrada
+                        timeout=10  # Timeout de 10 segundos
+                    )
+                    query_vector = embedding_response.data[0].embedding
+                    print(f"✅ Embedding generado: {len(query_vector)} dimensiones")
+                    
+                    # BÚSQUEDA VECTORIAL CON TIMEOUT
+                    print("🗄️ Buscando en Qdrant...")
+                    contexto = buscar_articulo_relevante(query_vector, collection_name)
+                    print(f"✅ Búsqueda Qdrant completada: {type(contexto)}")
+                    
+                    if contexto and contexto.get("pageContent"):
+                        print("✅ Contexto encontrado por búsqueda semántica")
+                    else:
+                        print("❌ No se encontró contexto en búsqueda semántica")
+                        
+                except Exception as e:
+                    print(f"🚨 ERROR en búsqueda semántica: {str(e)}")
+                    contexto = None
+            else:
+                print("⚠️ OpenAI no disponible para embeddings")
+                
+    except Exception as e:
+        print(f"🚨 ERROR GENERAL en búsqueda: {type(e).__name__}: {str(e)}")
+        contexto = None
+    
+    return contexto
 
 def generar_respuesta_legal(historial: List[MensajeChat], contexto: Optional[Dict] = None) -> str:
     """
-    Generación de respuesta legal mejorada con OpenAI
+    FIX: Generación con límites estrictos para evitar error 422
     """
     if not OPENAI_AVAILABLE or not openai_client:
         return generar_respuesta_con_contexto(historial[-1].content, contexto)
     
     try:
-        # Preparar mensajes para OpenAI
-        mensajes = [{"role": "system", "content": INSTRUCCION_SISTEMA_LEGAL}]
+        print("💭 INICIO generar_respuesta_legal")
+        print(f"📊 Historial: {len(historial)} mensajes")
+        print(f"📖 Contexto disponible: {bool(contexto and contexto.get('pageContent'))}")
         
-        # Agregar contexto legal si existe - CRÍTICO
+        # LÍMITES ESTRICTOS PARA EVITAR ERROR 422
+        mensajes = [{"role": "system", "content": INSTRUCCION_SISTEMA_LEGAL[:1000]}]  # Limitar instrucciones
+        
+        # MANEJO MEJORADO DEL CONTEXTO
         if contexto and contexto.get("pageContent"):
-            # Usar tu prompt_builder.py original
-            contexto_legal_texto = contexto.get('pageContent', '')
-            prompt_construido = construir_prompt(contexto_legal_texto, historial[-1].content)
+            contexto_limitado = contexto.get('pageContent', '')[:1500]  # Límite estricto
+            prompt_limitado = construir_prompt(contexto_limitado, historial[-1].content[:300])
             
-            mensajes.append({"role": "user", "content": prompt_construido})
-            logger.info(f"📖 Usando prompt_builder.py para contexto: {contexto.get('nombre_ley')} Art. {contexto.get('numero_articulo')}")
+            # LIMITAR PROMPT TOTAL
+            if len(prompt_limitado) > 2000:
+                prompt_limitado = prompt_limitado[:2000] + "..."
+            
+            mensajes.append({"role": "user", "content": prompt_limitado})
+            print(f"📖 Prompt construido: {len(prompt_limitado)} chars")
         else:
-            # Sin contexto específico, usar prompt del sistema mejorado
-            logger.info("📝 Generando respuesta sin contexto específico")
+            # SIN CONTEXTO: Solo pregunta actual limitada
+            pregunta_limitada = historial[-1].content[:300]
+            mensajes.append({"role": "user", "content": pregunta_limitada})
+            print(f"📝 Pregunta sin contexto: {len(pregunta_limitada)} chars")
         
-        # Agregar solo los últimos 2 mensajes del historial (no saturar cuando hay contexto)
-        if contexto and contexto.get("pageContent"):
-            # Con contexto: solo la pregunta actual ya está en el prompt construido
-            pass
-        else:
-            # Sin contexto: agregar historial normal
-            for msg in historial[-2:]:
-                role = "assistant" if msg.role == "assistant" else "user"
-                mensajes.append({"role": role, "content": msg.content})
+        print("🔗 Llamando a OpenAI con límites estrictos...")
         
-        # Llamada a OpenAI con parámetros optimizados
+        # LLAMADA CON PARÁMETROS ULTRA-CONSERVADORES
         response = openai_client.chat.completions.create(
-            model="gpt-4-turbo-preview",
+            model="gpt-3.5-turbo",  # Modelo más rápido y económico
             messages=mensajes,
-            temperature=0.1,  # Muy conservador para información legal
-            max_tokens=1800,
+            temperature=0.1,
+            max_tokens=800,  # Límite reducido
+            timeout=20,  # Timeout de 20 segundos
             presence_penalty=0,
             frequency_penalty=0
         )
         
         respuesta = response.choices[0].message.content
-        logger.info("✅ Respuesta generada con OpenAI")
-        
-        # Validar que usó el contexto si estaba disponible
-        if contexto and contexto.get("numero_articulo"):
-            articulo_num = str(contexto.get("numero_articulo", ""))
-            if articulo_num not in respuesta and len(articulo_num) > 0:
-                logger.warning(f"⚠️ OpenAI no incluyó el artículo {articulo_num} en la respuesta")
+        print(f"✅ Respuesta generada: {len(respuesta)} chars")
         
         return respuesta
         
     except Exception as e:
-        logger.error(f"❌ Error con OpenAI: {e}")
+        print(f"🚨 ERROR en generar_respuesta_legal: {type(e).__name__}: {str(e)}")
+        print("🔄 Usando respuesta con contexto como fallback")
         return generar_respuesta_con_contexto(historial[-1].content, contexto)
 
 def generar_respuesta_con_contexto(pregunta: str, contexto: Optional[Dict] = None) -> str:
@@ -577,6 +631,36 @@ async def health_check():
     
     return health_status
 
+@app.get("/api/test-openai")
+async def test_openai_connection():
+    """
+    Endpoint para probar conexión OpenAI específicamente
+    """
+    if not OPENAI_AVAILABLE:
+        return {"status": "ERROR", "message": "OpenAI no configurado"}
+    
+    try:
+        response = openai_client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=[{"role": "user", "content": "test"}],
+            max_tokens=5,
+            timeout=10
+        )
+        
+        return {
+            "status": "OK",
+            "message": "OpenAI operativo",
+            "model": "gpt-3.5-turbo",
+            "response": response.choices[0].message.content
+        }
+        
+    except Exception as e:
+        return {
+            "status": "ERROR", 
+            "message": f"OpenAI error: {str(e)}",
+            "error_type": type(e).__name__
+        }
+
 @app.get("/api/codigos")
 async def listar_codigos_legales():
     """Lista todos los códigos legales disponibles"""
@@ -595,189 +679,121 @@ async def procesar_consulta_legal(
     background_tasks: BackgroundTasks
 ):
     """
-    Endpoint principal para consultas legales oficiales - CON CLASIFICACIÓN INTELIGENTE
+    Endpoint principal - CON LOGGING DIAGNÓSTICO COMPLETO
     """
     start_time = time.time()
     
     try:
+        print(f"🚀 INICIO ENDPOINT - Nueva consulta recibida")
+        print(f"📊 Request: {len(request.historial)} mensajes en historial")
+        
         historial = request.historial
         pregunta_actual = historial[-1].content
+        print(f"📝 Pregunta actual: {pregunta_actual[:100]}...")
         
-        # ========== PREVENCIÓN ERROR 422 - LÍMITE DE TOKENS ==========
-        MAX_HISTORIAL = 6  # Solo últimos 6 mensajes (3 pares pregunta-respuesta)
+        # LÍMITE DE HISTORIAL PARA EVITAR ERROR 422
+        MAX_HISTORIAL = 3  # MUY CONSERVADOR
         if len(historial) > MAX_HISTORIAL:
             historial_limitado = historial[-MAX_HISTORIAL:]
-            logger.info(f"⚠️ Historial limitado a {len(historial_limitado)} mensajes para evitar error 422")
+            print(f"⚠️ Historial limitado: {len(historial)} → {len(historial_limitado)} mensajes")
         else:
             historial_limitado = historial
         
-        logger.info(f"🔍 Nueva consulta legal: {pregunta_actual[:100]}...")
-        
-        # ========== NUEVA FUNCIONALIDAD: CLASIFICACIÓN INTELIGENTE ==========
+        # CLASIFICACIÓN INTELIGENTE CON LOGGING
         if CLASIFICADOR_AVAILABLE:
-            logger.info("🧠 Iniciando clasificación inteligente...")
-            clasificacion = clasificar_y_procesar(pregunta_actual)
-            
-            logger.info(f"📊 Resultado clasificación:")
-            logger.info(f"   - Tipo: {clasificacion['tipo_consulta']}")
-            logger.info(f"   - Es conversacional: {clasificacion['es_conversacional']}")
-            logger.info(f"   - Requiere búsqueda: {clasificacion['requiere_busqueda']}")
-            
-            # Si es una consulta conversacional (saludo, despedida, etc.)
-            if clasificacion['es_conversacional'] and clasificacion['respuesta_directa']:
-                logger.info("💬 Generando respuesta conversacional directa...")
-                
-                tiempo_procesamiento = time.time() - start_time
-                
-                return ConsultaResponse(
-                    respuesta=clasificacion['respuesta_directa'],
-                    fuente=None,
-                    recomendaciones=None,
-                    tiempo_procesamiento=round(tiempo_procesamiento, 2),
-                    es_respuesta_oficial=True
-                )
-            
-            # Si no requiere búsqueda (tema no legal)
-            if not clasificacion['requiere_busqueda']:
-                logger.info("🚫 Consulta no legal, redirigiendo...")
-                
-                tiempo_procesamiento = time.time() - start_time
-                
-                return ConsultaResponse(
-                    respuesta=clasificacion['respuesta_directa'] or 
-                             "Disculpa, pero me especializo únicamente en consultas sobre "
-                             "las leyes y normativas de Paraguay. ¿Hay alguna pregunta legal "
-                             "en la que pueda asistirte?",
-                    fuente=None,
-                    recomendaciones=None,
-                    tiempo_procesamiento=round(tiempo_procesamiento, 2),
-                    es_respuesta_oficial=True
-                )
-            
-            # Si llegamos aquí, es una consulta legal que requiere búsqueda
-            logger.info("🔍 Consulta legal confirmada, procediendo con búsqueda...")
-            
-        else:
-            # Fallback si no hay clasificador
-            logger.info("⚠️ Clasificador no disponible, procesando como consulta legal")
-            clasificacion = {'tipo_consulta': 'consulta_legal'}
-        
-        # ========== CONTINÚA CON TU LÓGICA ORIGINAL ==========
-        # 1. Clasificar la consulta - CAMBIO CRÍTICO AQUÍ
-        collection_name = clasificar_consulta_con_ia_robusta(pregunta_actual)
-        logger.info(f"📚 Código legal identificado: {collection_name}")
-        
-        # 2. Buscar información legal relevante con estrategia híbrida
-        contexto = None
-        numero_articulo = extraer_numero_articulo_mejorado(pregunta_actual)
-        
-        if VECTOR_SEARCH_AVAILABLE:
+            print("🧠 Iniciando clasificación inteligente...")
             try:
-                if numero_articulo:
-                    # BÚSQUEDA PRIORITARIA: Por número exacto
-                    logger.info(f"🎯 Buscando artículo específico: {numero_articulo} en {collection_name}")
-                    contexto = buscar_articulo_por_numero(numero_articulo, collection_name)
-                    
-                    if contexto and contexto.get("pageContent"):
-                        logger.info(f"✅ Artículo {numero_articulo} encontrado por búsqueda exacta")
-                    else:
-                        logger.warning(f"❌ Artículo {numero_articulo} no encontrado por búsqueda exacta")
-                        
-                        # FALLBACK 1: Búsqueda semántica con número en el texto
-                        if OPENAI_AVAILABLE:
-                            logger.info(f"🔄 Intentando búsqueda semántica para artículo {numero_articulo}")
-                            
-                            # Crear consulta más específica para embeddings
-                            consulta_semantica = f"artículo {numero_articulo} código penal civil procesal laboral"
-                            
-                            embedding_response = openai_client.embeddings.create(
-                                model="text-embedding-ada-002",
-                                input=consulta_semantica
-                            )
-                            query_vector = embedding_response.data[0].embedding
-                            
-                            # Buscar con umbral más bajo para ser menos restrictivo
-                            contexto_semantico = buscar_articulo_relevante(query_vector, collection_name)
-                            
-                            # Verificar si el resultado semántico contiene el número correcto
-                            if (contexto_semantico and 
-                                contexto_semantico.get("pageContent") and 
-                                str(numero_articulo) in contexto_semantico.get("pageContent", "")):
-                                
-                                contexto = contexto_semantico
-                                logger.info(f"✅ Artículo {numero_articulo} encontrado por búsqueda semántica")
-                            else:
-                                logger.warning(f"❌ Búsqueda semántica no encontró artículo {numero_articulo}")
-                                contexto = None
+                clasificacion = clasificar_y_procesar(pregunta_actual)
+                print(f"✅ Clasificación completada: {clasificacion.get('tipo_consulta', 'N/A')}")
                 
-                # Si no se buscó por número o no se encontró, búsqueda semántica general
-                if not contexto or not contexto.get("pageContent"):
-                    logger.info(f"🔎 Realizando búsqueda semántica general en {collection_name}")
-                    
-                    if OPENAI_AVAILABLE:
-                        # Usar la pregunta original para búsqueda semántica
-                        embedding_response = openai_client.embeddings.create(
-                            model="text-embedding-ada-002",
-                            input=pregunta_actual
-                        )
-                        query_vector = embedding_response.data[0].embedding
-                        contexto = buscar_articulo_relevante(query_vector, collection_name)
-                        
-                        if contexto and contexto.get("pageContent"):
-                            logger.info("✅ Contexto encontrado por búsqueda semántica general")
-                        else:
-                            logger.warning("❌ No se encontró contexto por búsqueda semántica")
-                    else:
-                        # Fallback sin OpenAI
-                        contexto = buscar_articulo_relevante([], collection_name)
-                        
+                # MANEJO DE CONSULTAS CONVERSACIONALES
+                if clasificacion['es_conversacional'] and clasificacion['respuesta_directa']:
+                    print("💬 Generando respuesta conversacional...")
+                    return ConsultaResponse(
+                        respuesta=clasificacion['respuesta_directa'],
+                        fuente=None,
+                        recomendaciones=None,
+                        tiempo_procesamiento=round(time.time() - start_time, 2),
+                        es_respuesta_oficial=True
+                    )
+                
+                if not clasificacion['requiere_busqueda']:
+                    print("🚫 Consulta no legal, redirigiendo...")
+                    return ConsultaResponse(
+                        respuesta="Me especializo únicamente en consultas legales paraguayas. ¿Hay alguna pregunta legal específica en la que pueda ayudarte?",
+                        fuente=None,
+                        recomendaciones=None,
+                        tiempo_procesamiento=round(time.time() - start_time, 2),
+                        es_respuesta_oficial=True
+                    )
+                
+                print("🔍 Consulta legal confirmada, procediendo...")
+                
             except Exception as e:
-                logger.error(f"❌ Error en búsqueda vectorial: {e}")
+                print(f"🚨 ERROR en clasificación: {str(e)}")
+                print("🔄 Continuando sin clasificación...")
+        
+        # CLASIFICACIÓN DEL CÓDIGO LEGAL
+        print("📚 Iniciando clasificación de código legal...")
+        try:
+            collection_name = clasificar_consulta_con_ia_robusta(pregunta_actual)
+            print(f"✅ Código identificado: {collection_name}")
+        except Exception as e:
+            print(f"🚨 ERROR en clasificación de código: {str(e)}")
+            collection_name = "colepa_civil_maestro"  # Fallback seguro
+            print(f"🔄 Usando fallback: {collection_name}")
+        
+        # EXTRACCIÓN DE NÚMERO DE ARTÍCULO
+        numero_articulo = extraer_numero_articulo_mejorado(pregunta_actual)
+        print(f"🔢 Número de artículo extraído: {numero_articulo}")
+        
+        # BÚSQUEDA CON MANEJO DE ERRORES
+        contexto = None
+        if VECTOR_SEARCH_AVAILABLE:
+            print("🔎 Iniciando búsqueda vectorial...")
+            try:
+                contexto = await buscar_con_manejo_errores(numero_articulo, pregunta_actual, collection_name)
+                print(f"✅ Búsqueda completada: {bool(contexto and contexto.get('pageContent'))}")
+            except Exception as e:
+                print(f"🚨 ERROR en búsqueda: {str(e)}")
                 contexto = None
-
-        # Validar contexto final
-        if contexto and isinstance(contexto, dict) and contexto.get("pageContent"):
-            logger.info(f"📖 Contexto legal final:")
-            logger.info(f"   - Ley: {contexto.get('nombre_ley', 'N/A')}")
-            logger.info(f"   - Artículo: {contexto.get('numero_articulo', 'N/A')}")
-            logger.info(f"   - Contenido: {contexto.get('pageContent', '')[:200]}...")
         else:
-            logger.warning("❌ No se encontró contexto legal relevante para la consulta")
-            contexto = None
+            print("⚠️ Búsqueda vectorial no disponible")
         
-        # 3. Generar respuesta legal
-        respuesta = generar_respuesta_legal(historial_limitado, contexto)
+        # GENERACIÓN DE RESPUESTA
+        print("💭 Iniciando generación de respuesta...")
+        try:
+            respuesta = generar_respuesta_legal(historial_limitado, contexto)
+            print(f"✅ Respuesta generada: {len(respuesta)} chars")
+        except Exception as e:
+            print(f"🚨 ERROR en generación: {str(e)}")
+            respuesta = "Lo siento, no pude procesar tu consulta en este momento. Por favor, intenta reformular tu pregunta."
         
-        # 4. Preparar respuesta estructurada
+        # PREPARAR RESPUESTA FINAL
         tiempo_procesamiento = time.time() - start_time
         fuente = extraer_fuente_legal(contexto)
-        
-        # 5. CAMBIO MÍNIMO: Eliminar recomendaciones automáticas
-        recomendaciones = None  # SIEMPRE None - Sin recomendaciones automáticas
         
         response_data = ConsultaResponse(
             respuesta=respuesta,
             fuente=fuente,
-            recomendaciones=None,  # FORZAR None
+            recomendaciones=None,
             tiempo_procesamiento=round(tiempo_procesamiento, 2),
             es_respuesta_oficial=True
         )
         
-        logger.info(f"✅ Consulta procesada exitosamente en {tiempo_procesamiento:.2f}s")
-        if CLASIFICADOR_AVAILABLE and 'clasificacion' in locals():
-            logger.info(f"🏷️ Tipo clasificado: {clasificacion.get('tipo_consulta', 'N/A')}")
-        
+        print(f"🎉 Consulta procesada exitosamente en {tiempo_procesamiento:.2f}s")
         return response_data
         
     except Exception as e:
-        logger.error(f"❌ Error procesando consulta: {e}")
+        print(f"🚨 ERROR CRÍTICO EN ENDPOINT: {type(e).__name__}: {str(e)}")
+        print(f"🚨 Línea de error: {e.__traceback__.tb_lineno if e.__traceback__ else 'N/A'}")
+        
         raise HTTPException(
             status_code=500,
             detail={
                 "error": "Error interno del sistema",
-                "mensaje": "No fue posible procesar su consulta en este momento",
-                "recomendacion": "Intente nuevamente en unos momentos",
-                "codigo_error": str(e)[:100]
+                "mensaje": "No fue posible procesar su consulta",
+                "codigo_error": f"{type(e).__name__}: {str(e)[:100]}"
             }
         )
 
