@@ -1,4 +1,3 @@
-
 # COLEPA - Asistente Legal Gubernamental
 # Backend FastAPI Mejorado para Consultas Legales Oficiales - VERSIÓN PREMIUM v3.3.0 CON CACHE
 
@@ -481,10 +480,14 @@ PALABRAS_CLAVE_EXPANDIDAS = {
     ]
 }
 
-# ========== CONFIGURACIÓN DE TOKENS OPTIMIZADA ==========
-MAX_TOKENS_INPUT_CONTEXTO = 400      # Máximo tokens para contexto legal
+# ========== CONFIGURACIÓN DE TOKENS OPTIMIZADA CON LÍMITES DINÁMICOS ==========
+MAX_TOKENS_INPUT_CONTEXTO = 500      # Aumentado para artículos largos
 MAX_TOKENS_RESPUESTA = 300           # Máximo tokens para respuesta
 MAX_TOKENS_SISTEMA = 180             # Máximo tokens para prompt sistema
+
+# ========== CONFIGURACIÓN ADICIONAL PARA TRUNCADO INTELIGENTE ==========
+MAX_TOKENS_ARTICULO_UNICO = 800      # Límite especial para artículos únicos largos
+PRIORIDAD_COHERENCIA_JURIDICA = True  # Preservar coherencia legal sobre límites estrictos
 
 # ========== PROMPT PREMIUM COMPACTO ==========
 INSTRUCCION_SISTEMA_LEGAL_PREMIUM = """
@@ -836,44 +839,148 @@ Responde solo el nombre exacto (ej: "Código Penal")"""
 
 def truncar_contexto_inteligente(contexto: str, max_tokens: int = MAX_TOKENS_INPUT_CONTEXTO) -> str:
     """
-    Trunca el contexto legal manteniendo las partes más importantes
+    TRUNCADO INTELIGENTE PROFESIONAL para contextos legales
+    Prioriza artículos completos y preserva coherencia jurídica
     """
     if not contexto:
         return ""
     
-    # Estimación: 1 token ≈ 4 caracteres en español
-    max_chars = max_tokens * 4
+    # Estimación: 1 token ≈ 4 caracteres en español (conservador)
+    max_chars_base = max_tokens * 4
     
-    if len(contexto) <= max_chars:
+    # Si el contexto ya es pequeño, devolverlo completo
+    if len(contexto) <= max_chars_base:
+        logger.info(f"📄 Contexto completo preservado: {len(contexto)} chars")
         return contexto
     
-    # Priorizar texto que contenga artículos específicos
+    # ========== ANÁLISIS DE CONTENIDO LEGAL ==========
+    contexto_lower = contexto.lower()
+    
+    # Detectar si es un solo artículo largo vs múltiples artículos
+    patrones_articulos = [
+        r'art[íi]culo\s+\d+',
+        r'art\.\s*\d+',
+        r'artículo\s+\d+',
+        r'articulo\s+\d+'
+    ]
+    
+    articulos_encontrados = []
+    for patron in patrones_articulos:
+        matches = re.finditer(patron, contexto_lower)
+        for match in matches:
+            articulos_encontrados.append(match.start())
+    
+    es_articulo_unico = len(set(articulos_encontrados)) <= 1
+    
+    # ========== ESTRATEGIA 1: ARTÍCULO ÚNICO LARGO ==========
+    if es_articulo_unico and len(contexto) <= max_chars_base * 2:
+        logger.info(f"📋 Artículo único detectado - Aumentando límite para preservar completo")
+        # Para artículo único, permitir hasta 2x el límite (mejor calidad legal)
+        return contexto
+    
+    # ========== ESTRATEGIA 2: MÚLTIPLES ARTÍCULOS - PRIORIZACIÓN INTELIGENTE ==========
     lineas = contexto.split('\n')
-    lineas_prioritarias = []
-    lineas_normales = []
+    
+    # Clasificar líneas por importancia jurídica
+    lineas_criticas = []      # Encabezados de artículos, disposiciones principales
+    lineas_importantes = []   # Contenido sustantivo, sanciones, procedimientos
+    lineas_contextuales = []  # Definiciones, referencias, aclaraciones
+    lineas_secundarias = []   # Texto de relleno, conectores
     
     for linea in lineas:
-        if any(palabra in linea.lower() for palabra in ['artículo', 'artículo', 'art.', 'establece', 'dispone']):
-            lineas_prioritarias.append(linea)
+        linea_lower = linea.lower().strip()
+        
+        if not linea_lower:
+            continue
+            
+        # CRÍTICAS: Encabezados de artículos y disposiciones principales
+        if re.search(r'art[íi]culo\s+\d+|^art\.\s*\d+|^capítulo|^título|^libro', linea_lower):
+            lineas_criticas.append(linea)
+        
+        # IMPORTANTES: Contenido sustantivo legal
+        elif any(keyword in linea_lower for keyword in [
+            'establece', 'dispone', 'determina', 'ordena', 'prohíbe', 'permite',
+            'sanciona', 'multa', 'pena', 'prisión', 'reclusión',
+            'procedimiento', 'trámite', 'requisito', 'obligación', 'derecho',
+            'responsabilidad', 'competencia', 'jurisdicción'
+        ]):
+            lineas_importantes.append(linea)
+        
+        # CONTEXTUALES: Definiciones y referencias
+        elif any(keyword in linea_lower for keyword in [
+            'entiende', 'considera', 'define', 'significa',
+            'presente ley', 'presente código', 'reglament',
+            'excepción', 'caso', 'cuando', 'siempre que'
+        ]):
+            lineas_contextuales.append(linea)
+        
+        # SECUNDARIAS: Resto del contenido
         else:
-            lineas_normales.append(linea)
+            lineas_secundarias.append(linea)
     
-    # Reconstruir con prioridades
-    texto_final = '\n'.join(lineas_prioritarias)
+    # ========== RECONSTRUCCIÓN PRIORITARIA ==========
+    texto_final = ""
     
-    # Agregar líneas normales si hay espacio
-    chars_restantes = max_chars - len(texto_final)
-    for linea in lineas_normales:
-        if len(texto_final) + len(linea) + 1 <= max_chars:
-            texto_final += '\n' + linea
+    # 1. Siempre incluir líneas críticas (encabezados de artículos)
+    for linea in lineas_criticas:
+        if len(texto_final) + len(linea) + 1 <= max_chars_base * 1.5:  # 50% más para críticas
+            texto_final += linea + '\n'
         else:
             break
     
-    # Si aún es muy largo, truncar al final
-    if len(texto_final) > max_chars:
-        texto_final = texto_final[:max_chars-10] + "... [TEXTO TRUNCADO]"
+    # 2. Agregar líneas importantes hasta el límite
+    chars_restantes = max_chars_base - len(texto_final)
+    for linea in lineas_importantes:
+        if len(texto_final) + len(linea) + 1 <= max_chars_base:
+            texto_final += linea + '\n'
+        else:
+            break
     
-    logger.info(f"📏 Contexto truncado: {len(contexto)} → {len(texto_final)} chars")
+    # 3. Si hay espacio, agregar contextuales
+    for linea in lineas_contextuales:
+        if len(texto_final) + len(linea) + 1 <= max_chars_base:
+            texto_final += linea + '\n'
+        else:
+            break
+    
+    # 4. Completar con secundarias si hay espacio
+    for linea in lineas_secundarias:
+        if len(texto_final) + len(linea) + 1 <= max_chars_base:
+            texto_final += linea + '\n'
+        else:
+            break
+    
+    # ========== VERIFICACIÓN DE COHERENCIA JURÍDICA ==========
+    texto_final = texto_final.strip()
+    
+    # Asegurar que no termina en medio de una oración crítica
+    if texto_final and not texto_final.endswith('.'):
+        # Buscar el último punto antes del final
+        ultimo_punto = texto_final.rfind('.')
+        if ultimo_punto > len(texto_final) * 0.8:  # Si está en el último 20%
+            texto_final = texto_final[:ultimo_punto + 1]
+    
+    # ========== INDICADOR DE TRUNCADO PROFESIONAL ==========
+    if len(contexto) > len(texto_final):
+        # Verificar si se perdió información crítica
+        articulos_originales = len(re.findall(r'art[íi]culo\s+\d+', contexto.lower()))
+        articulos_finales = len(re.findall(r'art[íi]culo\s+\d+', texto_final.lower()))
+        
+        if articulos_finales < articulos_originales:
+            texto_final += f"\n\n[NOTA LEGAL: Contexto optimizado - {articulos_finales} de {articulos_originales} artículos incluidos]"
+        else:
+            texto_final += "\n\n[NOTA LEGAL: Contenido optimizado preservando disposiciones principales]"
+    
+    # ========== LOGGING PROFESIONAL ==========
+    tokens_estimados = len(texto_final) // 4
+    porcentaje_preservado = (len(texto_final) / len(contexto)) * 100
+    
+    logger.info(f"📋 Truncado inteligente aplicado:")
+    logger.info(f"   📏 Original: {len(contexto)} chars → Final: {len(texto_final)} chars")
+    logger.info(f"   🎯 Preservado: {porcentaje_preservado:.1f}% del contenido original")
+    logger.info(f"   💰 Tokens estimados: {tokens_estimados}/{max_tokens}")
+    logger.info(f"   📚 Estrategia: {'Artículo único' if es_articulo_unico else 'Múltiples artículos priorizados'}")
+    
     return texto_final
 
 # ========== FUNCIÓN GENERACIÓN DE RESPUESTA CON CACHE NIVEL 3 ==========
