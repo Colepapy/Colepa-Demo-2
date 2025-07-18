@@ -187,38 +187,20 @@ PALABRAS_CLAVE_EXPANDIDAS = {
     ]
 }
 
-# ========== PROMPT PREMIUM PROFESIONAL ==========
+# ========== CONFIGURACIÓN DE TOKENS OPTIMIZADA ==========
+MAX_TOKENS_INPUT_CONTEXTO = 400      # Máximo tokens para contexto legal
+MAX_TOKENS_RESPUESTA = 300           # Máximo tokens para respuesta
+MAX_TOKENS_SISTEMA = 180             # Máximo tokens para prompt sistema
+
+# ========== PROMPT PREMIUM COMPACTO ==========
 INSTRUCCION_SISTEMA_LEGAL_PREMIUM = """
-Usted es COLEPA, el asistente jurídico especializado en legislación paraguaya del Congreso Nacional de la República del Paraguay. Su función es proporcionar información legal precisa y estructurada para profesionales del derecho.
+COLEPA - Asistente jurídico Paraguay. Respuesta obligatoria:
 
-DIRECTRICES PROFESIONALES:
+**DISPOSICIÓN:** [Ley + Artículo específico]
+**FUNDAMENTO:** [Texto normativo textual]  
+**APLICACIÓN:** [Cómo aplica a la consulta]
 
-**ESTRUCTURA OBLIGATORIA DE RESPUESTA:**
-
-1. **DISPOSICIÓN LEGAL**
-   - Identifique el artículo y cuerpo normativo específico
-   - Sintetice la norma en términos jurídicos precisos
-
-2. **FUNDAMENTO NORMATIVO**
-   - Reproduzca textualmente la disposición legal aplicable
-   - Mantenga la literalidad del texto normativo
-
-3. **APLICACIÓN JURÍDICA**
-   - Explique la aplicación específica a la consulta planteada
-   - Use terminología jurídica apropiada
-
-**ESTÁNDARES DE CALIDAD:**
-- Precisión técnica en terminología jurídica
-- Citación exacta de fuentes normativas
-- Estructura profesional acorde a estándares forenses
-- Brevedad y claridad en la exposición
-
-**LIMITACIONES:**
-- No proporcione asesoramiento legal personalizado
-- No interprete más allá del texto normativo
-- Remita a consulta profesional para casos específicos
-
-Responda únicamente con base en el contexto legal proporcionado.
+Máximo 250 palabras. Solo use contexto proporcionado. Terminología jurídica precisa.
 """
 
 # ========== NUEVA FUNCIÓN: VALIDADOR DE CONTEXTO ==========
@@ -473,54 +455,57 @@ def clasificar_consulta_inteligente(pregunta: str) -> str:
 
 def clasificar_consulta_con_ia_robusta(pregunta: str) -> str:
     """
-    SÚPER ENRUTADOR: Clasificación robusta usando IA especializada
+    SÚPER ENRUTADOR: Clasificación robusta usando IA con límites de tokens
     """
     if not OPENAI_AVAILABLE or not openai_client:
         logger.warning("⚠️ OpenAI no disponible, usando clasificación básica")
         return clasificar_consulta_inteligente(pregunta)
     
-    # PROMPT ESPECIALIZADO PARA CLASIFICACIÓN
-    prompt_clasificacion = f"""
-Eres un experto clasificador de consultas legales paraguayas. Tu única tarea es identificar a qué CÓDIGO LEGAL pertenece la siguiente consulta.
+    # PROMPT ULTRA-COMPACTO PARA CLASIFICACIÓN
+    prompt_clasificacion = f"""Clasifica esta consulta legal paraguaya en uno de estos códigos:
 
-CÓDIGOS DISPONIBLES:
-1. Código Civil - matrimonio, divorcio, familia, propiedad, contratos, herencia, adopción, tutela, bienes
-2. Código Penal - delitos, crímenes, violencia, agresión, robo, homicidio, maltrato, femicidio, drogas
-3. Código Laboral - trabajo, empleo, salarios, despidos, vacaciones, derechos laborales, sindicatos
-4. Código Procesal Civil - demandas civiles, juicios civiles, daños y perjuicios, procedimientos civiles
-5. Código Procesal Penal - denuncias penales, procesos penales, investigaciones, fiscalía
-6. Código Aduanero - aduana, importación, exportación, mercancías, aranceles, depósitos, contrabando
-7. Código Electoral - elecciones, votos, candidatos, partidos políticos, procesos electorales
-8. Código de la Niñez y la Adolescencia - menores, niños, adolescentes, tutela de menores, adopción
-9. Código de Organización Judicial - tribunales, jueces, competencias judiciales, organización courts
-10. Código Sanitario - salud, medicina, hospitales, medicamentos, control sanitario
+CÓDIGOS:
+1. Código Civil - matrimonio, divorcio, familia, propiedad, contratos
+2. Código Penal - delitos, violencia, agresión, robo, homicidio  
+3. Código Laboral - trabajo, empleo, salarios, despidos
+4. Código Procesal Civil - demandas civiles, daños, perjuicios
+5. Código Procesal Penal - denuncias penales, investigaciones
+6. Código Aduanero - aduana, importación, exportación
+7. Código Electoral - elecciones, votos, candidatos
+8. Código de la Niñez y la Adolescencia - menores, niños
+9. Código de Organización Judicial - tribunales, jueces
+10. Código Sanitario - salud, medicina, hospitales
 
-CONSULTA A CLASIFICAR: "{pregunta}"
+CONSULTA: "{pregunta[:150]}"
 
-Responde ÚNICAMENTE con el nombre exacto del código (ej: "Código Penal")."""
+Responde solo el nombre exacto (ej: "Código Penal")"""
 
     try:
         response = openai_client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-3.5-turbo",  # Modelo más económico
             messages=[{"role": "user", "content": prompt_clasificacion}],
             temperature=0.1,
-            max_tokens=50,
-            timeout=15  # Timeout de 15 segundos
+            max_tokens=20,  # ULTRA LÍMITE para clasificación
+            timeout=10  # Timeout reducido
         )
         
         codigo_identificado = response.choices[0].message.content.strip()
         
+        # LOG DE TOKENS
+        if hasattr(response, 'usage'):
+            logger.info(f"💰 Clasificación - Tokens: {response.usage.total_tokens}")
+        
         # Mapear respuesta a colección
         if codigo_identificado in MAPA_COLECCIONES:
             collection_name = MAPA_COLECCIONES[codigo_identificado]
-            logger.info(f"🎯 IA clasificó correctamente: {codigo_identificado} → {collection_name}")
+            logger.info(f"🎯 IA clasificó: {codigo_identificado} → {collection_name}")
             return collection_name
         else:
             # Fuzzy matching para nombres similares
             for codigo_oficial in MAPA_COLECCIONES.keys():
                 if any(word in codigo_identificado.lower() for word in codigo_oficial.lower().split()):
                     collection_name = MAPA_COLECCIONES[codigo_oficial]
-                    logger.info(f"🎯 IA clasificó (fuzzy match): {codigo_identificado} → {codigo_oficial}")
+                    logger.info(f"🎯 IA clasificó (fuzzy): {codigo_identificado} → {codigo_oficial}")
                     return collection_name
             
             # Fallback
@@ -531,9 +516,51 @@ Responde ÚNICAMENTE con el nombre exacto del código (ej: "Código Penal")."""
         logger.error(f"❌ Error en clasificación con IA: {e}")
         return clasificar_consulta_inteligente(pregunta)
 
+def truncar_contexto_inteligente(contexto: str, max_tokens: int = MAX_TOKENS_INPUT_CONTEXTO) -> str:
+    """
+    Trunca el contexto legal manteniendo las partes más importantes
+    """
+    if not contexto:
+        return ""
+    
+    # Estimación: 1 token ≈ 4 caracteres en español
+    max_chars = max_tokens * 4
+    
+    if len(contexto) <= max_chars:
+        return contexto
+    
+    # Priorizar texto que contenga artículos específicos
+    lineas = contexto.split('\n')
+    lineas_prioritarias = []
+    lineas_normales = []
+    
+    for linea in lineas:
+        if any(palabra in linea.lower() for palabra in ['artículo', 'artículo', 'art.', 'establece', 'dispone']):
+            lineas_prioritarias.append(linea)
+        else:
+            lineas_normales.append(linea)
+    
+    # Reconstruir con prioridades
+    texto_final = '\n'.join(lineas_prioritarias)
+    
+    # Agregar líneas normales si hay espacio
+    chars_restantes = max_chars - len(texto_final)
+    for linea in lineas_normales:
+        if len(texto_final) + len(linea) + 1 <= max_chars:
+            texto_final += '\n' + linea
+        else:
+            break
+    
+    # Si aún es muy largo, truncar al final
+    if len(texto_final) > max_chars:
+        texto_final = texto_final[:max_chars-10] + "... [TEXTO TRUNCADO]"
+    
+    logger.info(f"📏 Contexto truncado: {len(contexto)} → {len(texto_final)} chars")
+    return texto_final
+
 def generar_respuesta_legal_premium(historial: List[MensajeChat], contexto: Optional[Dict] = None) -> str:
     """
-    Generación de respuesta legal PREMIUM con formato profesional
+    Generación de respuesta legal PREMIUM con límites estrictos de tokens
     """
     if not OPENAI_AVAILABLE or not openai_client:
         return generar_respuesta_con_contexto(historial[-1].content, contexto)
@@ -548,52 +575,58 @@ def generar_respuesta_legal_premium(historial: List[MensajeChat], contexto: Opti
                 logger.warning(f"⚠️ Contexto no válido (score: {score_relevancia:.2f}), generando respuesta sin contexto")
                 contexto = None
         
-        # Preparar mensajes para OpenAI con formato premium
+        # Preparar mensajes para OpenAI con LÍMITES ESTRICTOS
         mensajes = [{"role": "system", "content": INSTRUCCION_SISTEMA_LEGAL_PREMIUM}]
         
-        # Construcción del prompt con formato profesional
+        # Construcción del prompt con CONTROL DE TOKENS
         if contexto and contexto.get("pageContent"):
             ley = contexto.get('nombre_ley', 'Legislación paraguaya')
             articulo = contexto.get('numero_articulo', 'N/A')
             contenido_legal = contexto.get('pageContent', '')
             
-            prompt_profesional = f"""CONSULTA JURÍDICA: {pregunta_actual}
+            # TRUNCAR CONTEXTO INTELIGENTEMENTE
+            contenido_truncado = truncar_contexto_inteligente(contenido_legal)
+            
+            # PROMPT COMPACTO OPTIMIZADO
+            prompt_profesional = f"""CONSULTA: {pregunta_actual[:200]}
 
-NORMA APLICABLE:
-{ley} - Artículo {articulo}
+NORMA: {ley} - Art. {articulo}
+TEXTO: {contenido_truncado}
 
-TEXTO NORMATIVO:
-{contenido_legal}
-
-Proporcione una respuesta estructurada siguiendo el formato profesional establecido."""
+Responda en formato estructurado."""
             
             mensajes.append({"role": "user", "content": prompt_profesional})
-            logger.info(f"📖 Generando respuesta premium con contexto: {ley} Art. {articulo}")
+            logger.info(f"📖 Prompt generado - Chars: {len(prompt_profesional)}")
         else:
-            # Sin contexto específico - respuesta profesional pero limitada
-            prompt_sin_contexto = f"""CONSULTA JURÍDICA: {pregunta_actual}
+            # Sin contexto - RESPUESTA ULTRA COMPACTA
+            prompt_sin_contexto = f"""CONSULTA: {pregunta_actual[:150]}
 
-SITUACIÓN: No se encontró normativa específica aplicable en la base de datos legal.
-
-Proporcione una respuesta profesional indicando la limitación y sugiriendo alternativas de consulta."""
+Sin normativa específica encontrada. Respuesta profesional breve."""
             
             mensajes.append({"role": "user", "content": prompt_sin_contexto})
-            logger.info("📝 Generando respuesta premium sin contexto específico")
+            logger.info("📝 Prompt sin contexto - Modo compacto")
         
-        # Llamada a OpenAI con parámetros optimizados para calidad
+        # Llamada a OpenAI con LÍMITES ESTRICTOS
         response = openai_client.chat.completions.create(
             model="gpt-4-turbo-preview",
             messages=mensajes,
-            temperature=0.1,  # Muy conservador para información legal
-            max_tokens=1200,  # Reducido para evitar error 422
+            temperature=0.1,
+            max_tokens=MAX_TOKENS_RESPUESTA,  # LÍMITE ESTRICTO
             presence_penalty=0,
             frequency_penalty=0,
-            timeout=30  # Timeout de 30 segundos
+            timeout=25  # Timeout reducido
         )
         
         respuesta = response.choices[0].message.content
-        logger.info("✅ Respuesta premium generada con OpenAI")
         
+        # LOG DE TOKENS UTILIZADOS
+        if hasattr(response, 'usage'):
+            tokens_input = response.usage.prompt_tokens
+            tokens_output = response.usage.completion_tokens
+            tokens_total = response.usage.total_tokens
+            logger.info(f"💰 Tokens utilizados - Input: {tokens_input}, Output: {tokens_output}, Total: {tokens_total}")
+        
+        logger.info("✅ Respuesta premium generada con límites estrictos")
         return respuesta
         
     except Exception as e:
@@ -751,10 +784,10 @@ async def listar_codigos_legales():
         "modo": "PREMIUM - Optimizado para profesionales del derecho"
     }
 
-# ========== NUEVO ENDPOINT: MÉTRICAS EN TIEMPO REAL ==========
+# ========== NUEVO ENDPOINT: MÉTRICAS CON TOKENS ==========
 @app.get("/api/metricas")
 async def obtener_metricas():
-    """Métricas del sistema para monitoreo en tiempo real - DEMO"""
+    """Métricas del sistema con tracking de tokens para control de costos"""
     global metricas_sistema
     
     # Calcular porcentaje de éxito
@@ -765,7 +798,7 @@ async def obtener_metricas():
     
     return {
         "estado_sistema": "✅ PREMIUM OPERATIVO",
-        "version": "3.2.0-PREMIUM",
+        "version": "3.2.0-PREMIUM-OPTIMIZADO",
         "timestamp": datetime.now().isoformat(),
         "metricas": {
             "total_consultas_procesadas": total_consultas,
@@ -774,10 +807,18 @@ async def obtener_metricas():
             "tiempo_promedio_respuesta": round(metricas_sistema["tiempo_promedio"], 2),
             "ultima_actualizacion": metricas_sistema["ultima_actualizacion"].isoformat()
         },
+        "optimizacion_tokens": {
+            "max_tokens_respuesta": MAX_TOKENS_RESPUESTA,
+            "max_tokens_contexto": MAX_TOKENS_INPUT_CONTEXTO,
+            "max_tokens_sistema": MAX_TOKENS_SISTEMA,
+            "modelo_clasificacion": "gpt-3.5-turbo (económico)",
+            "modelo_respuesta": "gpt-4-turbo-preview (calidad)"
+        },
         "configuracion": {
             "validacion_contexto_activa": True,
             "busqueda_multi_metodo": True,
             "formato_profesional": True,
+            "control_costos_activo": True,
             "optimizado_para": "Congreso Nacional de Paraguay"
         }
     }
