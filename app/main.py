@@ -1412,7 +1412,290 @@ async def obtener_estadisticas_cache():
             "ahorro_qdrant_calls": f"~{cache_manager.hits_contextos} búsquedas evitadas"
         }
     }
+    # ========== NUEVO ENDPOINT: DASHBOARD VISUAL PARA DEMO ==========
+@app.get("/api/dashboard")
+async def dashboard_visual_demo():
+    """
+    Dashboard visual impresionante para demo del Congreso Nacional
+    Muestra métricas en tiempo real con gráficos animados
+    """
+    global metricas_sistema
+    
+    # Obtener todas las métricas actuales
+    cache_stats = cache_manager.get_stats()
+    circuit_stats = circuit_breaker.get_status()
+    
+    # Calcular métricas impresionantes
+    total_consultas = metricas_sistema["consultas_procesadas"]
+    porcentaje_exito = (metricas_sistema["contextos_encontrados"] / total_consultas * 100) if total_consultas > 0 else 0
+    
+    # HTML completo con CSS y JavaScript para gráficos
+    html_dashboard = f"""
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLEPA - Dashboard Congreso Nacional</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        * {{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }}
+        body {{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+        }}
+        .header {{
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }}
+        .header h1 {{
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }}
+        .header p {{
+            font-size: 1.2em;
+            opacity: 0.9;
+        }}
+        .dashboard-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }}
+        .metric-card {{
+            background: rgba(255,255,255,0.15);
+            border-radius: 15px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s ease;
+        }}
+        .metric-card:hover {{
+            transform: translateY(-5px);
+        }}
+        .metric-title {{
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #ffd700;
+            font-weight: bold;
+        }}
+        .metric-value {{
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #00ff88;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }}
+        .metric-label {{
+            font-size: 0.9em;
+            opacity: 0.8;
+        }}
+        .chart-container {{
+            background: rgba(255,255,255,0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }}
+        .status-indicator {{
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }}
+        .status-ok {{ background-color: #00ff88; }}
+        .status-warning {{ background-color: #ffd700; }}
+        .status-error {{ background-color: #ff4757; }}
+        .refresh-button {{
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #ffd700;
+            color: #1e3c72;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }}
+        .refresh-button:hover {{
+            background: #ffed4e;
+            transform: scale(1.05);
+        }}
+        .system-info {{
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }}
+    </style>
+</head>
+<body>
+    <button class="refresh-button" onclick="location.reload()">🔄 Actualizar</button>
+    
+    <div class="header">
+        <h1>🏛️ COLEPA PREMIUM</h1>
+        <p>Dashboard Operacional - Congreso Nacional de Paraguay</p>
+        <p>Sistema Legal Gubernamental v3.3.0-PREMIUM-CACHE</p>
+    </div>
 
+    <div class="dashboard-grid">
+        <div class="metric-card">
+            <div class="metric-title">📊 CONSULTAS PROCESADAS</div>
+            <div class="metric-value">{total_consultas:,}</div>
+            <div class="metric-label">Total desde inicialización</div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-title">✅ TASA DE ÉXITO</div>
+            <div class="metric-value">{porcentaje_exito:.1f}%</div>
+            <div class="metric-label">Contexto legal encontrado</div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-title">⚡ VELOCIDAD PROMEDIO</div>
+            <div class="metric-value">{metricas_sistema['tiempo_promedio']:.2f}s</div>
+            <div class="metric-label">Tiempo de respuesta</div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-title">🚀 CACHE HIT RATE</div>
+            <div class="metric-value">{cache_stats['hit_rate_percentage']:.1f}%</div>
+            <div class="metric-label">Consultas instantáneas</div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-title">💾 CACHE ENTRADAS</div>
+            <div class="metric-value">{sum(cache_stats['entradas_cache'].values()):,}</div>
+            <div class="metric-label">Total en memoria</div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-title">🛡️ CIRCUIT BREAKER</div>
+            <div class="metric-value">
+                <span class="status-indicator {'status-ok' if circuit_stats['openai_disponible'] else 'status-error'}"></span>
+                {'ACTIVO' if circuit_stats['openai_disponible'] else 'PROTEGIDO'}
+            </div>
+            <div class="metric-label">Estado de protección</div>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <h3 style="margin-bottom: 20px; color: #ffd700;">📈 Distribución de Cache por Nivel</h3>
+        <canvas id="cacheChart" width="400" height="200"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <h3 style="margin-bottom: 20px; color: #ffd700;">🎯 Métricas de Rendimiento</h3>
+        <canvas id="performanceChart" width="400" height="200"></canvas>
+    </div>
+
+    <div class="system-info">
+        <h3 style="color: #ffd700; margin-bottom: 15px;">🔧 Información del Sistema</h3>
+        <p><strong>Versión:</strong> COLEPA v3.3.0-PREMIUM-CACHE</p>
+        <p><strong>Última actualización:</strong> {metricas_sistema['ultima_actualizacion'].strftime('%d/%m/%Y %H:%M:%S')}</p>
+        <p><strong>Memoria Cache:</strong> {cache_stats['memoria_estimada_mb']:.1f} MB / {cache_stats['limite_memoria_mb']:.1f} MB</p>
+        <p><strong>OpenAI GPT-4:</strong> <span class="status-indicator {'status-ok' if circuit_stats['gpt4_disponible'] else 'status-warning'}"></span>{'Disponible' if circuit_stats['gpt4_disponible'] else 'Fallback activo'}</p>
+        <p><strong>OpenAI GPT-3.5:</strong> <span class="status-indicator {'status-ok' if circuit_stats['gpt35_disponible'] else 'status-warning'}"></span>{'Disponible' if circuit_stats['gpt35_disponible'] else 'Fallback activo'}</p>
+    </div>
+
+    <script>
+        // Gráfico de Cache
+        const cacheCtx = document.getElementById('cacheChart').getContext('2d');
+        new Chart(cacheCtx, {{
+            type: 'doughnut',
+            data: {{
+                labels: ['Clasificaciones', 'Contextos', 'Respuestas'],
+                datasets: [{{
+                    data: [{cache_stats['entradas_cache']['clasificaciones']}, {cache_stats['entradas_cache']['contextos']}, {cache_stats['entradas_cache']['respuestas']}],
+                    backgroundColor: ['#ff6b6b', '#4ecdc4', '#45b7d1'],
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }}]
+            }},
+            options: {{
+                responsive: true,
+                plugins: {{
+                    legend: {{
+                        labels: {{
+                            color: 'white',
+                            font: {{
+                                size: 14
+                            }}
+                        }}
+                    }}
+                }}
+            }}
+        }});
+
+        // Gráfico de Rendimiento
+        const perfCtx = document.getElementById('performanceChart').getContext('2d');
+        new Chart(perfCtx, {{
+            type: 'bar',
+            data: {{
+                labels: ['Cache Hits', 'Cache Misses', 'Consultas Exitosas', 'Tiempo Promedio (x10)'],
+                datasets: [{{
+                    label: 'Métricas',
+                    data: [{cache_stats['total_hits']}, {cache_stats['total_misses']}, {metricas_sistema['contextos_encontrados']}, {metricas_sistema['tiempo_promedio'] * 10}],
+                    backgroundColor: ['#00ff88', '#ffd700', '#45b7d1', '#ff6b6b'],
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }}]
+            }},
+            options: {{
+                responsive: true,
+                plugins: {{
+                    legend: {{
+                        labels: {{
+                            color: 'white'
+                        }}
+                    }}
+                }},
+                scales: {{
+                    y: {{
+                        ticks: {{
+                            color: 'white'
+                        }},
+                        grid: {{
+                            color: 'rgba(255,255,255,0.1)'
+                        }}
+                    }},
+                    x: {{
+                        ticks: {{
+                            color: 'white'
+                        }},
+                        grid: {{
+                            color: 'rgba(255,255,255,0.1)'
+                        }}
+                    }}
+                }}
+            }}
+        }});
+
+        // Auto-refresh cada 30 segundos
+        setTimeout(() => location.reload(), 30000);
+    </script>
+</body>
+</html>
+    """
+    
+    return HTMLResponse(content=html_dashboard)
 # ========== NUEVO ENDPOINT: TEST OPENAI ==========
 @app.get("/api/test-openai")
 async def test_openai_connection():
