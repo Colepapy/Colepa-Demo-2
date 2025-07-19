@@ -504,6 +504,7 @@ Máximo 250 palabras. Solo use contexto proporcionado. Terminología jurídica p
 def validar_calidad_contexto(contexto: Optional[Dict], pregunta: str) -> tuple[bool, float]:
     """
     Valida si el contexto encontrado es realmente relevante para la pregunta.
+    VERSIÓN OPTIMIZADA para artículos largos y específicos
     Retorna (es_valido, score_relevancia)
     """
     if not contexto or not contexto.get("pageContent"):
@@ -513,33 +514,107 @@ def validar_calidad_contexto(contexto: Optional[Dict], pregunta: str) -> tuple[b
         texto_contexto = contexto.get("pageContent", "").lower()
         pregunta_lower = pregunta.lower()
         
+        # ========== VALIDACIÓN ESPECÍFICA PARA ARTÍCULOS NUMERADOS ==========
+        # Si se pregunta por un artículo específico y el contexto lo contiene, es automáticamente válido
+        numero_pregunta = extraer_numero_articulo_mejorado(pregunta)
+        numero_contexto = contexto.get("numero_articulo")
+        
+        if numero_pregunta and numero_contexto:
+            try:
+                if int(numero_contexto) == numero_pregunta:
+                    logger.info(f"✅ Validación DIRECTA - Artículo {numero_pregunta} encontrado exactamente")
+                    return True, 1.0  # Score perfecto para coincidencia exacta
+            except (ValueError, TypeError):
+                pass
+        
+        # ========== VALIDACIÓN PARA CÓDIGO ESPECÍFICO ==========
+        # Si se menciona un código específico y el contexto es de ese código, es válido
+        codigos_mencionados = []
+        for codigo_nombre in MAPA_COLECCIONES.keys():
+            codigo_lower = codigo_nombre.lower()
+            if codigo_lower in pregunta_lower or any(palabra in pregunta_lower for palabra in codigo_lower.split()):
+                codigos_mencionados.append(codigo_nombre)
+        
+        nombre_ley_contexto = contexto.get("nombre_ley", "").lower()
+        for codigo in codigos_mencionados:
+            if codigo.lower() in nombre_ley_contexto:
+                logger.info(f"✅ Validación por CÓDIGO - {codigo} coincide con contexto")
+                return True, 0.9  # Score alto para coincidencia de código
+        
+        # ========== VALIDACIÓN SEMÁNTICA MEJORADA ==========
         # Extraer palabras clave de la pregunta
         palabras_pregunta = set(re.findall(r'\b\w+\b', pregunta_lower))
         palabras_contexto = set(re.findall(r'\b\w+\b', texto_contexto))
         
-        # Calcular intersección
-        interseccion = palabras_pregunta & palabras_contexto
+        # Filtrar palabras muy comunes que no aportan relevancia
+        palabras_comunes = {"el", "la", "los", "las", "de", "del", "en", "con", "por", "para", "que", "se", "es", "un", "una", "y", "o", "a", "al"}
+        palabras_pregunta -= palabras_comunes
+        palabras_contexto -= palabras_comunes
         
         if len(palabras_pregunta) == 0:
             return False, 0.0
             
+        # Calcular intersección
+        interseccion = palabras_pregunta & palabras_contexto
         score_basico = len(interseccion) / len(palabras_pregunta)
         
+        # ========== BONUS ESPECÍFICOS PARA CONTENIDO LEGAL ==========
+        
         # Bonus por palabras clave jurídicas importantes
-        palabras_juridicas = {"artículo", "código", "ley", "disposición", "norma", "legal"}
-        bonus_juridico = len(interseccion & palabras_juridicas) * 0.1
+        palabras_juridicas = {"artículo", "código", "ley", "disposición", "norma", "legal", "establece", "dispone", "determina", "ordena", "prohíbe"}
+        bonus_juridico = len(interseccion & palabras_juridicas) * 0.15
         
         # Bonus por números de artículo coincidentes
         numeros_pregunta = set(re.findall(r'\d+', pregunta))
         numeros_contexto = set(re.findall(r'\d+', texto_contexto))
-        bonus_numeros = len(numeros_pregunta & numeros_contexto) * 0.2
+        bonus_numeros = len(numeros_pregunta & numeros_contexto) * 0.25
         
-        score_final = score_basico + bonus_juridico + bonus_numeros
+        # Bonus por palabras clave específicas del contexto legal
+        palabras_clave_contexto = contexto.get("palabras_clave", [])
+        if isinstance(palabras_clave_contexto, list):
+            palabras_clave_set = set(palabra.lower() for palabra in palabras_clave_contexto)
+            bonus_palabras_clave = len(palabras_pregunta & palabras_clave_set) * 0.2
+        else:
+            bonus_palabras_clave = 0
         
-        # Umbral de calidad: debe tener al menos 30% de relevancia
-        es_valido = score_final >= 0.3 and len(texto_contexto.strip()) >= 50
+        # Bonus por longitud del contexto (artículos largos suelen ser más completos)
+        longitud_contexto = len(texto_contexto)
+        if longitud_contexto > 1000:  # Artículos largos y detallados
+            bonus_longitud = 0.1
+        elif longitud_contexto > 500:
+            bonus_longitud = 0.05
+        else:
+            bonus_longitud = 0
         
-        logger.info(f"🎯 Validación contexto - Score: {score_final:.2f}, Válido: {es_valido}")
+        score_final = score_basico + bonus_juridico + bonus_numeros + bonus_palabras_clave + bonus_longitud
+        
+        # ========== UMBRALES AJUSTADOS POR TIPO DE CONSULTA ==========
+        
+        # Umbral más bajo para consultas específicas por número de artículo
+        if numero_pregunta:
+            umbral_minimo = 0.15  # Muy permisivo para artículos específicos
+        # Umbral normal para consultas temáticas
+        elif any(codigo.lower() in pregunta_lower for codigo in MAPA_COLECCIONES.keys()):
+            umbral_minimo = 0.2   # Permisivo para consultas de código específico
+        else:
+            umbral_minimo = 0.25  # Un poco más estricto para consultas generales
+        
+        # El contexto debe tener contenido mínimo
+        contenido_minimo = len(texto_contexto.strip()) >= 50
+        
+        es_valido = score_final >= umbral_minimo and contenido_minimo
+        
+        # ========== LOGGING MEJORADO ==========
+        logger.info(f"🎯 Validación contexto MEJORADA:")
+        logger.info(f"   📊 Score básico: {score_basico:.3f}")
+        logger.info(f"   ⚖️ Bonus jurídico: {bonus_juridico:.3f}")
+        logger.info(f"   🔢 Bonus números: {bonus_numeros:.3f}")
+        logger.info(f"   🔑 Bonus palabras clave: {bonus_palabras_clave:.3f}")
+        logger.info(f"   📏 Bonus longitud: {bonus_longitud:.3f}")
+        logger.info(f"   🎯 Score FINAL: {score_final:.3f}")
+        logger.info(f"   ✅ Umbral requerido: {umbral_minimo:.3f}")
+        logger.info(f"   🏛️ VÁLIDO: {es_valido}")
+        
         return es_valido, score_final
         
     except Exception as e:
