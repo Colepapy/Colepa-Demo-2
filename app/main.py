@@ -625,7 +625,11 @@ def validar_calidad_contexto(contexto: Optional[Dict], pregunta: str) -> tuple[b
 def buscar_con_manejo_errores(pregunta: str, collection_name: str) -> Optional[Dict]:
     """
     Búsqueda robusta con múltiples métodos, validación de calidad y CACHE INTELIGENTE.
+    VERSIÓN CON LOGGING DETALLADO
     """
+    logger.info(f"🔍 INICIANDO búsqueda para pregunta: '{pregunta[:100]}...'")
+    logger.info(f"📚 Colección: {collection_name}")
+    
     # ========== CACHE NIVEL 2: VERIFICAR CONTEXTO EN CACHE ==========
     contexto_cached = cache_manager.get_contexto(pregunta, collection_name)
     if contexto_cached:
@@ -635,77 +639,122 @@ def buscar_con_manejo_errores(pregunta: str, collection_name: str) -> Optional[D
     contexto_final = None
     metodo_exitoso = None
     
-    # Método 1: Búsqueda por número de artículo específico
+    # ========== MÉTODO 1: BÚSQUEDA POR NÚMERO DE ARTÍCULO ==========
     numero_articulo = extraer_numero_articulo_mejorado(pregunta)
+    logger.info(f"🔢 Número extraído: {numero_articulo}")
+    
     if numero_articulo and VECTOR_SEARCH_AVAILABLE:
         try:
-            logger.info(f"🎯 Método 1: Búsqueda por artículo {numero_articulo}")
-            contexto = buscar_articulo_por_numero(numero_articulo, collection_name)
+            logger.info(f"🎯 MÉTODO 1: Búsqueda exacta por artículo {numero_articulo}")
+            
+            # Intentar búsqueda con número como string (coincide con Qdrant)
+            contexto = buscar_articulo_por_numero(str(numero_articulo), collection_name)
+            logger.info(f"📄 Resultado búsqueda por número (string): {contexto is not None}")
+            
+            # Si falla como string, intentar como int
+            if not contexto:
+                logger.info(f"🔄 Reintentando búsqueda por número como int")
+                contexto = buscar_articulo_por_numero(numero_articulo, collection_name)
+                logger.info(f"📄 Resultado búsqueda por número (int): {contexto is not None}")
             
             if contexto:
+                logger.info(f"✅ Contexto encontrado en Método 1:")
+                logger.info(f"   📖 Ley: {contexto.get('nombre_ley', 'N/A')}")
+                logger.info(f"   📋 Artículo: {contexto.get('numero_articulo', 'N/A')}")
+                logger.info(f"   📏 Longitud: {len(contexto.get('pageContent', ''))}")
+                
                 es_valido, score = validar_calidad_contexto(contexto, pregunta)
                 if es_valido:
                     contexto_final = contexto
                     metodo_exitoso = f"Búsqueda exacta Art. {numero_articulo}"
-                    logger.info(f"✅ Método 1 exitoso - Score: {score:.2f}")
+                    logger.info(f"✅ Método 1 EXITOSO - Score: {score:.2f}")
                 else:
                     logger.warning(f"⚠️ Método 1 - Contexto no válido (Score: {score:.2f})")
+            else:
+                logger.warning(f"❌ Método 1 - No se encontró artículo {numero_articulo}")
+                
         except Exception as e:
             logger.error(f"❌ Error en Método 1: {e}")
+    else:
+        if not numero_articulo:
+            logger.info("⏭️ Método 1 OMITIDO - No se extrajo número de artículo")
+        if not VECTOR_SEARCH_AVAILABLE:
+            logger.info("⏭️ Método 1 OMITIDO - Vector search no disponible")
     
-    # Método 2: Búsqueda semántica con embeddings
+    # ========== MÉTODO 2: BÚSQUEDA SEMÁNTICA ==========
     if not contexto_final and OPENAI_AVAILABLE and VECTOR_SEARCH_AVAILABLE:
         try:
-            logger.info("🔍 Método 2: Búsqueda semántica con embeddings")
+            logger.info("🔍 MÉTODO 2: Búsqueda semántica con embeddings")
             
             # Optimizar consulta para embeddings
             consulta_optimizada = f"{pregunta} legislación paraguay derecho"
+            logger.info(f"🎯 Consulta optimizada: '{consulta_optimizada}'")
             
             embedding_response = openai_client.embeddings.create(
                 model="text-embedding-ada-002",
                 input=consulta_optimizada
             )
             query_vector = embedding_response.data[0].embedding
+            logger.info(f"🧮 Embedding generado: {len(query_vector)} dimensiones")
             
             contexto = buscar_articulo_relevante(query_vector, collection_name)
+            logger.info(f"📄 Resultado búsqueda semántica: {contexto is not None}")
             
             if contexto:
+                logger.info(f"✅ Contexto encontrado en Método 2:")
+                logger.info(f"   📖 Ley: {contexto.get('nombre_ley', 'N/A')}")
+                logger.info(f"   📋 Artículo: {contexto.get('numero_articulo', 'N/A')}")
+                
                 es_valido, score = validar_calidad_contexto(contexto, pregunta)
                 if es_valido and score >= 0.4:  # Umbral más alto para semántica
                     contexto_final = contexto
                     metodo_exitoso = f"Búsqueda semántica (Score: {score:.2f})"
-                    logger.info(f"✅ Método 2 exitoso - Score: {score:.2f}")
+                    logger.info(f"✅ Método 2 EXITOSO - Score: {score:.2f}")
                 else:
                     logger.warning(f"⚠️ Método 2 - Contexto no válido (Score: {score:.2f})")
+            else:
+                logger.warning(f"❌ Método 2 - No se encontró contexto relevante")
                     
         except Exception as e:
             logger.error(f"❌ Error en Método 2: {e}")
+    else:
+        logger.info("⏭️ Método 2 OMITIDO - Condiciones no cumplidas")
     
-    # Método 3: Búsqueda por palabras clave específicas (fallback)
+    # ========== MÉTODO 3: BÚSQUEDA FALLBACK ==========
     if not contexto_final and numero_articulo and VECTOR_SEARCH_AVAILABLE:
         try:
-            logger.info("🔄 Método 3: Búsqueda fallback por palabras clave")
+            logger.info("🔄 MÉTODO 3: Búsqueda fallback por palabras clave")
             
             # Crear vector dummy y usar filtros más amplios
             contexto = buscar_articulo_relevante([0.1] * 1536, collection_name)
+            logger.info(f"📄 Resultado búsqueda fallback: {contexto is not None}")
             
             if contexto:
                 es_valido, score = validar_calidad_contexto(contexto, pregunta)
                 if es_valido and score >= 0.2:  # Umbral más bajo para fallback
                     contexto_final = contexto
                     metodo_exitoso = f"Búsqueda fallback (Score: {score:.2f})"
-                    logger.info(f"✅ Método 3 exitoso - Score: {score:.2f}")
+                    logger.info(f"✅ Método 3 EXITOSO - Score: {score:.2f}")
+                else:
+                    logger.warning(f"⚠️ Método 3 - Contexto no válido (Score: {score:.2f})")
+            else:
+                logger.warning(f"❌ Método 3 - No se encontró contexto fallback")
                     
         except Exception as e:
             logger.error(f"❌ Error en Método 3: {e}")
+    else:
+        logger.info("⏭️ Método 3 OMITIDO - Condiciones no cumplidas")
     
-    # ========== GUARDAR EN CACHE SI SE ENCONTRÓ CONTEXTO ==========
+    # ========== RESULTADO FINAL ==========
     if contexto_final:
-        logger.info(f"🎉 Contexto encontrado usando: {metodo_exitoso}")
+        logger.info(f"🎉 CONTEXTO ENCONTRADO usando: {metodo_exitoso}")
         cache_manager.set_contexto(pregunta, collection_name, contexto_final)
         return contexto_final
     else:
-        logger.warning("❌ Ningún método de búsqueda encontró contexto válido")
+        logger.error("❌ NINGÚN MÉTODO encontró contexto válido")
+        logger.error(f"   🔍 Búsqueda realizada en: {collection_name}")
+        logger.error(f"   📝 Pregunta: '{pregunta}'")
+        logger.error(f"   🔢 Número extraído: {numero_articulo}")
         return None
 
 # === CONFIGURACIÓN DE FASTAPI ===
@@ -744,31 +793,38 @@ metricas_sistema = {
 def extraer_numero_articulo_mejorado(texto: str) -> Optional[int]:
     """
     Extracción mejorada y más precisa de números de artículo
+    VERSIÓN OPTIMIZADA para casos reales
     """
-    texto_lower = texto.lower()
+    texto_lower = texto.lower().strip()
     
-    # Patrones más específicos y completos
+    # Patrones más específicos y completos - ORDEN IMPORTANTE
     patrones = [
-        r'art[ií]culo\s*(?:n[úu]mero\s*)?(\d+)',
-        r'art\.?\s*(\d+)',
-        r'artículo\s*(\d+)',
-        r'articulo\s*(\d+)',
-        r'art\s+(\d+)',
-        r'(?:^|\s)(\d+)(?:\s|$)',  # Número solo si está aislado
+        r'art[ií]culo\s*(?:n[úu]mero\s*)?(\d+)',  # "artículo 32", "artículo número 32"
+        r'art\.?\s*(\d+)',                        # "art. 32", "art 32"
+        r'artículo\s*(\d+)',                      # "artículo 32"
+        r'articulo\s*(\d+)',                      # "articulo 32" (sin tilde)
+        r'art\s+(\d+)',                           # "art 32"
+        r'(?:^|\s)(\d+)(?:\s+del\s+c[óo]digo)',  # "32 del código"
+        r'(?:^|\s)(\d+)(?:\s|$)',                 # Número aislado (último recurso)
     ]
     
-    for patron in patrones:
+    logger.info(f"🔍 Extrayendo número de artículo de: '{texto[:100]}...'")
+    
+    for i, patron in enumerate(patrones):
         matches = re.finditer(patron, texto_lower)
         for match in matches:
             try:
                 numero = int(match.group(1))
                 if 1 <= numero <= 9999:  # Rango razonable para artículos
-                    logger.info(f"🔍 Número de artículo extraído: {numero} con patrón: {patron}")
+                    logger.info(f"✅ Número de artículo extraído: {numero} con patrón {i+1}: {patron}")
                     return numero
+                else:
+                    logger.warning(f"⚠️ Número fuera de rango: {numero}")
             except (ValueError, IndexError):
+                logger.warning(f"⚠️ Error procesando match: {match.group(1) if match else 'None'}")
                 continue
     
-    logger.info(f"🔍 No se encontró número de artículo en: {texto[:50]}...")
+    logger.warning(f"❌ No se encontró número de artículo válido en: '{texto[:50]}...'")
     return None
 
 def clasificar_consulta_inteligente(pregunta: str) -> str:
