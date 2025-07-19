@@ -970,12 +970,24 @@ Responde solo el nombre exacto (ej: "Código Penal")"""
         return resultado
 
 def truncar_contexto_inteligente(contexto: str, max_tokens: int = MAX_TOKENS_INPUT_CONTEXTO) -> str:
+    def truncar_contexto_inteligente(contexto: str, max_tokens: int = MAX_TOKENS_INPUT_CONTEXTO) -> str:
     """
     TRUNCADO INTELIGENTE PROFESIONAL para contextos legales
-    Prioriza artículos completos y preserva coherencia jurídica
+    CON DETECCIÓN AUTOMÁTICA DE ARTÍCULOS LARGOS ESPECÍFICOS
     """
     if not contexto:
         return ""
+    
+    # ========== DETECCIÓN AUTOMÁTICA DE ARTÍCULOS ESPECÍFICOS LARGOS ==========
+    contexto_lower = contexto.lower()
+    
+    # Detectar si es consulta por artículo específico
+    es_articulo_especifico = bool(re.search(r'art[íi]culo\s+\d+', contexto_lower))
+    
+    # Si es artículo específico Y es largo, aumentar límites automáticamente
+    if es_articulo_especifico and len(contexto) > 2000:
+        max_tokens = 1200  # Límite especial para artículos largos específicos
+        logger.info(f"🎯 ARTÍCULO ESPECÍFICO LARGO detectado - Límite aumentado a {max_tokens} tokens")
     
     # Estimación: 1 token ≈ 4 caracteres en español (conservador)
     max_chars_base = max_tokens * 4
@@ -985,24 +997,8 @@ def truncar_contexto_inteligente(contexto: str, max_tokens: int = MAX_TOKENS_INP
         logger.info(f"📄 Contexto completo preservado: {len(contexto)} chars")
         return contexto
     
-    # ========== ANÁLISIS DE CONTENIDO LEGAL ==========
-    contexto_lower = contexto.lower()
-    
-    # Detectar si es un solo artículo largo vs múltiples artículos
-    patrones_articulos = [
-        r'art[íi]culo\s+\d+',
-        r'art\.\s*\d+',
-        r'artículo\s+\d+',
-        r'articulo\s+\d+'
-    ]
-    
-    articulos_encontrados = []
-    for patron in patrones_articulos:
-        matches = re.finditer(patron, contexto_lower)
-        for match in matches:
-            articulos_encontrados.append(match.start())
-    
-    es_articulo_unico = len(set(articulos_encontrados)) <= 1
+    # ========== RESTO DE LA FUNCIÓN IGUAL ==========
+    # (mantener todo el resto igual...)
     
     # ========== ESTRATEGIA 1: ARTÍCULO ÚNICO LARGO ==========
     if es_articulo_unico and len(contexto) <= max_chars_base * 2:
