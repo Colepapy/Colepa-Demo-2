@@ -970,7 +970,6 @@ Responde solo el nombre exacto (ej: "Código Penal")"""
         return resultado
 
 def truncar_contexto_inteligente(contexto: str, max_tokens: int = MAX_TOKENS_INPUT_CONTEXTO) -> str:
-    def truncar_contexto_inteligente(contexto: str, max_tokens: int = MAX_TOKENS_INPUT_CONTEXTO) -> str:
     """
     TRUNCADO INTELIGENTE PROFESIONAL para contextos legales
     CON DETECCIÓN AUTOMÁTICA DE ARTÍCULOS LARGOS ESPECÍFICOS
