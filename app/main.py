@@ -592,17 +592,18 @@ def validar_calidad_contexto(contexto: Optional[Dict], pregunta: str) -> tuple[b
         
         # Umbral más bajo para consultas específicas por número de artículo
         if numero_pregunta:
-            umbral_minimo = 0.15  # Muy permisivo para artículos específicos
+            umbral_minimo = 0.10  # MUY permisivo para artículos específicos (FIX CRÍTICO)
         # Umbral normal para consultas temáticas
         elif any(codigo.lower() in pregunta_lower for codigo in MAPA_COLECCIONES.keys()):
-            umbral_minimo = 0.2   # Permisivo para consultas de código específico
+            umbral_minimo = 0.15   # Más permisivo para consultas de código específico
         else:
-            umbral_minimo = 0.25  # Un poco más estricto para consultas generales
+            umbral_minimo = 0.20  # Menos estricto para consultas generales
         
         # El contexto debe tener contenido mínimo
-        contenido_minimo = len(texto_contexto.strip()) >= 50
-        
-        es_valido = score_final >= umbral_minimo and contenido_minimo
+        if numero_pregunta:
+            contenido_minimo = len(texto_contexto.strip()) >= 20  # Más permisivo para artículos específicos
+        else:
+            contenido_minimo = len(texto_contexto.strip()) >= 50
         
         # ========== LOGGING MEJORADO ==========
         logger.info(f"🎯 Validación contexto MEJORADA:")
