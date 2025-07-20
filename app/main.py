@@ -1412,6 +1412,9 @@ async def obtener_estadisticas_cache():
             "ahorro_qdrant_calls": f"~{cache_manager.hits_contextos} búsquedas evitadas"
         }
     }
+@app.get("/dashboard-test")
+async def test_dashboard():
+    return {"mensaje": "Dashboard funcionando", "status": "OK"}
     # ========== NUEVO ENDPOINT: DASHBOARD VISUAL PARA DEMO ==========
 @app.get("/api/dashboard")
 async def dashboard_visual_demo():
