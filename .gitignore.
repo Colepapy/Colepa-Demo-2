@@ -1,0 +1,88 @@
+# COLEPA - Archivos a ignorar en Git
+
+# === VARIABLES DE ENTORNO ===
+.env
+.env.local
+.env.*.local
+
+# === PYTHON ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# === ENTORNOS VIRTUALES ===
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# === TESTING ===
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# === JUPYTER NOTEBOOKS ===
+.ipynb_checkpoints
+
+# === IDE ===
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# === LOGS ===
+*.log
+logs/
+
+# === TEMPORARY FILES ===
+.tmp/
+tmp/
+temp/
+
+# === RAILWAY ===
+.railway/
+
+# === QDRANT DATA ===
+qdrant_data/
+vector_storage/
+
+# === BACKUP FILES ===
+*.bak
+*.backup
+
+# === OS ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
