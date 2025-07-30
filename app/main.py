@@ -767,7 +767,7 @@ app = FastAPI(
 )
 
 # Configurar CORS
-# === CONFIGURACIÓN CORS ROBUSTA ===
+# Configurar CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -775,24 +775,11 @@ app.add_middleware(
         "https://colepa.com", 
         "https://colepa-demo-2.vercel.app",
         "http://localhost:3000",
-        "http://localhost:8080",
-        # Agregar variantes para debug
-        "https://colepa-demo-2-production.vercel.app"
+        "http://localhost:8080"
     ],
     allow_credentials=True,
-    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "PATCH"],
-    allow_headers=[
-        "Accept",
-        "Accept-Language", 
-        "Content-Language",
-        "Content-Type",
-        "Authorization",
-        "X-Requested-With",
-        "Origin",
-        "Access-Control-Request-Method",
-        "Access-Control-Request-Headers"
-    ],
-    expose_headers=["*"]
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["*"],
 )
 # ========== MÉTRICAS EN MEMORIA PARA DEMO ==========
 metricas_sistema = {
