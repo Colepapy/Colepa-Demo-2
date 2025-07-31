@@ -773,7 +773,7 @@ app.add_middleware(
     allow_origins=[
         "https://www.colepa.com",
         "https://colepa.com", 
-        "https://colepa-demo-2.vercel.app",
+        "https://colepa-demo-2-colepas-projects.vercel.app", 
         "http://localhost:3000",
         "http://localhost:8080"
     ],
