@@ -3,10 +3,12 @@
 
 import os
 import re
+import sys
 import time
 import logging
 import hashlib
 import threading
+from pathlib import Path
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional, Any, Tuple
 
@@ -16,6 +18,13 @@ from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 import uvicorn
+
+# ========== FIX IMPORTACIONES ABSOLUTAS PARA RAILWAY ==========
+# Agregar el directorio raíz al path de Python para importaciones absolutas
+current_dir = Path(__file__).parent
+root_dir = current_dir.parent
+sys.path.insert(0, str(root_dir))
+sys.path.insert(0, str(current_dir))
 
 # Configurar logging
 logging.basicConfig(
@@ -38,14 +47,14 @@ except ImportError as e:
     OPENAI_AVAILABLE = False
     openai_client = None
 
-# Importaciones locales con fallback
+# ========== IMPORTACIONES LOCALES CON FALLBACK MEJORADO ==========
 try:
-   from .vector_search import buscar_articulo_relevante, buscar_articulo_por_numero
-    from .prompt_builder import construir_prompt
+    from app.vector_search import buscar_articulo_relevante, buscar_articulo_por_numero
+    from app.prompt_builder import construir_prompt
     VECTOR_SEARCH_AVAILABLE = True
     logger.info("✅ Módulos de búsqueda vectorial cargados")
-except ImportError:
-    logger.warning("⚠️ Módulos de búsqueda no encontrados, usando funciones mock")
+except ImportError as e:
+    logger.warning(f"⚠️ Módulos de búsqueda no encontrados: {e}, usando funciones mock")
     VECTOR_SEARCH_AVAILABLE = False
     
     def buscar_articulo_relevante(query_vector, collection_name):
@@ -65,16 +74,39 @@ except ImportError:
     def construir_prompt(contexto_legal, pregunta_usuario):
         return f"Contexto Legal: {contexto_legal}\n\nPregunta del Usuario: {pregunta_usuario}"
 
-# ========== NUEVO: CLASIFICADOR INTELIGENTE ==========
+# ========== CLASIFICADOR INTELIGENTE CON FALLBACK ==========
 try:
-    from .clasificador_inteligente import clasificar_y_procesar
+    from app.clasificador_inteligente import clasificar_y_procesar
     CLASIFICADOR_AVAILABLE = True
     logger.info("✅ Clasificador inteligente cargado")
-except ImportError:
-    logger.warning("⚠️ Clasificador no encontrado, modo básico")
+except ImportError as e:
+    logger.warning(f"⚠️ Clasificador no encontrado: {e}, modo básico")
     CLASIFICADOR_AVAILABLE = False
     
     def clasificar_y_procesar(texto):
+        texto_lower = texto.lower().strip()
+        
+        # Detección básica de saludos
+        saludos = ['hola', 'buenos días', 'buenas tardes', 'buenas noches', 'saludos', 'buen día']
+        if any(saludo in texto_lower for saludo in saludos):
+            return {
+                'tipo_consulta': 'saludo',
+                'respuesta_directa': "¡Hola! Soy COLEPA, tu asistente legal paraguayo. ¿En qué puedo ayudarte con temas legales hoy?",
+                'requiere_busqueda': False,
+                'es_conversacional': True
+            }
+        
+        # Detección básica de despedidas
+        despedidas = ['adiós', 'hasta luego', 'nos vemos', 'chau', 'bye', 'gracias', 'hasta pronto']
+        if any(despedida in texto_lower for despedida in despedidas):
+            return {
+                'tipo_consulta': 'despedida',
+                'respuesta_directa': "¡Hasta luego! Que tengas un excelente día. No dudes en consultarme cuando necesites ayuda legal.",
+                'requiere_busqueda': False,
+                'es_conversacional': True
+            }
+        
+        # Por defecto, consulta legal
         return {
             'tipo_consulta': 'consulta_legal',
             'respuesta_directa': None,
@@ -82,7 +114,7 @@ except ImportError:
             'es_conversacional': False
         }
 
-# ========== NUEVO: SISTEMA DE CACHE INTELIGENTE ==========
+# ========== SISTEMA DE CACHE INTELIGENTE ==========
 class CacheManager:
     """
     Sistema de cache híbrido de 3 niveles para optimizar velocidad y costos
