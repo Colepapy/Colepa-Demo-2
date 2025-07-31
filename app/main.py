@@ -40,8 +40,8 @@ except ImportError as e:
 
 # Importaciones locales con fallback
 try:
-    from app.vector_search import buscar_articulo_relevante, buscar_articulo_por_numero
-    from app.prompt_builder import construir_prompt
+   from .vector_search import buscar_articulo_relevante, buscar_articulo_por_numero
+    from .prompt_builder import construir_prompt
     VECTOR_SEARCH_AVAILABLE = True
     logger.info("✅ Módulos de búsqueda vectorial cargados")
 except ImportError:
@@ -67,7 +67,7 @@ except ImportError:
 
 # ========== NUEVO: CLASIFICADOR INTELIGENTE ==========
 try:
-    from app.clasificador_inteligente import clasificar_y_procesar
+    from .clasificador_inteligente import clasificar_y_procesar
     CLASIFICADOR_AVAILABLE = True
     logger.info("✅ Clasificador inteligente cargado")
 except ImportError:
