@@ -766,6 +766,24 @@ app = FastAPI(
     redoc_url="/api/redoc"
 )
 
+# ========== FIX CORS MANUAL - AGREGAR MIDDLEWARE PRIMERO ==========
+@app.middleware("http")
+async def cors_handler(request: Request, call_next):
+    # Handle preflight OPTIONS requests
+    if request.method == "OPTIONS":
+        response = Response()
+        response.headers["Access-Control-Allow-Origin"] = "https://www.colepa.com"
+        response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS"
+        response.headers["Access-Control-Allow-Headers"] = "*"
+        response.headers["Access-Control-Allow-Credentials"] = "true"
+        return response
+    
+    # Handle regular requests
+    response = await call_next(request)
+    response.headers["Access-Control-Allow-Origin"] = "https://www.colepa.com"
+    response.headers["Access-Control-Allow-Credentials"] = "true"
+    return response
+
 # Configurar CORS
 # Configurar CORS
 app.add_middleware(
