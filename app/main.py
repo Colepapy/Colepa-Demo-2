@@ -766,7 +766,24 @@ app = FastAPI(
     redoc_url="/api/redoc"
 )
 
-# Configurar CORS
+# ========== FIX CORS MANUAL - AGREGAR MIDDLEWARE PRIMERO ==========
+@app.middleware("http")
+async def cors_handler(request: Request, call_next):
+    # Handle preflight OPTIONS requests
+    if request.method == "OPTIONS":
+        response = Response()
+        response.headers["Access-Control-Allow-Origin"] = "https://www.colepa.com"
+        response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS"
+        response.headers["Access-Control-Allow-Headers"] = "*"
+        response.headers["Access-Control-Allow-Credentials"] = "true"
+        return response
+    
+    # Handle regular requests
+    response = await call_next(request)
+    response.headers["Access-Control-Allow-Origin"] = "https://www.colepa.com"
+    response.headers["Access-Control-Allow-Credentials"] = "true"
+    return response
+
 # Configurar CORS
 app.add_middleware(
     CORSMiddleware,
@@ -781,6 +798,7 @@ app.add_middleware(
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
+
 # ========== MÉTRICAS EN MEMORIA PARA DEMO ==========
 metricas_sistema = {
     "consultas_procesadas": 0,
@@ -1636,15 +1654,18 @@ async def general_exception_handler(request: Request, exc: Exception):
         }
     )
 
-# === PUNTO DE ENTRADA ===
+# === PUNTO DE ENTRADA CORREGIDO PARA RAILWAY ===
 if __name__ == "__main__":
-    logger.info("🚀 Iniciando COLEPA PREMIUM v3.3.0 - Sistema Legal Gubernamental CON CACHE INTELIGENTE")
+    port = int(os.getenv("PORT", 8000))
+    logger.info(f"🚀 Iniciando COLEPA PREMIUM v3.3.0 en puerto: {port}")
     logger.info("🏛️ Optimizado para Demo Congreso Nacional de Paraguay")
     logger.info("⚡ Cache de 3 niveles: 70% menos latencia, 60% menos costos OpenAI")
+    
     uvicorn.run(
-        "app",
+        app,  # ← CAMBIO CRÍTICO: usar 'app' en lugar de "main:app"
         host="0.0.0.0",
-        port=int(os.getenv("PORT", 8000)),
+        port=port,
         reload=False,  # Deshabilitado en producción
-        log_level="info"
+        log_level="info",
+        access_log=True  # ← Para debugging en Railway
     )
