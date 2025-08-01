@@ -18,18 +18,6 @@ from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 import uvicorn
-try:
-    # Forzar importación desde directorio app/
-    sys.path.insert(0, str(Path(__file__).parent / "app"))
-    
-    from prompt_builder import construir_prompt
-    from vector_search import buscar_articulo_por_numero, buscar_articulo_relevante
-    
-    MODULES_IMPORTED = True
-    logger.info("✅ Módulos locales FORZADOS correctamente")
-except ImportError as e:
-    logger.error(f"❌ Error forzando importaciones: {e}")
-    MODULES_IMPORTED = False
 # ========== FIX IMPORTACIONES ABSOLUTAS PARA RAILWAY ==========
 # Agregar el directorio raíz al path de Python para importaciones absolutas
 current_dir = Path(__file__).parent
