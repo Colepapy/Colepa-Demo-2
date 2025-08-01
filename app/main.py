@@ -57,21 +57,16 @@ except ImportError as e:
     VECTOR_SEARCH_AVAILABLE = False
     
     def buscar_articulo_relevante(query_vector, collection_name):
-        return {
-            "pageContent": "Contenido de ejemplo del artículo", 
-            "nombre_ley": "Código Civil", 
-            "numero_articulo": "123"
-        }
+        logger.error("❌ Usando fallback - vector_search.py no cargado")
+        return None
     
     def buscar_articulo_por_numero(numero, collection_name):
-        return {
-            "pageContent": f"Contenido del artículo {numero}", 
-            "nombre_ley": "Código Civil", 
-            "numero_articulo": str(numero)
-        }
+        logger.error("❌ Usando fallback - vector_search.py no cargado")
+        return None
     
     def construir_prompt(contexto_legal, pregunta_usuario):
-        return f"Contexto Legal: {contexto_legal}\n\nPregunta del Usuario: {pregunta_usuario}"
+        logger.error("❌ Usando fallback - prompt_builder.py no cargado")
+        return f"ERROR: Módulos no cargados. Contexto: {contexto_legal[:100]}... Pregunta: {pregunta_usuario}"
 
 # ========== CLASIFICADOR INTELIGENTE CON FALLBACK ==========
 try:
