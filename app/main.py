@@ -547,7 +547,7 @@ def validar_calidad_contexto(contexto: Optional[Dict], pregunta: str) -> tuple[b
         
         if numero_pregunta and numero_contexto:
             try:
-                if int(numero_contexto) == numero_pregunta:
+                if str(numero_contexto) == str(numero_pregunta):
                     logger.info(f"✅ Validación DIRECTA - Artículo {numero_pregunta} encontrado exactamente")
                     return True, 1.0  # Score perfecto para coincidencia exacta
             except (ValueError, TypeError):
