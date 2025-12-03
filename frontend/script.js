@@ -290,6 +290,48 @@ function crearElementoMensaje(mensaje) {
     const div = document.createElement('div');
     div.className = `message ${mensaje.role}`;
     
+    // Formateo del contenido
+    let contenidoHTML = formatearContenido(mensaje.content);
+    
+    // Si es IA y tiene fuentes, las agregamos bonito
+    if (mensaje.role === 'assistant') {
+        if (mensaje.metadata && mensaje.metadata.fuente && mensaje.metadata.fuente.ley) {
+            contenidoHTML += crearFuenteLegal(mensaje.metadata.fuente);
+        }
+        if (mensaje.metadata && mensaje.metadata.recomendaciones) {
+            contenidoHTML += crearRecomendaciones(mensaje.metadata.recomendaciones);
+        }
+    }
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'message-content-wrapper';
+    
+    // Iconos actualizados
+    const iconClass = mensaje.role === 'user' ? 'fa-user' : 'fa-wand-magic-sparkles';
+    
+    // HTML Estructurado para el nuevo CSS
+    if (mensaje.role === 'user') {
+        // Usuario: Texto primero, Avatar después (opcional, o mantener orden estándar)
+        // En el CSS nuevo lo manejamos estándar: Avatar izquierda, texto derecha.
+        wrapper.innerHTML = `
+            <div class="message-avatar">
+                <i class="fas ${iconClass}"></i>
+            </div>
+            <div class="message-text">${contenidoHTML}</div>
+        `;
+    } else {
+        // Asistente
+        wrapper.innerHTML = `
+            <div class="message-avatar">
+                <i class="fas ${iconClass}"></i>
+            </div>
+            <div class="message-text">${contenidoHTML}</div>
+        `;
+    }
+    
+    div.appendChild(wrapper);
+    return div;
+}
     // NUEVA LÓGICA: Formateo estructurado
     let contenidoHTML = formatearContenido(mensaje.content);
     
