@@ -413,16 +413,15 @@ function mostrarIndicadorEscritura() {
     const indicador = document.createElement('div');
     indicador.id = 'typingIndicator';
     indicador.className = 'message assistant';
+    
+    // AQUI ESTÁ LA MAGIA: Agregamos la clase 'loading-paraguay'
     indicador.innerHTML = `
         <div class="message-content-wrapper">
-            <div class="message-avatar">
-                <i class="fas fa-scale-balanced fa-bounce"></i>
+            <div class="message-avatar loading-paraguay">
+                <i class="fas fa-scale-balanced"></i>
             </div>
             <div class="message-text" style="display: flex; align-items: center; gap: 8px;">
                 <span style="color: var(--text-muted); font-size: 0.9em;">Analizando legislación...</span>
-                <div class="typing-dots">
-                    <div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>
-                </div>
             </div>
         </div>
     `;
