@@ -2,98 +2,103 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COLEPA - Consulta de Leyes del Paraguay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>COLEPA | IA Legal Paraguay</title>
     
-    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
     
-    <!-- Fuentes -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     
-    <!-- Estilos -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="ambient-background">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
     <div class="app-container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <!-- Header del Sidebar -->
+        <div class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <button class="new-chat-btn" onclick="nuevaConsulta()">
                     <i class="fas fa-plus"></i>
-                    Nuevo chat
+                    <span>Nuevo chat</span>
                 </button>
             </div>
             
-            <!-- Historial de Chats -->
             <div class="chat-history" id="chatHistory">
-                <!-- Se llena dinámicamente -->
-            </div>
+                </div>
             
-            <!-- Logo Section -->
             <div class="logo-section">
                 <div class="logo-text">
                     <h1>COLEPA</h1>
-                    <p>Consulta de leyes del Paraguay</p>
-                    <span class="demo-badge">Versión Demo</span>
+                    <p>Inteligencia Artificial Legal</p>
+                    <span class="demo-badge">DEMO</span>
                 </div>
             </div>
         </div>
         
-        <!-- Área Principal -->
+        <button class="mobile-menu-btn" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
+
         <div class="main-area">
-            <!-- Contenedor de Mensajes -->
             <div class="messages-container" id="messagesContainer">
-                <!-- Mensaje de Bienvenida -->
                 <div class="welcome-message" id="welcomeMessage">
                     <div class="welcome-content">
-                        <div class="welcome-icon">
-                            <i class="fas fa-balance-scale"></i>
+                        <div class="welcome-logo">
+                            <i class="fas fa-scale-balanced"></i>
                         </div>
-                        <h2>¿En qué estás trabajando?</h2>
-                        <p>Puedo ayudarte con consultas sobre la legislación paraguaya</p>
+                        <h2>Hola, soy COLEPA</h2>
+                        <p>Tu asistente experto en la legislación del Paraguay.<br>¿Qué analizamos hoy?</p>
                     </div>
                 </div>
             </div>
             
-            <!-- Área de Input -->
             <div class="input-area">
                 <div class="input-container">
                     <form id="messageForm" onsubmit="enviarMensaje(event)">
                         <div class="input-wrapper">
                             <textarea 
                                 id="messageInput" 
-                                placeholder="Pregunta lo que quieras"
+                                placeholder="Escribe tu consulta legal aquí..."
                                 rows="1"
                                 maxlength="2000"
                                 onkeydown="manejarTeclas(event)"
                                 oninput="manejarInput()"
                             ></textarea>
                             <button type="submit" id="sendBtn" disabled>
-                                <i class="fas fa-arrow-up"></i>
+                                <i class="fas fa-paper-plane"></i>
                             </button>
                         </div>
                     </form>
-                </div>
-                
-                <!-- Disclaimer Legal -->
-                <div class="legal-disclaimer">
-                    COLEPA puede generar información incorrecta. No sustituye el asesoramiento de un abogado profesional.
+                    <div class="legal-disclaimer">
+                        COLEPA puede cometer errores. Verifica la información con las fuentes oficiales.
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- Loading Overlay -->
     <div class="loading-overlay" id="loadingOverlay">
         <div class="loading-content">
-            <div class="spinner"></div>
-            <p>Consultando legislación paraguaya...</p>
+            <div class="gemini-spinner">
+                <div class="spinner-track"></div>
+                <div class="spinner-orb"></div>
+            </div>
+            <p>Analizando legislación...</p>
         </div>
     </div>
     
     <script src="script.js"></script>
+    <script>
+        // Script simple para toggle en móvil
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
