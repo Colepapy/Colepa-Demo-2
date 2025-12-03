@@ -438,3 +438,60 @@ body {
     .input-area { padding: 15px; }
     .message { max-width: 100%; }
 }
+/* --- LOADER PARAGUAY (Círculo tricolor giratorio) --- */
+@keyframes spin-paraguay {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.message-avatar.loading-paraguay {
+    position: relative;
+    background: transparent !important; /* Quitamos el fondo original */
+    border: none !important;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Resplandor suave */
+}
+
+/* El degradado cónico que crea la bandera giratoria */
+.message-avatar.loading-paraguay::before {
+    content: '';
+    position: absolute;
+    top: -50%; 
+    left: -50%;
+    width: 200%; 
+    height: 200%;
+    background: conic-gradient(
+        #D52B1E, /* Rojo */
+        #D52B1E, 
+        #FFFFFF, /* Blanco */
+        #0038A8, /* Azul */
+        #0038A8,
+        #D52B1E  /* Cierre en Rojo para que sea fluido */
+    );
+    animation: spin-paraguay 1.5s linear infinite;
+    z-index: 0;
+}
+
+/* El círculo interior para tapar el centro y dejar solo el borde */
+.message-avatar.loading-paraguay::after {
+    content: '';
+    position: absolute;
+    inset: 3px; /* Grosor del borde */
+    background: var(--bg-surface); /* Color del fondo de la app */
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Aseguramos que el icono quede encima de todo */
+.message-avatar.loading-paraguay i {
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
+    color: var(--text-primary);
+    animation: pulse 1.5s infinite ease-in-out; /* Latido suave del icono */
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(0.9); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
