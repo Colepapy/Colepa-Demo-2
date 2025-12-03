@@ -11,7 +11,7 @@ const CONFIG = {
     ENDPOINT_CONSULTA: '/api/consulta',
     ENDPOINT_HEALTH: '/api/health',
     MAX_MESSAGE_LENGTH: 2000,
-    TYPING_SPEED: 15 // Ajustado para que se sienta fluido
+    TYPING_SPEED: 5 // Ajustado para que se sienta fluido
 };
 
 // === ESTADO GLOBAL ===
