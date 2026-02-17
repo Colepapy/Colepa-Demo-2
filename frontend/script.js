@@ -1,6 +1,6 @@
 /**
  * COLEPA NASDAQ Edition - Frontend v4.0.0
- * Typewriter optimizado sin blur ni saltos
+ * Typewriter optimizado + Fix error 422
  */
 
 // === CONFIGURACIÓN ===
@@ -196,15 +196,19 @@ async function procesarRespuesta(mensajeUsuario) {
     try {
         const url = CONFIG.API_BASE_URL + CONFIG.ENDPOINT_CONSULTA;
         
+        // ✅ CRÍTICO: Enviar SOLO mensajes con contenido (sin vacíos)
         const requestData = {
-            historial: app.conversacionActual.map(msg => ({
-                role: msg.role === 'user' ? 'user' : 'assistant',
-                content: msg.content,
-                timestamp: msg.timestamp
-            }))
+            historial: app.conversacionActual
+                .filter(msg => msg.content && msg.content.trim() !== '')
+                .map(msg => ({
+                    role: msg.role === 'user' ? 'user' : 'assistant',
+                    content: msg.content,
+                    timestamp: msg.timestamp
+                }))
         };
 
         console.log('📡 Enviando request a:', url);
+        console.log('📦 Historial:', requestData.historial.length, 'mensajes');
 
         const response = await fetch(url, {
             method: 'POST',
@@ -219,7 +223,9 @@ async function procesarRespuesta(mensajeUsuario) {
             let errorMessage = `Error ${response.status}`;
             try {
                 const errorData = await response.json();
+                console.error('❌ Error del backend:', errorData);
                 if (errorData.detalle) errorMessage += `: ${errorData.detalle}`;
+                if (errorData.detail) errorMessage += `: ${errorData.detail}`;
             } catch (e) {
                 console.error('Error parseando error response');
             }
@@ -246,6 +252,8 @@ async function procesarRespuesta(mensajeUsuario) {
             mensajeError += 'No hay conexión con el servidor legal.';
         } else if (error.message.includes('404')) {
             mensajeError += 'Servicio no disponible (404).';
+        } else if (error.message.includes('422')) {
+            mensajeError += 'Error de validación. Intenta con un nuevo chat.';
         } else if (error.message.includes('500')) {
             mensajeError += 'Error interno del servidor.';
         } else {
@@ -289,7 +297,7 @@ function renderizarMensajes() {
     
     if (!container) return;
     
-    // ⚡ OPTIMIZACIÓN: Si estamos escribiendo, NO re-renderizar todo
+    // ⚡ OPTIMIZACIÓN: Si estamos escribiendo, NO re-renderizar
     if (app.isLoading) {
         if (app.conversacionActual.length > 0 && welcome) {
             welcome.style.display = 'none';
@@ -383,7 +391,7 @@ function crearFuenteLegal(fuente) {
     `;
 }
 
-// === TYPEWRITER OPTIMIZADO SIN BLUR NI SALTOS ===
+// === TYPEWRITER OPTIMIZADO (NO AGREGA AL ESTADO HASTA TERMINAR) ===
 async function mostrarRespuestaConEscritura(data) {
     const contenido = data.respuesta || 'No pude generar respuesta.';
     const metadata = {
@@ -393,33 +401,44 @@ async function mostrarRespuestaConEscritura(data) {
         tiempo_procesamiento_real: data.tiempo_procesamiento_real
     };
     
-    // Agregar mensaje vacío
-    const mensajeIdx = app.conversacionActual.length;
-    agregarMensaje('assistant', '', metadata);
-    
-    // IMPORTANTE: Obtener referencia al elemento DOM ESPECÍFICO
+    // Obtener container y ocultar welcome
     const container = document.getElementById('messagesContainer');
-    const allMessages = container.querySelectorAll('.message.assistant');
-    const mensajeElement = allMessages[allMessages.length - 1];
+    const welcome = document.getElementById('welcomeMessage');
+    if (welcome) welcome.style.display = 'none';
     
-    if (!mensajeElement) {
-        console.error('❌ No se encontró el elemento del mensaje');
-        app.isLoading = false;
-        return;
-    }
+    // Crear ID temporal
+    const tempId = Date.now();
     
-    const messageTextDiv = mensajeElement.querySelector('.message-text');
+    // Crear elemento DOM manualmente (sin agregar al estado todavía)
+    const div = document.createElement('div');
+    div.className = 'message assistant';
+    div.setAttribute('data-message-id', tempId);
     
-    if (!messageTextDiv) {
-        console.error('❌ No se encontró el div de texto');
-        app.isLoading = false;
-        return;
-    }
+    const wrapper = document.createElement('div');
+    wrapper.className = 'message-content-wrapper';
     
-    // Preservar botón copiar
+    wrapper.innerHTML = `
+        <div class="message-avatar">
+            <i class="fas fa-scale-balanced"></i>
+        </div>
+        <div class="message-text">
+            <div class="message-actions">
+                <button class="copy-btn" onclick="copiarMensaje(${tempId})" title="Copiar respuesta">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+        </div>
+    `;
+    
+    div.appendChild(wrapper);
+    container.appendChild(div);
+    
+    const messageTextDiv = div.querySelector('.message-text');
+    
+    // Botón copiar
     const copyBtn = `
         <div class="message-actions">
-            <button class="copy-btn" onclick="copiarMensaje(${app.conversacionActual[mensajeIdx].id})" title="Copiar respuesta">
+            <button class="copy-btn" onclick="copiarMensaje(${tempId})" title="Copiar respuesta">
                 <i class="fas fa-copy"></i>
             </button>
         </div>
@@ -429,27 +448,25 @@ async function mostrarRespuestaConEscritura(data) {
     const palabras = contenido.split(' ');
     let textoAcumulado = '';
     
+    // Typewriter palabra por palabra
     for (let i = 0; i < palabras.length; i++) {
         textoAcumulado += (i > 0 ? ' ' : '') + palabras[i];
         
-        // Actualizar estado interno
-        app.conversacionActual[mensajeIdx].content = textoAcumulado;
-        
-        // Actualizar SOLO este div (SIN re-renderizar todo el DOM)
+        // Actualizar SOLO el DOM (no el estado)
         const contenidoHTML = formatearContenido(textoAcumulado);
         messageTextDiv.innerHTML = copyBtn + contenidoHTML;
         
-        // Scroll suave solo cada 5 palabras
+        // Scroll suave cada 5 palabras
         if (i % 5 === 0 || i === palabras.length - 1) {
             container.scrollTop = container.scrollHeight;
         }
         
-        // Delay tipo Claude
+        // Delay aleatorio tipo Claude
         const delay = Math.random() * (CONFIG.TYPING_SPEED_MAX - CONFIG.TYPING_SPEED_MIN) + CONFIG.TYPING_SPEED_MIN;
         await sleep(delay);
     }
     
-    // Renderizado final COMPLETO (con fuente legal y tiempo)
+    // HTML final con metadata
     let finalHTML = copyBtn + formatearContenido(textoAcumulado);
     
     if (metadata.fuente && metadata.fuente.ley) {
@@ -462,6 +479,16 @@ async function mostrarRespuestaConEscritura(data) {
     
     messageTextDiv.innerHTML = finalHTML;
     
+    // ✅ AHORA SÍ agregamos al estado (con contenido completo)
+    const mensaje = {
+        id: tempId,
+        role: 'assistant',
+        content: textoAcumulado,
+        timestamp: new Date().toISOString(),
+        metadata
+    };
+    
+    app.conversacionActual.push(mensaje);
     actualizarSesionActual();
 }
 
@@ -506,7 +533,20 @@ function scrollToBottom() {
 // === COPIAR MENSAJE ===
 function copiarMensaje(messageId) {
     const mensaje = app.conversacionActual.find(m => m.id === messageId);
-    if (!mensaje) return;
+    if (!mensaje) {
+        console.warn('Mensaje no encontrado en estado, intentando copiar del DOM');
+        const element = document.querySelector(`[data-message-id="${messageId}"] .message-text`);
+        if (element) {
+            const texto = element.innerText.replace(/Copiar respuesta/g, '').trim();
+            navigator.clipboard.writeText(texto).then(() => {
+                mostrarNotificacion('Respuesta copiada', 'success');
+            }).catch(err => {
+                console.error('Error copiando:', err);
+                mostrarNotificacion('Error al copiar', 'error');
+            });
+        }
+        return;
+    }
     
     const textoPlano = mensaje.content
         .replace(/\*\*(.*?)\*\*/g, '$1')
