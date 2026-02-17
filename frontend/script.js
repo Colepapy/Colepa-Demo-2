@@ -1,6 +1,6 @@
 /**
  * COLEPA NASDAQ Edition - Frontend v4.0.0
- * Features: Claude-like sidebar, typewriter effect, copy buttons, export
+ * Typewriter effect tipo Claude - Palabra por palabra
  */
 
 // === CONFIGURACIÓN ===
@@ -11,7 +11,8 @@ const CONFIG = {
     ENDPOINT_CONSULTA: '/api/consulta',
     ENDPOINT_HEALTH: '/api/health',
     MAX_MESSAGE_LENGTH: 2000,
-    TYPING_SPEED: 12  // ← NASDAQ: 12ms por carácter (ultra fluido)
+    TYPING_SPEED_MIN: 50,  // Delay mínimo entre palabras
+    TYPING_SPEED_MAX: 100  // Delay máximo entre palabras
 };
 
 // === ESTADO GLOBAL ===
@@ -83,13 +84,17 @@ function toggleSidebarCollapse() {
     if (app.sidebarCollapsed) {
         sidebar.classList.add('collapsed');
         mainArea.classList.add('sidebar-collapsed');
-        btn.classList.remove('fa-chevron-left');
-        btn.classList.add('fa-chevron-right');
+        if (btn) {
+            btn.classList.remove('fa-chevron-left');
+            btn.classList.add('fa-chevron-right');
+        }
     } else {
         sidebar.classList.remove('collapsed');
         mainArea.classList.remove('sidebar-collapsed');
-        btn.classList.remove('fa-chevron-right');
-        btn.classList.add('fa-chevron-left');
+        if (btn) {
+            btn.classList.remove('fa-chevron-right');
+            btn.classList.add('fa-chevron-left');
+        }
     }
     
     localStorage.setItem('colepa_sidebar_collapsed', app.sidebarCollapsed);
@@ -135,27 +140,44 @@ function actualizarBotonEnvio() {
 function enviarMensaje(event) {
     if (event) event.preventDefault();
     
-    if (app.isLoading) return;
+    if (app.isLoading) {
+        console.log('⏳ Ya hay una consulta en proceso');
+        return;
+    }
     
     const input = document.getElementById('messageInput');
-    if (!input) return;
+    if (!input) {
+        console.error('❌ Input no encontrado');
+        return;
+    }
     
     const mensaje = input.value.trim();
-    if (!mensaje) return;
+    if (!mensaje) {
+        console.log('⚠️ Mensaje vacío');
+        return;
+    }
     
     if (mensaje.length > CONFIG.MAX_MESSAGE_LENGTH) {
         mostrarNotificacion(`Máximo ${CONFIG.MAX_MESSAGE_LENGTH} caracteres`, 'warning');
         return;
     }
 
-    if (!app.sesionId) nuevaConsulta();
+    console.log('📤 Enviando mensaje:', mensaje);
+
+    // Iniciar sesión si no existe
+    if (!app.sesionId) {
+        nuevaConsulta();
+    }
     
+    // Agregar mensaje del usuario
     agregarMensaje('user', mensaje);
     
+    // Limpiar input
     input.value = '';
     input.style.height = 'auto';
     actualizarBotonEnvio();
     
+    // Procesar respuesta
     procesarRespuesta(mensaje);
 }
 
@@ -164,7 +186,7 @@ function enviarConsultaSugerida(consulta) {
     if (input) {
         input.value = consulta;
         actualizarBotonEnvio();
-        enviarMensaje();
+        enviarMensaje(null);
     }
 }
 
@@ -187,6 +209,8 @@ async function procesarRespuesta(mensajeUsuario) {
             }))
         };
 
+        console.log('📡 Enviando request a:', url);
+
         const response = await fetch(url, {
             method: 'POST',
             headers: {
@@ -201,55 +225,51 @@ async function procesarRespuesta(mensajeUsuario) {
             try {
                 const errorData = await response.json();
                 if (errorData.detalle) errorMessage += `: ${errorData.detalle}`;
-            } catch (e) {}
+            } catch (e) {
+                console.error('Error parseando error response');
+            }
             throw new Error(errorMessage);
         }
         
         const data = await response.json();
+        console.log('✅ Respuesta recibida:', data);
         
         ocultarIndicadorEscritura();
         
         const tiempoReal = ((Date.now() - startTime) / 1000).toFixed(2);
         data.tiempo_procesamiento_real = tiempoReal;
         
-        async function mostrarRespuestaConEscritura(data) {
-    const contenido = data.respuesta || 'No pude generar respuesta.';
-    const metadata = {
-        fuente: data.fuente,
-        recomendaciones: data.recomendaciones,
-        tiempo_procesamiento: data.tiempo_procesamiento,
-        tiempo_procesamiento_real: data.tiempo_procesamiento_real
-    };
-    
-    const mensajeIdx = app.conversacionActual.length;
-    agregarMensaje('assistant', '', metadata);
-    
-    // Split por espacios para escribir palabra por palabra
-    const palabras = contenido.split(' ');
-    let textoAcumulado = '';
-    
-    for (let i = 0; i < palabras.length; i++) {
-        // Agregar palabra con espacio
-        textoAcumulado += (i > 0 ? ' ' : '') + palabras[i];
+        await mostrarRespuestaConEscritura(data);
         
-        // Actualizar contenido
-        app.conversacionActual[mensajeIdx].content = textoAcumulado;
+    } catch (error) {
+        console.error('❌ Error completo:', error);
+        ocultarIndicadorEscritura();
         
-        // Renderizar solo cada 2 palabras para optimizar
-        if (i % 2 === 0 || i === palabras.length - 1) {
-            renderizarMensajes();
-            scrollToBottom();
+        let mensajeError = '🚨 **Error procesando consulta**\n\n';
+        
+        if (error.message.includes('Failed to fetch')) {
+            mensajeError += 'No hay conexión con el servidor legal.';
+        } else if (error.message.includes('404')) {
+            mensajeError += 'Servicio no disponible (404).';
+        } else if (error.message.includes('500')) {
+            mensajeError += 'Error interno del servidor.';
+        } else {
+            mensajeError += `Error: ${error.message}`;
         }
         
-        // Delay aleatorio tipo ChatGPT (50-100ms por palabra)
-        const delay = Math.random() * 50 + 50;
-        await sleep(delay);
+        agregarMensaje('assistant', mensajeError);
+        
+    } finally {
+        app.isLoading = false;
+        actualizarBotonEnvio();
+        
+        setTimeout(() => {
+            const input = document.getElementById('messageInput');
+            if(input) input.focus();
+        }, 100);
     }
-    
-    // Renderizado final
-    renderizarMensajes();
-    actualizarSesionActual();
 }
+
 // === RENDERIZADO VISUAL ===
 function agregarMensaje(role, content, metadata = null) {
     const mensaje = {
@@ -361,7 +381,7 @@ function crearFuenteLegal(fuente) {
     `;
 }
 
-// === TYPEWRITER EFECTO NASDAQ ===
+// === TYPEWRITER EFECTO CLAUDE (PALABRA POR PALABRA) ===
 async function mostrarRespuestaConEscritura(data) {
     const contenido = data.respuesta || 'No pude generar respuesta.';
     const metadata = {
@@ -374,22 +394,30 @@ async function mostrarRespuestaConEscritura(data) {
     const mensajeIdx = app.conversacionActual.length;
     agregarMensaje('assistant', '', metadata);
     
-    // ⚡ TYPEWRITER CARÁCTER POR CARÁCTER (NASDAQ Edition)
+    // Split por palabras (como Claude)
+    const palabras = contenido.split(' ');
     let textoAcumulado = '';
     
-    for (let i = 0; i < contenido.length; i++) {
-        textoAcumulado += contenido[i];
+    for (let i = 0; i < palabras.length; i++) {
+        // Agregar palabra
+        textoAcumulado += (i > 0 ? ' ' : '') + palabras[i];
+        
+        // Actualizar contenido
         app.conversacionActual[mensajeIdx].content = textoAcumulado;
         
-        // Renderizar cada 2 caracteres para ultra-smooth
-        if (i % 2 === 0 || i === contenido.length - 1) {
+        // Renderizar cada 2 palabras para optimizar
+        if (i % 2 === 0 || i === palabras.length - 1) {
             renderizarMensajes();
             scrollToBottom();
         }
         
-        await sleep(CONFIG.TYPING_SPEED);
+        // Delay aleatorio tipo Claude (50-100ms por palabra)
+        const delay = Math.random() * (CONFIG.TYPING_SPEED_MAX - CONFIG.TYPING_SPEED_MIN) + CONFIG.TYPING_SPEED_MIN;
+        await sleep(delay);
     }
     
+    // Renderizado final
+    renderizarMensajes();
     actualizarSesionActual();
 }
 
@@ -431,7 +459,7 @@ function scrollToBottom() {
     }
 }
 
-// === COPIAR MENSAJE (Feature NASDAQ) ===
+// === COPIAR MENSAJE ===
 function copiarMensaje(messageId) {
     const mensaje = app.conversacionActual.find(m => m.id === messageId);
     if (!mensaje) return;
@@ -538,7 +566,6 @@ function nuevaConsulta() {
     }
     actualizarBotonEnvio();
     
-    // Cerrar sidebar en móvil
     const sidebar = document.getElementById('sidebar');
     if(sidebar) sidebar.classList.remove('active');
 }
