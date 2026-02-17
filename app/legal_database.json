@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "fuente": "Códigos oficiales de Paraguay",
+    "descripcion": "Base legal demo COLEPA",
+    "total_articulos": 25
+  },
+  "articulos": [
+    {
+      "id": 1,
+      "nombre_ley": "Código Civil",
+      "numero_articulo": "10",
+      "texto_completo": "Art. 10.- La renuncia general de las leyes no produce efecto alguno; pero podrán renunciarse los derechos conferidos por ellas, con tal que sólo miren el interés individual y que no esté prohibida su renuncia.",
+      "palabras_clave": ["renuncia", "derechos", "leyes"]
+    },
+    {
+      "id": 2,
+      "nombre_ley": "Código Civil",
+      "numero_articulo": "11",
+      "texto_completo": "Art. 11.- La existencia, el estado civil, la capacidad e incapacidad de hecho de las personas físicas domiciliadas en la República, sean nacionales o extranjeras, serán juzgados por las disposiciones de este Código, aunque no se trate de actos ejecutados o de bienes existentes en la República.",
+      "palabras_clave": ["capacidad", "incapacidad", "personas", "estado civil"]
+    },
+    {
+      "id": 3,
+      "nombre_ley": "Código Civil",
+      "numero_articulo": "15",
+      "texto_completo": "Art. 15.- La capacidad de derecho y de hecho es igual para el hombre y la mujer, cualquiera sea el estado civil de ésta, salvo las limitaciones expresamente establecidas por la ley.",
+      "palabras_clave": ["igualdad", "género", "capacidad", "mujer"]
+    },
+    {
+      "id": 4,
+      "nombre_ley": "Código Civil",
+      "numero_articulo": "154",
+      "texto_completo": "Art. 154.- El matrimonio es la unión legal de un hombre y una mujer con el fin de establecer una plena comunidad de vida. La ley determinará la forma de celebración, los requisitos, los impedimentos y los efectos del matrimonio.",
+      "palabras_clave": ["matrimonio", "unión", "comunidad", "vida"]
+    },
+    {
+      "id": 5,
+      "nombre_ley": "Código Civil",
+      "numero_articulo": "217",
+      "texto_completo": "Art. 217.- Las causas del divorcio vincular son: a) el adulterio; b) el atentado de uno de los cónyuges contra la vida del otro; c) las injurias graves; d) el abandono voluntario y malicioso por más de un año; e) la separación de hecho de los esposos por más de tres años.",
+      "palabras_clave": ["divorcio", "causas", "adulterio", "separación", "abandono"]
+    },
+    {
+      "id": 6,
+      "nombre_ley": "Código Penal",
+      "numero_articulo": "105",
+      "texto_completo": "Artículo 105.- Homicidio doloso. El que matare a otro será castigado con pena privativa de libertad de cinco a quince años. En los casos especialmente graves la pena privativa de libertad será de diez a veinticinco años.",
+      "palabras_clave": ["homicidio", "matar", "pena", "prisión"]
+    },
+    {
+      "id": 7,
+      "nombre_ley": "Código Penal",
+      "numero_articulo": "111",
+      "texto_completo": "Artículo 111.- Lesión. El que dañara la salud de otro será castigado con pena privativa de libertad de hasta cinco años o con multa. En casos graves, la pena privativa de libertad podrá ser aumentada hasta diez años.",
+      "palabras_clave": ["lesión", "daño", "salud", "agresión", "golpes"]
+    },
+    {
+      "id": 8,
+      "nombre_ley": "Código Penal",
+      "numero_articulo": "124",
+      "texto_completo": "Artículo 124.- Coacción sexual. El que mediante fuerza o amenaza grave coaccionara a otro a realizar el acto sexual, será castigado con pena privativa de libertad de hasta diez años.",
+      "palabras_clave": ["violación", "coacción", "sexual", "fuerza", "abuso"]
+    },
+    {
+      "id": 9,
+      "nombre_ley": "Código Penal",
+      "numero_articulo": "129",
+      "texto_completo": "Artículo 129.- Trata de personas. El que mediante fuerza, amenaza de mal considerable, engaño o abuso de autoridad captare, trasladare o recibiere a una persona para someterla a explotación sexual, trabajos forzados o esclavitud, será castigado con pena privativa de libertad de hasta diez años.",
+      "palabras_clave": ["trata", "personas", "explotación", "trabajo forzado", "esclavitud"]
+    },
+    {
+      "id": 10,
+      "nombre_ley": "Código Penal",
+      "numero_articulo": "166",
+      "texto_completo": "Artículo 166.- Hurto. El que se apoderare de una cosa mueble ajena, sin el consentimiento de su dueño, con la intención de apropiársela, será castigado con pena privativa de libertad de hasta cinco años o con multa.",
+      "palabras_clave": ["hurto", "robo", "apoderamiento", "cosa ajena"]
+    },
+    {
+      "id": 11,
+      "nombre_ley": "Código Penal",
+      "numero_articulo": "185",
+      "texto_completo": "Artículo 185.- Estafa. El que con la intención de obtener para sí o para un tercero un beneficio patrimonial indebido, perjudicare el patrimonio de otro mediante engaño, será castigado con pena privativa de libertad de hasta cinco años o con multa.",
+      "palabras_clave": ["estafa", "engaño", "fraude", "perjuicio"]
+    },
+    {
+      "id": 12,
+      "nombre_ley": "Código Penal",
+      "numero_articulo": "229",
+      "texto_completo": "Artículo 229.- Violencia familiar. El que maltratare físicamente a otro con quien conviva o conviviere en relación familiar, será castigado con pena privativa de libertad de hasta cinco años o con multa, siempre que no constituya un hecho punible con pena mayor.",
+      "palabras_clave": ["violencia", "familiar", "maltrato", "doméstica", "golpes", "pareja"]
+    },
+    {
+      "id": 13,
+      "nombre_ley": "Código Laboral",
+      "numero_articulo": "61",
+      "texto_completo": "Artículo 61.- El contrato de trabajo es el convenio mediante el cual el trabajador se obliga a prestar servicios bajo la dependencia y subordinación del empleador, a cambio de una remuneración. Puede celebrarse por escrito o verbalmente.",
+      "palabras_clave": ["contrato", "trabajo", "empleador", "trabajador", "remuneración"]
+    },
+    {
+      "id": 14,
+      "nombre_ley": "Código Laboral",
+      "numero_articulo": "91",
+      "texto_completo": "Artículo 91.- La jornada ordinaria de trabajo no podrá exceder de ocho horas diarias ni de cuarenta y ocho horas semanales. La jornada nocturna no excederá de siete horas.",
+      "palabras_clave": ["jornada", "trabajo", "horas", "laboral", "nocturna"]
+    },
+    {
+      "id": 15,
+      "nombre_ley": "Código Laboral",
+      "numero_articulo": "78",
+      "texto_completo": "Artículo 78.- Todo trabajador tiene derecho a un descanso mínimo de treinta minutos durante la jornada de trabajo, cuando ésta sea de más de cuatro horas continuas. Este tiempo no se computará como trabajo efectivo.",
+      "palabras_clave": ["descanso", "jornada", "trabajador", "minutos"]
+    },
+    {
+      "id": 16,
+      "nombre_ley": "Código Laboral",
+      "numero_articulo": "243",
+      "texto_completo": "Artículo 243.- El salario mínimo será fijado periódicamente por el Poder Ejecutivo, teniendo en cuenta las condiciones de vida y las necesidades de los trabajadores. El salario no podrá ser inferior al mínimo legal.",
+      "palabras_clave": ["salario", "mínimo", "sueldo", "remuneración", "trabajador"]
+    },
+    {
+      "id": 17,
+      "nombre_ley": "Código Laboral",
+      "numero_articulo": "81",
+      "texto_completo": "Artículo 81.- El empleador no podrá despedir al trabajador sin justa causa comprobada. En caso de despido injustificado, el trabajador tendrá derecho a una indemnización equivalente a quince días de salario por cada año de servicio o fracción de seis meses.",
+      "palabras_clave": ["despido", "indemnización", "justa causa", "empleador"]
+    },
+    {
+      "id": 18,
+      "nombre_ley": "Código Procesal Penal",
+      "numero_articulo": "1",
+      "texto_completo": "Artículo 1.- Nadie podrá ser condenado sin un juicio previo fundado en ley anterior al hecho del proceso ni juzgado por tribunales especiales.",
+      "palabras_clave": ["juicio", "condena", "ley", "proceso", "tribunal"]
+    },
+    {
+      "id": 19,
+      "nombre_ley": "Código Procesal Penal",
+      "numero_articulo": "6",
+      "texto_completo": "Artículo 6.- La defensa de las personas es inviolable. El derecho a la defensa es irrenunciable y su violación producirá la nulidad absoluta de las actuaciones.",
+      "palabras_clave": ["defensa", "inviolable", "derecho", "nulidad"]
+    },
+    {
+      "id": 20,
+      "nombre_ley": "Código Procesal Penal",
+      "numero_articulo": "7",
+      "texto_completo": "Artículo 7.- El imputado tendrá derecho a un intérprete para que lo asista en su defensa cuando no comprenda los idiomas oficiales.",
+      "palabras_clave": ["intérprete", "imputado", "idioma", "defensa"]
+    },
+    {
+      "id": 21,
+      "nombre_ley": "Código Procesal Penal",
+      "numero_articulo": "115",
+      "texto_completo": "Artículo 115.- En los actos procesales solo podrán usarse, bajo pena de nulidad, los idiomas oficiales (español y guaraní), con las excepciones establecidas por este código.",
+      "palabras_clave": ["idioma", "español", "guaraní", "procesal", "nulidad"]
+    },
+    {
+      "id": 22,
+      "nombre_ley": "Código Procesal Civil",
+      "numero_articulo": "3",
+      "texto_completo": "Art. 3°.- La competencia atribuida a los jueces y tribunales es improrrogable. Exceptúase la competencia territorial, que podrá ser prorrogada por conformidad de partes.",
+      "palabras_clave": ["competencia", "juez", "tribunal", "territorial"]
+    },
+    {
+      "id": 23,
+      "nombre_ley": "Código Procesal Civil",
+      "numero_articulo": "131",
+      "texto_completo": "Art. 131.- Las resoluciones quedarán notificadas, en todas las instancias, el día martes o jueves inmediatamente subsiguiente a aquél en que fueron dictadas o el siguiente día hábil, si alguno de ellos fuere feriado.",
+      "palabras_clave": ["notificación", "martes", "jueves", "resolución", "feriado"]
+    },
+    {
+      "id": 24,
+      "nombre_ley": "Código de la Niñez y la Adolescencia",
+      "numero_articulo": "3",
+      "texto_completo": "Artículo 3.- Son niños las personas desde su concepción hasta los trece años de edad y adolescentes desde los catorce hasta los diecisiete años de edad.",
+      "palabras_clave": ["niño", "adolescente", "menor", "edad"]
+    },
+    {
+      "id": 25,
+      "nombre_ley": "Código de la Niñez y la Adolescencia",
+      "numero_articulo": "69",
+      "texto_completo": "Artículo 69.- Los padres están obligados a proveer al hijo de alimentos, vivienda, vestido, educación, asistencia médica y recreación. Esta obligación subsiste mientras el hijo sea menor de edad o esté cursando estudios superiores con provecho.",
+      "palabras_clave": ["alimentos", "obligación", "padres", "hijo", "educación"]
+    }
+  ]
+}
