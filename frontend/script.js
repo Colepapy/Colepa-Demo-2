@@ -212,37 +212,44 @@ async function procesarRespuesta(mensajeUsuario) {
         const tiempoReal = ((Date.now() - startTime) / 1000).toFixed(2);
         data.tiempo_procesamiento_real = tiempoReal;
         
-        await mostrarRespuestaConEscritura(data);
+        async function mostrarRespuestaConEscritura(data) {
+    const contenido = data.respuesta || 'No pude generar respuesta.';
+    const metadata = {
+        fuente: data.fuente,
+        recomendaciones: data.recomendaciones,
+        tiempo_procesamiento: data.tiempo_procesamiento,
+        tiempo_procesamiento_real: data.tiempo_procesamiento_real
+    };
+    
+    const mensajeIdx = app.conversacionActual.length;
+    agregarMensaje('assistant', '', metadata);
+    
+    // Split por espacios para escribir palabra por palabra
+    const palabras = contenido.split(' ');
+    let textoAcumulado = '';
+    
+    for (let i = 0; i < palabras.length; i++) {
+        // Agregar palabra con espacio
+        textoAcumulado += (i > 0 ? ' ' : '') + palabras[i];
         
-    } catch (error) {
-        console.error('❌ Error:', error);
-        ocultarIndicadorEscritura();
+        // Actualizar contenido
+        app.conversacionActual[mensajeIdx].content = textoAcumulado;
         
-        let mensajeError = '🚨 **Error procesando consulta**\n\n';
-        
-        if (error.message.includes('Failed to fetch')) {
-            mensajeError += 'No hay conexión con el servidor legal.';
-        } else if (error.message.includes('404')) {
-            mensajeError += 'Servicio no disponible (404).';
-        } else if (error.message.includes('500')) {
-            mensajeError += 'Error interno del servidor.';
-        } else {
-            mensajeError += `Error: ${error.message}`;
+        // Renderizar solo cada 2 palabras para optimizar
+        if (i % 2 === 0 || i === palabras.length - 1) {
+            renderizarMensajes();
+            scrollToBottom();
         }
         
-        agregarMensaje('assistant', mensajeError);
-        
-    } finally {
-        app.isLoading = false;
-        actualizarBotonEnvio();
-        
-        setTimeout(() => {
-            const input = document.getElementById('messageInput');
-            if(input) input.focus();
-        }, 100);
+        // Delay aleatorio tipo ChatGPT (50-100ms por palabra)
+        const delay = Math.random() * 50 + 50;
+        await sleep(delay);
     }
+    
+    // Renderizado final
+    renderizarMensajes();
+    actualizarSesionActual();
 }
-
 // === RENDERIZADO VISUAL ===
 function agregarMensaje(role, content, metadata = null) {
     const mensaje = {
