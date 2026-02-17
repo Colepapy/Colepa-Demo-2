@@ -1,6 +1,6 @@
 /**
- * COLEPA - JavaScript Ultimate Version
- * Fusiona: Diseño Gemini + Funcionalidad Original Completa + Corrección de Bugs
+ * COLEPA NASDAQ Edition - Frontend v4.0.0
+ * Features: Claude-like sidebar, typewriter effect, copy buttons, export
  */
 
 // === CONFIGURACIÓN ===
@@ -11,7 +11,7 @@ const CONFIG = {
     ENDPOINT_CONSULTA: '/api/consulta',
     ENDPOINT_HEALTH: '/api/health',
     MAX_MESSAGE_LENGTH: 2000,
-    TYPING_SPEED: 80// Ajustado para que se sienta fluido
+    TYPING_SPEED: 12  // ← NASDAQ: 12ms por carácter (ultra fluido)
 };
 
 // === ESTADO GLOBAL ===
@@ -19,7 +19,8 @@ let app = {
     conversaciones: [],
     conversacionActual: [],
     sesionId: null,
-    isLoading: false
+    isLoading: false,
+    sidebarCollapsed: false
 };
 
 // === INICIALIZACIÓN ===
@@ -28,24 +29,25 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function inicializar() {
-    // 1. Cargar datos previos
     cargarHistorial();
     renderizarHistorial();
-    
-    // 2. Verificar estado inicial de la UI
     actualizarBotonEnvio();
     
-    // 3. Auto-focus al input
     const input = document.getElementById('messageInput');
     if (input) input.focus();
 
-    // 4. Verificar conexión con el backend (Restaurado del original)
     verificarConexionAPI();
+    
+    // Cargar estado del sidebar
+    const savedCollapsed = localStorage.getItem('colepa_sidebar_collapsed');
+    if (savedCollapsed === 'true') {
+        toggleSidebarCollapse();
+    }
 
-    console.log('🚀 COLEPA Sistema Legal Inicializado');
+    console.log('🚀 COLEPA NASDAQ v4.0.0 Inicializado');
 }
 
-// === VERIFICACIÓN DE CONEXIÓN (RESTAURADO) ===
+// === VERIFICACIÓN DE CONEXIÓN ===
 async function verificarConexionAPI() {
     try {
         const response = await fetch(CONFIG.API_BASE_URL + CONFIG.ENDPOINT_HEALTH, {
@@ -55,42 +57,48 @@ async function verificarConexionAPI() {
         
         if (response.ok) {
             const data = await response.json();
-            console.log('✅ Conexión con API exitosa:', data);
+            console.log('✅ API Online:', data);
         } else {
-            throw new Error('Estado de API no OK');
+            throw new Error('API no responde');
         }
     } catch (error) {
-        console.error('❌ Error conectando con API:', error);
-        mostrarAvisoConexion(false);
+        console.error('❌ Error de conexión:', error);
+        mostrarNotificacion('Sin conexión al servidor legal', 'error');
     }
 }
 
-function mostrarAvisoConexion(exito) {
-    if (!exito) {
-        // Creamos un aviso discreto pero visible
-        const aviso = document.createElement('div');
-        aviso.style.cssText = `
-            position: fixed; top: 20px; right: 20px; 
-            background: rgba(255, 75, 75, 0.9); color: white;
-            padding: 12px 20px; border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            z-index: 9999; font-size: 14px; display: flex; align-items: center; gap: 10px;
-            backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);
-            animation: fadeIn 0.5s ease;
-        `;
-        aviso.innerHTML = `<i class="fas fa-wifi"></i> <span>Sin conexión al servidor legal</span>`;
-        document.body.appendChild(aviso);
-        
-        // Se quita solo después de 5 segundos
-        setTimeout(() => aviso.remove(), 8000);
-    }
+// === SIDEBAR CLAUDE-STYLE ===
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('active');
 }
 
-// === LÓGICA DE INPUT Y ENVÍO (CORREGIDA) ===
+function toggleSidebarCollapse() {
+    const sidebar = document.getElementById('sidebar');
+    const mainArea = document.getElementById('mainArea');
+    const btn = document.querySelector('.collapse-sidebar-btn i');
+    
+    app.sidebarCollapsed = !app.sidebarCollapsed;
+    
+    if (app.sidebarCollapsed) {
+        sidebar.classList.add('collapsed');
+        mainArea.classList.add('sidebar-collapsed');
+        btn.classList.remove('fa-chevron-left');
+        btn.classList.add('fa-chevron-right');
+    } else {
+        sidebar.classList.remove('collapsed');
+        mainArea.classList.remove('sidebar-collapsed');
+        btn.classList.remove('fa-chevron-right');
+        btn.classList.add('fa-chevron-left');
+    }
+    
+    localStorage.setItem('colepa_sidebar_collapsed', app.sidebarCollapsed);
+}
 
+// === INPUT HANDLING ===
 function manejarTeclas(event) {
     if (event.key === 'Enter' && !event.shiftKey) {
-        event.preventDefault(); // Evitar salto de línea
+        event.preventDefault();
         enviarMensaje(event);
     }
 }
@@ -98,7 +106,6 @@ function manejarTeclas(event) {
 function manejarInput() {
     const input = document.getElementById('messageInput');
     if (input) {
-        // Ajuste automático de altura
         input.style.height = 'auto';
         input.style.height = Math.min(input.scrollHeight, 200) + 'px';
     }
@@ -113,7 +120,6 @@ function actualizarBotonEnvio() {
 
     const tieneTexto = input.value.trim().length > 0;
     
-    // El botón se habilita si hay texto Y no está cargando
     if (tieneTexto && !app.isLoading) {
         btn.disabled = false;
         btn.style.opacity = "1";
@@ -125,7 +131,7 @@ function actualizarBotonEnvio() {
     }
 }
 
-// === FUNCIÓN PRINCIPAL DE ENVÍO ===
+// === ENVÍO DE MENSAJES ===
 function enviarMensaje(event) {
     if (event) event.preventDefault();
     
@@ -137,42 +143,42 @@ function enviarMensaje(event) {
     const mensaje = input.value.trim();
     if (!mensaje) return;
     
-    // Validación de longitud (Restaurado)
     if (mensaje.length > CONFIG.MAX_MESSAGE_LENGTH) {
-        alert(`Mensaje demasiado largo. Máximo ${CONFIG.MAX_MESSAGE_LENGTH} caracteres.`);
+        mostrarNotificacion(`Máximo ${CONFIG.MAX_MESSAGE_LENGTH} caracteres`, 'warning');
         return;
     }
 
-    // Iniciar nueva sesión si no existe
     if (!app.sesionId) nuevaConsulta();
     
-    // 1. Agregar mensaje del usuario visualmente
     agregarMensaje('user', mensaje);
     
-    // 2. Limpiar input y resetear botón
     input.value = '';
     input.style.height = 'auto';
     actualizarBotonEnvio();
     
-    // 3. Procesar respuesta con la API
     procesarRespuesta(mensaje);
 }
 
-// === PROCESAMIENTO CON API Y MANEJO DE ERRORES (COMPLETO) ===
+function enviarConsultaSugerida(consulta) {
+    const input = document.getElementById('messageInput');
+    if (input) {
+        input.value = consulta;
+        actualizarBotonEnvio();
+        enviarMensaje();
+    }
+}
+
+// === PROCESAMIENTO CON API ===
 async function procesarRespuesta(mensajeUsuario) {
     app.isLoading = true;
-    actualizarBotonEnvio(); 
-    mostrarIndicadorEscritura(); 
+    actualizarBotonEnvio();
+    mostrarIndicadorEscritura();
+    
+    const startTime = Date.now();
     
     try {
         const url = CONFIG.API_BASE_URL + CONFIG.ENDPOINT_CONSULTA;
         
-        // Verificar emergencia localmente antes de enviar (Restaurado)
-        if (detectarEmergencia(mensajeUsuario)) {
-            console.warn("⚠️ Posible emergencia detectada en el input");
-            // Aquí podríamos mostrar un aviso inmediato si quisiéramos
-        }
-
         const requestData = {
             historial: app.conversacionActual.map(msg => ({
                 role: msg.role === 'user' ? 'user' : 'assistant',
@@ -190,45 +196,46 @@ async function procesarRespuesta(mensajeUsuario) {
             body: JSON.stringify(requestData)
         });
         
-        // Manejo de errores detallado (Restaurado del original)
         if (!response.ok) {
-            let errorMessage = `Error ${response.status}: ${response.statusText}`;
+            let errorMessage = `Error ${response.status}`;
             try {
                 const errorData = await response.json();
-                if (errorData.detalle) errorMessage += `\nDetalle: ${errorData.detalle}`;
-            } catch (e) { console.error('No se pudo parsear error JSON'); }
+                if (errorData.detalle) errorMessage += `: ${errorData.detalle}`;
+            } catch (e) {}
             throw new Error(errorMessage);
         }
         
         const data = await response.json();
         
         ocultarIndicadorEscritura();
+        
+        const tiempoReal = ((Date.now() - startTime) / 1000).toFixed(2);
+        data.tiempo_procesamiento_real = tiempoReal;
+        
         await mostrarRespuestaConEscritura(data);
         
     } catch (error) {
-        console.error('❌ Error completo:', error);
+        console.error('❌ Error:', error);
         ocultarIndicadorEscritura();
         
-        // Mensajes de error específicos (Restaurado del original)
-        let mensajeError = '🚨 **No pude procesar tu consulta**\n\n';
+        let mensajeError = '🚨 **Error procesando consulta**\n\n';
         
-        if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
-            mensajeError += 'Parece que no hay conexión con el servidor de COLEPA. Verifica tu internet.';
+        if (error.message.includes('Failed to fetch')) {
+            mensajeError += 'No hay conexión con el servidor legal.';
         } else if (error.message.includes('404')) {
-            mensajeError += 'El servicio de consultas no está respondiendo (404).';
+            mensajeError += 'Servicio no disponible (404).';
         } else if (error.message.includes('500')) {
-            mensajeError += 'Error interno del sistema legal. Estamos trabajando en ello.';
+            mensajeError += 'Error interno del servidor.';
         } else {
-            mensajeError += `Ocurrió un error técnico: ${error.message}`;
+            mensajeError += `Error: ${error.message}`;
         }
         
         agregarMensaje('assistant', mensajeError);
         
     } finally {
         app.isLoading = false;
-        actualizarBotonEnvio(); 
+        actualizarBotonEnvio();
         
-        // Auto-focus para seguir escribiendo rápido
         setTimeout(() => {
             const input = document.getElementById('messageInput');
             if(input) input.focus();
@@ -236,20 +243,7 @@ async function procesarRespuesta(mensajeUsuario) {
     }
 }
 
-// === DETECCIÓN DE EMERGENCIA (RESTAURADO) ===
-function detectarEmergencia(contenido) {
-    const palabrasEmergencia = [
-        'línea 137', '137', 'violencia', 'maltrato', 'agresión', 
-        'golpes', 'pega', 'abuso', 'emergencia', 'inmediatamente',
-        'urgente', 'peligro', 'amenaza', 'matar', 'socorro'
-    ];
-    
-    const contenidoLower = contenido.toLowerCase();
-    return palabrasEmergencia.some(palabra => contenidoLower.includes(palabra));
-}
-
-// === RENDERIZADO VISUAL (DISEÑO GEMINI) ===
-
+// === RENDERIZADO VISUAL ===
 function agregarMensaje(role, content, metadata = null) {
     const mensaje = {
         id: Date.now(),
@@ -273,25 +267,16 @@ function renderizarMensajes() {
     
     if (!container) return;
     
-    // Mostrar/Ocultar bienvenida
     if (app.conversacionActual.length === 0) {
-        if(welcome) {
-            welcome.style.display = 'flex';
-            welcome.style.opacity = '1';
-        }
-        // Limpiar todo excepto bienvenida
+        if(welcome) welcome.style.display = 'flex';
         Array.from(container.children).forEach(child => {
             if (child.id !== 'welcomeMessage') child.remove();
         });
         return;
     } else {
-        if(welcome) {
-            welcome.style.display = 'none';
-            welcome.style.opacity = '0';
-        }
+        if(welcome) welcome.style.display = 'none';
     }
     
-    // Re-renderizado seguro
     Array.from(container.children).forEach(child => {
         if (child.id !== 'welcomeMessage') child.remove();
     });
@@ -305,23 +290,34 @@ function renderizarMensajes() {
 function crearElementoMensaje(mensaje) {
     const div = document.createElement('div');
     div.className = `message ${mensaje.role}`;
+    div.setAttribute('data-message-id', mensaje.id);
     
     let contenidoHTML = formatearContenido(mensaje.content);
     
-    // Si es asistente, agregar fuentes y recomendaciones
     if (mensaje.role === 'assistant') {
+        // Agregar botón copiar
+        contenidoHTML = `
+            <div class="message-actions">
+                <button class="copy-btn" onclick="copiarMensaje(${mensaje.id})" title="Copiar respuesta">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+            ${contenidoHTML}
+        `;
+        
         if (mensaje.metadata && mensaje.metadata.fuente && mensaje.metadata.fuente.ley) {
             contenidoHTML += crearFuenteLegal(mensaje.metadata.fuente);
         }
-        if (mensaje.metadata && mensaje.metadata.recomendaciones) {
-            contenidoHTML += crearRecomendaciones(mensaje.metadata.recomendaciones);
+        
+        if (mensaje.metadata && mensaje.metadata.tiempo_procesamiento_real) {
+            contenidoHTML += `<div class="processing-time"><i class="fas fa-clock"></i> ${mensaje.metadata.tiempo_procesamiento_real}s</div>`;
         }
     }
 
     const wrapper = document.createElement('div');
     wrapper.className = 'message-content-wrapper';
     
-    const iconClass = mensaje.role === 'user' ? 'fa-user' : 'fa-scale-balanced'; // Icono legal
+    const iconClass = mensaje.role === 'user' ? 'fa-user' : 'fa-scale-balanced';
     
     wrapper.innerHTML = `
         <div class="message-avatar">
@@ -337,9 +333,9 @@ function crearElementoMensaje(mensaje) {
 function formatearContenido(texto) {
     if (!texto) return '';
     return texto
-        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Negritas
-        .replace(/\*(.*?)\*/g, '<em>$1</em>') // Cursivas
-        .replace(/\n/g, '<br>'); // Saltos de línea
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/\n/g, '<br>');
 }
 
 function crearFuenteLegal(fuente) {
@@ -350,49 +346,36 @@ function crearFuenteLegal(fuente) {
                 <i class="fas fa-book"></i>
                 <span>Fuente Legal</span>
             </div>
-            <div style="color: var(--text-secondary);">
+            <div class="source-content">
                 <strong>${fuente.ley}</strong>
-                ${fuente.articulo_numero ? ` • Art. ${fuente.articulo_numero}` : ''}
-                ${fuente.titulo ? `<br><span style="font-size: 0.85em; opacity: 0.8;">${fuente.titulo}</span>` : ''}
+                ${fuente.articulo_numero ? ` • Artículo ${fuente.articulo_numero}` : ''}
             </div>
         </div>
     `;
 }
 
-function crearRecomendaciones(recs) {
-    if (!recs || !Array.isArray(recs) || recs.length === 0) return '';
-    const items = recs.map(r => `<li>${r}</li>`).join('');
-    return `
-        <div style="margin-top: 15px; padding: 10px; background: rgba(255,255,255,0.03); border-radius: 8px;">
-            <div style="font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 5px;">Sugerencias</div>
-            <ul style="padding-left:20px; color:var(--text-secondary); font-size: 0.9em; line-height: 1.6;">${items}</ul>
-        </div>
-    `;
-}
-
-// === EFECTOS VISUALES Y ESCRITURA ===
-
+// === TYPEWRITER EFECTO NASDAQ ===
 async function mostrarRespuestaConEscritura(data) {
-    const contenido = data.respuesta || 'Lo siento, no pude generar una respuesta.';
+    const contenido = data.respuesta || 'No pude generar respuesta.';
     const metadata = {
         fuente: data.fuente,
         recomendaciones: data.recomendaciones,
-        tiempo_procesamiento: data.tiempo_procesamiento
+        tiempo_procesamiento: data.tiempo_procesamiento,
+        tiempo_procesamiento_real: data.tiempo_procesamiento_real
     };
     
     const mensajeIdx = app.conversacionActual.length;
-    agregarMensaje('assistant', '', metadata); // Mensaje vacío inicial
+    agregarMensaje('assistant', '', metadata);
     
-    const palabras = contenido.split(' ');
+    // ⚡ TYPEWRITER CARÁCTER POR CARÁCTER (NASDAQ Edition)
     let textoAcumulado = '';
     
-    // Efecto de escritura palabra por palabra
-    for (let i = 0; i < palabras.length; i++) {
-        textoAcumulado += (i > 0 ? ' ' : '') + palabras[i];
+    for (let i = 0; i < contenido.length; i++) {
+        textoAcumulado += contenido[i];
         app.conversacionActual[mensajeIdx].content = textoAcumulado;
         
-        // Renderizado optimizado: solo actualizar si es necesario o cada X palabras
-        if (i % 2 === 0 || i === palabras.length - 1) {
+        // Renderizar cada 2 caracteres para ultra-smooth
+        if (i % 2 === 0 || i === contenido.length - 1) {
             renderizarMensajes();
             scrollToBottom();
         }
@@ -407,21 +390,19 @@ function mostrarIndicadorEscritura() {
     const container = document.getElementById('messagesContainer');
     if (!container) return;
 
-    // Remover si ya existe
     ocultarIndicadorEscritura();
 
     const indicador = document.createElement('div');
     indicador.id = 'typingIndicator';
     indicador.className = 'message assistant';
     
-    // AQUI ESTÁ LA MAGIA: Agregamos la clase 'loading-paraguay'
     indicador.innerHTML = `
         <div class="message-content-wrapper">
             <div class="message-avatar loading-paraguay">
                 <i class="fas fa-scale-balanced"></i>
             </div>
-            <div class="message-text" style="display: flex; align-items: center; gap: 8px;">
-                <span style="color: var(--text-muted); font-size: 0.9em;">Analizando legislación...</span>
+            <div class="message-text typing-indicator">
+                <span></span><span></span><span></span>
             </div>
         </div>
     `;
@@ -443,10 +424,54 @@ function scrollToBottom() {
     }
 }
 
-// === HISTORIAL (LOCAL STORAGE) - RESTAURADO COMPLETO ===
+// === COPIAR MENSAJE (Feature NASDAQ) ===
+function copiarMensaje(messageId) {
+    const mensaje = app.conversacionActual.find(m => m.id === messageId);
+    if (!mensaje) return;
+    
+    const textoPlano = mensaje.content
+        .replace(/\*\*(.*?)\*\*/g, '$1')
+        .replace(/\*(.*?)\*/g, '$1')
+        .replace(/<br>/g, '\n');
+    
+    navigator.clipboard.writeText(textoPlano).then(() => {
+        mostrarNotificacion('Respuesta copiada', 'success');
+    }).catch(err => {
+        console.error('Error copiando:', err);
+        mostrarNotificacion('Error al copiar', 'error');
+    });
+}
+
+// === NOTIFICACIONES ===
+function mostrarNotificacion(mensaje, tipo = 'info') {
+    const notif = document.createElement('div');
+    notif.className = `notification notification-${tipo}`;
+    
+    const iconos = {
+        success: 'fa-check-circle',
+        error: 'fa-exclamation-circle',
+        warning: 'fa-exclamation-triangle',
+        info: 'fa-info-circle'
+    };
+    
+    notif.innerHTML = `
+        <i class="fas ${iconos[tipo]}"></i>
+        <span>${mensaje}</span>
+    `;
+    
+    document.body.appendChild(notif);
+    
+    setTimeout(() => notif.classList.add('show'), 10);
+    setTimeout(() => {
+        notif.classList.remove('show');
+        setTimeout(() => notif.remove(), 300);
+    }, 3000);
+}
+
+// === HISTORIAL (LOCAL STORAGE) ===
 function cargarHistorial() {
     try {
-        const saved = localStorage.getItem('colepa_conversaciones'); // Usando la key original
+        const saved = localStorage.getItem('colepa_conversaciones');
         if (saved) app.conversaciones = JSON.parse(saved);
     } catch (e) {
         console.error("Error cargando historial", e);
@@ -467,19 +492,18 @@ function actualizarSesionActual() {
     
     const index = app.conversaciones.findIndex(c => c.id === app.sesionId);
     
-    // Título inteligente basado en el primer mensaje
     const primerMensaje = app.conversacionActual.find(m => m.role === 'user');
     let titulo = 'Nueva Consulta Legal';
     
     if (primerMensaje) {
-        titulo = primerMensaje.content.substring(0, 40);
-        if (primerMensaje.content.length > 40) titulo += '...';
+        titulo = primerMensaje.content.substring(0, 50);
+        if (primerMensaje.content.length > 50) titulo += '...';
     }
 
     const sesionData = {
         id: app.sesionId,
         titulo: titulo,
-        mensajes: [...app.conversacionActual], // Copia segura
+        mensajes: [...app.conversacionActual],
         fecha: new Date().toISOString()
     };
 
@@ -493,7 +517,7 @@ function actualizarSesionActual() {
     renderizarHistorial();
 }
 
-// === ACCIONES DE UI ===
+// === ACCIONES UI ===
 function nuevaConsulta() {
     app.sesionId = 'chat_' + Date.now();
     app.conversacionActual = [];
@@ -506,29 +530,31 @@ function nuevaConsulta() {
         input.focus();
     }
     actualizarBotonEnvio();
+    
+    // Cerrar sidebar en móvil
+    const sidebar = document.getElementById('sidebar');
+    if(sidebar) sidebar.classList.remove('active');
 }
 
 function cargarConversacion(id) {
     const chat = app.conversaciones.find(c => c.id === id);
     if (chat) {
         app.sesionId = chat.id;
-        app.conversacionActual = [...chat.mensajes]; // Copia segura
+        app.conversacionActual = [...chat.mensajes];
         renderizarMensajes();
         scrollToBottom();
         
-        // En móvil cerrar sidebar automáticamente
         const sidebar = document.getElementById('sidebar');
         if(sidebar) sidebar.classList.remove('active');
         
-        // Resaltar activo en sidebar
         renderizarHistorial();
     }
 }
 
 function eliminarConversacion(e, id) {
-    if (e) e.stopPropagation(); // Evitar abrir el chat al borrar
+    if (e) e.stopPropagation();
     
-    if(confirm('¿Deseas eliminar este historial permanentemente?')) {
+    if(confirm('¿Eliminar este chat permanentemente?')) {
         app.conversaciones = app.conversaciones.filter(c => c.id !== id);
         guardarHistorial();
         
@@ -547,7 +573,12 @@ function renderizarHistorial() {
     container.innerHTML = '';
     
     if (app.conversaciones.length === 0) {
-        container.innerHTML = '<div style="padding: 20px; text-align: center; color: var(--text-muted); font-size: 0.9em;">No hay historial reciente</div>';
+        container.innerHTML = `
+            <div class="empty-history">
+                <i class="fas fa-comments"></i>
+                <p>No hay historial</p>
+            </div>
+        `;
         return;
     }
     
@@ -557,9 +588,9 @@ function renderizarHistorial() {
         div.onclick = () => cargarConversacion(chat.id);
         
         div.innerHTML = `
-            <div style="flex:1; overflow:hidden; text-overflow:ellipsis;">
-                <i class="far fa-comment-dots" style="margin-right:8px; opacity:0.7;"></i>
-                ${chat.titulo}
+            <div class="chat-item-content">
+                <i class="far fa-comment-dots"></i>
+                <span class="chat-title">${chat.titulo}</span>
             </div>
             <button class="chat-delete" onclick="eliminarConversacion(event, '${chat.id}')" title="Eliminar">
                 <i class="fas fa-trash-alt"></i>
@@ -570,4 +601,6 @@ function renderizarHistorial() {
 }
 
 // === UTILIDADES ===
-function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+function sleep(ms) { 
+    return new Promise(r => setTimeout(r, ms)); 
+}
