@@ -781,3 +781,105 @@ body {
     font-size: 12px;
     opacity: 0.5;
 }
+/* ========== FIX ANTI-BLUR & OPTIMIZACIÓN RENDERIZADO ========== */
+
+/* Optimización de renderizado para mensajes */
+.message {
+    /* Forzar aceleración GPU sin blur */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    
+    /* Anti-aliasing perfecto */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    /* Optimización de repaint */
+    will-change: auto;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Texto del mensaje - máxima claridad */
+.message-text {
+    /* Anti-blur crítico */
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+    text-rendering: optimizeLegibility;
+    
+    /* Evitar reflows durante escritura */
+    contain: layout style;
+    
+    /* Renderizado óptimo */
+    transform: translateZ(0);
+    will-change: contents;
+}
+
+/* Container de mensajes - scroll optimizado */
+.messages-container {
+    /* Scroll ultra-suave */
+    scroll-behavior: auto; /* Desactivar smooth durante typewriter */
+    
+    /* Optimización GPU */
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    
+    /* Prevenir blur en scroll */
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Avatar - evitar repaint */
+.message-avatar {
+    /* Evitar que el avatar se re-renderice */
+    will-change: auto;
+    transform: translateZ(0);
+}
+
+/* Quitar animaciones que causan blur */
+.message.assistant .message-text {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Durante typewriter, deshabilitar transiciones */
+.messages-container.typing {
+    scroll-behavior: auto;
+}
+
+.messages-container.typing .message {
+    animation: none;
+    transition: none;
+}
+
+/* Fix específico para fadeInUp que causa blur */
+@keyframes fadeInUp {
+    from { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Tipografía ultra-clara */
+body, .message-text {
+    font-feature-settings: "kern" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fix para Chrome específicamente */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .message-text {
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+}
+
+/* Fix para Firefox */
+@-moz-document url-prefix() {
+    .message-text {
+        -moz-osx-font-smoothing: auto;
+    }
+}
