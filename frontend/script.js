@@ -1,6 +1,6 @@
 /**
  * COLEPA NASDAQ Edition - Frontend v4.0.0
- * Typewriter effect tipo Claude - Palabra por palabra
+ * Typewriter optimizado sin blur ni saltos
  */
 
 // === CONFIGURACIÓN ===
@@ -11,8 +11,8 @@ const CONFIG = {
     ENDPOINT_CONSULTA: '/api/consulta',
     ENDPOINT_HEALTH: '/api/health',
     MAX_MESSAGE_LENGTH: 2000,
-    TYPING_SPEED_MIN: 50,  // Delay mínimo entre palabras
-    TYPING_SPEED_MAX: 100  // Delay máximo entre palabras
+    TYPING_SPEED_MIN: 50,
+    TYPING_SPEED_MAX: 100
 };
 
 // === ESTADO GLOBAL ===
@@ -39,7 +39,6 @@ function inicializar() {
 
     verificarConexionAPI();
     
-    // Cargar estado del sidebar
     const savedCollapsed = localStorage.getItem('colepa_sidebar_collapsed');
     if (savedCollapsed === 'true') {
         toggleSidebarCollapse();
@@ -164,20 +163,16 @@ function enviarMensaje(event) {
 
     console.log('📤 Enviando mensaje:', mensaje);
 
-    // Iniciar sesión si no existe
     if (!app.sesionId) {
         nuevaConsulta();
     }
     
-    // Agregar mensaje del usuario
     agregarMensaje('user', mensaje);
     
-    // Limpiar input
     input.value = '';
     input.style.height = 'auto';
     actualizarBotonEnvio();
     
-    // Procesar respuesta
     procesarRespuesta(mensaje);
 }
 
@@ -294,6 +289,14 @@ function renderizarMensajes() {
     
     if (!container) return;
     
+    // ⚡ OPTIMIZACIÓN: Si estamos escribiendo, NO re-renderizar todo
+    if (app.isLoading) {
+        if (app.conversacionActual.length > 0 && welcome) {
+            welcome.style.display = 'none';
+        }
+        return;
+    }
+    
     if (app.conversacionActual.length === 0) {
         if(welcome) welcome.style.display = 'flex';
         Array.from(container.children).forEach(child => {
@@ -322,7 +325,6 @@ function crearElementoMensaje(mensaje) {
     let contenidoHTML = formatearContenido(mensaje.content);
     
     if (mensaje.role === 'assistant') {
-        // Agregar botón copiar
         contenidoHTML = `
             <div class="message-actions">
                 <button class="copy-btn" onclick="copiarMensaje(${mensaje.id})" title="Copiar respuesta">
@@ -381,7 +383,7 @@ function crearFuenteLegal(fuente) {
     `;
 }
 
-// === TYPEWRITER EFECTO CLAUDE (PALABRA POR PALABRA) ===
+// === TYPEWRITER OPTIMIZADO SIN BLUR NI SALTOS ===
 async function mostrarRespuestaConEscritura(data) {
     const contenido = data.respuesta || 'No pude generar respuesta.';
     const metadata = {
@@ -391,33 +393,75 @@ async function mostrarRespuestaConEscritura(data) {
         tiempo_procesamiento_real: data.tiempo_procesamiento_real
     };
     
+    // Agregar mensaje vacío
     const mensajeIdx = app.conversacionActual.length;
     agregarMensaje('assistant', '', metadata);
     
-    // Split por palabras (como Claude)
+    // IMPORTANTE: Obtener referencia al elemento DOM ESPECÍFICO
+    const container = document.getElementById('messagesContainer');
+    const allMessages = container.querySelectorAll('.message.assistant');
+    const mensajeElement = allMessages[allMessages.length - 1];
+    
+    if (!mensajeElement) {
+        console.error('❌ No se encontró el elemento del mensaje');
+        app.isLoading = false;
+        return;
+    }
+    
+    const messageTextDiv = mensajeElement.querySelector('.message-text');
+    
+    if (!messageTextDiv) {
+        console.error('❌ No se encontró el div de texto');
+        app.isLoading = false;
+        return;
+    }
+    
+    // Preservar botón copiar
+    const copyBtn = `
+        <div class="message-actions">
+            <button class="copy-btn" onclick="copiarMensaje(${app.conversacionActual[mensajeIdx].id})" title="Copiar respuesta">
+                <i class="fas fa-copy"></i>
+            </button>
+        </div>
+    `;
+    
+    // Split por palabras
     const palabras = contenido.split(' ');
     let textoAcumulado = '';
     
     for (let i = 0; i < palabras.length; i++) {
-        // Agregar palabra
         textoAcumulado += (i > 0 ? ' ' : '') + palabras[i];
         
-        // Actualizar contenido
+        // Actualizar estado interno
         app.conversacionActual[mensajeIdx].content = textoAcumulado;
         
-        // Renderizar cada 2 palabras para optimizar
-        if (i % 2 === 0 || i === palabras.length - 1) {
-            renderizarMensajes();
-            scrollToBottom();
+        // Actualizar SOLO este div (SIN re-renderizar todo el DOM)
+        const contenidoHTML = formatearContenido(textoAcumulado);
+        messageTextDiv.innerHTML = copyBtn + contenidoHTML;
+        
+        // Scroll suave solo cada 5 palabras
+        if (i % 5 === 0 || i === palabras.length - 1) {
+            container.scrollTop = container.scrollHeight;
         }
         
-        // Delay aleatorio tipo Claude (50-100ms por palabra)
+        // Delay tipo Claude
         const delay = Math.random() * (CONFIG.TYPING_SPEED_MAX - CONFIG.TYPING_SPEED_MIN) + CONFIG.TYPING_SPEED_MIN;
         await sleep(delay);
     }
     
-    // Renderizado final
-    renderizarMensajes();
+    // Renderizado final COMPLETO (con fuente legal y tiempo)
+    let finalHTML = copyBtn + formatearContenido(textoAcumulado);
+    
+    if (metadata.fuente && metadata.fuente.ley) {
+        finalHTML += crearFuenteLegal(metadata.fuente);
+    }
+    
+    if (metadata.tiempo_procesamiento_real) {
+        finalHTML += `<div class="processing-time"><i class="fas fa-clock"></i> ${metadata.tiempo_procesamiento_real}s</div>`;
+    }
+    
+    messageTextDiv.innerHTML = finalHTML;
+    
     actualizarSesionActual();
 }
 
