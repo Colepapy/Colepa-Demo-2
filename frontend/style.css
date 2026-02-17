@@ -495,3 +495,289 @@ body {
     0%, 100% { transform: scale(0.9); opacity: 0.8; }
     50% { transform: scale(1.1); opacity: 1; }
 }
+/* ========== MEJORAS NASDAQ - Agregar al final del CSS existente ========== */
+
+/* --- Sidebar Footer con botón colapsar --- */
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: var(--glass-border);
+}
+
+.collapse-sidebar-btn {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    color: var(--text-muted);
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.collapse-sidebar-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+/* Sidebar colapsado */
+.sidebar.collapsed {
+    width: 70px;
+    padding: 1rem 0.5rem;
+}
+
+.sidebar.collapsed .sidebar-header span,
+.sidebar.collapsed .chat-history,
+.sidebar.collapsed .logo-section p,
+.sidebar.collapsed .logo-section .demo-badge,
+.sidebar.collapsed .chat-item span {
+    display: none;
+}
+
+.sidebar.collapsed .logo-section h1 {
+    font-size: 18px;
+    text-align: center;
+}
+
+.sidebar.collapsed .new-chat-btn {
+    justify-content: center;
+    padding: 12px;
+}
+
+.main-area.sidebar-collapsed {
+    margin-left: 70px;
+}
+
+/* --- Sugerencias rápidas (welcome) --- */
+.quick-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+    justify-content: center;
+    max-width: 600px;
+}
+
+.suggestion-chip {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.suggestion-chip:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-blue);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.suggestion-chip i {
+    opacity: 0.7;
+}
+
+/* --- Botón copiar en mensajes --- */
+.message-actions {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.message.assistant:hover .message-actions {
+    opacity: 1;
+}
+
+.copy-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--text-muted);
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 12px;
+}
+
+.copy-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
+}
+
+.message.assistant .message-text {
+    position: relative;
+}
+
+/* --- Tiempo de procesamiento --- */
+.processing-time {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* --- Notificaciones --- */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(20, 22, 27, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10000;
+    opacity: 0;
+    transform: translateX(400px);
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.notification-success { border-left: 3px solid #4caf50; }
+.notification-error { border-left: 3px solid var(--accent-red); }
+.notification-warning { border-left: 3px solid #ff9800; }
+.notification-info { border-left: 3px solid var(--accent-blue); }
+
+.notification i {
+    font-size: 16px;
+}
+
+.notification-success i { color: #4caf50; }
+.notification-error i { color: var(--accent-red); }
+.notification-warning i { color: #ff9800; }
+.notification-info i { color: var(--accent-blue); }
+
+/* --- Historial vacío --- */
+.empty-history {
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.empty-history i {
+    font-size: 32px;
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+
+.empty-history p {
+    font-size: 13px;
+}
+
+/* --- Chat item mejorado --- */
+.chat-item-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.chat-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* --- Typing indicator mejorado --- */
+.typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 10px 0;
+}
+
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    background: var(--text-muted);
+    border-radius: 50%;
+    animation: typing 1.4s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%, 60%, 100% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+    30% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+/* --- Source content mejorado --- */
+.source-content {
+    color: var(--text-secondary);
+    margin-top: 5px;
+}
+
+/* --- Responsive mejorado --- */
+@media (max-width: 768px) {
+    .sidebar.collapsed {
+        width: var(--sidebar-width);
+        left: -100%;
+    }
+    
+    .sidebar.collapsed.active {
+        left: 0;
+    }
+    
+    .main-area.sidebar-collapsed {
+        margin-left: 0;
+    }
+    
+    .quick-suggestions {
+        flex-direction: column;
+    }
+    
+    .suggestion-chip {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .notification {
+        right: 10px;
+        left: 10px;
+        top: 10px;
+    }
+}
+
+/* --- Disclaimer mejorado --- */
+.legal-disclaimer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.legal-disclaimer i {
+    font-size: 12px;
+    opacity: 0.5;
+}
