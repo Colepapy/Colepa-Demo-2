@@ -21,6 +21,7 @@
     </div>
 
     <div class="app-container">
+        <!-- SIDEBAR MEJORADO ESTILO CLAUDE -->
         <div class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <button class="new-chat-btn" onclick="nuevaConsulta()">
@@ -30,22 +31,32 @@
             </div>
             
             <div class="chat-history" id="chatHistory">
-                </div>
+                <!-- Historial dinámico -->
+            </div>
             
-            <div class="logo-section">
-                <div class="logo-text">
-                    <h1>COLEPA</h1>
-                    <p>Inteligencia Artificial Legal</p>
-                    <span class="demo-badge">DEMO</span>
+            <div class="sidebar-footer">
+                <div class="logo-section">
+                    <div class="logo-text">
+                        <h1>COLEPA</h1>
+                        <p>Inteligencia Artificial Legal</p>
+                        <span class="demo-badge">NASDAQ v4.0</span>
+                    </div>
                 </div>
+                
+                <!-- Botón colapsar sidebar -->
+                <button class="collapse-sidebar-btn" onclick="toggleSidebarCollapse()" title="Colapsar sidebar">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
             </div>
         </div>
         
-        <button class="mobile-menu-btn" onclick="toggleSidebar()">
+        <!-- Botón móvil + desktop toggle -->
+        <button class="mobile-menu-btn" onclick="toggleSidebar()" id="menuBtn">
             <i class="fas fa-bars"></i>
         </button>
 
-        <div class="main-area">
+        <!-- ÁREA PRINCIPAL -->
+        <div class="main-area" id="mainArea">
             <div class="messages-container" id="messagesContainer">
                 <div class="welcome-message" id="welcomeMessage">
                     <div class="welcome-content">
@@ -54,10 +65,24 @@
                         </div>
                         <h2>Hola, soy COLEPA</h2>
                         <p>Tu asistente experto en la legislación del Paraguay.<br>¿Qué analizamos hoy?</p>
+                        
+                        <!-- Sugerencias rápidas -->
+                        <div class="quick-suggestions">
+                            <button class="suggestion-chip" onclick="enviarConsultaSugerida('¿Cuáles son las causas del divorcio en Paraguay?')">
+                                <i class="fas fa-ring"></i> Causas del divorcio
+                            </button>
+                            <button class="suggestion-chip" onclick="enviarConsultaSugerida('¿Qué dice el código penal sobre lesiones?')">
+                                <i class="fas fa-gavel"></i> Lesiones - Código Penal
+                            </button>
+                            <button class="suggestion-chip" onclick="enviarConsultaSugerida('¿Cuál es la jornada laboral máxima?')">
+                                <i class="fas fa-briefcase"></i> Jornada laboral
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
             
+            <!-- INPUT MEJORADO -->
             <div class="input-area">
                 <div class="input-container">
                     <form id="messageForm" onsubmit="enviarMensaje(event)">
@@ -76,29 +101,25 @@
                         </div>
                     </form>
                     <div class="legal-disclaimer">
-                        COLEPA puede cometer errores. Verifica la información con las fuentes oficiales.
+                        <i class="fas fa-info-circle"></i>
+                        COLEPA puede cometer errores. Verifica la información con fuentes oficiales.
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
+    <!-- Loading overlay -->
     <div class="loading-overlay" id="loadingOverlay">
         <div class="loading-content">
             <div class="gemini-spinner">
                 <div class="spinner-track"></div>
                 <div class="spinner-orb"></div>
             </div>
-            <p>Analizando legislación...</p>
+            <p>Analizando legislación paraguaya...</p>
         </div>
     </div>
     
     <script src="script.js"></script>
-    <script>
-        // Script simple para toggle en móvil
-        function toggleSidebar() {
-            document.getElementById('sidebar').classList.toggle('active');
-        }
-    </script>
 </body>
 </html>
